@@ -2,7 +2,7 @@
 
 A GitHub Pages site to discover and track date ideas together.
 
-**Live site:** [daniela9619.github.io/date-ideas](https://daniela9619.github.io/date-ideas/)
+**Live site:** [daniela9619.github.io/Date-Ideas](https://daniela9619.github.io/Date-Ideas/)
 
 ## What It Does
 
@@ -12,23 +12,25 @@ A GitHub Pages site to discover and track date ideas together.
 - Refreshed every two weeks with new ideas tailored to your ratings
 
 **Done List tab** — Log completed dates directly on the site:
-- Date, activity, 1-5 star rating, category (optional), notes (optional)
-- Entries are saved locally and can be synced to GitHub via the copy button
+- Date, activity, 1-5 star rating, category, location, price, notes (all optional except activity)
+- Saves directly to `done-dates.json` via GitHub API
 - Stats dashboard shows total dates, average rating, and category count
 
-## How to Log a Date
+## First-Time Setup
 
-Two ways:
-
-1. **On the site** — Fill in the form on the Done List tab. Hit "Copy Done List for GitHub" and paste it into `done-dates.json` on GitHub to save permanently.
-2. **Tell Claude Code** — Say *"we did [activity] and it was a 4/5"* and it adds it to `done-dates.json` automatically.
-
-## Setup
-
+### GitHub Pages
 1. Go to **Settings > Pages** in this repo
 2. Set source to **Deploy from a branch**
-3. Select **master** branch, **/ (root)**
-4. Save — site goes live in about a minute
+3. Select **master** branch, **/ (root)**, and save
+
+### Direct Saving (one-time)
+To save dates from the site directly to the repo:
+1. Go to **github.com/settings/tokens** → Fine-grained tokens → Generate
+2. Name it "Date Ideas", select **Only this repository**
+3. Under Permissions → Contents → **Read and write**
+4. Paste the token on the Done List tab under "GitHub connection setup"
+
+Without the token, you can still log dates through Claude Code.
 
 ## Data
 

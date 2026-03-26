@@ -162,15 +162,8 @@
             color: #555;
         }
 
-        .detail-ticket {
-            background: #fff3e0;
-            color: #e65100;
-        }
-
-        .detail-free {
-            background: #e8f5e9;
-            color: #2e7d32;
-        }
+        .detail-ticket { background: #fff3e0; color: #e65100; }
+        .detail-free { background: #e8f5e9; color: #2e7d32; }
 
         /* Done List */
         .add-form {
@@ -214,7 +207,6 @@
 
         .form-row input::placeholder { color: #bbb; }
 
-        /* Star rating */
         .star-rating {
             display: flex;
             align-items: center;
@@ -232,6 +224,8 @@
         .stars {
             display: flex;
             gap: 2px;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
         }
 
         .stars input { display: none; }
@@ -247,16 +241,6 @@
         .stars label:hover,
         .stars label:hover ~ label,
         .stars input:checked ~ label {
-            color: #f5b800;
-        }
-
-        /* Reverse order trick for CSS hover */
-        .stars {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-
-        .stars label:hover ~ label {
             color: #f5b800;
         }
 
@@ -278,15 +262,7 @@
         }
 
         .btn-add:hover { background: #333; }
-
-        .btn-secondary {
-            background: #f0f0f0;
-            color: #555;
-            width: 100%;
-            margin-top: 8px;
-        }
-
-        .btn-secondary:hover { background: #e5e5e5; }
+        .btn-add:disabled { background: #999; cursor: not-allowed; }
 
         .done-list { list-style: none; }
 
@@ -296,16 +272,7 @@
             padding: 16px 20px;
             margin-bottom: 8px;
             border: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
-
-        .done-entry.pending {
-            border-left: 3px solid #f5b800;
-        }
-
-        .done-entry .left { flex: 1; }
 
         .done-entry .activity {
             font-weight: 600;
@@ -336,20 +303,7 @@
             font-weight: 600;
         }
 
-        .tag-cat   { background: #f0f0f0; color: #555; }
-        .tag-pending { background: #fff8e1; color: #f5a623; }
-
-        .delete-btn {
-            background: none;
-            border: none;
-            color: #ccc;
-            cursor: pointer;
-            font-size: 1.2rem;
-            padding: 4px 8px;
-            transition: color 0.2s;
-        }
-
-        .delete-btn:hover { color: #c62828; }
+        .tag-cat { background: #f0f0f0; color: #555; }
 
         .empty-state {
             text-align: center;
@@ -407,20 +361,101 @@
             z-index: 100;
         }
 
-        .toast.show {
-            transform: translateX(-50%) translateY(0);
+        .toast.show { transform: translateX(-50%) translateY(0); }
+        .toast.error { background: #c62828; }
+
+        /* Setup */
+        .setup-box {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border: 1px solid #eee;
         }
 
-        .sync-note {
-            text-align: center;
-            font-size: 0.75rem;
-            color: #bbb;
-            margin-top: 16px;
-        }
-
-        .sync-note a {
+        .setup-box summary {
+            cursor: pointer;
+            font-size: 0.8rem;
             color: #999;
-            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .setup-box summary:hover { color: #555; }
+
+        .setup-content {
+            margin-top: 12px;
+        }
+
+        .setup-content p {
+            font-size: 0.8rem;
+            color: #777;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .setup-content ol {
+            font-size: 0.8rem;
+            color: #777;
+            line-height: 1.8;
+            margin: 0 0 12px 20px;
+        }
+
+        .setup-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .setup-row input {
+            flex: 1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            background: #fafafa;
+            font-size: 0.85rem;
+            font-family: inherit;
+        }
+
+        .setup-row input:focus {
+            outline: none;
+            border-color: #111;
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.8rem;
+            font-family: inherit;
+            background: #111;
+            color: #fff;
+        }
+
+        .btn-small:hover { background: #333; }
+
+        .btn-danger {
+            background: #fce4ec;
+            color: #c62828;
+        }
+
+        .btn-danger:hover { background: #f8d0d6; }
+
+        .connected-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.8rem;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        .connected-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #2e7d32;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -443,6 +478,26 @@
 
 <!-- DONE LIST -->
 <div id="done" class="panel">
+
+    <!-- GitHub Setup -->
+    <details class="setup-box" id="setup-box">
+        <summary id="setup-summary">GitHub connection setup</summary>
+        <div class="setup-content" id="setup-content">
+            <p>Connect to GitHub so dates save directly to the repo. One-time setup:</p>
+            <ol>
+                <li>Go to <strong>github.com/settings/tokens</strong> → Fine-grained tokens → Generate</li>
+                <li>Name it anything (e.g. "Date Ideas")</li>
+                <li>Set repository access to <strong>Only select repositories</strong> → pick <strong>Date-Ideas</strong></li>
+                <li>Under Permissions → Repository → <strong>Contents</strong> → set to <strong>Read and write</strong></li>
+                <li>Generate and paste the token below</li>
+            </ol>
+            <div class="setup-row">
+                <input type="password" id="token-input" placeholder="Paste your token here">
+                <button class="btn-small" onclick="saveToken()">Save</button>
+            </div>
+        </div>
+    </details>
+
     <div class="add-form">
         <h3>Log a Date</h3>
         <div class="form-row">
@@ -471,10 +526,13 @@
             </select>
         </div>
         <div class="form-row">
+            <input type="text" id="entry-location" placeholder="Location (optional)">
+            <input type="text" id="entry-price" placeholder="Price (optional, e.g. $25)">
+        </div>
+        <div class="form-row">
             <input type="text" id="entry-notes" placeholder="Notes (optional)">
         </div>
-        <button class="btn btn-add" onclick="addEntry()">Add to Done List</button>
-        <button class="btn btn-secondary" onclick="exportDone()">Copy Done List for GitHub</button>
+        <button class="btn btn-add" id="add-btn" onclick="addEntry()">Add to Done List</button>
     </div>
 
     <ul class="done-list" id="done-list"></ul>
@@ -494,8 +552,6 @@
             <div class="stat-label">Categories</div>
         </div>
     </div>
-
-    <p class="sync-note">Entries added here are saved in your browser. Use <strong>Copy Done List for GitHub</strong> to sync them to the repo so the AI can see them.</p>
 </div>
 
 <p class="updated" id="updated"></p>
@@ -505,6 +561,14 @@
 <div class="toast" id="toast"></div>
 
 <script>
+    const REPO_OWNER = 'daniela9619';
+    const REPO_NAME = 'Date-Ideas';
+    const FILE_PATH = 'done-dates.json';
+    const BRANCH = 'master';
+
+    let allEntries = [];
+    let fileSha = null;
+
     function showTab(id, btn) {
         document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -512,11 +576,103 @@
         btn.classList.add('active');
     }
 
-    function showToast(msg) {
+    function showToast(msg, isError) {
         const t = document.getElementById('toast');
         t.textContent = msg;
-        t.classList.add('show');
-        setTimeout(() => t.classList.remove('show'), 2500);
+        t.className = 'toast show' + (isError ? ' error' : '');
+        setTimeout(() => t.className = 'toast', 3000);
+    }
+
+    function getToken() {
+        return localStorage.getItem('gh_token');
+    }
+
+    function saveToken() {
+        const token = document.getElementById('token-input').value.trim();
+        if (!token) return;
+        localStorage.setItem('gh_token', token);
+        document.getElementById('token-input').value = '';
+        updateSetupUI();
+        showToast('GitHub connected! You can now save dates directly.');
+    }
+
+    function removeToken() {
+        localStorage.removeItem('gh_token');
+        updateSetupUI();
+        showToast('Token removed.');
+    }
+
+    function updateSetupUI() {
+        const box = document.getElementById('setup-box');
+        const summary = document.getElementById('setup-summary');
+        const content = document.getElementById('setup-content');
+
+        if (getToken()) {
+            summary.innerHTML = '<span class="connected-badge">Connected to GitHub</span>';
+            content.innerHTML = '<p>Dates save directly to the repo. The AI reads them when generating recommendations.</p><button class="btn-small btn-danger" onclick="removeToken()">Disconnect</button>';
+            box.removeAttribute('open');
+        } else {
+            summary.textContent = 'Connect to GitHub to save dates directly';
+            content.innerHTML = `
+                <p>Connect to GitHub so dates save directly to the repo. One-time setup:</p>
+                <ol>
+                    <li>Go to <strong>github.com/settings/tokens</strong> → Fine-grained tokens → Generate</li>
+                    <li>Name it anything (e.g. "Date Ideas")</li>
+                    <li>Set repository access to <strong>Only select repositories</strong> → pick <strong>Date-Ideas</strong></li>
+                    <li>Under Permissions → Repository → <strong>Contents</strong> → set to <strong>Read and write</strong></li>
+                    <li>Generate and paste the token below</li>
+                </ol>
+                <div class="setup-row">
+                    <input type="password" id="token-input" placeholder="Paste your token here">
+                    <button class="btn-small" onclick="saveToken()">Save</button>
+                </div>
+            `;
+            box.setAttribute('open', '');
+        }
+    }
+
+    // --- GitHub API ---
+    async function fetchDoneFromGitHub() {
+        try {
+            const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}?ref=${BRANCH}`);
+            if (!resp.ok) return [];
+            const data = await resp.json();
+            fileSha = data.sha;
+            return JSON.parse(atob(data.content));
+        } catch {
+            return [];
+        }
+    }
+
+    async function saveDoneToGitHub(entries) {
+        const token = getToken();
+        if (!token) throw new Error('No GitHub token');
+
+        const content = btoa(unescape(encodeURIComponent(JSON.stringify(entries, null, 4) + '\n')));
+
+        const body = {
+            message: 'Add done date entry',
+            content,
+            branch: BRANCH
+        };
+        if (fileSha) body.sha = fileSha;
+
+        const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+
+        if (!resp.ok) {
+            const err = await resp.json();
+            throw new Error(err.message || 'Failed to save');
+        }
+
+        const result = await resp.json();
+        fileSha = result.content.sha;
     }
 
     // --- Recommendations ---
@@ -540,9 +696,7 @@
         document.getElementById('updated').textContent = 'Updated ' + data.updated;
 
         const saved = JSON.parse(localStorage.getItem('dateRecs') || '{}');
-        const panel = document.getElementById('recs');
-
-        panel.innerHTML = data.categories.map(cat => `
+        document.getElementById('recs').innerHTML = data.categories.map(cat => `
             <div class="category">
                 <div class="category-title">${cat.title}</div>
                 ${cat.dates.map(d => `
@@ -567,31 +721,17 @@
     }
 
     // --- Done List ---
-    let savedEntries = [];  // from done-dates.json
-    let localEntries = JSON.parse(localStorage.getItem('localDoneEntries') || '[]');
-
     function starsHtml(rating) {
         if (!rating) return '';
-        const filled = '&#9733;'.repeat(rating);
-        const empty = '&#9734;'.repeat(5 - rating);
-        return `<span class="star-display">${filled}${empty}</span>`;
-    }
-
-    function getAllEntries() {
-        // Local entries first (pending), then saved entries
-        return [
-            ...localEntries.map(e => ({ ...e, _pending: true })),
-            ...savedEntries
-        ];
+        return '<span class="star-display">' + '&#9733;'.repeat(rating) + '&#9734;'.repeat(5 - rating) + '</span>';
     }
 
     function renderDone() {
-        const entries = getAllEntries();
         const list = document.getElementById('done-list');
         const empty = document.getElementById('empty-state');
         const stats = document.getElementById('stats');
 
-        if (!entries.length) {
+        if (!allEntries.length) {
             list.innerHTML = '';
             empty.style.display = 'block';
             stats.style.display = 'none';
@@ -601,109 +741,95 @@
         empty.style.display = 'none';
         stats.style.display = 'grid';
 
-        list.innerHTML = entries.map(e => `
-            <li class="done-entry${e._pending ? ' pending' : ''}">
-                <div class="left">
-                    <div class="activity">${e.activity}${e._pending ? ' <span class="tag tag-pending">unsaved</span>' : ''}</div>
-                    <div class="meta">
-                        ${e.date ? `<span>${new Date(e.date + 'T00:00').toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</span>` : ''}
-                        ${e.rating ? starsHtml(e.rating) : ''}
-                        ${e.category ? `<span class="tag tag-cat">${e.category}</span>` : ''}
-                        ${e.notes ? `<span>${e.notes}</span>` : ''}
-                    </div>
+        list.innerHTML = allEntries.map(e => `
+            <li class="done-entry">
+                <div class="activity">${e.activity}</div>
+                <div class="meta">
+                    ${e.date ? `<span>${new Date(e.date + 'T00:00').toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</span>` : ''}
+                    ${e.rating ? starsHtml(e.rating) : ''}
+                    ${e.category ? `<span class="tag tag-cat">${e.category}</span>` : ''}
+                    ${e.location ? `<span>${e.location}</span>` : ''}
+                    ${e.price ? `<span>${e.price}</span>` : ''}
+                    ${e.notes ? `<span>${e.notes}</span>` : ''}
                 </div>
-                ${e._pending ? `<button class="delete-btn" onclick="deleteLocal(${e._localId})">&times;</button>` : ''}
             </li>
         `).join('');
 
-        // Stats
-        const rated = entries.filter(e => e.rating);
-        document.getElementById('stat-total').textContent = entries.length;
+        const rated = allEntries.filter(e => e.rating);
+        document.getElementById('stat-total').textContent = allEntries.length;
         document.getElementById('stat-avg').textContent = rated.length
             ? (rated.reduce((sum, e) => sum + e.rating, 0) / rated.length).toFixed(1)
             : '-';
-        document.getElementById('stat-categories').textContent = new Set(entries.map(e => e.category).filter(Boolean)).size;
+        document.getElementById('stat-categories').textContent = new Set(allEntries.map(e => e.category).filter(Boolean)).size;
     }
 
-    function addEntry() {
+    async function addEntry() {
         const activity = document.getElementById('entry-activity').value.trim();
         if (!activity) { alert('Fill in what you did!'); return; }
 
+        const btn = document.getElementById('add-btn');
         const ratingEl = document.querySelector('input[name="rating"]:checked');
 
-        const entry = {
-            date: document.getElementById('entry-date').value || undefined,
-            activity,
-            rating: ratingEl ? parseInt(ratingEl.value) : undefined,
-            category: document.getElementById('entry-category').value || undefined,
-            notes: document.getElementById('entry-notes').value.trim() || undefined,
-            _localId: Date.now()
-        };
+        const entry = {};
+        const dateVal = document.getElementById('entry-date').value;
+        if (dateVal) entry.date = dateVal;
+        entry.activity = activity;
+        if (ratingEl) entry.rating = parseInt(ratingEl.value);
+        const catVal = document.getElementById('entry-category').value;
+        if (catVal) entry.category = catVal;
+        const locVal = document.getElementById('entry-location').value.trim();
+        if (locVal) entry.location = locVal;
+        const priceVal = document.getElementById('entry-price').value.trim();
+        if (priceVal) entry.price = priceVal;
+        const notesVal = document.getElementById('entry-notes').value.trim();
+        if (notesVal) entry.notes = notesVal;
 
-        // Clean undefined fields
-        Object.keys(entry).forEach(k => entry[k] === undefined && delete entry[k]);
+        if (getToken()) {
+            btn.disabled = true;
+            btn.textContent = 'Saving...';
+            try {
+                allEntries.unshift(entry);
+                await saveDoneToGitHub(allEntries);
+                renderDone();
+                resetForm(ratingEl);
+                showToast('Saved to GitHub!');
+            } catch (err) {
+                allEntries.shift();
+                showToast('Save failed: ' + err.message, true);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Add to Done List';
+            }
+        } else {
+            allEntries.unshift(entry);
+            renderDone();
+            resetForm(ratingEl);
+            showToast('Added! Connect GitHub to save permanently.', true);
+        }
+    }
 
-        localEntries.unshift(entry);
-        localStorage.setItem('localDoneEntries', JSON.stringify(localEntries));
-        renderDone();
-
-        // Reset form
+    function resetForm(ratingEl) {
         document.getElementById('entry-activity').value = '';
+        document.getElementById('entry-date').value = '';
         document.getElementById('entry-notes').value = '';
+        document.getElementById('entry-location').value = '';
+        document.getElementById('entry-price').value = '';
         document.getElementById('entry-category').value = '';
         if (ratingEl) ratingEl.checked = false;
-
-        showToast('Date added! Use "Copy for GitHub" to save permanently.');
     }
 
-    function deleteLocal(id) {
-        localEntries = localEntries.filter(e => e._localId !== id);
-        localStorage.setItem('localDoneEntries', JSON.stringify(localEntries));
-        renderDone();
-    }
+    // --- Init ---
+    updateSetupUI();
 
-    function exportDone() {
-        // Merge: local entries (cleaned) on top, then saved
-        const merged = [
-            ...localEntries.map(e => {
-                const clean = { ...e };
-                delete clean._localId;
-                return clean;
-            }),
-            ...savedEntries
-        ];
-
-        const json = JSON.stringify(merged, null, 4);
-        navigator.clipboard.writeText(json).then(() => {
-            showToast('Copied! Paste into done-dates.json on GitHub.');
-        }).catch(() => {
-            // Fallback
-            const ta = document.createElement('textarea');
-            ta.value = json;
-            document.body.appendChild(ta);
-            ta.select();
-            document.execCommand('copy');
-            document.body.removeChild(ta);
-            showToast('Copied! Paste into done-dates.json on GitHub.');
-        });
-    }
-
-    // --- Load data ---
     fetch('recommendations.json')
         .then(r => r.json())
         .then(data => renderRecs(data))
         .catch(() => document.getElementById('recs').innerHTML = '<div class="empty-state">Could not load recommendations.</div>');
 
-    fetch('done-dates.json')
-        .then(r => r.json())
-        .then(entries => {
-            savedEntries = entries;
-            renderDone();
-        })
-        .catch(() => renderDone());
-
-    // Initial render for local-only entries
-    renderDone();
+    fetchDoneFromGitHub().then(entries => {
+        allEntries = entries;
+        renderDone();
+    });
 </script>
 
 </body>

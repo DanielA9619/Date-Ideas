@@ -30,6 +30,8 @@ When the user says they did a date (e.g. *"we did a sunset picnic and loved it"*
     "activity": "Sunset Picnic",
     "rating": 5,
     "category": "outdoor",
+    "location": "Riverside Park overlook",
+    "price": "$25",
     "notes": "Beautiful weather, great spot at the overlook"
 }
 ```
@@ -40,6 +42,8 @@ When the user says they did a date (e.g. *"we did a sunset picnic and loved it"*
 | `activity` | **yes** | What they did |
 | `rating` | optional | `1` to `5` (star rating — 5 is best) |
 | `category` | optional | `outdoor`, `food`, `arts`, `cozy`, `active`, `unique` |
+| `location` | optional | Where they went |
+| `price` | optional | What they spent (e.g. `"$25"`, `"Free"`) |
 | `notes` | optional | Any extra details |
 
 ### Rating guide for AI
