@@ -305,6 +305,44 @@
 
         .tag-cat { background: #f0f0f0; color: #555; }
 
+        .entry-actions {
+            display: flex;
+            gap: 4px;
+            flex-shrink: 0;
+        }
+
+        .entry-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.15s;
+            color: #bbb;
+        }
+
+        .entry-btn:hover { background: #f0f0f0; color: #555; }
+        .entry-btn.delete:hover { background: #fce4ec; color: #c62828; }
+
+        .done-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .done-entry .left { flex: 1; }
+
+        .btn-cancel {
+            background: #f0f0f0;
+            color: #555;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .btn-cancel:hover { background: #e5e5e5; }
+
         .empty-state {
             text-align: center;
             color: #bbb;
@@ -533,6 +571,7 @@
             <input type="text" id="entry-notes" placeholder="Notes (optional)">
         </div>
         <button class="btn btn-add" id="add-btn" onclick="addEntry()">Add to Done List</button>
+        <button class="btn btn-cancel" id="cancel-btn" onclick="cancelEdit()" style="display:none;">Cancel Edit</button>
     </div>
 
     <ul class="done-list" id="done-list"></ul>
@@ -568,6 +607,7 @@
 
     let allEntries = [];
     let fileSha = null;
+    let editingIndex = -1;
 
     function showTab(id, btn) {
         document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
@@ -741,16 +781,22 @@
         empty.style.display = 'none';
         stats.style.display = 'grid';
 
-        list.innerHTML = allEntries.map(e => `
+        list.innerHTML = allEntries.map((e, i) => `
             <li class="done-entry">
-                <div class="activity">${e.activity}</div>
-                <div class="meta">
-                    ${e.date ? `<span>${new Date(e.date + 'T00:00').toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</span>` : ''}
-                    ${e.rating ? starsHtml(e.rating) : ''}
-                    ${e.category ? `<span class="tag tag-cat">${e.category}</span>` : ''}
-                    ${e.location ? `<span>${e.location}</span>` : ''}
-                    ${e.price ? `<span>${e.price}</span>` : ''}
-                    ${e.notes ? `<span>${e.notes}</span>` : ''}
+                <div class="left">
+                    <div class="activity">${e.activity}</div>
+                    <div class="meta">
+                        ${e.date ? `<span>${new Date(e.date + 'T00:00').toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</span>` : ''}
+                        ${e.rating ? starsHtml(e.rating) : ''}
+                        ${e.category ? `<span class="tag tag-cat">${e.category}</span>` : ''}
+                        ${e.location ? `<span>${e.location}</span>` : ''}
+                        ${e.price ? `<span>${e.price}</span>` : ''}
+                        ${e.notes ? `<span>${e.notes}</span>` : ''}
+                    </div>
+                </div>
+                <div class="entry-actions">
+                    <button class="entry-btn" onclick="editEntry(${i})" title="Edit">&#9998;</button>
+                    <button class="entry-btn delete" onclick="deleteEntry(${i})" title="Delete">&times;</button>
                 </div>
             </li>
         `).join('');
@@ -763,13 +809,11 @@
         document.getElementById('stat-categories').textContent = new Set(allEntries.map(e => e.category).filter(Boolean)).size;
     }
 
-    async function addEntry() {
+    function getFormEntry() {
         const activity = document.getElementById('entry-activity').value.trim();
-        if (!activity) { alert('Fill in what you did!'); return; }
+        if (!activity) { alert('Fill in what you did!'); return null; }
 
-        const btn = document.getElementById('add-btn');
         const ratingEl = document.querySelector('input[name="rating"]:checked');
-
         const entry = {};
         const dateVal = document.getElementById('entry-date').value;
         if (dateVal) entry.date = dateVal;
@@ -783,39 +827,106 @@
         if (priceVal) entry.price = priceVal;
         const notesVal = document.getElementById('entry-notes').value.trim();
         if (notesVal) entry.notes = notesVal;
+        return entry;
+    }
+
+    async function addEntry() {
+        const entry = getFormEntry();
+        if (!entry) return;
+
+        const btn = document.getElementById('add-btn');
+        const isEdit = editingIndex >= 0;
 
         if (getToken()) {
             btn.disabled = true;
             btn.textContent = 'Saving...';
             try {
-                allEntries.unshift(entry);
+                if (isEdit) {
+                    allEntries[editingIndex] = entry;
+                } else {
+                    allEntries.unshift(entry);
+                }
                 await saveDoneToGitHub(allEntries);
                 renderDone();
-                resetForm(ratingEl);
-                showToast('Saved to GitHub!');
+                resetForm();
+                showToast(isEdit ? 'Date updated!' : 'Saved to GitHub!');
             } catch (err) {
-                allEntries.shift();
+                if (!isEdit) allEntries.shift();
                 showToast('Save failed: ' + err.message, true);
             } finally {
                 btn.disabled = false;
                 btn.textContent = 'Add to Done List';
             }
         } else {
-            allEntries.unshift(entry);
+            if (isEdit) {
+                allEntries[editingIndex] = entry;
+            } else {
+                allEntries.unshift(entry);
+            }
             renderDone();
-            resetForm(ratingEl);
-            showToast('Added! Connect GitHub to save permanently.', true);
+            resetForm();
+            showToast(isEdit ? 'Date updated (connect GitHub to save).' : 'Added! Connect GitHub to save permanently.', true);
         }
     }
 
-    function resetForm(ratingEl) {
+    function editEntry(index) {
+        const e = allEntries[index];
+        editingIndex = index;
+
+        document.getElementById('entry-date').value = e.date || '';
+        document.getElementById('entry-activity').value = e.activity || '';
+        document.getElementById('entry-category').value = e.category || '';
+        document.getElementById('entry-location').value = e.location || '';
+        document.getElementById('entry-price').value = e.price || '';
+        document.getElementById('entry-notes').value = e.notes || '';
+
+        // Set star rating
+        document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
+        if (e.rating) {
+            const starEl = document.getElementById('star' + e.rating);
+            if (starEl) starEl.checked = true;
+        }
+
+        document.getElementById('add-btn').textContent = 'Update Date';
+        document.getElementById('cancel-btn').style.display = 'block';
+
+        // Scroll to form
+        document.querySelector('.add-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    async function deleteEntry(index) {
+        if (!confirm('Delete "' + allEntries[index].activity + '"?')) return;
+
+        allEntries.splice(index, 1);
+
+        if (getToken()) {
+            try {
+                await saveDoneToGitHub(allEntries);
+                showToast('Deleted!');
+            } catch (err) {
+                showToast('Delete failed: ' + err.message, true);
+            }
+        }
+
+        if (editingIndex === index) resetForm();
+        renderDone();
+    }
+
+    function cancelEdit() {
+        resetForm();
+    }
+
+    function resetForm() {
+        editingIndex = -1;
         document.getElementById('entry-activity').value = '';
         document.getElementById('entry-date').value = '';
         document.getElementById('entry-notes').value = '';
         document.getElementById('entry-location').value = '';
         document.getElementById('entry-price').value = '';
         document.getElementById('entry-category').value = '';
-        if (ratingEl) ratingEl.checked = false;
+        document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
+        document.getElementById('add-btn').textContent = 'Add to Done List';
+        document.getElementById('cancel-btn').style.display = 'none';
     }
 
     // --- Init ---

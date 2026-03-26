@@ -4,43 +4,173 @@ A GitHub Pages site to discover and track date ideas together.
 
 **Live site:** [daniela9619.github.io/Date-Ideas](https://daniela9619.github.io/Date-Ideas/)
 
-## What It Does
+---
 
-**Recommendations tab** — Date ideas organized by category, each with:
-- Price range, suggested day/time, duration, location, and reservation info
-- Clickable checkboxes to mark completed — done items fade out
-- Refreshed every two weeks with new ideas tailored to your ratings
+## Architecture
 
-**Done List tab** — Log completed dates directly on the site:
-- Date, activity, 1-5 star rating, category, location, price, notes (all optional except activity)
-- Saves directly to `done-dates.json` via GitHub API
-- Stats dashboard shows total dates, average rating, and category count
+The site is a single HTML page (`index.html`) that reads from two JSON data files. There is no build step, no frameworks — just vanilla HTML/CSS/JS.
 
-## First-Time Setup
+```
+index.html              ← Rendering shell (HTML + CSS + JS)
+recommendations.json    ← Date ideas data (AI updates this)
+done-dates.json         ← Completed dates log (user + AI write here)
+CLAUDE.md               ← Instructions the AI reads automatically
+README.md               ← This file
+```
+
+### How data flows
+
+```
+recommendations.json ──fetch──→ index.html renders Recommendations tab
+done-dates.json ─────fetch──→ index.html renders Done List tab
+                     ←──GitHub API PUT── form submit (with token)
+localStorage ────────────────→ checkbox states only
+```
+
+---
+
+## index.html — Code Structure
+
+The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** (logic).
+
+### CSS (lines ~9–460)
+
+| Section | What it styles |
+|---------|---------------|
+| Base / layout | body, container, header, tabs |
+| `.date-card` | Recommendation cards (checkbox, name, price, desc, detail pills) |
+| `.detail-free` / `.detail-ticket` | Green "no reservation" and orange "tickets needed" tags |
+| `.add-form` | The "Log a Date" form (inputs, star rating, buttons) |
+| `.done-entry` | Done list entries (activity, meta row, edit/delete buttons) |
+| `.stars` | Star rating picker (uses CSS reverse-order trick for hover) |
+| `.setup-box` | GitHub token setup collapsible |
+| `.stats` | Stats dashboard (total, avg rating, categories) |
+| `.toast` | Bottom notification popup |
+
+### HTML (lines ~462–570)
+
+| Element | Purpose |
+|---------|---------|
+| `<header>` | Title + subtitle (date range, set dynamically) |
+| `.tabs` | Two tab buttons: Recommendations / Done List |
+| `#recs` | Empty div — filled by JS from `recommendations.json` |
+| `#done` | Done List panel containing: |
+| → `#setup-box` | Collapsible GitHub token setup |
+| → `.add-form` | Form: date, activity, stars, category, location, price, notes |
+| → `#done-list` | List container — filled by JS from `done-dates.json` |
+| → `#stats` | Stats grid (hidden until entries exist) |
+
+### JavaScript (lines ~572–end)
+
+#### Constants & state
+- `REPO_OWNER`, `REPO_NAME`, `FILE_PATH`, `BRANCH` — GitHub API target
+- `allEntries` — array of done date objects (source of truth at runtime)
+- `fileSha` — current SHA of `done-dates.json` (needed for GitHub API updates)
+- `editingIndex` — which entry is being edited (`-1` = adding new)
+
+#### Key functions
+
+| Function | What it does |
+|----------|-------------|
+| `showTab(id, btn)` | Switches between Recommendations and Done List tabs |
+| `showToast(msg, isError)` | Shows a notification at the bottom of the screen |
+| **GitHub connection** | |
+| `getToken()` | Reads GitHub PAT from localStorage |
+| `saveToken()` | Saves PAT to localStorage, updates UI |
+| `removeToken()` | Removes PAT, updates UI |
+| `updateSetupUI()` | Toggles setup box between "connected" and "setup" states |
+| **GitHub API** | |
+| `fetchDoneFromGitHub()` | GET `done-dates.json` contents via GitHub API, stores `fileSha` |
+| `saveDoneToGitHub(entries)` | PUT updated JSON to `done-dates.json` via GitHub API using stored token |
+| **Recommendations** | |
+| `toggleRec(cb)` | Toggles checkbox, saves state to localStorage |
+| `reservationTag(type)` | Returns HTML for "none"/"tickets"/"required" tag |
+| `renderRecs(data)` | Renders all recommendation cards from JSON data |
+| **Done List** | |
+| `starsHtml(rating)` | Returns filled/empty star HTML for a 1-5 rating |
+| `renderDone()` | Renders the full done list + stats from `allEntries` |
+| `getFormEntry()` | Reads all form fields into an entry object |
+| `addEntry()` | Adds new or updates existing entry (checks `editingIndex`), saves to GitHub |
+| `editEntry(index)` | Populates form with entry data, sets edit mode |
+| `deleteEntry(index)` | Confirms and removes entry, saves to GitHub |
+| `cancelEdit()` | Exits edit mode, clears form |
+| `resetForm()` | Clears all form fields, resets to "add" mode |
+
+#### Init sequence (bottom of script)
+1. `updateSetupUI()` — show connection status
+2. Fetch `recommendations.json` → `renderRecs()`
+3. `fetchDoneFromGitHub()` → populate `allEntries` → `renderDone()`
+
+---
+
+## recommendations.json
+
+```json
+{
+    "dateRange": "March 26 - April 8, 2026",
+    "updated": "March 26, 2026",
+    "previousIds": ["sunset-picnic", "..."],
+    "categories": [
+        {
+            "title": "Category Name",
+            "dates": [
+                {
+                    "id": "kebab-case-id",
+                    "name": "Date Name",
+                    "price": "$XX - $XX",
+                    "desc": "Description.",
+                    "when": "Any evening",
+                    "start": "7:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Location",
+                    "reservation": "none|tickets|required"
+                }
+            ]
+        }
+    ]
+}
+```
+
+- `previousIds` — tracks all ever-used IDs to prevent repeats
+- `reservation` — controls tag color: `"none"` = green, `"tickets"`/`"required"` = orange
+- The AI replaces `categories` and appends new IDs to `previousIds` on each refresh
+
+## done-dates.json
+
+Array of objects, newest first:
+
+```json
+[
+    {
+        "date": "2026-03-28",
+        "activity": "Sunset Picnic",
+        "rating": 5,
+        "category": "outdoor",
+        "location": "Riverside Park",
+        "price": "$25",
+        "notes": "Beautiful weather"
+    }
+]
+```
+
+- Only `activity` is required, everything else is optional
+- `rating` is 1-5 (the AI uses this to tune recommendations)
+- Written to by the site form (via GitHub API) and by the AI (via direct file edit)
+
+---
+
+## Setup
 
 ### GitHub Pages
-1. Go to **Settings > Pages** in this repo
-2. Set source to **Deploy from a branch**
-3. Select **master** branch, **/ (root)**, and save
+1. **Settings > Pages** → Deploy from branch → **master** / root → Save
 
-### Direct Saving (one-time)
-To save dates from the site directly to the repo:
+### Direct saving from the site
 1. Go to **github.com/settings/tokens** → Fine-grained tokens → Generate
-2. Name it "Date Ideas", select **Only this repository**
-3. Under Permissions → Contents → **Read and write**
-4. Paste the token on the Done List tab under "GitHub connection setup"
+2. Scope to **only this repository**, Contents: **Read and write**
+3. Paste token on the Done List tab under "GitHub connection setup"
 
-Without the token, you can still log dates through Claude Code.
-
-## Data
-
-| File | Purpose |
-|------|---------|
-| `recommendations.json` | Current date ideas (AI updates this) |
-| `done-dates.json` | Completed dates log with ratings |
-| `index.html` | Site shell — renders the JSON files |
-| `CLAUDE.md` | Instructions for the AI agent |
+---
 
 ## Updating Recommendations
 
-Open this repo in [Claude Code](https://claude.ai/code) and ask it to refresh the recommendations. It reads `done-dates.json` for your star ratings and preferences, then generates new ideas that lean into what you loved and avoid what you didn't.
+Open this repo in [Claude Code](https://claude.ai/code) and ask it to refresh. It reads `CLAUDE.md` for detailed instructions, reads `done-dates.json` for preferences, and updates `recommendations.json`.
