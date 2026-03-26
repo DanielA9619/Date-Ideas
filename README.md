@@ -1,22 +1,19 @@
 # Date Ideas
 
-A simple GitHub Pages site to track and discover date ideas together.
+A GitHub Pages site to discover and track date ideas together.
 
 **Live site:** [daniela9619.github.io/date-ideas](https://daniela9619.github.io/date-ideas/)
 
-## How It Works
+## What It Does
 
-The site has two tabs:
+**Recommendations tab** — Date ideas organized by category, each with:
+- Price range, suggested day/time, duration, location, and reservation info
+- Clickable checkboxes to mark completed — done items fade out
+- Refreshed every two weeks with new ideas
 
-### Recommendations
-- Date ideas organized by category (Outdoors, Food, Arts, Cozy, Active, Unique)
-- Check off ideas as you do them — completed ones fade out
-- Updated every two weeks with fresh ideas based on what you've already done
-
-### Done List
-- Log completed dates with a simple form
-- Fields: date, activity, liked it (yes/no), category (optional), notes (optional)
-- Stats dashboard tracks totals, favorites, and category variety
+**Done List tab** — Log completed dates with a simple form:
+- Date, activity, liked it (yes/no), category (optional), notes (optional)
+- Stats dashboard at the bottom
 
 ## Setup
 
@@ -27,8 +24,8 @@ The site has two tabs:
 
 ## Data Storage
 
-Everything is saved in your browser's **localStorage** — no backend, no accounts. Data persists between visits on the same device/browser.
+Checkbox state and done list entries are saved in your browser's **localStorage**. Data persists between visits on the same device/browser.
 
 ## Updating Recommendations
 
-Run this repo with [Claude Code](https://claude.ai/code) and ask it to refresh the recommendations. It will read your done list history and generate new, non-repetitive ideas tailored to your preferences.
+Open this repo in [Claude Code](https://claude.ai/code) and ask it to refresh the recommendations. It reads `CLAUDE.md` for instructions on how to structure updates and uses the done list to avoid repeats.
