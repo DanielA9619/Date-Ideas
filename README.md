@@ -24,7 +24,7 @@ README.md               ← This file
 recommendations.json ──fetch──→ index.html renders Recommendations tab
 done-dates.json ─────fetch──→ index.html renders Done List tab
                      ←──GitHub API PUT── form submit (with token)
-localStorage ────────────────→ checkbox states only
+localStorage ────────────────→ checkbox states + theme preference
 ```
 
 ---
@@ -37,8 +37,11 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 
 | Section | What it styles |
 |---------|---------------|
+| `:root` / `[data-theme="dark"]` | CSS custom properties for light (cream `#FFF9F2`) and dark (`#1a1a1a`) themes |
 | Base / layout | body, container, header, tabs |
+| `.theme-toggle` | Sun/moon toggle button in header |
 | `.date-card` | Recommendation cards (checkbox, name, price, desc, detail pills) |
+| `.feedback-btns` / `.fb-btn` | Thumbs up/down buttons on recommendation cards |
 | `.detail-free` / `.detail-ticket` | Green "no reservation" and orange "tickets needed" tags |
 | `.add-form` | The "Log a Date" form (inputs, star rating, buttons) |
 | `.done-entry` | Done list entries (activity, meta row, edit/delete buttons) |
@@ -51,7 +54,7 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 
 | Element | Purpose |
 |---------|---------|
-| `<header>` | Title + subtitle (date range, set dynamically) |
+| `<header>` | Title + subtitle (date range, set dynamically) + theme toggle button |
 | `.tabs` | Two tab buttons: Recommendations / Done List |
 | `#recs` | Empty div — filled by JS from `recommendations.json` |
 | `#done` | Done List panel containing: |
@@ -74,6 +77,10 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 
 | Function | What it does |
 |----------|-------------|
+| **Theme** | |
+| `getPreferredTheme()` | Returns saved theme or detects system preference (`prefers-color-scheme`) |
+| `applyTheme(theme)` | Sets `data-theme` attribute, updates toggle button icon (sun/moon) |
+| `toggleTheme()` | Switches theme and saves to localStorage |
 | `showTab(id, btn)` | Switches between Recommendations and Done List tabs |
 | `showToast(msg, isError)` | Shows a notification at the bottom of the screen |
 | **GitHub connection** | |
@@ -81,17 +88,18 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 | `saveToken()` | Saves PAT to localStorage, updates UI |
 | `removeToken()` | Removes PAT, updates UI |
 | `updateSetupUI()` | Toggles setup box between "connected" and "setup" states |
-| **GitHub API** | |
-| `fetchDoneFromGitHub()` | GET `done-dates.json` contents via GitHub API, stores `fileSha` |
-| `saveDoneToGitHub(entries)` | PUT updated JSON to `done-dates.json` via GitHub API using stored token |
+| **GitHub API helpers** | |
+| `ghGet(path)` | Shared GET helper — fetches file from GitHub Contents API, returns JSON with `sha` and `content` |
+| `ghPut(path, content, sha, msg)` | Shared PUT helper — commits file update via GitHub Contents API using stored token |
+| `fetchDoneFromGitHub()` | Uses `ghGet` to load `done-dates.json`, stores `fileSha` |
+| `saveDoneToGitHub(entries)` | Uses `ghPut` to commit updated `done-dates.json` |
 | **Recommendations** | |
 | `toggleRec(cb)` | Toggles checkbox, saves state to localStorage |
 | `reservationTag(type)` | Returns HTML for "none"/"tickets"/"required" tag |
-| `toggleFeedback(id, type)` | Thumbs up/down on a recommendation, saves to `recommendations.json` |
+| `toggleFeedback(id, type)` | Thumbs up/down on a recommendation, saves via `ghPut` to `recommendations.json` |
 | `updateFeedbackUI(id)` | Updates button active states for a card |
-| `saveRecsToGitHub()` | PUT updated `recommendations.json` via GitHub API |
 | `renderRecs(data)` | Renders all recommendation cards with feedback buttons |
-| `loadRecs()` | Fetches recs (via API if token exists, else direct fetch) |
+| `loadRecs()` | Fetches recs (via `ghGet` if token exists, else direct fetch) |
 | **Done List** | |
 | `starsHtml(rating)` | Returns filled/empty star HTML for a 1-5 rating |
 | `renderDone()` | Renders the full done list + stats from `allEntries` |
@@ -103,9 +111,10 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 | `resetForm()` | Clears all form fields, resets to "add" mode |
 
 #### Init sequence (bottom of script)
-1. `updateSetupUI()` — show connection status
-2. `loadRecs()` — fetch recommendations (via API with token, or direct), store SHA, `renderRecs()`
-3. `fetchDoneFromGitHub()` → populate `allEntries` → `renderDone()`
+1. `applyTheme(getPreferredTheme())` — set light/dark theme + listen for system changes
+2. `updateSetupUI()` — show connection status
+3. `loadRecs()` — fetch recommendations (via API with token, or direct), store SHA, `renderRecs()`
+4. `fetchDoneFromGitHub()` → populate `allEntries` → `renderDone()`
 
 ---
 
