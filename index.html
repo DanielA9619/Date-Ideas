@@ -279,17 +279,28 @@
         .liked-no  { background: #fce4ec; color: #c62828; }
         .tag-cat   { background: #f0f0f0; color: #555; }
 
-        .delete-btn {
-            background: none;
-            border: none;
-            color: #ccc;
-            cursor: pointer;
-            font-size: 1.2rem;
-            padding: 4px 8px;
-            transition: color 0.2s;
+        .done-header {
+            margin-bottom: 20px;
         }
 
-        .delete-btn:hover { color: #c62828; }
+        .done-header h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .done-subtitle {
+            color: #999;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .done-subtitle code {
+            background: #f0f0f0;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
 
         .empty-state {
             text-align: center;
@@ -602,32 +613,9 @@
 
 <!-- DONE LIST -->
 <div id="done" class="panel">
-    <div class="add-form">
-        <h3>Log a Date</h3>
-        <div class="form-row">
-            <input type="date" id="entry-date">
-            <input type="text" id="entry-activity" placeholder="What did you do?">
-        </div>
-        <div class="form-row">
-            <select id="entry-liked">
-                <option value="">Liked it?</option>
-                <option value="yes">Loved it</option>
-                <option value="no">Not really</option>
-            </select>
-            <select id="entry-category">
-                <option value="">Category (optional)</option>
-                <option value="outdoor">Outdoor</option>
-                <option value="food">Food</option>
-                <option value="arts">Arts</option>
-                <option value="cozy">Cozy</option>
-                <option value="active">Active</option>
-                <option value="unique">Unique</option>
-            </select>
-        </div>
-        <div class="form-row">
-            <input type="text" id="entry-notes" placeholder="Notes (optional)">
-        </div>
-        <button class="btn btn-add" onclick="addEntry()">Add to Done List</button>
+    <div class="done-header">
+        <h3>Done Dates</h3>
+        <p class="done-subtitle">To add a date, tell Claude Code <em>"we did [activity]"</em> or edit <code>done-dates.json</code> on GitHub.</p>
     </div>
 
     <ul class="done-list" id="done-list"></ul>
@@ -661,12 +649,9 @@
         btn.classList.add('active');
     }
 
+    // Recommendations checkboxes (localStorage for check state only)
     function toggleRec(cb) {
         cb.closest('.date-card').classList.toggle('done', cb.checked);
-        saveRecs();
-    }
-
-    function saveRecs() {
         const checked = {};
         document.querySelectorAll('.date-card').forEach(card => {
             checked[card.dataset.id] = card.querySelector('input').checked;
@@ -684,43 +669,8 @@
         });
     }
 
-    function getEntries() {
-        return JSON.parse(localStorage.getItem('doneEntries') || '[]');
-    }
-
-    function saveEntries(entries) {
-        localStorage.setItem('doneEntries', JSON.stringify(entries));
-    }
-
-    function addEntry() {
-        const activity = document.getElementById('entry-activity').value.trim();
-        if (!activity) { alert('Fill in what you did!'); return; }
-
-        const entries = getEntries();
-        entries.unshift({
-            date: document.getElementById('entry-date').value,
-            activity,
-            liked: document.getElementById('entry-liked').value,
-            category: document.getElementById('entry-category').value,
-            notes: document.getElementById('entry-notes').value.trim(),
-            id: Date.now()
-        });
-        saveEntries(entries);
-        renderEntries();
-
-        document.getElementById('entry-activity').value = '';
-        document.getElementById('entry-liked').value = '';
-        document.getElementById('entry-category').value = '';
-        document.getElementById('entry-notes').value = '';
-    }
-
-    function deleteEntry(id) {
-        saveEntries(getEntries().filter(e => e.id !== id));
-        renderEntries();
-    }
-
-    function renderEntries() {
-        const entries = getEntries();
+    // Done list — loaded from done-dates.json in the repo
+    function renderEntries(entries) {
         const list = document.getElementById('done-list');
         const empty = document.getElementById('empty-state');
         const stats = document.getElementById('stats');
@@ -746,7 +696,6 @@
                         ${e.notes ? `<span>${e.notes}</span>` : ''}
                     </div>
                 </div>
-                <button class="delete-btn" onclick="deleteEntry(${e.id})">&times;</button>
             </li>
         `).join('');
 
@@ -755,8 +704,13 @@
         document.getElementById('stat-categories').textContent = new Set(entries.map(e => e.category).filter(Boolean)).size;
     }
 
+    // Load done dates from JSON file
+    fetch('done-dates.json')
+        .then(r => r.json())
+        .then(entries => renderEntries(entries))
+        .catch(() => renderEntries([]));
+
     loadRecs();
-    renderEntries();
 </script>
 
 <!--

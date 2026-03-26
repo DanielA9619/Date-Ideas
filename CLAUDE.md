@@ -12,28 +12,44 @@ This file tells the AI agent how to update the date recommendation site.
 
 ## How the Done List Works
 
-The done list lives in the user's browser (`localStorage`), so the AI **cannot read it directly** from the code. Instead:
+Done dates are stored in **`done-dates.json`** in the repo root. The site fetches and displays this file. The AI reads it directly.
 
-1. **Ask the user** what dates they've done recently, what they liked, and what they didn't
-2. **Read the hidden preference summary** at the bottom of `index.html` (inside `<!-- PREFERENCE SUMMARY -->`) for past context
-3. **Update the preference summary** with the new info the user gives you
+### Adding a done date
 
-This way, preference data persists across sessions in the source code.
+When the user says they did a date (e.g. *"we did a sunset picnic and loved it"*), add an entry to `done-dates.json`:
+
+```json
+{
+    "date": "2026-03-28",
+    "activity": "Sunset Picnic",
+    "liked": "yes",
+    "category": "outdoor",
+    "notes": "Beautiful weather, great spot at the overlook"
+}
+```
+
+| Field | Required | Values |
+|-------|----------|--------|
+| `date` | optional | `YYYY-MM-DD` |
+| `activity` | **yes** | What they did |
+| `liked` | optional | `"yes"` or `"no"` |
+| `category` | optional | `outdoor`, `food`, `arts`, `cozy`, `active`, `unique` |
+| `notes` | optional | Any extra details |
+
+The JSON file is an array of these objects, newest first.
 
 ## Updating Recommendations
 
 When asked to refresh or update recommendations:
 
-1. **Read `index.html`** — check the hidden preference summary at the bottom and the current recommendation `data-id` values
-2. **Ask the user** about any new dates they've done since last update — what they did, liked/disliked
-3. **Update the preference summary** comment block with:
-   - New done dates added to `DONE DATES`
-   - Updated `PREFERENCES` (what they enjoy)
-   - Updated `AVOID / DIDN'T ENJOY` (what to skip)
+1. **Read `done-dates.json`** to see all past dates, what they liked, and what they didn't
+2. **Read `index.html`** to check the hidden preference summary and current `data-id` values
+3. **Update the preference summary** comment block in `index.html` with:
+   - Summary of patterns from `done-dates.json` (what they enjoy, what to avoid)
    - All old + new `data-id` values added to `PREVIOUSLY RECOMMENDED IDS`
 4. **Generate 10-14 new ideas** that:
    - Lean into categories and types they rated positively
-   - Avoid anything in `AVOID / DIDN'T ENJOY`
+   - Avoid anything similar to dates marked `"liked": "no"`
    - Never reuse any ID from `PREVIOUSLY RECOMMENDED IDS`
 5. **Replace** the recommendation cards in each category section
 
