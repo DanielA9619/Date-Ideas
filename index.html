@@ -165,6 +165,44 @@
         .detail-ticket { background: #fff3e0; color: #e65100; }
         .detail-free { background: #e8f5e9; color: #2e7d32; }
 
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 30px;
+            margin-top: 12px;
+        }
+
+        .feedback-btns {
+            display: flex;
+            gap: 4px;
+        }
+
+        .fb-btn {
+            background: #f5f5f5;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 5px 12px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.15s;
+            color: #bbb;
+        }
+
+        .fb-btn:hover { background: #eee; }
+
+        .fb-btn.up.active {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-color: #c8e6c9;
+        }
+
+        .fb-btn.down.active {
+            background: #fce4ec;
+            color: #c62828;
+            border-color: #f8bbd0;
+        }
+
         /* Done List */
         .add-form {
             background: #fff;
@@ -716,6 +754,9 @@
     }
 
     // --- Recommendations ---
+    let recsData = null;
+    let recsSha = null;
+
     function toggleRec(cb) {
         cb.closest('.date-card').classList.toggle('done', cb.checked);
         const checked = {};
@@ -731,11 +772,80 @@
         return '<div class="detail detail-free">No reservation needed</div>';
     }
 
+    async function toggleFeedback(id, type) {
+        if (!recsData) return;
+        if (!recsData.feedback) recsData.feedback = {};
+
+        // Toggle: if same type already set, remove it; otherwise set it
+        if (recsData.feedback[id] === type) {
+            delete recsData.feedback[id];
+        } else {
+            recsData.feedback[id] = type;
+        }
+
+        // Update UI immediately
+        updateFeedbackUI(id);
+
+        // Save to GitHub
+        if (getToken()) {
+            try {
+                await saveRecsToGitHub();
+            } catch (err) {
+                showToast('Feedback save failed: ' + err.message, true);
+            }
+        } else {
+            showToast('Connect GitHub to save feedback permanently.', true);
+        }
+    }
+
+    function updateFeedbackUI(id) {
+        const fb = (recsData.feedback || {})[id];
+        const card = document.querySelector(`.date-card[data-id="${id}"]`);
+        if (!card) return;
+        const upBtn = card.querySelector('.fb-btn.up');
+        const downBtn = card.querySelector('.fb-btn.down');
+        if (upBtn) upBtn.classList.toggle('active', fb === 'up');
+        if (downBtn) downBtn.classList.toggle('active', fb === 'down');
+    }
+
+    async function saveRecsToGitHub() {
+        const token = getToken();
+        if (!token) throw new Error('No GitHub token');
+
+        const content = btoa(unescape(encodeURIComponent(JSON.stringify(recsData, null, 4) + '\n')));
+        const body = {
+            message: 'Update recommendation feedback',
+            content,
+            branch: BRANCH
+        };
+        if (recsSha) body.sha = recsSha;
+
+        const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/recommendations.json`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+
+        if (!resp.ok) {
+            const err = await resp.json();
+            throw new Error(err.message || 'Failed to save');
+        }
+
+        const result = await resp.json();
+        recsSha = result.content.sha;
+    }
+
     function renderRecs(data) {
+        recsData = data;
         document.getElementById('date-range').textContent = data.dateRange;
         document.getElementById('updated').textContent = 'Updated ' + data.updated;
 
         const saved = JSON.parse(localStorage.getItem('dateRecs') || '{}');
+        const fb = data.feedback || {};
+
         document.getElementById('recs').innerHTML = data.categories.map(cat => `
             <div class="category">
                 <div class="category-title">${cat.title}</div>
@@ -753,6 +863,12 @@
                             <div class="detail"><span class="label">Duration</span> ${d.duration}</div>
                             <div class="detail"><span class="label">Where</span> ${d.where}</div>
                             ${reservationTag(d.reservation)}
+                        </div>
+                        <div class="card-footer">
+                            <div class="feedback-btns">
+                                <button class="fb-btn up${fb[d.id] === 'up' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'up')" title="Interested">&#128077;</button>
+                                <button class="fb-btn down${fb[d.id] === 'down' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'down')" title="Not for us">&#128078;</button>
+                            </div>
                         </div>
                     </div>
                 `).join('')}
@@ -932,10 +1048,30 @@
     // --- Init ---
     updateSetupUI();
 
-    fetch('recommendations.json')
-        .then(r => r.json())
-        .then(data => renderRecs(data))
-        .catch(() => document.getElementById('recs').innerHTML = '<div class="empty-state">Could not load recommendations.</div>');
+    // Fetch recs — use GitHub API if token exists (to get SHA for feedback saves), fall back to direct fetch
+    async function loadRecs() {
+        try {
+            const token = getToken();
+            if (token) {
+                const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/recommendations.json?ref=${BRANCH}`);
+                if (resp.ok) {
+                    const file = await resp.json();
+                    recsSha = file.sha;
+                    const data = JSON.parse(atob(file.content));
+                    renderRecs(data);
+                    return;
+                }
+            }
+            // Fallback: direct fetch (works without token, but can't save feedback)
+            const resp = await fetch('recommendations.json');
+            const data = await resp.json();
+            renderRecs(data);
+        } catch {
+            document.getElementById('recs').innerHTML = '<div class="empty-state">Could not load recommendations.</div>';
+        }
+    }
+
+    loadRecs();
 
     fetchDoneFromGitHub().then(entries => {
         allEntries = entries;

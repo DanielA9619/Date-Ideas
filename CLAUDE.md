@@ -54,20 +54,37 @@ When the user says they did a date (e.g. *"we did a sunset picnic and loved it"*
 - **2** = "Meh, not great" — reduce similar ideas
 - **1** = "Didn't enjoy" — avoid this type
 
+## Recommendation Feedback
+
+Users can thumbs-up or thumbs-down individual recommendations without doing them. This is stored in the `feedback` object in `recommendations.json`:
+
+```json
+"feedback": {
+    "sunset-picnic": "up",
+    "game-night": "down"
+}
+```
+
+- `"up"` = "This idea appeals to me" — suggest more like it
+- `"down"` = "Not interested" — avoid similar ideas
+
 ## Updating Recommendations
 
 When asked to refresh or update recommendations:
 
 1. **Read `done-dates.json`** to see all past dates, what they liked, and what they didn't
-2. **Read `recommendations.json`** to check `previousIds` (never reuse these)
+2. **Read `recommendations.json`** — check `previousIds`, and read the `feedback` object
 3. **Generate 10-14 new ideas** that:
-   - Heavily favor categories/styles with ratings of 4-5
+   - Heavily favor categories/styles with done-date ratings of 4-5
+   - Lean into ideas similar to feedback `"up"` thumbs
+   - Avoid ideas similar to feedback `"down"` thumbs
    - Include some variety from categories rated 3
-   - Avoid anything similar to dates rated 1-2
+   - Avoid anything similar to done dates rated 1-2
    - Never reuse any ID from `previousIds`
 4. **Replace the `categories` array** in `recommendations.json` with new ideas
-5. **Add all new IDs** to the `previousIds` array (keep old ones too)
-6. **Update `dateRange`** and **`updated`** fields
+5. **Clear the `feedback` object** (reset to `{}`) since it was for the old set
+6. **Add all new IDs** to the `previousIds` array (keep old ones too)
+7. **Update `dateRange`** and **`updated`** fields
 
 ## recommendations.json Structure
 
@@ -75,6 +92,7 @@ When asked to refresh or update recommendations:
 {
     "dateRange": "March 26 - April 8, 2026",
     "updated": "March 26, 2026",
+    "feedback": {},
     "previousIds": ["sunset-picnic", "stargazing-drive", "..."],
     "categories": [
         {

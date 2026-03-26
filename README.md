@@ -67,6 +67,8 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 - `allEntries` — array of done date objects (source of truth at runtime)
 - `fileSha` — current SHA of `done-dates.json` (needed for GitHub API updates)
 - `editingIndex` — which entry is being edited (`-1` = adding new)
+- `recsData` — full recommendations.json object (kept in memory for feedback saves)
+- `recsSha` — current SHA of `recommendations.json`
 
 #### Key functions
 
@@ -85,7 +87,11 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 | **Recommendations** | |
 | `toggleRec(cb)` | Toggles checkbox, saves state to localStorage |
 | `reservationTag(type)` | Returns HTML for "none"/"tickets"/"required" tag |
-| `renderRecs(data)` | Renders all recommendation cards from JSON data |
+| `toggleFeedback(id, type)` | Thumbs up/down on a recommendation, saves to `recommendations.json` |
+| `updateFeedbackUI(id)` | Updates button active states for a card |
+| `saveRecsToGitHub()` | PUT updated `recommendations.json` via GitHub API |
+| `renderRecs(data)` | Renders all recommendation cards with feedback buttons |
+| `loadRecs()` | Fetches recs (via API if token exists, else direct fetch) |
 | **Done List** | |
 | `starsHtml(rating)` | Returns filled/empty star HTML for a 1-5 rating |
 | `renderDone()` | Renders the full done list + stats from `allEntries` |
@@ -98,7 +104,7 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 
 #### Init sequence (bottom of script)
 1. `updateSetupUI()` — show connection status
-2. Fetch `recommendations.json` → `renderRecs()`
+2. `loadRecs()` — fetch recommendations (via API with token, or direct), store SHA, `renderRecs()`
 3. `fetchDoneFromGitHub()` → populate `allEntries` → `renderDone()`
 
 ---
@@ -109,6 +115,7 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 {
     "dateRange": "March 26 - April 8, 2026",
     "updated": "March 26, 2026",
+    "feedback": {"sunset-picnic": "up", "game-night": "down"},
     "previousIds": ["sunset-picnic", "..."],
     "categories": [
         {
@@ -131,9 +138,10 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 }
 ```
 
+- `feedback` — user thumbs up/down on ideas: `"up"` = interested, `"down"` = not for us. AI reads this, then clears it on refresh.
 - `previousIds` — tracks all ever-used IDs to prevent repeats
 - `reservation` — controls tag color: `"none"` = green, `"tickets"`/`"required"` = orange
-- The AI replaces `categories` and appends new IDs to `previousIds` on each refresh
+- The AI replaces `categories`, clears `feedback`, and appends new IDs to `previousIds` on each refresh
 
 ## done-dates.json
 
