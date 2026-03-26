@@ -1,0 +1,197 @@
+{
+    "dateRange": "March 26 - April 8, 2026",
+    "updated": "March 26, 2026",
+    "previousIds": [
+        "sunset-picnic", "stargazing-drive", "neighborhood-walk",
+        "cooking-challenge", "farmers-market", "dessert-hop",
+        "bookstore-coffee", "live-music", "pottery-art",
+        "spa-night", "movie-marathon", "game-night",
+        "hike-lunch", "thrift-challenge"
+    ],
+    "categories": [
+        {
+            "title": "Adventures & Outdoors",
+            "dates": [
+                {
+                    "id": "sunset-picnic",
+                    "name": "Sunset Picnic",
+                    "price": "$15 - $30",
+                    "desc": "Pack a spread — cheese board, fruit, wine or sparkling water — and find a scenic overlook or park. Golden hour makes everything feel special.",
+                    "when": "Any evening",
+                    "start": "~1 hr before sunset",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "Local park / overlook",
+                    "reservation": "none"
+                },
+                {
+                    "id": "stargazing-drive",
+                    "name": "Stargazing + Late Night Drive",
+                    "price": "$5 - $15",
+                    "desc": "Drive somewhere with less light pollution. Bring blankets, hot chocolate, and a stargazing app. Make a playlist for the drive.",
+                    "when": "Fri or Sat night",
+                    "start": "9:00 PM+",
+                    "duration": "2 - 3 hrs",
+                    "where": "Rural area / state park",
+                    "reservation": "none"
+                },
+                {
+                    "id": "neighborhood-walk",
+                    "name": "Neighborhood Exploration Walk",
+                    "price": "Free - $20",
+                    "desc": "Pick a part of town you've never wandered. No plan — pop into shops, try a random restaurant, photograph cool things you find.",
+                    "when": "Any afternoon",
+                    "start": "Flexible",
+                    "duration": "2 - 3 hrs",
+                    "where": "New neighborhood",
+                    "reservation": "none"
+                }
+            ]
+        },
+        {
+            "title": "Food & Dining",
+            "dates": [
+                {
+                    "id": "cooking-challenge",
+                    "name": "Cooking Challenge Night",
+                    "price": "$20 - $40",
+                    "desc": "Pick a cuisine neither of you has cooked before (Thai, Ethiopian, Korean). Shop for ingredients together, cook side by side, rate each other's dishes.",
+                    "when": "Any evening",
+                    "start": "5:00 PM (shop + cook)",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Grocery store + home",
+                    "reservation": "none"
+                },
+                {
+                    "id": "farmers-market",
+                    "name": "Farmers Market + Mystery Recipe",
+                    "price": "$15 - $35",
+                    "desc": "Each person picks 3 surprise ingredients at a farmers market, then come home and cook a meal using all of them.",
+                    "when": "Sat or Sun morning",
+                    "start": "9:00 - 10:00 AM",
+                    "duration": "3 - 4 hrs",
+                    "where": "Local farmers market + home",
+                    "reservation": "none"
+                },
+                {
+                    "id": "dessert-hop",
+                    "name": "Dessert Hop",
+                    "price": "$20 - $40",
+                    "desc": "Skip dinner — go straight to dessert. Visit 3 different spots: a bakery, an ice cream shop, and a fancy dessert bar. Rate and compare all night.",
+                    "when": "Any evening",
+                    "start": "7:00 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Downtown / walkable area",
+                    "reservation": "none"
+                }
+            ]
+        },
+        {
+            "title": "Arts & Culture",
+            "dates": [
+                {
+                    "id": "bookstore-coffee",
+                    "name": "Bookstore & Coffee Date",
+                    "price": "$10 - $30",
+                    "desc": "Browse a bookstore together. Each pick a book for the other person, then read and sip coffee at a nearby cafe.",
+                    "when": "Weekend afternoon",
+                    "start": "1:00 - 2:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Local bookstore + cafe",
+                    "reservation": "none"
+                },
+                {
+                    "id": "live-music",
+                    "name": "Live Music or Open Mic Night",
+                    "price": "$10 - $50",
+                    "desc": "Check local listings for a live show, jazz bar, or open mic. Even better if it's a genre you wouldn't normally pick.",
+                    "when": "Fri or Sat night",
+                    "start": "7:00 - 8:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Local venue / bar",
+                    "reservation": "tickets"
+                },
+                {
+                    "id": "pottery-art",
+                    "name": "Pottery / Art Class",
+                    "price": "$30 - $70 per person",
+                    "desc": "Look up a local paint-and-sip, pottery studio, or craft workshop. Making something together is a great bonding experience — keep what you make as a memento.",
+                    "when": "Weekend",
+                    "start": "Check studio schedule",
+                    "duration": "2 - 3 hrs",
+                    "where": "Local studio",
+                    "reservation": "required"
+                }
+            ]
+        },
+        {
+            "title": "Cozy / Stay-In",
+            "dates": [
+                {
+                    "id": "spa-night",
+                    "name": "At-Home Spa Night",
+                    "price": "$10 - $25",
+                    "desc": "Face masks, candles, massage oils, calming playlist. Take turns giving each other massages. Make fancy infused water or mocktails.",
+                    "when": "Any evening",
+                    "start": "7:00 - 8:00 PM",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "Home",
+                    "reservation": "none"
+                },
+                {
+                    "id": "movie-marathon",
+                    "name": "Movie Marathon Night",
+                    "price": "Free - $15",
+                    "desc": "Pick a trilogy or a director's collection. Build a blanket fort, make themed snacks to match the movies, and fully commit to the couch.",
+                    "when": "Fri or Sat night",
+                    "start": "6:00 PM",
+                    "duration": "4 - 6 hrs",
+                    "where": "Home",
+                    "reservation": "none"
+                },
+                {
+                    "id": "game-night",
+                    "name": "Game Night",
+                    "price": "Free - $10",
+                    "desc": "Board games, card games, or video games with a twist — loser of each round does a dare or answers a spicy question.",
+                    "when": "Any evening",
+                    "start": "Flexible",
+                    "duration": "2 - 3 hrs",
+                    "where": "Home",
+                    "reservation": "none"
+                }
+            ]
+        },
+        {
+            "title": "Active & Sporty",
+            "dates": [
+                {
+                    "id": "hike-lunch",
+                    "name": "Hike + Hidden Gem Lunch",
+                    "price": "$15 - $35",
+                    "desc": "Find a scenic trail nearby and hike in the morning, then reward yourselves with lunch at a hole-in-the-wall restaurant you've never tried.",
+                    "when": "Weekend morning",
+                    "start": "8:00 - 9:00 AM",
+                    "duration": "4 - 5 hrs",
+                    "where": "Local trail + nearby restaurant",
+                    "reservation": "none"
+                }
+            ]
+        },
+        {
+            "title": "Unique / Novelty",
+            "dates": [
+                {
+                    "id": "thrift-challenge",
+                    "name": "Thrift Store Challenge",
+                    "price": "$10 - $15 each",
+                    "desc": "Each person gets $10-15. You have 30 minutes to find the funniest/best outfit for the other person. Wear the outfits to dinner.",
+                    "when": "Weekend afternoon",
+                    "start": "2:00 - 3:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Thrift store + dinner spot",
+                    "reservation": "none"
+                }
+            ]
+        }
+    ]
+}

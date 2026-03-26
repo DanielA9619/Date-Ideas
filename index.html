@@ -22,7 +22,6 @@
             padding: 20px;
         }
 
-        /* Header */
         header {
             text-align: center;
             padding: 40px 20px 20px;
@@ -42,7 +41,6 @@
             font-weight: 400;
         }
 
-        /* Tabs */
         .tabs {
             display: flex;
             justify-content: center;
@@ -77,7 +75,6 @@
         .panel { display: none; }
         .panel.active { display: block; }
 
-        /* Category */
         .category { margin-bottom: 32px; }
 
         .category-title {
@@ -90,7 +87,6 @@
             padding-left: 4px;
         }
 
-        /* Date Cards */
         .date-card {
             background: #fff;
             border-radius: 12px;
@@ -177,65 +173,26 @@
         }
 
         /* Done List */
-        .add-form {
-            background: #fff;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 24px;
-            border: 1px solid #eee;
-        }
+        .done-header { margin-bottom: 20px; }
 
-        .add-form h3 {
+        .done-header h3 {
             font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 6px;
         }
 
-        .form-row {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
+        .done-subtitle {
+            color: #999;
+            font-size: 0.8rem;
+            line-height: 1.5;
         }
 
-        .form-row input, .form-row select {
-            padding: 10px 12px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-            background: #fafafa;
-            color: #333;
-            font-size: 0.85rem;
-            font-family: inherit;
-            flex: 1;
-            min-width: 140px;
-            transition: border-color 0.2s;
+        .done-subtitle code {
+            background: #f0f0f0;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
         }
-
-        .form-row input:focus, .form-row select:focus {
-            outline: none;
-            border-color: #111;
-        }
-
-        .form-row input::placeholder { color: #bbb; }
-
-        .btn {
-            padding: 11px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            font-family: inherit;
-            transition: all 0.2s;
-        }
-
-        .btn-add {
-            background: #111;
-            color: #fff;
-            width: 100%;
-        }
-
-        .btn-add:hover { background: #333; }
 
         .done-list { list-style: none; }
 
@@ -278,29 +235,6 @@
         .liked-yes { background: #e8f5e9; color: #2e7d32; }
         .liked-no  { background: #fce4ec; color: #c62828; }
         .tag-cat   { background: #f0f0f0; color: #555; }
-
-        .done-header {
-            margin-bottom: 20px;
-        }
-
-        .done-header h3 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .done-subtitle {
-            color: #999;
-            font-size: 0.8rem;
-            line-height: 1.5;
-        }
-
-        .done-subtitle code {
-            background: #f0f0f0;
-            padding: 1px 6px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-        }
 
         .empty-state {
             text-align: center;
@@ -348,7 +282,7 @@
 
 <header>
     <h1>Date Ideas</h1>
-    <p class="subtitle">March 26 - April 8, 2026</p>
+    <p class="subtitle" id="date-range"></p>
 </header>
 
 <div class="container">
@@ -359,257 +293,7 @@
 </div>
 
 <!-- RECOMMENDATIONS -->
-<div id="recs" class="panel active">
-
-    <div class="category">
-        <div class="category-title">Adventures & Outdoors</div>
-
-        <div class="date-card" data-id="sunset-picnic">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Sunset Picnic</div>
-                <div class="price">$15 - $30</div>
-            </div>
-            <div class="desc">Pack a spread — cheese board, fruit, wine or sparkling water — and find a scenic overlook or park. Golden hour makes everything feel special.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Any evening</div>
-                <div class="detail"><span class="label">Start</span> ~1 hr before sunset</div>
-                <div class="detail"><span class="label">Duration</span> 1.5 - 2 hrs</div>
-                <div class="detail"><span class="label">Where</span> Local park / overlook</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-
-        <div class="date-card" data-id="stargazing-drive">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Stargazing + Late Night Drive</div>
-                <div class="price">$5 - $15</div>
-            </div>
-            <div class="desc">Drive somewhere with less light pollution. Bring blankets, hot chocolate, and a stargazing app. Make a playlist for the drive.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Fri or Sat night</div>
-                <div class="detail"><span class="label">Start</span> 9:00 PM+</div>
-                <div class="detail"><span class="label">Duration</span> 2 - 3 hrs</div>
-                <div class="detail"><span class="label">Where</span> Rural area / state park</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-
-        <div class="date-card" data-id="neighborhood-walk">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Neighborhood Exploration Walk</div>
-                <div class="price">Free - $20</div>
-            </div>
-            <div class="desc">Pick a part of town you've never wandered. No plan — pop into shops, try a random restaurant, photograph cool things you find.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Any afternoon</div>
-                <div class="detail"><span class="label">Start</span> Flexible</div>
-                <div class="detail"><span class="label">Duration</span> 2 - 3 hrs</div>
-                <div class="detail"><span class="label">Where</span> New neighborhood</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="category">
-        <div class="category-title">Food & Dining</div>
-
-        <div class="date-card" data-id="cooking-challenge">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Cooking Challenge Night</div>
-                <div class="price">$20 - $40</div>
-            </div>
-            <div class="desc">Pick a cuisine neither of you has cooked before (Thai, Ethiopian, Korean). Shop for ingredients together, cook side by side, rate each other's dishes.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Any evening</div>
-                <div class="detail"><span class="label">Start</span> 5:00 PM (shop + cook)</div>
-                <div class="detail"><span class="label">Duration</span> 2.5 - 3 hrs</div>
-                <div class="detail"><span class="label">Where</span> Grocery store + home</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-
-        <div class="date-card" data-id="farmers-market">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Farmers Market + Mystery Recipe</div>
-                <div class="price">$15 - $35</div>
-            </div>
-            <div class="desc">Each person picks 3 surprise ingredients at a farmers market, then come home and cook a meal using all of them.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Sat or Sun morning</div>
-                <div class="detail"><span class="label">Start</span> 9:00 - 10:00 AM</div>
-                <div class="detail"><span class="label">Duration</span> 3 - 4 hrs</div>
-                <div class="detail"><span class="label">Where</span> Local farmers market + home</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-
-        <div class="date-card" data-id="dessert-hop">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Dessert Hop</div>
-                <div class="price">$20 - $40</div>
-            </div>
-            <div class="desc">Skip dinner — go straight to dessert. Visit 3 different spots: a bakery, an ice cream shop, and a fancy dessert bar. Rate and compare all night.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Any evening</div>
-                <div class="detail"><span class="label">Start</span> 7:00 PM</div>
-                <div class="detail"><span class="label">Duration</span> 2 - 2.5 hrs</div>
-                <div class="detail"><span class="label">Where</span> Downtown / walkable area</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="category">
-        <div class="category-title">Arts & Culture</div>
-
-        <div class="date-card" data-id="bookstore-coffee">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Bookstore & Coffee Date</div>
-                <div class="price">$10 - $30</div>
-            </div>
-            <div class="desc">Browse a bookstore together. Each pick a book for the other person, then read and sip coffee at a nearby cafe.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Weekend afternoon</div>
-                <div class="detail"><span class="label">Start</span> 1:00 - 2:00 PM</div>
-                <div class="detail"><span class="label">Duration</span> 2 - 3 hrs</div>
-                <div class="detail"><span class="label">Where</span> Local bookstore + cafe</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-
-        <div class="date-card" data-id="live-music">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Live Music or Open Mic Night</div>
-                <div class="price">$10 - $50</div>
-            </div>
-            <div class="desc">Check local listings for a live show, jazz bar, or open mic. Even better if it's a genre you wouldn't normally pick.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Fri or Sat night</div>
-                <div class="detail"><span class="label">Start</span> 7:00 - 8:00 PM</div>
-                <div class="detail"><span class="label">Duration</span> 2 - 3 hrs</div>
-                <div class="detail"><span class="label">Where</span> Local venue / bar</div>
-                <div class="detail detail-ticket">Tickets may be needed</div>
-            </div>
-        </div>
-
-        <div class="date-card" data-id="pottery-art">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Pottery / Art Class</div>
-                <div class="price">$30 - $70 per person</div>
-            </div>
-            <div class="desc">Look up a local paint-and-sip, pottery studio, or craft workshop. Making something together is a great bonding experience — keep what you make as a memento.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Weekend</div>
-                <div class="detail"><span class="label">Start</span> Check studio schedule</div>
-                <div class="detail"><span class="label">Duration</span> 2 - 3 hrs</div>
-                <div class="detail"><span class="label">Where</span> Local studio</div>
-                <div class="detail detail-ticket">Reservation required</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="category">
-        <div class="category-title">Cozy / Stay-In</div>
-
-        <div class="date-card" data-id="spa-night">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">At-Home Spa Night</div>
-                <div class="price">$10 - $25</div>
-            </div>
-            <div class="desc">Face masks, candles, massage oils, calming playlist. Take turns giving each other massages. Make fancy infused water or mocktails.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Any evening</div>
-                <div class="detail"><span class="label">Start</span> 7:00 - 8:00 PM</div>
-                <div class="detail"><span class="label">Duration</span> 1.5 - 2 hrs</div>
-                <div class="detail"><span class="label">Where</span> Home</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-
-        <div class="date-card" data-id="movie-marathon">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Movie Marathon Night</div>
-                <div class="price">Free - $15</div>
-            </div>
-            <div class="desc">Pick a trilogy or a director's collection. Build a blanket fort, make themed snacks to match the movies, and fully commit to the couch.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Fri or Sat night</div>
-                <div class="detail"><span class="label">Start</span> 6:00 PM</div>
-                <div class="detail"><span class="label">Duration</span> 4 - 6 hrs</div>
-                <div class="detail"><span class="label">Where</span> Home</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-
-        <div class="date-card" data-id="game-night">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Game Night</div>
-                <div class="price">Free - $10</div>
-            </div>
-            <div class="desc">Board games, card games, or video games with a twist — loser of each round does a dare or answers a spicy question.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Any evening</div>
-                <div class="detail"><span class="label">Start</span> Flexible</div>
-                <div class="detail"><span class="label">Duration</span> 2 - 3 hrs</div>
-                <div class="detail"><span class="label">Where</span> Home</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="category">
-        <div class="category-title">Active & Sporty</div>
-
-        <div class="date-card" data-id="hike-lunch">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Hike + Hidden Gem Lunch</div>
-                <div class="price">$15 - $35</div>
-            </div>
-            <div class="desc">Find a scenic trail nearby and hike in the morning, then reward yourselves with lunch at a hole-in-the-wall restaurant you've never tried.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Weekend morning</div>
-                <div class="detail"><span class="label">Start</span> 8:00 - 9:00 AM</div>
-                <div class="detail"><span class="label">Duration</span> 4 - 5 hrs</div>
-                <div class="detail"><span class="label">Where</span> Local trail + nearby restaurant</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="category">
-        <div class="category-title">Unique / Novelty</div>
-
-        <div class="date-card" data-id="thrift-challenge">
-            <div class="card-header">
-                <input type="checkbox" onchange="toggleRec(this)">
-                <div class="name">Thrift Store Challenge</div>
-                <div class="price">$10 - $15 each</div>
-            </div>
-            <div class="desc">Each person gets $10-15. You have 30 minutes to find the funniest/best outfit for the other person. Wear the outfits to dinner.</div>
-            <div class="details">
-                <div class="detail"><span class="label">When</span> Weekend afternoon</div>
-                <div class="detail"><span class="label">Start</span> 2:00 - 3:00 PM</div>
-                <div class="detail"><span class="label">Duration</span> 2 - 3 hrs</div>
-                <div class="detail"><span class="label">Where</span> Thrift store + dinner spot</div>
-                <div class="detail detail-free">No reservation needed</div>
-            </div>
-        </div>
-    </div>
-
-</div>
+<div id="recs" class="panel active"></div>
 
 <!-- DONE LIST -->
 <div id="done" class="panel">
@@ -637,7 +321,7 @@
     </div>
 </div>
 
-<p class="updated">Updated March 26, 2026</p>
+<p class="updated" id="updated"></p>
 
 </div>
 
@@ -649,7 +333,7 @@
         btn.classList.add('active');
     }
 
-    // Recommendations checkboxes (localStorage for check state only)
+    // Recommendations — loaded from recommendations.json
     function toggleRec(cb) {
         cb.closest('.date-card').classList.toggle('done', cb.checked);
         const checked = {};
@@ -659,18 +343,45 @@
         localStorage.setItem('dateRecs', JSON.stringify(checked));
     }
 
-    function loadRecs() {
-        const saved = JSON.parse(localStorage.getItem('dateRecs') || '{}');
-        document.querySelectorAll('.date-card').forEach(card => {
-            if (saved[card.dataset.id]) {
-                card.querySelector('input').checked = true;
-                card.classList.add('done');
-            }
-        });
+    function reservationTag(type) {
+        if (type === 'tickets') return '<div class="detail detail-ticket">Tickets may be needed</div>';
+        if (type === 'required') return '<div class="detail detail-ticket">Reservation required</div>';
+        return '<div class="detail detail-free">No reservation needed</div>';
     }
 
-    // Done list — loaded from done-dates.json in the repo
-    function renderEntries(entries) {
+    function renderRecs(data) {
+        document.getElementById('date-range').textContent = data.dateRange;
+        document.getElementById('updated').textContent = 'Updated ' + data.updated;
+
+        const saved = JSON.parse(localStorage.getItem('dateRecs') || '{}');
+        const panel = document.getElementById('recs');
+
+        panel.innerHTML = data.categories.map(cat => `
+            <div class="category">
+                <div class="category-title">${cat.title}</div>
+                ${cat.dates.map(d => `
+                    <div class="date-card${saved[d.id] ? ' done' : ''}" data-id="${d.id}">
+                        <div class="card-header">
+                            <input type="checkbox" onchange="toggleRec(this)"${saved[d.id] ? ' checked' : ''}>
+                            <div class="name">${d.name}</div>
+                            <div class="price">${d.price}</div>
+                        </div>
+                        <div class="desc">${d.desc}</div>
+                        <div class="details">
+                            <div class="detail"><span class="label">When</span> ${d.when}</div>
+                            <div class="detail"><span class="label">Start</span> ${d.start}</div>
+                            <div class="detail"><span class="label">Duration</span> ${d.duration}</div>
+                            <div class="detail"><span class="label">Where</span> ${d.where}</div>
+                            ${reservationTag(d.reservation)}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `).join('');
+    }
+
+    // Done list — loaded from done-dates.json
+    function renderDone(entries) {
         const list = document.getElementById('done-list');
         const empty = document.getElementById('empty-state');
         const stats = document.getElementById('stats');
@@ -704,39 +415,17 @@
         document.getElementById('stat-categories').textContent = new Set(entries.map(e => e.category).filter(Boolean)).size;
     }
 
-    // Load done dates from JSON file
+    // Load both JSON files
+    fetch('recommendations.json')
+        .then(r => r.json())
+        .then(data => renderRecs(data))
+        .catch(() => document.getElementById('recs').innerHTML = '<div class="empty-state">Could not load recommendations.</div>');
+
     fetch('done-dates.json')
         .then(r => r.json())
-        .then(entries => renderEntries(entries))
-        .catch(() => renderEntries([]));
-
-    loadRecs();
+        .then(entries => renderDone(entries))
+        .catch(() => renderDone([]));
 </script>
-
-<!--
-===========================================================
-PREFERENCE SUMMARY (hidden — for AI agent use only)
-===========================================================
-This section is read and updated by Claude Code.
-Users: you never see this on the site, it's just in the source.
-
-DONE DATES:
-(none yet)
-
-PREFERENCES:
-(none yet — no dates logged)
-
-AVOID / DIDN'T ENJOY:
-(none yet)
-
-PREVIOUSLY RECOMMENDED IDS:
-sunset-picnic, stargazing-drive, neighborhood-walk, cooking-challenge,
-farmers-market, dessert-hop, bookstore-coffee, live-music, pottery-art,
-spa-night, movie-marathon, game-night, hike-lunch, thrift-challenge
-
-LAST UPDATED: 2026-03-26
-===========================================================
--->
 
 </body>
 </html>
