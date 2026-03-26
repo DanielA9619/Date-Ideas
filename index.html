@@ -173,26 +173,120 @@
         }
 
         /* Done List */
-        .done-header { margin-bottom: 20px; }
+        .add-form {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid #eee;
+        }
 
-        .done-header h3 {
+        .add-form h3 {
             font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 16px;
         }
 
-        .done-subtitle {
+        .form-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .form-row input, .form-row select {
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            background: #fafafa;
+            color: #333;
+            font-size: 0.85rem;
+            font-family: inherit;
+            flex: 1;
+            min-width: 140px;
+            transition: border-color 0.2s;
+        }
+
+        .form-row input:focus, .form-row select:focus {
+            outline: none;
+            border-color: #111;
+        }
+
+        .form-row input::placeholder { color: #bbb; }
+
+        /* Star rating */
+        .star-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .star-rating-label {
+            font-size: 0.85rem;
             color: #999;
-            font-size: 0.8rem;
-            line-height: 1.5;
+            white-space: nowrap;
         }
 
-        .done-subtitle code {
-            background: #f0f0f0;
-            padding: 1px 6px;
-            border-radius: 4px;
-            font-size: 0.75rem;
+        .stars {
+            display: flex;
+            gap: 2px;
         }
+
+        .stars input { display: none; }
+
+        .stars label {
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: #ddd;
+            transition: color 0.15s;
+            line-height: 1;
+        }
+
+        .stars label:hover,
+        .stars label:hover ~ label,
+        .stars input:checked ~ label {
+            color: #f5b800;
+        }
+
+        /* Reverse order trick for CSS hover */
+        .stars {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        .stars label:hover ~ label {
+            color: #f5b800;
+        }
+
+        .btn {
+            padding: 11px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .btn-add {
+            background: #111;
+            color: #fff;
+            width: 100%;
+        }
+
+        .btn-add:hover { background: #333; }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #555;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .btn-secondary:hover { background: #e5e5e5; }
 
         .done-list { list-style: none; }
 
@@ -205,6 +299,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .done-entry.pending {
+            border-left: 3px solid #f5b800;
         }
 
         .done-entry .left { flex: 1; }
@@ -224,6 +322,12 @@
             align-items: center;
         }
 
+        .star-display {
+            color: #f5b800;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
         .tag {
             display: inline-block;
             padding: 2px 8px;
@@ -232,9 +336,20 @@
             font-weight: 600;
         }
 
-        .liked-yes { background: #e8f5e9; color: #2e7d32; }
-        .liked-no  { background: #fce4ec; color: #c62828; }
         .tag-cat   { background: #f0f0f0; color: #555; }
+        .tag-pending { background: #fff8e1; color: #f5a623; }
+
+        .delete-btn {
+            background: none;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 4px 8px;
+            transition: color 0.2s;
+        }
+
+        .delete-btn:hover { color: #c62828; }
 
         .empty-state {
             text-align: center;
@@ -250,7 +365,7 @@
             margin-top: 20px;
             border: 1px solid #eee;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             gap: 16px;
             text-align: center;
         }
@@ -276,6 +391,37 @@
             margin-top: 40px;
             padding-bottom: 24px;
         }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #111;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+            z-index: 100;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .sync-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #bbb;
+            margin-top: 16px;
+        }
+
+        .sync-note a {
+            color: #999;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -297,9 +443,38 @@
 
 <!-- DONE LIST -->
 <div id="done" class="panel">
-    <div class="done-header">
-        <h3>Done Dates</h3>
-        <p class="done-subtitle">To add a date, tell Claude Code <em>"we did [activity]"</em> or edit <code>done-dates.json</code> on GitHub.</p>
+    <div class="add-form">
+        <h3>Log a Date</h3>
+        <div class="form-row">
+            <input type="date" id="entry-date">
+            <input type="text" id="entry-activity" placeholder="What did you do?">
+        </div>
+        <div class="form-row">
+            <div class="star-rating">
+                <span class="star-rating-label">Rating</span>
+                <div class="stars" id="star-input">
+                    <input type="radio" name="rating" id="star5" value="5"><label for="star5">&#9733;</label>
+                    <input type="radio" name="rating" id="star4" value="4"><label for="star4">&#9733;</label>
+                    <input type="radio" name="rating" id="star3" value="3"><label for="star3">&#9733;</label>
+                    <input type="radio" name="rating" id="star2" value="2"><label for="star2">&#9733;</label>
+                    <input type="radio" name="rating" id="star1" value="1"><label for="star1">&#9733;</label>
+                </div>
+            </div>
+            <select id="entry-category">
+                <option value="">Category (optional)</option>
+                <option value="outdoor">Outdoor</option>
+                <option value="food">Food</option>
+                <option value="arts">Arts</option>
+                <option value="cozy">Cozy</option>
+                <option value="active">Active</option>
+                <option value="unique">Unique</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <input type="text" id="entry-notes" placeholder="Notes (optional)">
+        </div>
+        <button class="btn btn-add" onclick="addEntry()">Add to Done List</button>
+        <button class="btn btn-secondary" onclick="exportDone()">Copy Done List for GitHub</button>
     </div>
 
     <ul class="done-list" id="done-list"></ul>
@@ -311,19 +486,23 @@
             <div class="stat-label">Total</div>
         </div>
         <div>
-            <div class="stat-num" id="stat-liked">0</div>
-            <div class="stat-label">Loved</div>
+            <div class="stat-num" id="stat-avg">-</div>
+            <div class="stat-label">Avg Rating</div>
         </div>
         <div>
             <div class="stat-num" id="stat-categories">0</div>
             <div class="stat-label">Categories</div>
         </div>
     </div>
+
+    <p class="sync-note">Entries added here are saved in your browser. Use <strong>Copy Done List for GitHub</strong> to sync them to the repo so the AI can see them.</p>
 </div>
 
 <p class="updated" id="updated"></p>
 
 </div>
+
+<div class="toast" id="toast"></div>
 
 <script>
     function showTab(id, btn) {
@@ -333,7 +512,14 @@
         btn.classList.add('active');
     }
 
-    // Recommendations — loaded from recommendations.json
+    function showToast(msg) {
+        const t = document.getElementById('toast');
+        t.textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    // --- Recommendations ---
     function toggleRec(cb) {
         cb.closest('.date-card').classList.toggle('done', cb.checked);
         const checked = {};
@@ -380,8 +566,27 @@
         `).join('');
     }
 
-    // Done list — loaded from done-dates.json
-    function renderDone(entries) {
+    // --- Done List ---
+    let savedEntries = [];  // from done-dates.json
+    let localEntries = JSON.parse(localStorage.getItem('localDoneEntries') || '[]');
+
+    function starsHtml(rating) {
+        if (!rating) return '';
+        const filled = '&#9733;'.repeat(rating);
+        const empty = '&#9734;'.repeat(5 - rating);
+        return `<span class="star-display">${filled}${empty}</span>`;
+    }
+
+    function getAllEntries() {
+        // Local entries first (pending), then saved entries
+        return [
+            ...localEntries.map(e => ({ ...e, _pending: true })),
+            ...savedEntries
+        ];
+    }
+
+    function renderDone() {
+        const entries = getAllEntries();
         const list = document.getElementById('done-list');
         const empty = document.getElementById('empty-state');
         const stats = document.getElementById('stats');
@@ -397,25 +602,93 @@
         stats.style.display = 'grid';
 
         list.innerHTML = entries.map(e => `
-            <li class="done-entry">
+            <li class="done-entry${e._pending ? ' pending' : ''}">
                 <div class="left">
-                    <div class="activity">${e.activity}</div>
+                    <div class="activity">${e.activity}${e._pending ? ' <span class="tag tag-pending">unsaved</span>' : ''}</div>
                     <div class="meta">
                         ${e.date ? `<span>${new Date(e.date + 'T00:00').toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</span>` : ''}
-                        ${e.liked ? `<span class="tag ${e.liked === 'yes' ? 'liked-yes' : 'liked-no'}">${e.liked === 'yes' ? 'Loved it' : 'Meh'}</span>` : ''}
+                        ${e.rating ? starsHtml(e.rating) : ''}
                         ${e.category ? `<span class="tag tag-cat">${e.category}</span>` : ''}
                         ${e.notes ? `<span>${e.notes}</span>` : ''}
                     </div>
                 </div>
+                ${e._pending ? `<button class="delete-btn" onclick="deleteLocal(${e._localId})">&times;</button>` : ''}
             </li>
         `).join('');
 
+        // Stats
+        const rated = entries.filter(e => e.rating);
         document.getElementById('stat-total').textContent = entries.length;
-        document.getElementById('stat-liked').textContent = entries.filter(e => e.liked === 'yes').length;
+        document.getElementById('stat-avg').textContent = rated.length
+            ? (rated.reduce((sum, e) => sum + e.rating, 0) / rated.length).toFixed(1)
+            : '-';
         document.getElementById('stat-categories').textContent = new Set(entries.map(e => e.category).filter(Boolean)).size;
     }
 
-    // Load both JSON files
+    function addEntry() {
+        const activity = document.getElementById('entry-activity').value.trim();
+        if (!activity) { alert('Fill in what you did!'); return; }
+
+        const ratingEl = document.querySelector('input[name="rating"]:checked');
+
+        const entry = {
+            date: document.getElementById('entry-date').value || undefined,
+            activity,
+            rating: ratingEl ? parseInt(ratingEl.value) : undefined,
+            category: document.getElementById('entry-category').value || undefined,
+            notes: document.getElementById('entry-notes').value.trim() || undefined,
+            _localId: Date.now()
+        };
+
+        // Clean undefined fields
+        Object.keys(entry).forEach(k => entry[k] === undefined && delete entry[k]);
+
+        localEntries.unshift(entry);
+        localStorage.setItem('localDoneEntries', JSON.stringify(localEntries));
+        renderDone();
+
+        // Reset form
+        document.getElementById('entry-activity').value = '';
+        document.getElementById('entry-notes').value = '';
+        document.getElementById('entry-category').value = '';
+        if (ratingEl) ratingEl.checked = false;
+
+        showToast('Date added! Use "Copy for GitHub" to save permanently.');
+    }
+
+    function deleteLocal(id) {
+        localEntries = localEntries.filter(e => e._localId !== id);
+        localStorage.setItem('localDoneEntries', JSON.stringify(localEntries));
+        renderDone();
+    }
+
+    function exportDone() {
+        // Merge: local entries (cleaned) on top, then saved
+        const merged = [
+            ...localEntries.map(e => {
+                const clean = { ...e };
+                delete clean._localId;
+                return clean;
+            }),
+            ...savedEntries
+        ];
+
+        const json = JSON.stringify(merged, null, 4);
+        navigator.clipboard.writeText(json).then(() => {
+            showToast('Copied! Paste into done-dates.json on GitHub.');
+        }).catch(() => {
+            // Fallback
+            const ta = document.createElement('textarea');
+            ta.value = json;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            showToast('Copied! Paste into done-dates.json on GitHub.');
+        });
+    }
+
+    // --- Load data ---
     fetch('recommendations.json')
         .then(r => r.json())
         .then(data => renderRecs(data))
@@ -423,8 +696,14 @@
 
     fetch('done-dates.json')
         .then(r => r.json())
-        .then(entries => renderDone(entries))
-        .catch(() => renderDone([]));
+        .then(entries => {
+            savedEntries = entries;
+            renderDone();
+        })
+        .catch(() => renderDone());
+
+    // Initial render for local-only entries
+    renderDone();
 </script>
 
 </body>

@@ -28,7 +28,7 @@ When the user says they did a date (e.g. *"we did a sunset picnic and loved it"*
 {
     "date": "2026-03-28",
     "activity": "Sunset Picnic",
-    "liked": "yes",
+    "rating": 5,
     "category": "outdoor",
     "notes": "Beautiful weather, great spot at the overlook"
 }
@@ -38,9 +38,17 @@ When the user says they did a date (e.g. *"we did a sunset picnic and loved it"*
 |-------|----------|--------|
 | `date` | optional | `YYYY-MM-DD` |
 | `activity` | **yes** | What they did |
-| `liked` | optional | `"yes"` or `"no"` |
+| `rating` | optional | `1` to `5` (star rating — 5 is best) |
 | `category` | optional | `outdoor`, `food`, `arts`, `cozy`, `active`, `unique` |
 | `notes` | optional | Any extra details |
+
+### Rating guide for AI
+
+- **5** = "Loved it, want more like this" — heavily favor this category/style
+- **4** = "Really enjoyed it" — lean into similar ideas
+- **3** = "It was fine" — neutral, okay to suggest similar but don't prioritize
+- **2** = "Meh, not great" — reduce similar ideas
+- **1** = "Didn't enjoy" — avoid this type
 
 ## Updating Recommendations
 
@@ -49,8 +57,9 @@ When asked to refresh or update recommendations:
 1. **Read `done-dates.json`** to see all past dates, what they liked, and what they didn't
 2. **Read `recommendations.json`** to check `previousIds` (never reuse these)
 3. **Generate 10-14 new ideas** that:
-   - Lean into categories and types they rated `"liked": "yes"`
-   - Avoid anything similar to dates marked `"liked": "no"`
+   - Heavily favor categories/styles with ratings of 4-5
+   - Include some variety from categories rated 3
+   - Avoid anything similar to dates rated 1-2
    - Never reuse any ID from `previousIds`
 4. **Replace the `categories` array** in `recommendations.json` with new ideas
 5. **Add all new IDs** to the `previousIds` array (keep old ones too)
