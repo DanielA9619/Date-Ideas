@@ -1,41 +1,54 @@
-========================================
-          DONE DATE LIST
-   (Dates We've Already Done)
-========================================
+DONE DATE LIST
+==============
+Just fill in under the right category after a date!
+Copy the template line and replace the blanks.
 
-Instructions: Add dates here after completing them
-so future recommendations stay fresh!
 
-Format: Date | Activity | Notes/Rating
-
-----------------------------------------
 ADVENTURES & OUTDOORS
-----------------------------------------
-(none yet)
+---------------------
+Template:  ___ / ___ / ___  |  Activity: _______________  |  Loved it? Y / N  |  Notes: _______________
 
-----------------------------------------
+>
+
+
 FOOD & DINING
-----------------------------------------
-(none yet)
+-------------
+Template:  ___ / ___ / ___  |  Activity: _______________  |  Loved it? Y / N  |  Notes: _______________
 
-----------------------------------------
+>
+
+
 ARTS & CULTURE
-----------------------------------------
-(none yet)
+--------------
+Template:  ___ / ___ / ___  |  Activity: _______________  |  Loved it? Y / N  |  Notes: _______________
 
-----------------------------------------
+>
+
+
 COZY / STAY-IN
-----------------------------------------
-(none yet)
+--------------
+Template:  ___ / ___ / ___  |  Activity: _______________  |  Loved it? Y / N  |  Notes: _______________
 
-----------------------------------------
+>
+
+
 ACTIVE & SPORTY
-----------------------------------------
-(none yet)
+---------------
+Template:  ___ / ___ / ___  |  Activity: _______________  |  Loved it? Y / N  |  Notes: _______________
 
-----------------------------------------
+>
+
+
 UNIQUE / NOVELTY
-----------------------------------------
-(none yet)
+----------------
+Template:  ___ / ___ / ___  |  Activity: _______________  |  Loved it? Y / N  |  Notes: _______________
 
-========================================
+>
+
+
+QUICK STATS
+-----------
+Total dates logged:  ___
+Favorite so far:     _______________
+Want to do again:    _______________
+Never again:         _______________

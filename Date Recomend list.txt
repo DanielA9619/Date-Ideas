@@ -1,124 +1,87 @@
-========================================================
-            DATE RECOMMENDATION LIST
-         Week of March 26 - April 8, 2026
-========================================================
-  Updated: March 26, 2026 | Next Update: April 2, 2026
-========================================================
+DATE RECOMMENDATIONS  |  March 26 - April 8, 2026
+==================================================
+Updated: March 26, 2026  |  Next update: April 2, 2026
 
-Since this is our first recommendation list, here's a
-diverse mix to help discover what you both enjoy most!
-Add completed dates to "done date list.txt" so future
-weeks stay fresh and tailored to your tastes.
+Pick from any category based on your mood!
+Mark [x] when done, then log it in "done date list.txt"
 
---------------------------------------------------------
-  WEEK 1: March 26 - April 1
---------------------------------------------------------
 
-Thu Mar 26 | SUNSET PICNIC
-             Pack a simple spread (cheese board, fruit,
-             wine or sparkling water) and find a scenic
-             overlook or park. Golden hour makes everything
-             feel special.
-             Vibe: Romantic, low-key
+ADVENTURES & OUTDOORS
+---------------------
+[ ] Sunset Picnic
+    Cheese board, fruit, wine at a scenic overlook or park.
 
-Fri Mar 27 | COOKING CHALLENGE NIGHT
-             Pick a cuisine neither of you has cooked
-             before (Thai, Ethiopian, Korean). Shop for
-             ingredients together, cook side by side, and
-             rate each other's dishes.
-             Vibe: Fun, collaborative
+[ ] Stargazing + Late Night Drive
+    Drive somewhere dark, bring blankets & hot chocolate.
+    Download a stargazing app and make a playlist for the road.
 
-Sat Mar 28 | FARMERS MARKET + MYSTERY RECIPE
-             Hit up a local farmers market in the morning.
-             Each person picks 3 surprise ingredients, then
-             come home and cook a meal using all of them.
-             Vibe: Adventurous, daytime date
+[ ] Neighborhood Exploration Walk
+    Pick a part of town you've never explored. No plan —
+    just wander, pop into shops, try a random spot to eat.
 
-Sun Mar 29 | BOOKSTORE & COFFEE DATE
-             Browse a bookstore together. Each pick a book
-             for the other person, then read and sip coffee
-             at a nearby cafe.
-             Vibe: Cozy, intellectual
 
-Mon Mar 30 | AT-HOME SPA NIGHT
-             Face masks, candles, massage oils, calming
-             playlist. Take turns giving each other
-             massages. Make fancy infused water or mocktails.
-             Vibe: Relaxing, intimate
+FOOD & DINING
+-------------
+[ ] Cooking Challenge Night
+    Pick a cuisine you've never cooked (Thai, Ethiopian, Korean).
+    Shop together, cook side by side, rate each other's dishes.
 
-Tue Mar 31 | NEIGHBORHOOD EXPLORATION WALK
-             Pick a part of town you've never wandered.
-             Walk with no plan — pop into shops, try a
-             random restaurant, photograph cool things
-             you find.
-             Vibe: Casual, curious
+[ ] Farmers Market + Mystery Recipe
+    Each person picks 3 surprise ingredients at a farmers market,
+    then come home and cook a meal using all of them.
 
-Wed Apr 1  | GAME NIGHT (April Fools Edition)
-             Board games, card games, or video games with
-             a twist — loser of each round does a dare or
-             answers a spicy question.
-             Vibe: Playful, competitive
+[ ] Dessert Hop
+    Skip dinner. Hit 3 spots: a bakery, an ice cream shop,
+    and a fancy dessert bar. Rate and compare all night.
 
---------------------------------------------------------
-  WEEK 2: April 2 - April 8
---------------------------------------------------------
 
-Thu Apr 2  | STARGAZING + LATE NIGHT DRIVE
-             Drive somewhere with less light pollution.
-             Bring blankets, hot chocolate, and a
-             stargazing app. Bonus: make a playlist for
-             the drive.
-             Vibe: Romantic, adventurous
+ARTS & CULTURE
+--------------
+[ ] Bookstore & Coffee Date
+    Browse a bookstore, each pick a book for the other person,
+    then read and sip coffee at a nearby cafe.
 
-Fri Apr 3  | LIVE MUSIC OR OPEN MIC NIGHT
-             Check local listings for a live show, jazz
-             bar, or open mic. Even better if it's a
-             genre you wouldn't normally pick.
-             Vibe: Energetic, cultural
+[ ] Live Music or Open Mic Night
+    Find a local show, jazz bar, or open mic. Bonus points
+    if it's a genre you wouldn't normally pick.
 
-Sat Apr 4  | HIKE + HIDDEN GEM LUNCH
-             Find a scenic trail nearby and hike in the
-             morning, then reward yourselves with lunch
-             at a hole-in-the-wall restaurant you've
-             never tried.
-             Vibe: Active, exploratory
+[ ] Pottery / Art Class
+    Paint-and-sip, pottery studio, or craft workshop.
+    Keep what you make as a memento.
 
-Sun Apr 5  | THRIFT STORE CHALLENGE
-             Each person gets $10-15. You have 30 minutes
-             to find the funniest/best outfit for the
-             other person. Wear the outfits to dinner.
-             Vibe: Hilarious, cheap date
 
-Mon Apr 6  | MOVIE MARATHON NIGHT
-             Pick a trilogy or a director's collection.
-             Build a blanket fort, make themed snacks
-             to match the movies, and fully commit to
-             the couch.
-             Vibe: Cozy, low-effort
+COZY / STAY-IN
+--------------
+[ ] At-Home Spa Night
+    Face masks, candles, massage oils, calming playlist.
+    Make fancy infused water or mocktails.
 
-Tue Apr 7  | POTTERY / ART CLASS
-             Look up a local paint-and-sip, pottery
-             studio, or craft workshop. Making something
-             together is a great bonding experience —
-             keep what you make as a memento.
-             Vibe: Creative, hands-on
+[ ] Movie Marathon Night
+    Pick a trilogy or director's collection. Build a blanket
+    fort, make themed snacks, fully commit to the couch.
 
-Wed Apr 8  | DESSERT HOP
-             Skip dinner — go straight to dessert. Visit
-             3 different spots: a bakery, an ice cream
-             shop, and a fancy dessert bar. Rate and
-             compare all night.
-             Vibe: Sweet, spontaneous
+[ ] Game Night
+    Board games, card games, or video games with a twist —
+    loser of each round does a dare or answers a spicy question.
 
-========================================================
-  NOTES & TIPS
-========================================================
-- Check weather before outdoor dates and have a backup
-- "Vibe" tags help you match your mood to the date
-- After each date, log it in "done date list.txt"
-  with a quick rating so future recs get even better!
-- Categories covered this cycle:
-  [x] Outdoor/Adventure  [x] Food/Cooking
-  [x] Arts/Culture       [x] Cozy/Stay-in
-  [x] Active             [x] Unique/Novelty
-========================================================
+
+ACTIVE & SPORTY
+---------------
+[ ] Hike + Hidden Gem Lunch
+    Scenic trail in the morning, then reward yourselves
+    with lunch at a hole-in-the-wall you've never tried.
+
+
+UNIQUE / NOVELTY
+----------------
+[ ] Thrift Store Challenge
+    Each person gets $10-15 and 30 min to find the
+    funniest outfit for the other. Wear them to dinner.
+
+
+NOTES
+-----
+- Check weather before outdoor dates — have a backup plan
+- Pick based on mood, not the day of the week
+- Log completed dates in "done date list.txt" so next
+  week's recommendations stay fresh and get better!
