@@ -237,7 +237,7 @@
             margin-top: 12px;
         }
 
-        .feedback-btns { display: flex; gap: 6px; }
+        .feedback-btns { display: flex; gap: 6px; align-items: center; }
 
         .fb-btn {
             background: var(--pill-bg);
@@ -261,6 +261,56 @@
             background: var(--red-bg);
             border-color: var(--red-text);
         }
+
+        .fb-comment-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.15s;
+        }
+
+        .fb-comment-btn:hover { color: var(--text-secondary); background: var(--pill-bg); }
+        .fb-comment-btn.has-comment { color: var(--text-secondary); font-weight: 600; }
+
+        .fb-comment-row {
+            display: none;
+            padding-left: 30px;
+            margin-top: 8px;
+            gap: 8px;
+        }
+
+        .fb-comment-row.open { display: flex; }
+
+        .fb-comment-row input {
+            flex: 1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--input-border);
+            background: var(--input-bg);
+            color: var(--text);
+            font-size: 0.8rem;
+            font-family: inherit;
+        }
+
+        .fb-comment-row input:focus { outline: none; border-color: var(--text); }
+
+        .fb-comment-save {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.75rem;
+            font-family: inherit;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+        }
+
+        .fb-comment-save:hover { background: var(--btn-hover); }
 
         /* Done List */
         .add-form {
@@ -719,6 +769,13 @@
     }
 
     // --- GitHub API ---
+    function decodeBase64UTF8(b64) {
+        const bin = atob(b64);
+        const bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        return new TextDecoder('utf-8').decode(bytes);
+    }
+
     async function ghGet(path) {
         const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${BRANCH}`);
         if (!resp.ok) return null;
@@ -728,7 +785,8 @@
     async function ghPut(path, content, sha, message) {
         const token = getToken();
         if (!token) throw new Error('No GitHub token');
-        const body = { message, content: btoa(unescape(encodeURIComponent(content))), branch: BRANCH };
+        const encoded = btoa(String.fromCharCode(...new TextEncoder().encode(content)));
+        const body = { message, content: encoded, branch: BRANCH };
         if (sha) body.sha = sha;
         const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}`, {
             method: 'PUT',
@@ -755,11 +813,79 @@
         return '<div class="detail detail-free">No reservation needed</div>';
     }
 
+    function escHtml(str) {
+        if (!str) return '';
+        return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function getComment(id) {
+        return (recsData && recsData.feedback && recsData.feedback[id] && typeof recsData.feedback[id] === 'object')
+            ? (recsData.feedback[id].comment || '') : '';
+    }
+
+    function toggleCommentRow(id) {
+        const row = document.getElementById('comment-row-' + id);
+        row.classList.toggle('open');
+        if (row.classList.contains('open')) document.getElementById('comment-input-' + id).focus();
+    }
+
+    async function saveComment(id) {
+        if (!recsData) return;
+        if (!recsData.feedback) recsData.feedback = {};
+        const input = document.getElementById('comment-input-' + id);
+        const comment = input.value.trim();
+        const current = recsData.feedback[id];
+
+        // Convert old string format ("up"/"down") to object format
+        if (typeof current === 'string') {
+            recsData.feedback[id] = { vote: current, comment };
+        } else if (current && typeof current === 'object') {
+            current.comment = comment;
+            if (!comment) delete current.comment;
+        } else {
+            recsData.feedback[id] = { comment };
+        }
+
+        // Clean up empty entries
+        const entry = recsData.feedback[id];
+        if (typeof entry === 'object' && !entry.vote && !entry.comment) delete recsData.feedback[id];
+
+        // Update button label
+        const btn = document.querySelector(`.date-card[data-id="${id}"] .fb-comment-btn`);
+        if (btn) {
+            btn.className = 'fb-comment-btn' + (comment ? ' has-comment' : '');
+            btn.textContent = comment ? '\uD83D\uDCAC comment' : '\uD83D\uDCAC';
+        }
+
+        document.getElementById('comment-row-' + id).classList.remove('open');
+
+        if (getToken()) {
+            try {
+                const result = await ghPut('recommendations.json', JSON.stringify(recsData, null, 4) + '\n', recsSha, 'Update recommendation comment');
+                recsSha = result.content.sha;
+                showToast('Comment saved!');
+            } catch (err) { showToast('Comment save failed: ' + err.message, true); }
+        } else {
+            showToast('Connect GitHub to save comments.', true);
+        }
+    }
+
     async function toggleFeedback(id, type) {
         if (!recsData) return;
         if (!recsData.feedback) recsData.feedback = {};
-        if (recsData.feedback[id] === type) { delete recsData.feedback[id]; }
-        else { recsData.feedback[id] = type; }
+        const current = recsData.feedback[id];
+        const currentVote = typeof current === 'string' ? current : (current && current.vote) || null;
+        const currentComment = typeof current === 'object' ? (current.comment || '') : '';
+
+        if (currentVote === type) {
+            // Toggle off
+            if (currentComment) { recsData.feedback[id] = { comment: currentComment }; }
+            else { delete recsData.feedback[id]; }
+        } else {
+            // Set vote
+            if (currentComment) { recsData.feedback[id] = { vote: type, comment: currentComment }; }
+            else { recsData.feedback[id] = type; }
+        }
         updateFeedbackUI(id);
         if (getToken()) {
             try {
@@ -772,13 +898,14 @@
     }
 
     function updateFeedbackUI(id) {
-        const fb = (recsData.feedback || {})[id];
+        const raw = (recsData.feedback || {})[id];
+        const vote = typeof raw === 'string' ? raw : (raw && raw.vote) || null;
         const card = document.querySelector(`.date-card[data-id="${id}"]`);
         if (!card) return;
         const up = card.querySelector('.fb-btn.up');
         const down = card.querySelector('.fb-btn.down');
-        if (up) up.classList.toggle('active', fb === 'up');
-        if (down) down.classList.toggle('active', fb === 'down');
+        if (up) up.classList.toggle('active', vote === 'up');
+        if (down) down.classList.toggle('active', vote === 'down');
     }
 
     function renderRecs(data) {
@@ -787,6 +914,7 @@
         document.getElementById('updated').textContent = 'Updated ' + data.updated;
         const saved = JSON.parse(localStorage.getItem('dateRecs') || '{}');
         const fb = data.feedback || {};
+        function getVote(id) { const v = fb[id]; return typeof v === 'string' ? v : (v && v.vote) || null; }
 
         document.getElementById('recs').innerHTML = data.categories.map(cat => `
             <div class="category">
@@ -808,9 +936,14 @@
                         </div>
                         <div class="card-footer">
                             <div class="feedback-btns">
-                                <button class="fb-btn up${fb[d.id] === 'up' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'up')" title="Interested">\uD83D\uDC4D</button>
-                                <button class="fb-btn down${fb[d.id] === 'down' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'down')" title="Not for us">\uD83D\uDC4E</button>
+                                <button class="fb-btn up${getVote(d.id) === 'up' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'up')" title="Interested">\uD83D\uDC4D</button>
+                                <button class="fb-btn down${getVote(d.id) === 'down' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'down')" title="Not for us">\uD83D\uDC4E</button>
+                                <button class="fb-comment-btn${getComment(d.id) ? ' has-comment' : ''}" onclick="toggleCommentRow('${d.id}')" title="Add a comment">${getComment(d.id) ? '\uD83D\uDCAC comment' : '\uD83D\uDCAC'}</button>
                             </div>
+                        </div>
+                        <div class="fb-comment-row" id="comment-row-${d.id}">
+                            <input type="text" id="comment-input-${d.id}" placeholder="Why do you like or dislike this idea?" value="${escHtml(getComment(d.id))}" onkeydown="if(event.key==='Enter')saveComment('${d.id}')">
+                            <button class="fb-comment-save" onclick="saveComment('${d.id}')">Save</button>
                         </div>
                     </div>
                 `).join('')}
@@ -949,7 +1082,7 @@
             const file = await ghGet('recommendations.json');
             if (file) {
                 recsSha = file.sha;
-                renderRecs(JSON.parse(atob(file.content)));
+                renderRecs(JSON.parse(decodeBase64UTF8(file.content)));
             } else {
                 const resp = await fetch('recommendations.json');
                 renderRecs(await resp.json());
@@ -964,7 +1097,7 @@
             const file = await ghGet(FILE_PATH);
             if (file) {
                 fileSha = file.sha;
-                allEntries = JSON.parse(atob(file.content));
+                allEntries = JSON.parse(decodeBase64UTF8(file.content));
             }
         } catch {}
         renderDone();

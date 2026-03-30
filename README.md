@@ -42,6 +42,7 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 | `.theme-toggle` | Sun/moon toggle button in header |
 | `.date-card` | Recommendation cards (checkbox, name, price, desc, detail pills) |
 | `.feedback-btns` / `.fb-btn` | Thumbs up/down buttons on recommendation cards |
+| `.fb-comment-btn` / `.fb-comment-row` | Comment button and expandable input row on cards |
 | `.detail-free` / `.detail-ticket` | Green "no reservation" and orange "tickets needed" tags |
 | `.add-form` | The "Log a Date" form (inputs, star rating, buttons) |
 | `.done-entry` | Done list entries (activity, meta row, edit/delete buttons) |
@@ -96,6 +97,10 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 | **Recommendations** | |
 | `toggleRec(cb)` | Toggles checkbox, saves state to localStorage |
 | `reservationTag(type)` | Returns HTML for "none"/"tickets"/"required" tag |
+| `escHtml(str)` | Escapes HTML special characters for safe rendering |
+| `getComment(id)` | Returns the comment string for a recommendation (handles both string and object feedback formats) |
+| `toggleCommentRow(id)` | Shows/hides the comment input row on a card |
+| `saveComment(id)` | Saves comment to feedback object, commits via `ghPut` |
 | `toggleFeedback(id, type)` | Thumbs up/down on a recommendation, saves via `ghPut` to `recommendations.json` |
 | `updateFeedbackUI(id)` | Updates button active states for a card |
 | `renderRecs(data)` | Renders all recommendation cards with feedback buttons |
@@ -147,7 +152,7 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 }
 ```
 
-- `feedback` — user thumbs up/down on ideas: `"up"` = interested, `"down"` = not for us. AI reads this, then clears it on refresh.
+- `feedback` — user thumbs up/down + optional comments. Values can be a simple string (`"up"`/`"down"`) or an object (`{ "vote": "down", "comment": "too expensive" }`). AI reads this, then clears it on refresh.
 - `previousIds` — tracks all ever-used IDs to prevent repeats
 - `reservation` — controls tag color: `"none"` = green, `"tickets"`/`"required"` = orange
 - The AI replaces `categories`, clears `feedback`, and appends new IDs to `previousIds` on each refresh

@@ -8,7 +8,7 @@ This file tells the AI agent how to update the date recommendation site.
 - **`recommendations.json`** — current date recommendations (AI updates this)
 - **`done-dates.json`** — completed dates log (AI adds entries here)
 - Hosted via GitHub Pages from the `master` branch
-- Checkbox state is the only thing in `localStorage`
+- Checkbox state and theme preference stored in `localStorage`
 
 ## File Structure
 
@@ -56,17 +56,26 @@ When the user says they did a date (e.g. *"we did a sunset picnic and loved it"*
 
 ## Recommendation Feedback
 
-Users can thumbs-up or thumbs-down individual recommendations without doing them. This is stored in the `feedback` object in `recommendations.json`:
+Users can thumbs-up or thumbs-down individual recommendations without doing them, and optionally add a comment explaining why. This is stored in the `feedback` object in `recommendations.json`:
 
 ```json
 "feedback": {
     "sunset-picnic": "up",
-    "game-night": "down"
+    "game-night": { "vote": "down", "comment": "We don't really like board games" },
+    "cooking-challenge": { "vote": "up", "comment": "Love the idea of trying new cuisines together" },
+    "hike-lunch": { "comment": "Maybe if it's not too hot" }
 }
 ```
 
-- `"up"` = "This idea appeals to me" — suggest more like it
-- `"down"` = "Not interested" — avoid similar ideas
+Feedback values can be:
+- A simple string `"up"` or `"down"` (vote only, no comment)
+- An object with `vote` (`"up"` or `"down"`) and/or `comment` (string)
+
+### How to use feedback
+
+- `"up"` vote = "This idea appeals to me" — suggest more like it
+- `"down"` vote = "Not interested" — avoid similar ideas
+- `comment` = **Read carefully** — the user is explaining *why* they like or dislike an idea. Use this to understand their preferences more deeply than just a thumbs up/down. For example, "too expensive" means suggest cheaper alternatives; "love the creativity" means lean into unusual/creative ideas.
 
 ## Updating Recommendations
 
@@ -76,8 +85,9 @@ When asked to refresh or update recommendations:
 2. **Read `recommendations.json`** — check `previousIds`, and read the `feedback` object
 3. **Generate 10-14 new ideas** that:
    - Heavily favor categories/styles with done-date ratings of 4-5
-   - Lean into ideas similar to feedback `"up"` thumbs
-   - Avoid ideas similar to feedback `"down"` thumbs
+   - Lean into ideas similar to feedback `"up"` votes
+   - Avoid ideas similar to feedback `"down"` votes
+   - **Pay close attention to feedback comments** — they explain the *why* behind preferences
    - Include some variety from categories rated 3
    - Avoid anything similar to done dates rated 1-2
    - Never reuse any ID from `previousIds`
