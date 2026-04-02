@@ -38,7 +38,7 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 | Section | What it styles |
 |---------|---------------|
 | `:root` / `[data-theme="dark"]` | CSS custom properties for light (cream `#FFF9F2`) and dark (`#1a1a1a`) themes |
-| Base / layout | body, container, header, tabs |
+| Base / layout | body, container, header, tabs, sub-tabs |
 | `.theme-toggle` | Sun/moon toggle button in header |
 | `.date-card` | Recommendation cards (checkbox, name, price, desc, detail pills) |
 | `.feedback-btns` / `.fb-btn` | Thumbs up/down buttons on recommendation cards |
@@ -57,7 +57,10 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 |---------|---------|
 | `<header>` | Title + subtitle (date range, set dynamically) + theme toggle button |
 | `.tabs` | Two tab buttons: Recommendations / Done List |
-| `#recs` | Empty div — filled by JS from `recommendations.json` |
+| `#recs` | Recommendations panel with sub-tabs: |
+| → `.sub-tabs` | "This Period" / "Whenever" toggle |
+| → `#scheduled` | Date-specific ideas (filled by JS) |
+| → `#whenever` | Anytime ideas by category (filled by JS) |
 | `#done` | Done List panel containing: |
 | → `#setup-box` | Collapsible GitHub token setup |
 | → `.add-form` | Form: date, activity, stars, category, location, price, notes |
@@ -83,6 +86,7 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 | `applyTheme(theme)` | Sets `data-theme` attribute, updates toggle button icon (sun/moon) |
 | `toggleTheme()` | Switches theme and saves to localStorage |
 | `showTab(id, btn)` | Switches between Recommendations and Done List tabs |
+| `showSubTab(id, btn)` | Switches between "This Period" and "Whenever" sub-tabs within Recommendations |
 | `showToast(msg, isError)` | Shows a notification at the bottom of the screen |
 | **GitHub connection** | |
 | `getToken()` | Reads GitHub PAT from localStorage |
@@ -103,7 +107,9 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 | `saveComment(id)` | Saves comment to feedback object, commits via `ghPut` |
 | `toggleFeedback(id, type)` | Thumbs up/down on a recommendation, saves via `ghPut` to `recommendations.json` |
 | `updateFeedbackUI(id)` | Updates button active states for a card |
-| `renderRecs(data)` | Renders all recommendation cards with feedback buttons |
+| `renderCard(d, saved, getVote)` | Renders a single date card (shared by scheduled and whenever views) |
+| `formatDay(dateStr)` | Formats a date string as "Friday — Apr 4" for the scheduled view |
+| `renderRecs(data)` | Renders scheduled (by date) and whenever (by category) sub-panels |
 | `loadRecs()` | Fetches recs (via `ghGet` if token exists, else direct fetch) |
 | **Done List** | |
 | `starsHtml(rating)` | Returns filled/empty star HTML for a 1-5 rating |
@@ -125,37 +131,35 @@ The file has three sections: **CSS** (styles), **HTML** (structure), and **JS** 
 
 ## recommendations.json
 
+Two main arrays: `scheduled` (date-specific ideas) and `whenever` (anytime ideas by category).
+
 ```json
 {
-    "dateRange": "March 26 - April 8, 2026",
-    "updated": "March 26, 2026",
-    "feedback": {"sunset-picnic": "up", "game-night": "down"},
+    "dateRange": "March 31 - April 13, 2026",
+    "updated": "March 31, 2026",
+    "feedback": {"sunset-picnic": "up", "game-night": {"vote": "down", "comment": "Not into board games"}},
     "previousIds": ["sunset-picnic", "..."],
-    "categories": [
+    "scheduled": [
+        {
+            "date": "2026-04-04",
+            "dates": [{ "id": "...", "name": "...", "price": "...", "desc": "...", "start": "7:00 PM", "duration": "2 hrs", "where": "...", "reservation": "none" }]
+        }
+    ],
+    "whenever": [
         {
             "title": "Category Name",
-            "dates": [
-                {
-                    "id": "kebab-case-id",
-                    "name": "Date Name",
-                    "price": "$XX - $XX",
-                    "desc": "Description.",
-                    "when": "Any evening",
-                    "start": "7:00 PM",
-                    "duration": "2 - 3 hrs",
-                    "where": "Location",
-                    "reservation": "none|tickets|required"
-                }
-            ]
+            "dates": [{ "id": "...", "name": "...", "price": "...", "desc": "...", "duration": "2 hrs", "where": "...", "reservation": "none" }]
         }
     ]
 }
 ```
 
+- `scheduled` — ideas tied to specific dates, shown under "This Period" tab. Each entry has a `date` (YYYY-MM-DD) and array of date ideas for that day.
+- `whenever` — category-grouped ideas for anytime, shown under "Whenever" tab
 - `feedback` — user thumbs up/down + optional comments. Values can be a simple string (`"up"`/`"down"`) or an object (`{ "vote": "down", "comment": "too expensive" }`). AI reads this, then clears it on refresh.
 - `previousIds` — tracks all ever-used IDs to prevent repeats
 - `reservation` — controls tag color: `"none"` = green, `"tickets"`/`"required"` = orange
-- The AI replaces `categories`, clears `feedback`, and appends new IDs to `previousIds` on each refresh
+- The AI replaces `scheduled` and `whenever`, clears `feedback`, and appends new IDs to `previousIds` on each refresh
 
 ## done-dates.json
 

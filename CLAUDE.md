@@ -83,15 +83,18 @@ When asked to refresh or update recommendations:
 
 1. **Read `done-dates.json`** to see all past dates, what they liked, and what they didn't
 2. **Read `recommendations.json`** — check `previousIds`, and read the `feedback` object
-3. **Generate 10-14 new ideas** that:
-   - Heavily favor categories/styles with done-date ratings of 4-5
-   - Lean into ideas similar to feedback `"up"` votes
-   - Avoid ideas similar to feedback `"down"` votes
-   - **Pay close attention to feedback comments** — they explain the *why* behind preferences
-   - Include some variety from categories rated 3
-   - Avoid anything similar to done dates rated 1-2
-   - Never reuse any ID from `previousIds`
-4. **Replace the `categories` array** in `recommendations.json` with new ideas
+3. **Generate ideas** split into two groups:
+   - **`scheduled`** — 4-7 date-specific ideas tied to particular days in the 2-week window. Pick good days (Fridays, Saturdays, some weeknights). Consider events, weather, and day of week.
+   - **`whenever`** — 5-8 anytime ideas grouped by category. These are ideas that work any day.
+   - Both groups should:
+     - Heavily favor categories/styles with done-date ratings of 4-5
+     - Lean into ideas similar to feedback `"up"` votes
+     - Avoid ideas similar to feedback `"down"` votes
+     - **Pay close attention to feedback comments** — they explain the *why* behind preferences
+     - Include some variety from categories rated 3
+     - Avoid anything similar to done dates rated 1-2
+     - Never reuse any ID from `previousIds`
+4. **Replace `scheduled` and `whenever`** arrays in `recommendations.json` with new ideas
 5. **Clear the `feedback` object** (reset to `{}`) since it was for the old set
 6. **Add all new IDs** to the `previousIds` array (keep old ones too)
 7. **Update `dateRange`** and **`updated`** fields
@@ -100,21 +103,36 @@ When asked to refresh or update recommendations:
 
 ```json
 {
-    "dateRange": "March 26 - April 8, 2026",
-    "updated": "March 26, 2026",
+    "dateRange": "March 31 - April 13, 2026",
+    "updated": "March 31, 2026",
     "feedback": {},
     "previousIds": ["sunset-picnic", "stargazing-drive", "..."],
-    "categories": [
+    "scheduled": [
         {
-            "title": "Adventures & Outdoors",
+            "date": "2026-04-04",
             "dates": [
                 {
                     "id": "unique-kebab-case-id",
                     "name": "Date Name Here",
                     "price": "$XX - $XX",
                     "desc": "One to two sentence description.",
-                    "when": "Any evening",
                     "start": "7:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Location description",
+                    "reservation": "none"
+                }
+            ]
+        }
+    ],
+    "whenever": [
+        {
+            "title": "Category Name",
+            "dates": [
+                {
+                    "id": "unique-kebab-case-id",
+                    "name": "Date Name Here",
+                    "price": "$XX - $XX",
+                    "desc": "One to two sentence description.",
                     "duration": "2 - 3 hrs",
                     "where": "Location description",
                     "reservation": "none"
@@ -125,23 +143,26 @@ When asked to refresh or update recommendations:
 }
 ```
 
-### Date fields
+### Scheduled date fields
 
 | Field | Description | Example |
 |-------|-------------|---------|
-| `id` | Unique kebab-case identifier | `sunset-picnic` |
+| `id` | Unique kebab-case identifier | `friday-picnic` |
 | `name` | Short, catchy title | `Sunset Picnic` |
 | `price` | Cost range for two | `$15 - $30` or `Free` |
 | `desc` | 1-2 sentence description | |
-| `when` | Best day/time | `Any evening`, `Weekend morning` |
-| `start` | Suggested start time | `7:00 PM`, `Flexible` |
+| `start` | Suggested start time | `7:00 PM`, `10:00 AM` |
 | `duration` | Estimated total time | `2 - 3 hrs` |
 | `where` | General location | `Local park`, `Home` |
 | `reservation` | `"none"`, `"tickets"`, or `"required"` | |
 
-### Categories
+### Whenever date fields
 
-Use these 6 category titles. Aim for 2-3 ideas per category minimum:
+Same as scheduled, but `start` is optional (omit or use `"Flexible"`). No `when` field needed — these are anytime ideas.
+
+### Whenever categories
+
+Use these category titles for the `whenever` array. Aim for 1-2 ideas per category:
 
 - **Adventures & Outdoors** — parks, drives, exploring, nature
 - **Food & Dining** — cooking, restaurants, food crawls, markets
@@ -155,7 +176,7 @@ Use these 6 category titles. Aim for 2-3 ideas per category minimum:
 - [ ] Read `done-dates.json` for preference context
 - [ ] Read `recommendations.json` for `previousIds`
 - [ ] Update `dateRange` and `updated` in `recommendations.json`
-- [ ] Replace `categories` with new date ideas
+- [ ] Replace `scheduled` and `whenever` arrays with new date ideas
 - [ ] Add all new IDs to `previousIds`
 - [ ] Do NOT edit `index.html` (unless changing layout/style)
 - [ ] Commit and push to `master`
