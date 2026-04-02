@@ -278,6 +278,8 @@
         .detail .label { font-weight: 600; color: var(--pill-label); }
         .detail-ticket { background: var(--orange-bg); color: var(--orange-text); }
         .detail-free { background: var(--green-bg); color: var(--green-text); }
+        .detail-link { text-decoration: none; cursor: pointer; font-weight: 600; }
+        .detail-link:hover { opacity: 0.8; }
 
         .card-footer {
             display: flex;
@@ -697,6 +699,8 @@
                 <option value="arts">Arts</option>
                 <option value="cozy">Cozy</option>
                 <option value="active">Active</option>
+                <option value="sports">Sports</option>
+                <option value="exploration">Exploration</option>
                 <option value="unique">Unique</option>
             </select>
         </div>
@@ -989,6 +993,7 @@
                     <div class="detail"><span class="label">Duration</span> ${d.duration}</div>
                     <div class="detail"><span class="label">Where</span> ${d.where}</div>
                     ${reservationTag(d.reservation)}
+                    ${d.link ? `<a class="detail detail-link" href="${d.link}" target="_blank" rel="noopener">More info \u2197</a>` : ''}
                 </div>
                 <div class="card-footer">
                     <div class="feedback-btns">

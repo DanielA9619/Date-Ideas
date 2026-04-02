@@ -41,7 +41,7 @@ When the user says they did a date (e.g. *"we did a sunset picnic and loved it"*
 | `date` | optional | `YYYY-MM-DD` |
 | `activity` | **yes** | What they did |
 | `rating` | optional | `1` to `5` (star rating — 5 is best) |
-| `category` | optional | `outdoor`, `food`, `arts`, `cozy`, `active`, `unique` |
+| `category` | optional | `outdoor`, `food`, `arts`, `cozy`, `active`, `sports`, `exploration`, `unique` |
 | `location` | optional | Where they went |
 | `price` | optional | What they spent (e.g. `"$25"`, `"Free"`) |
 | `notes` | optional | Any extra details |
@@ -119,7 +119,8 @@ When asked to refresh or update recommendations:
                     "start": "7:00 PM",
                     "duration": "2 - 3 hrs",
                     "where": "Location description",
-                    "reservation": "none"
+                    "reservation": "none",
+                    "link": "https://example.com/venue-or-event"
                 }
             ]
         }
@@ -135,7 +136,8 @@ When asked to refresh or update recommendations:
                     "desc": "One to two sentence description.",
                     "duration": "2 - 3 hrs",
                     "where": "Location description",
-                    "reservation": "none"
+                    "reservation": "none",
+                    "link": "https://example.com/venue-or-event"
                 }
             ]
         }
@@ -155,10 +157,11 @@ When asked to refresh or update recommendations:
 | `duration` | Estimated total time | `2 - 3 hrs` |
 | `where` | General location | `Local park`, `Home` |
 | `reservation` | `"none"`, `"tickets"`, or `"required"` | |
+| `link` | URL to venue, event page, or tickets (optional) | `https://thanksgivingpoint.org/tulip-festival` |
 
 ### Whenever date fields
 
-Same as scheduled, but `start` is optional (omit or use `"Flexible"`). No `when` field needed — these are anytime ideas.
+Same as scheduled, but `start` is optional (omit or use `"Flexible"`). Include `link` when there's a relevant website.
 
 ### Whenever categories
 

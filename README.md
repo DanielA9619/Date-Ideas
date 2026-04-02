@@ -142,13 +142,13 @@ Two main arrays: `scheduled` (date-specific ideas) and `whenever` (anytime ideas
     "scheduled": [
         {
             "date": "2026-04-04",
-            "dates": [{ "id": "...", "name": "...", "price": "...", "desc": "...", "start": "7:00 PM", "duration": "2 hrs", "where": "...", "reservation": "none" }]
+            "dates": [{ "id": "...", "name": "...", "price": "...", "desc": "...", "start": "7:00 PM", "duration": "2 hrs", "where": "...", "reservation": "none", "link": "https://..." }]
         }
     ],
     "whenever": [
         {
             "title": "Category Name",
-            "dates": [{ "id": "...", "name": "...", "price": "...", "desc": "...", "duration": "2 hrs", "where": "...", "reservation": "none" }]
+            "dates": [{ "id": "...", "name": "...", "price": "...", "desc": "...", "duration": "2 hrs", "where": "...", "reservation": "none", "link": "https://..." }]
         }
     ]
 }
