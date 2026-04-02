@@ -10,7 +10,10 @@
             "vote": "up",
             "comment": "Yes, But later in the season"
         },
-        "candlelight-concert-series": "down"
+        "candlelight-concert-series": {
+            "vote": "down",
+            "comment": "Seems Kinda boring"
+        }
     },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
