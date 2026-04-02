@@ -1,6 +1,12 @@
 [
     {
         "date": "2026-03-06",
+        "activity": "Rounds Mini Golf",
+        "rating": 4,
+        "notes": "good but short"
+    },
+    {
+        "date": "2026-03-06",
         "activity": "illuminate art festival",
         "rating": 3,
         "category": "arts",
