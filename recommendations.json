@@ -14,7 +14,10 @@
             "vote": "down",
             "comment": "Seems Kinda boring"
         },
-        "btg-wine-bar-slc": "down"
+        "btg-wine-bar-slc": {
+            "vote": "down",
+            "comment": "Not 21"
+        }
     },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
