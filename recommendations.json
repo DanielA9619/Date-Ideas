@@ -6,7 +6,10 @@
             "vote": "down",
             "comment": "Dont really like comedy shows"
         },
-        "tulip-festival-thanksgiving-point": "up"
+        "tulip-festival-thanksgiving-point": {
+            "vote": "up",
+            "comment": "Yes, But later in the season"
+        }
     },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
