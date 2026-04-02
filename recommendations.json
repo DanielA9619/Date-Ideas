@@ -2,7 +2,10 @@
     "dateRange": "April 1 - April 14, 2026",
     "updated": "March 31, 2026",
     "feedback": {
-        "wiseguys-comedy-night": "down"
+        "wiseguys-comedy-night": {
+            "vote": "down",
+            "comment": "Dont really like comedy shows"
+        }
     },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
