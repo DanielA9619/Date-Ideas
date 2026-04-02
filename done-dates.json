@@ -1,5 +1,11 @@
 [
     {
+        "date": "2026-03-20",
+        "activity": "Lake Date",
+        "rating": 5,
+        "location": "Rockport Reservoir"
+    },
+    {
         "date": "2026-03-26",
         "activity": "Utah Grizzlies Hockey game",
         "rating": 5,
