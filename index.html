@@ -840,7 +840,10 @@
     }
 
     async function ghGet(path) {
-        const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${BRANCH}`);
+        const headers = {};
+        const token = getToken();
+        if (token) headers['Authorization'] = `Bearer ${token}`;
+        const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${path}?ref=${BRANCH}`, { headers });
         if (!resp.ok) return null;
         return resp.json();
     }
