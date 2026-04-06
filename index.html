@@ -308,6 +308,11 @@
             border-color: var(--green-text);
         }
 
+        .fb-btn.maybe.active {
+            background: var(--orange-bg);
+            border-color: var(--orange-text);
+        }
+
         .fb-btn.down.active {
             background: var(--red-bg);
             border-color: var(--red-text);
@@ -547,6 +552,58 @@
             letter-spacing: 0.5px;
         }
 
+        .profile-section {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .profile-section h3 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+
+        .profile-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .profile-row:last-child { border-bottom: none; }
+        .profile-row .label { color: var(--text-secondary); }
+        .profile-row .value { font-weight: 600; }
+
+        .profile-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .profile-list li:last-child { border-bottom: none; }
+        .profile-list .name { font-weight: 600; margin-bottom: 4px; }
+        .profile-list .comment { color: var(--text-secondary); font-style: italic; font-size: 0.8rem; }
+
+        .profile-empty {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
         .updated {
             text-align: center;
             color: var(--text-muted);
@@ -656,6 +713,7 @@
 <div class="tabs">
     <button class="tab active" onclick="showTab('recs', this)">Recommendations</button>
     <button class="tab" onclick="showTab('done', this)">Done List</button>
+    <button class="tab" onclick="showTab('profile', this)">Profile</button>
 </div>
 
 <!-- RECOMMENDATIONS -->
@@ -725,6 +783,9 @@
     </div>
 </div>
 
+<!-- PROFILE -->
+<div id="profile" class="panel"></div>
+
 <p class="updated" id="updated"></p>
 </div>
 
@@ -773,6 +834,7 @@
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         document.getElementById(id).classList.add('active');
         btn.classList.add('active');
+        if (id === 'profile') renderProfile();
     }
 
     function showSubTab(id, btn) {
@@ -972,10 +1034,10 @@
         const vote = typeof raw === 'string' ? raw : (raw && raw.vote) || null;
         const card = document.querySelector(`.date-card[data-id="${id}"]`);
         if (!card) return;
-        const up = card.querySelector('.fb-btn.up');
-        const down = card.querySelector('.fb-btn.down');
-        if (up) up.classList.toggle('active', vote === 'up');
-        if (down) down.classList.toggle('active', vote === 'down');
+        ['up', 'maybe', 'down'].forEach(t => {
+            const btn = card.querySelector('.fb-btn.' + t);
+            if (btn) btn.classList.toggle('active', vote === t);
+        });
     }
 
     function renderCard(d, saved, getVote) {
@@ -998,6 +1060,7 @@
                 <div class="card-footer">
                     <div class="feedback-btns">
                         <button class="fb-btn up${getVote(d.id) === 'up' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'up')" title="Interested">\uD83D\uDC4D</button>
+                        <button class="fb-btn maybe${getVote(d.id) === 'maybe' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'maybe')" title="Maybe">\uD83E\uDD14</button>
                         <button class="fb-btn down${getVote(d.id) === 'down' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'down')" title="Not for us">\uD83D\uDC4E</button>
                         <button class="fb-comment-btn${getComment(d.id) ? ' has-comment' : ''}" onclick="toggleCommentRow('${d.id}')" title="Add a comment">${getComment(d.id) ? '\uD83D\uDCAC comment' : '\uD83D\uDCAC'}</button>
                     </div>
@@ -1089,6 +1152,126 @@
         document.getElementById('stat-total').textContent = allEntries.length;
         document.getElementById('stat-avg').textContent = rated.length ? (rated.reduce((s, e) => s + e.rating, 0) / rated.length).toFixed(1) : '-';
         document.getElementById('stat-categories').textContent = new Set(allEntries.map(e => e.category).filter(Boolean)).size;
+    }
+
+    // --- Profile ---
+    function findRecById(id) {
+        if (!recsData) return null;
+        for (const day of (recsData.scheduled || [])) {
+            for (const d of day.dates) if (d.id === id) return d;
+        }
+        for (const cat of (recsData.whenever || [])) {
+            for (const d of cat.dates) if (d.id === id) return d;
+        }
+        return null;
+    }
+
+    function renderProfile() {
+        const el = document.getElementById('profile');
+        const rated = allEntries.filter(e => e.rating);
+        const total = allEntries.length;
+        const avg = rated.length ? (rated.reduce((s, e) => s + e.rating, 0) / rated.length).toFixed(1) : '-';
+
+        // Category counts and average rating per category
+        const catStats = {};
+        allEntries.forEach(e => {
+            if (!e.category) return;
+            if (!catStats[e.category]) catStats[e.category] = { count: 0, ratingSum: 0, ratingCount: 0 };
+            catStats[e.category].count++;
+            if (e.rating) { catStats[e.category].ratingSum += e.rating; catStats[e.category].ratingCount++; }
+        });
+        const catList = Object.entries(catStats)
+            .map(([cat, s]) => ({ cat, count: s.count, avg: s.ratingCount ? (s.ratingSum / s.ratingCount).toFixed(1) : '-' }))
+            .sort((a, b) => (parseFloat(b.avg) || 0) - (parseFloat(a.avg) || 0));
+
+        // Top rated dates (4-5 stars)
+        const loved = rated.filter(e => e.rating >= 4).sort((a, b) => b.rating - a.rating);
+        const disliked = rated.filter(e => e.rating <= 2);
+
+        // Feedback breakdown
+        const fb = (recsData && recsData.feedback) || {};
+        const fbBuckets = { up: [], maybe: [], down: [], comment: [] };
+        Object.entries(fb).forEach(([id, raw]) => {
+            const vote = typeof raw === 'string' ? raw : (raw && raw.vote) || null;
+            const comment = typeof raw === 'object' ? (raw.comment || '') : '';
+            const rec = findRecById(id);
+            const name = rec ? rec.name : id;
+            if (vote === 'up') fbBuckets.up.push({ name, comment });
+            else if (vote === 'maybe') fbBuckets.maybe.push({ name, comment });
+            else if (vote === 'down') fbBuckets.down.push({ name, comment });
+            else if (comment) fbBuckets.comment.push({ name, comment });
+        });
+
+        function fbList(items) {
+            if (!items.length) return '<div class="profile-empty">None yet</div>';
+            return '<ul class="profile-list">' + items.map(i => `
+                <li>
+                    <div class="name">${i.name}</div>
+                    ${i.comment ? `<div class="comment">"${escHtml(i.comment)}"</div>` : ''}
+                </li>
+            `).join('') + '</ul>';
+        }
+
+        function ratingList(items) {
+            if (!items.length) return '<div class="profile-empty">None yet</div>';
+            return '<ul class="profile-list">' + items.map(e => `
+                <li>
+                    <div class="name">${e.activity} ${starsHtml(e.rating)}</div>
+                    ${e.notes ? `<div class="comment">"${escHtml(e.notes)}"</div>` : ''}
+                </li>
+            `).join('') + '</ul>';
+        }
+
+        el.innerHTML = `
+            <div class="profile-section">
+                <h3>Overview</h3>
+                <div class="profile-row"><span class="label">Dates logged</span><span class="value">${total}</span></div>
+                <div class="profile-row"><span class="label">Average rating</span><span class="value">${avg}</span></div>
+                <div class="profile-row"><span class="label">Categories tried</span><span class="value">${Object.keys(catStats).length}</span></div>
+            </div>
+
+            <div class="profile-section">
+                <h3>Categories (best to worst)</h3>
+                ${catList.length ? catList.map(c => `
+                    <div class="profile-row">
+                        <span class="label">${c.cat} (${c.count})</span>
+                        <span class="value">${c.avg !== '-' ? c.avg + ' \u2605' : '\u2014'}</span>
+                    </div>
+                `).join('') : '<div class="profile-empty">No categories yet</div>'}
+            </div>
+
+            <div class="profile-section">
+                <h3>Loved (4-5 stars)</h3>
+                ${ratingList(loved)}
+            </div>
+
+            <div class="profile-section">
+                <h3>Disliked (1-2 stars)</h3>
+                ${ratingList(disliked)}
+            </div>
+
+            <div class="profile-section">
+                <h3>Interested \uD83D\uDC4D</h3>
+                ${fbList(fbBuckets.up)}
+            </div>
+
+            <div class="profile-section">
+                <h3>Maybe \uD83E\uDD14</h3>
+                ${fbList(fbBuckets.maybe)}
+            </div>
+
+            <div class="profile-section">
+                <h3>Not for us \uD83D\uDC4E</h3>
+                ${fbList(fbBuckets.down)}
+            </div>
+
+            ${fbBuckets.comment.length ? `
+                <div class="profile-section">
+                    <h3>Other comments</h3>
+                    ${fbList(fbBuckets.comment)}
+                </div>
+            ` : ''}
+        `;
     }
 
     function getFormEntry() {

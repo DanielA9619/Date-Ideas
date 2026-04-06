@@ -63,19 +63,20 @@ Users can thumbs-up or thumbs-down individual recommendations without doing them
     "sunset-picnic": "up",
     "game-night": { "vote": "down", "comment": "We don't really like board games" },
     "cooking-challenge": { "vote": "up", "comment": "Love the idea of trying new cuisines together" },
-    "hike-lunch": { "comment": "Maybe if it's not too hot" }
+    "hike-lunch": { "vote": "maybe", "comment": "Maybe if it's not too hot" }
 }
 ```
 
 Feedback values can be:
-- A simple string `"up"` or `"down"` (vote only, no comment)
-- An object with `vote` (`"up"` or `"down"`) and/or `comment` (string)
+- A simple string `"up"`, `"maybe"`, or `"down"` (vote only, no comment)
+- An object with `vote` (`"up"` / `"maybe"` / `"down"`) and/or `comment` (string)
 
 ### How to use feedback
 
 - `"up"` vote = "This idea appeals to me" — suggest more like it
+- `"maybe"` vote = "On the fence — could go either way" — okay to suggest similar but don't prioritize. Pay extra attention to any comment, since it usually explains the hesitation.
 - `"down"` vote = "Not interested" — avoid similar ideas
-- `comment` = **Read carefully** — the user is explaining *why* they like or dislike an idea. Use this to understand their preferences more deeply than just a thumbs up/down. For example, "too expensive" means suggest cheaper alternatives; "love the creativity" means lean into unusual/creative ideas.
+- `comment` = **Read carefully** — the user is explaining *why* they like or dislike (or are unsure about) an idea. Use this to understand their preferences more deeply than just a thumbs up/down. For example, "too expensive" means suggest cheaper alternatives; "love the creativity" means lean into unusual/creative ideas; "maybe if it's not too hot" means suggest indoor or shaded alternatives.
 
 ## Updating Recommendations
 
@@ -90,6 +91,7 @@ When asked to refresh or update recommendations:
      - Heavily favor categories/styles with done-date ratings of 4-5
      - Lean into ideas similar to feedback `"up"` votes
      - Avoid ideas similar to feedback `"down"` votes
+     - For `"maybe"` votes, read the comment carefully — it usually says what would tip them toward "yes." Adjust similar ideas to address the hesitation.
      - **Pay close attention to feedback comments** — they explain the *why* behind preferences
      - Include some variety from categories rated 3
      - Avoid anything similar to done dates rated 1-2
