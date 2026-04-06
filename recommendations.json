@@ -1,6 +1,6 @@
 {
-    "dateRange": "April 5 - April 19, 2026",
-    "updated": "April 5, 2026",
+    "dateRange": "April 6 - April 20, 2026",
+    "updated": "April 6, 2026",
     "feedback": {},
     "previousIds": [
         "tulip-festival-thanksgiving-point",
@@ -29,22 +29,43 @@
         "topgolf-vineyard",
         "clark-planetarium-slc",
         "home-cook-off-challenge",
-        "getout-games-escape-room"
+        "getout-games-escape-room",
+        "mammoth-vs-oilers-apr7",
+        "phantom-eccles-wed",
+        "park-city-wine-fest-apr10",
+        "grizzlies-final-game-2026",
+        "journey-final-frontier-2026",
+        "antelope-island-spring-escape",
+        "tulip-festival-fri-peak",
+        "bridal-veil-provo-canyon-hike",
+        "rsl-vs-san-diego",
+        "stewart-falls-hike-provo",
+        "antelope-island-bison-wildflowers",
+        "handle-park-city-dinner",
+        "riverhorse-park-city-upscale",
+        "topgolf-vineyard-game-night",
+        "slc-rock-climbing-gym",
+        "clark-planetarium-gateway",
+        "utah-symphony-spring-concert",
+        "international-cook-off-challenge",
+        "board-game-tournament-home",
+        "getout-games-escape-room-slc",
+        "gondola-art-stroll-park-city"
     ],
     "scheduled": [
         {
             "date": "2026-04-07",
             "dates": [
                 {
-                    "id": "utah-mammoth-vs-oilers",
+                    "id": "mammoth-vs-oilers-apr7",
                     "name": "Utah Mammoth vs. Edmonton Oilers — NHL Hockey",
                     "price": "$47 - $120+/person",
-                    "desc": "Catch Utah's new NHL franchise against Connor McDavid and the high-powered Edmonton Oilers — one of the marquee matchups of the Mammoth's debut season. The Mammoth also have home games Thu Apr 9 vs. Nashville (7:00 PM) and Sat Apr 11 vs. Carolina Hurricanes (3:00 PM) if this date doesn't work.",
+                    "desc": "Catch Utah's new NHL franchise against the elite Edmonton Oilers led by Connor McDavid. One of the marquee matchups of the Mammoth's debut season. If this Tuesday doesn't work, Thu Apr 9 vs. Nashville (7:00 PM) and Sat Apr 11 vs. Carolina Hurricanes (3:00 PM) are also great options.",
                     "start": "7:30 PM",
                     "duration": "2.5 - 3 hrs",
                     "where": "Delta Center — 301 S Temple, Salt Lake City, UT 84101",
                     "reservation": "tickets",
-                    "link": "https://www.deltacenter.com/event-type/utah-mammoth/"
+                    "link": "https://www.nhl.com/utah/"
                 }
             ]
         },
@@ -52,10 +73,10 @@
             "date": "2026-04-08",
             "dates": [
                 {
-                    "id": "phantom-eccles-april",
+                    "id": "phantom-eccles-wed",
                     "name": "The Phantom of the Opera — Broadway at the Eccles",
                     "price": "$60 - $150/person (varies by seat)",
-                    "desc": "Cameron Mackintosh's acclaimed new production of the iconic Broadway musical — full orchestra, stunning set design, and one of the most spectacular shows in musical theater. Runs through April 26; also plays Fri Apr 10 at 7:30 PM, Sun Apr 12 at 6:30 PM, and Sat Apr 18 at 7:30 PM if another night works better.",
+                    "desc": "Cameron Mackintosh's acclaimed production of the iconic Broadway musical — full orchestra, stunning set design, and breathtaking staging. Runs through April 26. Also playing Fri Apr 10 at 7:30 PM and Sat Apr 18 at 7:30 PM if you prefer a different night.",
                     "start": "7:30 PM",
                     "duration": "2.5 hrs",
                     "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
@@ -68,15 +89,26 @@
             "date": "2026-04-10",
             "dates": [
                 {
+                    "id": "park-city-wine-fest-apr10",
+                    "name": "Park City Wine Festival: Paired Park City Experience",
+                    "price": "$85 - $120/person",
+                    "desc": "Immersive wine and food pairings created by top Park City restaurants paired with world-class wineries. Live DJ, costume contest, and après vibes make this an evening to remember. Runs all day with various experiences; Paired Park City is 5-7 PM on Friday.",
+                    "start": "5:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Park City, UT (multiple restaurant locations)",
+                    "reservation": "required",
+                    "link": "https://parkcitywinefest.com/spring-schedule-2026/"
+                },
+                {
                     "id": "jazz-vs-grizzlies-apr10",
-                    "name": "Utah Jazz vs. Memphis Grizzlies",
-                    "price": "$16 - $60/person (budget seats widely available)",
-                    "desc": "A Friday night Jazz game to close out the week — in a rebuilding year, tickets are extremely affordable and you can grab great seats for cheap. Grab dinner on 300 South beforehand and walk over to the arena.",
+                    "name": "Utah Jazz vs. Memphis Grizzlies — NBA Basketball",
+                    "price": "$16 - $60/person (great budget seats available)",
+                    "desc": "Friday night Jazz hoops at the Delta Center. Affordable tickets mean you can grab excellent seats for cheap. Hit 300 South for dinner beforehand, then walk over to catch the game.",
                     "start": "7:30 PM",
                     "duration": "2.5 - 3 hrs",
                     "where": "Delta Center — 301 S Temple, Salt Lake City, UT 84101",
                     "reservation": "tickets",
-                    "link": "https://www.deltacenter.com/events/utah-jazz-vs-memphis-grizzlies-2/"
+                    "link": "https://www.nba.com/jazz/schedule"
                 }
             ]
         },
@@ -84,10 +116,10 @@
             "date": "2026-04-12",
             "dates": [
                 {
-                    "id": "utah-grizzlies-final-game",
+                    "id": "grizzlies-final-game-2026",
                     "name": "Utah Grizzlies — Final Regular Season Game Ever",
                     "price": "$15 - $30/person",
-                    "desc": "The Utah Grizzlies are being dissolved after this season — this Sunday afternoon matinee is their very last regular season home game in franchise history. An emotional send-off for a team you've loved. Afternoon start means you could pair it with the Journey concert the same night.",
+                    "desc": "The Utah Grizzlies are being dissolved after this season — this Sunday afternoon matinee is their very last regular season home game in franchise history. An emotional, one-of-a-kind send-off. Finish the epic day with Journey at 7:30 PM.",
                     "start": "3:10 PM",
                     "duration": "2.5 - 3 hrs",
                     "where": "Maverik Center — 3200 S Decker Lake Dr, West Valley City, UT 84119",
@@ -95,10 +127,10 @@
                     "link": "https://utahgrizzlies.com/"
                 },
                 {
-                    "id": "journey-farewell-tour-slc",
+                    "id": "journey-final-frontier-2026",
                     "name": "Journey — Final Frontier Farewell Tour",
                     "price": "$92 - $250+/person",
-                    "desc": "One of rock's greatest bands on what's billed as their final major North American tour — Don't Stop Believin', Open Arms, Faithfully, and more. An evening with Journey, no opener. Make it an epic Sunday by catching the Grizzlies' historic final game at 3:10 PM before heading over.",
+                    "desc": "One of rock's greatest bands on their final major North American tour. Don't Stop Believin', Open Arms, Faithfully, and more. An evening with Journey and no opener. Make it legendary: catch the Grizzlies' historic final game at 3:10 PM, then head to the Delta Center for this unforgettable night.",
                     "start": "7:30 PM",
                     "duration": "2 - 2.5 hrs",
                     "where": "Delta Center — 301 S Temple, Salt Lake City, UT 84101",
@@ -108,13 +140,29 @@
             ]
         },
         {
+            "date": "2026-04-14",
+            "dates": [
+                {
+                    "id": "antelope-island-spring-escape",
+                    "name": "Antelope Island State Park — Spring Wildflowers & Bison",
+                    "price": "$15 entry fee/vehicle (great value)",
+                    "desc": "Early April is perfect timing: the island is bursting with spring wildflowers (Gray's Biscuitroot, Redstem Filaree, bright desert blooms), and you'll see the resident bison herd (600+ animals) in their spring habitat. Hike, photograph, and explore a Utah treasure. Pack a picnic lunch.",
+                    "start": "9:00 AM",
+                    "duration": "3 - 5 hrs",
+                    "where": "Antelope Island State Park — Syracuse, UT (45 min north of Salt Lake City)",
+                    "reservation": "none",
+                    "link": "https://stateparks.utah.gov/parks/antelope-island/"
+                }
+            ]
+        },
+        {
             "date": "2026-04-17",
             "dates": [
                 {
-                    "id": "tulip-festival-friday-evening",
-                    "name": "Tulip Festival — Friday Evening (Live Music + Food Trucks)",
-                    "price": "$24 - $29/person (save $3 buying online vs. at the gate)",
-                    "desc": "Over 1 million tulips and spring blooms at Ashton Gardens — mid-April is peak bloom week and Friday evenings add a live music lineup (3–7 PM) with food trucks and local vendors, making it a full evening experience. This is the sweet spot of the season.",
+                    "id": "tulip-festival-fri-peak",
+                    "name": "Tulip Festival at Thanksgiving Point — Peak Season Friday Evening",
+                    "price": "$24 - $29/person (online discount available)",
+                    "desc": "Over 1 million tulips and spring blooms at peak bloom in mid-April. Friday evenings feature live music (3-7 PM), food trucks, and local vendors for a full sensory experience. The 50-acre Ashton Gardens is absolutely stunning right now. This is the best time to go.",
                     "start": "3:00 PM",
                     "duration": "3 - 4 hrs",
                     "where": "Ashton Gardens, Thanksgiving Point — 3900 N Garden Dr, Lehi, UT 84043",
@@ -127,10 +175,25 @@
             "date": "2026-04-18",
             "dates": [
                 {
-                    "id": "rsl-vs-san-diego-fc",
+                    "id": "bridal-veil-provo-canyon-hike",
+                    "name": "Bridal Veil Falls & Provo Canyon Scenic Drive",
+                    "price": "Free (parking may have small fee)",
+                    "desc": "A stunning 607-foot double waterfall at peak spring flow — the short, easy trail to the base is beautiful and gives you full waterfall immersion. The drive through Provo Canyon is gorgeous in mid-April with wildflowers, rushing water, and canyon walls. Grab lunch in Heber City on the return for a perfect half-day date.",
+                    "start": "9:00 AM",
+                    "duration": "3 - 4 hrs",
+                    "where": "Bridal Veil Falls — off US-189, Provo Canyon, UT 84604 (45 min from Lehi)",
+                    "reservation": "none"
+                }
+            ]
+        },
+        {
+            "date": "2026-04-19",
+            "dates": [
+                {
+                    "id": "rsl-vs-san-diego",
                     "name": "Real Salt Lake vs. San Diego FC — MLS Soccer",
-                    "price": "$29 - $80/person",
-                    "desc": "A Saturday night MLS match at America First Field — RSL hosts the brand-new San Diego FC expansion club in their inaugural season, making for a fun and historic matchup. Outdoor stadium with a great atmosphere and affordable lower-bowl seats.",
+                    "price": "$29 - $80/person (lower-bowl seats available)",
+                    "desc": "Saturday night soccer at America First Field. RSL hosts brand-new San Diego FC (expansion team in inaugural season) — a historic matchup. Great outdoor stadium atmosphere, affordable seating, and lively crowd.",
                     "start": "7:30 PM",
                     "duration": "2.5 hrs",
                     "where": "America First Field — 9256 S State St, Sandy, UT 84070",
@@ -145,14 +208,25 @@
             "title": "Adventures & Outdoors",
             "dates": [
                 {
-                    "id": "bridal-veil-falls-provo-canyon",
-                    "name": "Bridal Veil Falls & Provo Canyon Drive",
+                    "id": "stewart-falls-hike-provo",
+                    "name": "Stewart Falls Hike — Provo Canyon",
                     "price": "Free",
-                    "desc": "A stunning 607-foot double waterfall at peak spring flow — the short trail to the base is easy and beautiful, and the drive through Provo Canyon is gorgeous in mid-April with wildflowers and rushing water everywhere. Grab lunch at a Heber City spot on the way back for a full half-day.",
+                    "desc": "A moderate 3.5-mile out-and-back hike to a beautiful two-tiered waterfall in Provo Canyon. April wildflowers are blooming along the trail, and the water flow is at its peak. Perfect spring hike with payoff views and a cool wading pool at the base.",
                     "start": "Flexible (morning recommended)",
-                    "duration": "2 - 4 hrs",
-                    "where": "Bridal Veil Falls — Provo Canyon, UT 84604 (off US-189, ~45 min from Lehi)",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Stewart Falls Trailhead — Provo Canyon, UT (off US-189, ~40 min from Lehi)",
                     "reservation": "none"
+                },
+                {
+                    "id": "antelope-island-bison-wildflowers",
+                    "name": "Antelope Island State Park — Explore & Photograph",
+                    "price": "$15 entry fee/vehicle",
+                    "desc": "Island hikes with spring wildflowers in bloom and 600+ bison to spot (especially near Fielding Garr Ranch on southeast side). Bring a camera and snacks. Safe distance from animals is 100+ yards. Pack layers — it's windy and scenic.",
+                    "start": "Flexible",
+                    "duration": "3 - 5 hrs",
+                    "where": "Antelope Island State Park — Syracuse, UT (45 min north of SLC)",
+                    "reservation": "none",
+                    "link": "https://stateparks.utah.gov/parks/antelope-island/"
                 }
             ]
         },
@@ -160,15 +234,26 @@
             "title": "Food & Dining",
             "dates": [
                 {
-                    "id": "handle-restaurant-park-city",
+                    "id": "handle-park-city-dinner",
                     "name": "Dinner at Handle — Park City",
-                    "price": "$80 - $130 for two",
-                    "desc": "One of Park City's most celebrated restaurants — creative American small plates and hearty entrees in a restored historic building on Heber Ave. Go early enough to stroll Historic Main Street before or after dinner; the whole area is walkable and lively in spring.",
+                    "price": "$80 - $140 for two",
+                    "desc": "One of Park City's most celebrated restaurants — creative American small plates and hearty entrees in a restored historic building on Heber Ave. Arrive early to stroll Historic Main Street before dinner; the whole area is walkable and lively in spring.",
                     "start": "6:30 PM",
                     "duration": "2 - 3 hrs",
                     "where": "Handle — 136 Heber Ave, Park City, UT 84060",
                     "reservation": "required",
                     "link": "https://www.handleparkcity.com/"
+                },
+                {
+                    "id": "riverhorse-park-city-upscale",
+                    "name": "Dinner at Riverhorse on Main — Park City",
+                    "price": "$120 - $180 for two",
+                    "desc": "Park City's premier fine dining experience with innovative cuisine, excellent wine program, and intimate atmosphere on Historic Main Street. Dress up and make an evening of it. Reservations strongly recommended.",
+                    "start": "6:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Riverhorse on Main — 540 Main St, Park City, UT 84060",
+                    "reservation": "required",
+                    "link": "https://www.riverhorseparkcity.com/"
                 }
             ]
         },
@@ -176,15 +261,25 @@
             "title": "Active & Sporty",
             "dates": [
                 {
-                    "id": "topgolf-vineyard",
-                    "name": "TopGolf at Vineyard",
-                    "price": "$25 - $45/person (half price on Tuesdays!)",
-                    "desc": "Gamified golf bays with automatic scoring, a full food menu, and zero skill required — a natural next step from mini golf with more variety and a livelier atmosphere. Bay pricing is per bay (not per person), and Tuesdays are half-off gameplay, making it one of the best-value activity dates in Utah County.",
+                    "id": "topgolf-vineyard-game-night",
+                    "name": "TopGolf at Vineyard — Gamified Golf Experience",
+                    "price": "$25 - $45/person (half off Tuesdays!)",
+                    "desc": "Gamified golf bays with automatic scoring, a full food menu, and zero golf skill required — a fun step up from mini golf with more variety and a lively atmosphere. Bay pricing is per bay, not per person. Tuesday half-off makes this an amazing value date.",
                     "start": "Flexible",
                     "duration": "2 - 3 hrs",
                     "where": "TopGolf — 484 N Entertainment Way, Vineyard, UT 84059",
                     "reservation": "none",
                     "link": "https://topgolf.com/us/vineyard/"
+                },
+                {
+                    "id": "slc-rock-climbing-gym",
+                    "name": "Indoor Rock Climbing at Red Rock Climbing Center",
+                    "price": "$20 - $30/person (including shoe rental)",
+                    "desc": "Beginner-friendly climbing gym in downtown Salt Lake with a huge variety of routes for all skill levels. No experience needed — staff will show you the ropes (literally). It's a fun, active date with zero pressure and lots of laughs.",
+                    "start": "Flexible",
+                    "duration": "2 - 3 hrs",
+                    "where": "Red Rock Climbing Center — 2074 E Fort Union Blvd, Salt Lake City, UT 84121",
+                    "reservation": "none"
                 }
             ]
         },
@@ -192,15 +287,26 @@
             "title": "Arts & Culture",
             "dates": [
                 {
-                    "id": "clark-planetarium-slc",
-                    "name": "Clark Planetarium + Gateway Stroll",
+                    "id": "clark-planetarium-gateway",
+                    "name": "Clark Planetarium + The Gateway District Stroll",
                     "price": "Free admission ($9 - $14/person for IMAX shows)",
-                    "desc": "Free interactive science museum with immersive space exhibits and a digital full-dome IMAX theater — hands-on and visual, not a quiet gallery experience. Afterwards, explore The Gateway district just outside for dessert, a stroll, or an arcade bar (mocktails welcome).",
+                    "desc": "Free interactive science museum with immersive space exhibits and a digital full-dome IMAX theater — hands-on and visual. Then stroll The Gateway district outside for dessert, shopping, or an arcade bar.",
                     "start": "Flexible",
                     "duration": "2 - 3 hrs",
                     "where": "Clark Planetarium — 110 S 400 W, Salt Lake City, UT 84101",
                     "reservation": "none",
                     "link": "https://clarkplanetarium.org/"
+                },
+                {
+                    "id": "utah-symphony-spring-concert",
+                    "name": "Utah Symphony Spring Concert — Abravanel Hall",
+                    "price": "$20 - $80/person",
+                    "desc": "Live orchestra performances featuring masterworks and contemporary pieces. Abravanel Hall is stunning and the acoustics are world-class. Check their spring schedule for specific programs and dates.",
+                    "start": "7:30 PM",
+                    "duration": "2 hrs",
+                    "where": "Abravanel Hall — 123 S State St, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://utahsymphony.org/schedule/"
                 }
             ]
         },
@@ -208,12 +314,22 @@
             "title": "Cozy / Stay-In",
             "dates": [
                 {
-                    "id": "home-cook-off-challenge",
+                    "id": "international-cook-off-challenge",
                     "name": "Themed Cook-Off Challenge at Home",
                     "price": "$30 - $50 for ingredients",
-                    "desc": "Pick a cuisine neither of you has cooked before — Japanese, Moroccan, Thai, whatever sounds interesting — grab the ingredients together, then challenge yourselves to cook a full meal from scratch. Set a timer for each course and see what you can pull off. More fun and chaotic than it sounds.",
+                    "desc": "Pick a cuisine neither of you has cooked before — Japanese, Moroccan, Thai, Korean, whatever sounds interesting — grab ingredients together, then challenge yourselves to cook a full meal from scratch. Set timers, compete, laugh, and enjoy. More fun than cooking out.",
                     "start": "Flexible",
                     "duration": "2 - 3 hrs",
+                    "where": "Home",
+                    "reservation": "none"
+                },
+                {
+                    "id": "board-game-tournament-home",
+                    "name": "Board Game Tournament Night at Home",
+                    "price": "Free (if you own games) or $0 - $15 (buy a new game)",
+                    "desc": "Pick 2-3 board games you've never played or haven't played in a while. Set a tournament bracket, keep score, and crown a champion. Grab snacks, make it competitive and fun, and take goofy victory photos.",
+                    "start": "Flexible",
+                    "duration": "2.5 - 4 hrs",
                     "where": "Home",
                     "reservation": "none"
                 }
@@ -223,15 +339,25 @@
             "title": "Unique / Novelty",
             "dates": [
                 {
-                    "id": "getout-games-escape-room",
-                    "name": "Escape Room at Getout Games — SLC",
+                    "id": "getout-games-escape-room-slc",
+                    "name": "Escape Room at Getout Games — Salt Lake City",
                     "price": "$25 - $35/person",
-                    "desc": "Four themed rooms downtown — Egyptian Tomb, Zombie on a Chain, The Heist, or Reactor Room — 60 minutes of puzzle-solving and teamwork under a ticking clock. Book a slot in advance; evenings available through the week.",
-                    "start": "Flexible (book a time slot in advance)",
+                    "desc": "Four themed rooms downtown — Egyptian Tomb, Zombie on a Chain, The Heist, or Reactor Room. 60 minutes of puzzle-solving and teamwork under a ticking clock. Book in advance; evenings available all week.",
+                    "start": "Flexible (book time slot in advance)",
                     "duration": "1 - 1.5 hrs",
                     "where": "Getout Games — 202 W 400 S, Salt Lake City, UT 84101",
                     "reservation": "required",
                     "link": "https://getoutgames.com/escape-room-salt-lake-city/"
+                },
+                {
+                    "id": "gondola-art-stroll-park-city",
+                    "name": "Gondola Art Stroll at Canyons Village — Park City",
+                    "price": "Gondola ticket + art experience (typically $20 - $40 for both)",
+                    "desc": "Ride the gondola up Canyons Mountain for panoramic spring views, then stroll outdoor art installations scattered throughout Canyons Village. Gallery shops, outdoor galleries, live artists. It runs daily through April 19.",
+                    "start": "Flexible",
+                    "duration": "2 - 3 hrs",
+                    "where": "Canyons Village, Park City, UT (next to Park City Mountain Resort)",
+                    "reservation": "none"
                 }
             ]
         }
