@@ -4,7 +4,10 @@
     "feedback": {
         "mammoth-vs-oilers-apr7": "up",
         "phantom-eccles-wed": "up",
-        "park-city-wine-fest-apr10": "down"
+        "park-city-wine-fest-apr10": {
+            "vote": "down",
+            "comment": "Not 21, so 21+ events are a no go"
+        }
     },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
