@@ -1,7 +1,9 @@
 {
     "dateRange": "April 6 - April 20, 2026",
     "updated": "April 6, 2026",
-    "feedback": {},
+    "feedback": {
+        "mammoth-vs-oilers-apr7": "up"
+    },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
         "antelope-island-day-trip",
