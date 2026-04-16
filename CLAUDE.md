@@ -84,8 +84,9 @@ When asked to refresh or update recommendations:
 
 1. **Read `done-dates.json`** to see all past dates, what they liked, and what they didn't
 2. **Read `recommendations.json`** — check `previousIds`, and read the `feedback` object
-3. **Generate ideas** split into two groups:
-   - **`scheduled`** — 4-7 date-specific ideas tied to particular days in the 2-week window. Pick good days (Fridays, Saturdays, some weeknights). Consider events, weather, and day of week.
+3. **Note today's date** from the `currentDate` context. The 2-week window starts **today** (not a future date). Skip any days that have already passed. So if today is April 16, the window is April 16 – April 29 and no scheduled date should be before April 16.
+4. **Generate ideas** split into two groups:
+   - **`scheduled`** — 4-7 date-specific ideas tied to particular days within the 2-week window starting today. Pick good days (Fridays, Saturdays, some weeknights). Consider events, weather, and day of week.
    - **`whenever`** — 5-8 anytime ideas grouped by category. These are ideas that work any day.
    - Both groups should:
      - Heavily favor categories/styles with done-date ratings of 4-5
@@ -96,10 +97,10 @@ When asked to refresh or update recommendations:
      - Include some variety from categories rated 3
      - Avoid anything similar to done dates rated 1-2
      - Never reuse any ID from `previousIds`
-4. **Replace `scheduled` and `whenever`** arrays in `recommendations.json` with new ideas
-5. **Clear the `feedback` object** (reset to `{}`) since it was for the old set
-6. **Add all new IDs** to the `previousIds` array (keep old ones too)
-7. **Update `dateRange`** and **`updated`** fields
+5. **Replace `scheduled` and `whenever`** arrays in `recommendations.json` with new ideas
+6. **Clear the `feedback` object** (reset to `{}`) since it was for the old set
+7. **Add all new IDs** to the `previousIds` array (keep old ones too)
+8. **Update `dateRange`** (today → today + 13 days) and **`updated`** (today's date) fields
 
 ## recommendations.json Structure
 
