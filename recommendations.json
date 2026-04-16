@@ -19,7 +19,10 @@
         "tupelo-park-city-dinner": "up",
         "park-city-historic-stroll": "up",
         "mirror-lake-scenic-byway-drive": "up",
-        "topgolf-vineyard-game-night": "down"
+        "topgolf-vineyard-game-night": {
+            "vote": "down",
+            "comment": "too far away"
+        }
     },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
