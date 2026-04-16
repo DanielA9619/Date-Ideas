@@ -1,7 +1,9 @@
 {
     "dateRange": "April 30 - May 14, 2026",
     "updated": "April 16, 2026",
-    "feedback": {},
+    "feedback": {
+        "rsl-vs-portland-may2": "down"
+    },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
         "antelope-island-day-trip",
