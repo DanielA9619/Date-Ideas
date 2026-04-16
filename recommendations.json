@@ -27,7 +27,8 @@
         "clark-planetarium-gateway": "up",
         "getout-games-escape-room-slc": "up",
         "slc-rock-climbing-gym": "down",
-        "board-game-tournament-home": "down"
+        "board-game-tournament-home": "down",
+        "international-cook-off-challenge": "maybe"
     },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
