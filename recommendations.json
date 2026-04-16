@@ -6,7 +6,10 @@
             "vote": "down",
             "comment": "No Soccer"
         },
-        "mothers-day-sundance": "down"
+        "mothers-day-sundance": {
+            "vote": "down",
+            "comment": "Not really a date idea, but good for mothers day"
+        }
     },
     "previousIds": [
         "tulip-festival-thanksgiving-point",
