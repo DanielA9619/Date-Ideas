@@ -1,35 +1,8 @@
 {
-    "dateRange": "April 30 - May 14, 2026",
-    "updated": "April 16, 2026",
-    "feedback": {
-        "rsl-vs-portland-may2": {
-            "vote": "down",
-            "comment": "No Soccer"
-        },
-        "mothers-day-sundance": {
-            "vote": "down",
-            "comment": "Not really a date idea, but good for mothers day"
-        },
-        "pablo-cruise-park-city-may": "down",
-        "rsl-vs-houston-may13": "down",
-        "sundance-horseback-hiking-may": "down",
-        "trappers-lake-hike-alta": "maybe",
-        "antelope-island-spring-wildflowers": "up",
-        "snowbird-tram-scenic-ride": "maybe",
-        "tupelo-park-city-dinner": "up",
-        "park-city-historic-stroll": "up",
-        "mirror-lake-scenic-byway-drive": "up",
-        "topgolf-vineyard-game-night": {
-            "vote": "down",
-            "comment": "too far away"
-        },
-        "riverdance-eccles-may22": "down",
-        "clark-planetarium-gateway": "up",
-        "getout-games-escape-room-slc": "up",
-        "slc-rock-climbing-gym": "down",
-        "board-game-tournament-home": "down",
-        "international-cook-off-challenge": "maybe"
-    },
+    "dateRange": "April 20 - May 3, 2026",
+    "updated": "April 20, 2026",
+    "feedback": {},
+    "wishlist": [],
     "previousIds": [
         "tulip-festival-thanksgiving-point",
         "antelope-island-day-trip",
@@ -96,22 +69,109 @@
         "snowbird-tram-scenic-ride",
         "antelope-island-spring-wildflowers",
         "rsl-vs-houston-may13",
-        "riverdance-eccles-may22"
+        "riverdance-eccles-may22",
+        "blippi-eccles-may1",
+        "art-exhibit-opening-slc-apr20",
+        "tulip-festival-ashton-gardens-lehi",
+        "spring-festival-utah-state-fairpark",
+        "repeal-jazz-bar-grand-opening",
+        "natural-history-museum-slc",
+        "utah-food-festival-slc"
     ],
     "scheduled": [
+        {
+            "date": "2026-04-20",
+            "dates": [
+                {
+                    "id": "art-exhibit-opening-slc-apr20",
+                    "name": "Art Exhibit Opening Reception — 'And the Journey Continues'",
+                    "price": "Free (donations welcome)",
+                    "desc": "Opening reception for paintings by Dr. Sam Forlenza runs through May 1. Spring art opening with refreshments and a chance to meet the artist. Intimate gallery setting downtown. Great way to start a date exploring local art.",
+                    "start": "5:00 PM - 7:00 PM",
+                    "duration": "1 - 2 hrs",
+                    "where": "Salt Lake City (exact gallery location TBD — check local art listings)",
+                    "reservation": "none",
+                    "link": "https://www.visitsaltlake.com/events/"
+                }
+            ]
+        },
+        {
+            "date": "2026-04-25",
+            "dates": [
+                {
+                    "id": "spring-festival-utah-state-fairpark",
+                    "name": "Spring Celebration Festival — Utah State Fairpark",
+                    "price": "Free entry (food & vendor items à la carte)",
+                    "desc": "Full day spring celebration featuring live music, dancing, artisan vendors, and food trucks. Family-friendly with a mix of cultural traditions and modern festival vibes. Great for exploring local makers and grabbing dinner from food trucks.",
+                    "start": "10:00 AM",
+                    "duration": "3 - 5 hrs (flexible)",
+                    "where": "Utah State Fairpark — 155 N 1000 W, Salt Lake City, UT 84116",
+                    "reservation": "none",
+                    "link": "https://www.visitsaltlake.com/events/"
+                }
+            ]
+        },
+        {
+            "date": "2026-04-26",
+            "dates": [
+                {
+                    "id": "tulip-festival-ashton-gardens-lehi",
+                    "name": "Thanksgiving Point Tulip Festival — Ashton Gardens (Weekend Outing)",
+                    "price": "$16 - $20/person (check website for current rates)",
+                    "desc": "Peak tulip season! Over 1 million flowers across 50 acres including 400,000 tulips in 175+ varieties. Saturday features live music, local vendors, and food trucks. Perfect for photos, strolling, and enjoying spring blooms together. The festival has excellent walkability and stunning photo spots throughout.",
+                    "start": "10:00 AM",
+                    "duration": "2 - 4 hrs",
+                    "where": "Thanksgiving Point — Ashton Gardens, 3900 N. Garden Drive, Lehi, UT 84048",
+                    "reservation": "tickets recommended (buy online)",
+                    "link": "https://thanksgivingpoint.org/events/tulip-festival/"
+                }
+            ]
+        },
+        {
+            "date": "2026-04-28",
+            "dates": [
+                {
+                    "id": "tree-room-sundance-dinner",
+                    "name": "Fine Dining at The Tree Room — Sundance Resort",
+                    "price": "$150 - $220 for two (entrees + wine)",
+                    "desc": "Forbes Four-Star, Michelin-rated fine dining with stunning mountain views. Seasonal menu featuring locally-sourced ingredients and creative presentations. Closed Sundays and Mondays. Reservations required well in advance. Dress code: smart casual.",
+                    "start": "6:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
+                    "reservation": "required",
+                    "link": "https://www.sundanceresort.com/dining/"
+                }
+            ]
+        },
+        {
+            "date": "2026-05-01",
+            "dates": [
+                {
+                    "id": "blippi-eccles-may1",
+                    "name": "Blippi: Be Like Blippi — Family Show at Eccles Theater",
+                    "price": "$25 - $55/person",
+                    "desc": "Interactive live performance by the beloved Blippi character with music, dance, and audience participation. Great fun if you enjoy high-energy entertainment. May 1 evening show. All ages welcome.",
+                    "start": "7:00 PM",
+                    "duration": "1.5 hrs",
+                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "tickets recommended",
+                    "link": "https://live-at-the-eccles.com/events"
+                }
+            ]
+        },
         {
             "date": "2026-05-02",
             "dates": [
                 {
-                    "id": "rsl-vs-portland-may2",
-                    "name": "Real Salt Lake vs. Portland Timbers FC — MLS Soccer",
-                    "price": "$40 - $80/person",
-                    "desc": "Major League Soccer matchup at America First Field. Real Salt Lake takes on Portland Timbers in a competitive mid-season clash. May is the perfect time for outdoor soccer with ideal weather. Pre-game parking and concessions available.",
-                    "start": "2:30 PM",
-                    "duration": "2 hrs",
-                    "where": "America First Field — 9220 S State St, Sandy, UT 84070",
-                    "reservation": "tickets",
-                    "link": "https://www.rsl.com/schedule/matches"
+                    "id": "bells-canyon-waterfall-hike-may2",
+                    "name": "Bell's Canyon Waterfall Hike — Easy to Moderate Spring Adventure",
+                    "price": "Free (parking at trailhead)",
+                    "desc": "Classic Wasatch hike starting just 25 minutes from downtown Sandy. Relatively easy trail until the final mile becomes rocky with possible snow patches in late April/early May. Stunning canyon scenery with waterfall views at the end. Perfect spring outing with minimal elevation gain.",
+                    "start": "9:00 AM",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Bell's Canyon Trailhead — Sandy, UT (25 min from SLC downtown)",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/utah/salt-lake-county/bells-canyon-trail"
                 }
             ]
         },
@@ -119,63 +179,15 @@
             "date": "2026-05-03",
             "dates": [
                 {
-                    "id": "sundance-horseback-hiking-may",
-                    "name": "Sundance Mountain Resort — Spring Horseback Ride & Hiking Adventure",
-                    "price": "$100 - $150 for horseback ($50+ for hiking)",
-                    "desc": "Spring is peak season at Sundance with aspen groves blooming and wildflower trails in full color. Guided horseback rides through scenic mountain terrain or challenge yourself with hiking to waterfalls and vistas. The Foundry Grill offers a celebrated Sunday brunch buffet (9 AM-2 PM) with farm-to-table ingredients.",
-                    "start": "9:00 AM",
-                    "duration": "3 - 4 hrs",
-                    "where": "Sundance Mountain Resort — 8841 Alpine Loop Rd, Sundance, UT 84604",
-                    "reservation": "required",
-                    "link": "https://www.sundanceresort.com/activities/"
-                }
-            ]
-        },
-        {
-            "date": "2026-05-04",
-            "dates": [
-                {
-                    "id": "mothers-day-sundance",
-                    "name": "Mother's Day Celebration at Sundance — Brunch & Mountain Activities",
-                    "price": "$80 - $150 for brunch; activities $50-$150",
-                    "desc": "Celebrate Mother's Day at Sundance with the famous Foundry Grill brunch (special Mother's Day menu with beloved favorites), followed by a scenic hike, horseback ride, or spa treatment. Spectacular mountain views and peaceful spring ambiance. Reservations highly recommended.",
+                    "id": "natural-history-museum-slc",
+                    "name": "Natural History Museum of Utah — Dinosaurs & Interactive Exhibits",
+                    "price": "$24.95/adult (Wednesday until 9 PM if you go in evening)",
+                    "desc": "World-class natural history museum with extensive dinosaur skeletons, interactive science exhibits, and hands-on learning. The Red Butte Garden is attached if you want to extend the outing. Excellent full-day or half-day activity with amazing views of the valley from the building.",
                     "start": "10:00 AM",
-                    "duration": "4 - 5 hrs",
-                    "where": "Sundance Mountain Resort — 8841 Alpine Loop Rd, Sundance, UT 84604",
-                    "reservation": "required",
-                    "link": "https://www.sundanceresort.com/dining/the-foundry-grill/"
-                }
-            ]
-        },
-        {
-            "date": "2026-05-08",
-            "dates": [
-                {
-                    "id": "pablo-cruise-park-city-may",
-                    "name": "Pablo Cruise — Retro Rock Concert in Park City",
-                    "price": "$40 - $75/person",
-                    "desc": "Legendary soft rock band with three original members performing their greatest hits from the '70s and '80s. Intimate Park City venue with excellent acoustics. May concert run; perfect for a romantic evening in the mountains.",
-                    "start": "7:30 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Park City Live — Park City, UT (exact venue TBD; check visitparkcity.com)",
-                    "reservation": "required",
-                    "link": "https://www.visitparkcity.com/events/"
-                }
-            ]
-        },
-        {
-            "date": "2026-05-13",
-            "dates": [
-                {
-                    "id": "rsl-vs-houston-may13",
-                    "name": "Real Salt Lake vs. Houston Dynamo — MLS Soccer",
-                    "price": "$40 - $80/person",
-                    "desc": "Real Salt Lake hosts Houston Dynamo in a mid-week MLS contest. Competitive soccer under the May evening lights at America First Field. This is one of RSL's final home games before the FIFA World Cup break.",
-                    "start": "7:30 PM",
-                    "duration": "2 hrs",
-                    "where": "America First Field — 9220 S State St, Sandy, UT 84070",
-                    "reservation": "tickets",
-                    "link": "https://www.rsl.com/schedule/matches"
+                    "duration": "2 - 4 hrs",
+                    "where": "Natural History Museum of Utah — 301 S 1300 E, Salt Lake City, UT 84112",
+                    "reservation": "none (tickets at door or online)",
+                    "link": "https://nhmu.utah.edu/"
                 }
             ]
         }
@@ -188,8 +200,7 @@
                     "id": "trappers-lake-hike-alta",
                     "name": "Trappers Lake Trail — Little Cottonwood Canyon",
                     "price": "Free (small parking area)",
-                    "desc": "Moderate 3.5-mile hike to a pristine alpine lake surrounded by wildflowers and mountain peaks. May is ideal for spring runoff views and blooming wildflowers. Less crowded than the famous Donut Falls, with equally stunning scenery. Great for photography.",
-                    "start": "Flexible (morning recommended)",
+                    "desc": "Moderate 3.5-mile hike to a pristine alpine lake surrounded by wildflowers and mountain peaks. April-May is ideal for spring runoff views and blooming wildflowers. Less crowded than the famous Donut Falls, with equally stunning scenery. Great for photography.",
                     "duration": "2.5 - 3.5 hrs",
                     "where": "Trappers Lake Trailhead — Little Cottonwood Canyon Rd, UT (~25 miles from SLC)",
                     "reservation": "none",
@@ -199,8 +210,7 @@
                     "id": "antelope-island-spring-wildflowers",
                     "name": "Antelope Island State Park — Spring Wildlife & Wildflowers",
                     "price": "$15/vehicle entry fee",
-                    "desc": "May is peak season for island wildflowers blooming across sagebrush terrain. Roam the island by car or hike to see native bison herds, pronghorn, and bighorn sheep. Sunset views of the Great Salt Lake are spectacular. Pack a picnic.",
-                    "start": "Flexible",
+                    "desc": "April-May is peak season for island wildflowers blooming across sagebrush terrain. Roam the island by car or hike to see native bison herds, pronghorn, and bighorn sheep. Sunset views of the Great Salt Lake are spectacular. Pack a picnic or bring dinner supplies.",
                     "duration": "3 - 4 hrs",
                     "where": "Antelope Island State Park — 4528 W 1700 S, Syracuse, UT 84075",
                     "reservation": "none",
@@ -210,12 +220,21 @@
                     "id": "snowbird-tram-scenic-ride",
                     "name": "Snowbird Aerial Tram — High Alpine Scenic Experience",
                     "price": "$22 - $35/person (round trip)",
-                    "desc": "Ride the aerial tram 2,000 vertical feet to Hidden Peak (11,000 ft) for 360-degree views of the Wasatch Mountains, Lake Utah, and beyond. Accessible May through October. Walk the trails, visit the summit restaurant, or simply breathe the crisp alpine air. No skiing required — just stunning views.",
-                    "start": "Flexible",
+                    "desc": "Ride the aerial tram 2,000 vertical feet to Hidden Peak (11,000 ft) for 360-degree views of the Wasatch Mountains, Lake Utah, and beyond. Accessible April-October. Walk the trails, visit the summit restaurant, or simply breathe the crisp alpine air. No skiing required — just stunning views.",
                     "duration": "2 - 3 hrs",
                     "where": "Snowbird Resort — 9385 E Snowbird Tram Rd, Snowbird, UT 84092",
                     "reservation": "none",
                     "link": "https://www.snowbird.com/summer/tram/"
+                },
+                {
+                    "id": "jordanelle-reservoir-hike",
+                    "name": "Jordanelle State Park — Scenic Reservoir Hike & Picnic",
+                    "price": "$15/vehicle entry fee",
+                    "desc": "Perched above the beautiful Heber Valley with stunning alpine lake views. Multiple scenic trails ranging from easy to moderate. Day-use areas with picnic facilities overlooking the water. Perfect for a relaxing spring hike and lunch with a view.",
+                    "duration": "2 - 4 hrs",
+                    "where": "Jordanelle State Park — Heber, UT (45 min from SLC)",
+                    "reservation": "none",
+                    "link": "https://stateparks.utah.gov/parks/jordanelle/"
                 }
             ]
         },
@@ -224,10 +243,9 @@
             "dates": [
                 {
                     "id": "tupelo-park-city-dinner",
-                    "name": "Dinner at Tupelo Park City — Globally-Inspired Fine Dining",
+                    "name": "Dinner at Tupelo Park City — Globally-Inspired Farm-to-Table",
                     "price": "$120 - $180 for two (entrees + drinks)",
-                    "desc": "Chef Matt Harris's celebrated farm-to-table restaurant showcasing artisanal ingredients: fresh Idaho trout, natural Utah lamb, heirloom grains, and housemade pasta. Sophisticated atmosphere with carefully curated wine pairings. Reservations essential.",
-                    "start": "6:30 PM",
+                    "desc": "Chef Matt Harris's celebrated restaurant showcasing artisanal ingredients: fresh Idaho trout, natural Utah lamb, heirloom grains, and housemade pasta. Sophisticated atmosphere with carefully curated wine pairings. Reservations essential. You gave this an 'up' vote — definitely a winner.",
                     "duration": "2.5 - 3 hrs",
                     "where": "Tupelo Park City — 1375 Park Ave, Park City, UT 84060",
                     "reservation": "required",
@@ -236,13 +254,22 @@
                 {
                     "id": "park-city-historic-stroll",
                     "name": "Park City Historic Main Street — Explore & Dine",
-                    "price": "$30 - $80 (food costs vary)",
+                    "price": "$30 - $80 (food costs vary by restaurant)",
                     "desc": "Walkable historic district lined with local restaurants, galleries, and shops. Grab coffee at a local café, browse art galleries, and choose from diverse dining options (pizza, sushi, burgers, fine dining). Live music often plays on weekends. Perfect for a relaxed spring afternoon.",
-                    "start": "Flexible",
                     "duration": "2 - 4 hrs",
                     "where": "Park City Historic Main Street — Park City, UT (various restaurants/galleries)",
                     "reservation": "varies by restaurant",
                     "link": "https://www.visitparkcity.com/eat-drink/"
+                },
+                {
+                    "id": "foundry-grill-sundance-brunch",
+                    "name": "Sunday Brunch at The Foundry Grill — Sundance Resort",
+                    "price": "$80 - $100/person (Sunday brunch buffet)",
+                    "desc": "Celebrated farm-to-table buffet brunch with farm-fresh ingredients, seasonal dishes, and mountain views. Open 9 AM - 2 PM on Sundays. Outstanding quality and selection. Reservations recommended. Perfect for a leisurely spring Sunday morning.",
+                    "duration": "1.5 - 2.5 hrs",
+                    "where": "The Foundry Grill — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
+                    "reservation": "recommended",
+                    "link": "https://www.sundanceresort.com/dining/the-foundry-grill/"
                 }
             ]
         },
@@ -253,8 +280,7 @@
                     "id": "mirror-lake-scenic-byway-drive",
                     "name": "Mirror Lake Scenic Byway — High Alpine Drive & Hiking",
                     "price": "$15 (recreation area fee)",
-                    "desc": "Utah's highest paved road at 10,715 feet (Bald Mountain Pass). 42-mile scenic drive with multiple pullouts, photo ops, and short hikes. Opens late May typically. Stunning panoramic views, mountain wildflowers, and pristine alpine lakes. Bring layers — it's cool at elevation.",
-                    "start": "Flexible",
+                    "desc": "Utah's highest paved road at 10,715 feet (Bald Mountain Pass). 42-mile scenic drive with multiple pullouts, photo ops, and short hikes. Opens late May typically. Stunning panoramic views, mountain wildflowers, and pristine alpine lakes. Bring layers — it's cool at elevation. You gave this an 'up' vote.",
                     "duration": "3 - 5 hrs",
                     "where": "Mirror Lake Scenic Byway — State Route 150, Kamas to Duck Creek (1 hour from Park City)",
                     "reservation": "none",
@@ -265,7 +291,6 @@
                     "name": "TopGolf at Vineyard — Gamified Golf Experience",
                     "price": "$25 - $45/bay (half off Tuesdays!)",
                     "desc": "Gamified golf bays with automatic scoring, full food menu, and zero golf skill required. Fun, competitive energy with lively bar scene. Bay pricing is per bay, not per person — great value for two. Play games, grab food, enjoy the vibe.",
-                    "start": "Flexible",
                     "duration": "2 - 3 hrs",
                     "where": "TopGolf — 484 N Entertainment Way, Vineyard, UT 84059",
                     "reservation": "none (recommended for evenings)",
@@ -277,51 +302,24 @@
             "title": "Arts & Culture",
             "dates": [
                 {
-                    "id": "riverdance-eccles-may22",
-                    "name": "Riverdance — The Show at Eccles Theater",
-                    "price": "$81 - $261/person",
-                    "desc": "The legendary Irish dance and music spectacular — thunderous footsteps, live orchestral score, and mesmerizing choreography. Runs May 22-24, 2026. One of the most beloved touring shows. You loved The Phantom of the Opera; Riverdance offers equally breathtaking performance artistry.",
-                    "start": "7:30 PM (check schedule)",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://live-at-the-eccles.com/events"
-                },
-                {
                     "id": "clark-planetarium-gateway",
                     "name": "Clark Planetarium + The Gateway District Stroll",
                     "price": "Free admission ($9 - $14/person for IMAX shows)",
-                    "desc": "Free interactive science museum with immersive space exhibits and full-dome IMAX theater. Then stroll The Gateway district for dessert, shopping, art installations, or an arcade bar. Easy afternoon with lots of options.",
-                    "start": "Flexible",
+                    "desc": "Free interactive science museum with immersive space exhibits and full-dome IMAX theater. Then stroll The Gateway district for dessert, shopping, art installations, or an arcade bar. Easy afternoon with lots of options. You gave this an 'up' vote — great pairing.",
                     "duration": "2 - 3 hrs",
                     "where": "Clark Planetarium — 110 S 400 W, Salt Lake City, UT 84101",
                     "reservation": "none (book IMAX in advance)",
                     "link": "https://clarkplanetarium.org/"
-                }
-            ]
-        },
-        {
-            "title": "Cozy / Stay-In",
-            "dates": [
-                {
-                    "id": "international-cook-off-challenge",
-                    "name": "Themed Cook-Off Challenge at Home",
-                    "price": "$30 - $50 for ingredients",
-                    "desc": "Pick a cuisine neither of you has cooked before — Japanese, Moroccan, Thai, Korean, Vietnamese, Lebanese — grab ingredients together, then challenge yourselves to make a full meal from scratch. Set timers, taste-test, laugh at mistakes, and enjoy the result. Competitive and creative.",
-                    "start": "Flexible",
-                    "duration": "2 - 3 hrs",
-                    "where": "Home",
-                    "reservation": "none"
                 },
                 {
-                    "id": "board-game-tournament-home",
-                    "name": "Board Game Tournament Night at Home",
-                    "price": "Free (if you own games) or $0 - $20 (new game purchase)",
-                    "desc": "Pick 2-3 board games you've never played together. Set a tournament bracket, keep score across games, and crown an ultimate champion. Grab snacks, make it competitive, and celebrate victory. Silly, fun, and surprisingly engaging.",
-                    "start": "Flexible",
-                    "duration": "2.5 - 4 hrs",
-                    "where": "Home",
-                    "reservation": "none"
+                    "id": "gondola-art-stroll-park-city",
+                    "name": "Park City Gondola Art Stroll — Mountain Views + Local Art",
+                    "price": "$15 - $20 per person for gondola ride",
+                    "desc": "Ride the scenic gondola at Canyons Village with panoramic mountain views, then explore local art galleries and installations throughout Park City. Open through April. Combine outdoor scenic rides with cultural exploration.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Canyons Village — Park City, UT",
+                    "reservation": "none",
+                    "link": "https://www.visitparkcity.com/events/"
                 }
             ]
         },
@@ -332,29 +330,23 @@
                     "id": "getout-games-escape-room-slc",
                     "name": "Escape Room at Getout Games — Salt Lake City",
                     "price": "$25 - $35/person",
-                    "desc": "Four themed rooms downtown: Egyptian Tomb, Zombie on a Chain, The Heist, or Reactor Room. 60 minutes of puzzle-solving and teamwork under pressure. Book in advance; evening slots available daily. Great for testing your problem-solving chemistry.",
-                    "start": "Flexible (book 2-3 days ahead)",
+                    "desc": "Four themed rooms downtown: Egyptian Tomb, Zombie on a Chain, The Heist, or Reactor Room. 60 minutes of puzzle-solving and teamwork under pressure. Book in advance; evening slots available daily. You gave this an 'up' vote — definitely try it. Great problem-solving chemistry builder.",
                     "duration": "1 - 1.5 hrs",
                     "where": "Getout Games — 202 W 400 S, Salt Lake City, UT 84101",
                     "reservation": "required",
                     "link": "https://getoutgames.com/escape-room-salt-lake-city/"
                 },
                 {
-                    "id": "slc-rock-climbing-gym",
-                    "name": "Indoor Rock Climbing at Red Rock Climbing Center",
-                    "price": "$20 - $30/person (includes shoe rental)",
-                    "desc": "Beginner-friendly climbing gym in Salt Lake with hundreds of routes at all difficulty levels. No experience needed — staff teaches you everything. It's active, fun, slightly competitive, and feels like a real achievement (even on easy walls). Great date energy.",
-                    "start": "Flexible",
-                    "duration": "1.5 - 2.5 hrs",
-                    "where": "Red Rock Climbing Center — 2074 E Fort Union Blvd, Salt Lake City, UT 84121",
-                    "reservation": "none",
-                    "link": "https://www.redrocksaltlake.com/"
+                    "id": "utah-food-festival-slc",
+                    "name": "Utah Food Festival — Culinary Artisan Workshops",
+                    "price": "$30 - $80 per workshop (May 16-17)",
+                    "desc": "Celebrates culinary creativity with artisan food workshops, tastings, and demonstrations. If you enjoy trying new cuisines and cooking techniques together, this is perfect. Multiple vendors and interactive food experiences.",
+                    "duration": "2 - 4 hrs",
+                    "where": "Salt Lake City (venue TBD — check event page for details)",
+                    "reservation": "recommended for workshops",
+                    "link": "https://www.visitsaltlake.com/events/"
                 }
             ]
         }
-    ],
-    "wishlist": [
-        "Japan Festival",
-        "Phantom of the Opera"
     ]
 }
