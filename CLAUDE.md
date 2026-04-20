@@ -180,6 +180,22 @@ Use these category titles for the `whenever` array. Aim for 1-2 ideas per catego
 - **Active & Sporty** — hiking, biking, sports, physical activities
 - **Unique / Novelty** — challenges, themed dates, unusual experiences
 
+## Git Workflow
+
+**Always work directly on the `master` branch.** Do NOT create feature branches or pull requests. The site deploys from `master` via GitHub Pages, so changes must be committed and pushed directly to `master` to go live.
+
+```
+git add recommendations.json done-dates.json
+git commit -m "Refresh recommendations for <dateRange>"
+git push -u origin master
+```
+
+If push is rejected (remote has newer commits), pull with rebase first:
+```
+git pull origin master --rebase
+git push -u origin master
+```
+
 ## Update Checklist
 
 - [ ] Read `done-dates.json` for preference context
@@ -188,4 +204,4 @@ Use these category titles for the `whenever` array. Aim for 1-2 ideas per catego
 - [ ] Replace `scheduled` and `whenever` arrays with new date ideas
 - [ ] Add all new IDs to `previousIds`
 - [ ] Do NOT edit `index.html` (unless changing layout/style)
-- [ ] Commit and push to `master`
+- [ ] Commit and push directly to `master` (no branches, no PRs)
