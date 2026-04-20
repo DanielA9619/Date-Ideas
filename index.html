@@ -332,6 +332,24 @@
         .fb-comment-btn:hover { color: var(--text-secondary); background: var(--pill-bg); }
         .fb-comment-btn.has-comment { color: var(--text-secondary); font-weight: 600; }
 
+        .did-it-btn {
+            background: var(--pill-bg);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            padding: 4px 12px;
+            cursor: pointer;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: all 0.15s;
+            margin-left: 4px;
+        }
+        .did-it-btn:hover {
+            background: var(--green-bg);
+            color: var(--green-text);
+            border-color: var(--green-text);
+        }
+
         .fb-comment-row {
             display: none;
             padding-left: 30px;
@@ -1140,6 +1158,7 @@
                         <button class="fb-btn maybe${getVote(d.id) === 'maybe' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'maybe')" title="Maybe">\uD83E\uDD14</button>
                         <button class="fb-btn down${getVote(d.id) === 'down' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'down')" title="Not for us">\uD83D\uDC4E</button>
                         <button class="fb-comment-btn${getComment(d.id) ? ' has-comment' : ''}" onclick="toggleCommentRow('${d.id}')" title="Add a comment">${getComment(d.id) ? '\uD83D\uDCAC comment' : '\uD83D\uDCAC'}</button>
+                        <button class="did-it-btn" onclick="markAsDone('${d.id}')" title="Add to Done List">Did It \u2713</button>
                     </div>
                 </div>
                 <div class="fb-comment-row" id="comment-row-${d.id}">
@@ -1290,6 +1309,57 @@
             for (const d of cat.dates) if (d.id === id) return d;
         }
         return null;
+    }
+
+    function findRecContext(id) {
+        if (!recsData) return { rec: null };
+        for (const day of (recsData.scheduled || [])) {
+            for (const d of day.dates) if (d.id === id) return { rec: d, date: day.date };
+        }
+        for (const cat of (recsData.whenever || [])) {
+            for (const d of cat.dates) if (d.id === id) return { rec: d, categoryTitle: cat.title };
+        }
+        return { rec: null };
+    }
+
+    const WHENEVER_CATEGORY_MAP = {
+        'Adventures & Outdoors': 'outdoor',
+        'Food & Dining': 'food',
+        'Arts & Culture': 'arts',
+        'Cozy / Stay-In': 'cozy',
+        'Active & Sporty': 'active',
+        'Sports': 'sports',
+        'Exploration': 'exploration',
+        'Unique / Novelty': 'unique'
+    };
+
+    function markAsDone(id) {
+        const { rec, date, categoryTitle } = findRecContext(id);
+        if (!rec) { showToast('Recommendation not found.', true); return; }
+
+        const today = new Date().toISOString().slice(0, 10);
+        document.getElementById('entry-date').value = date || today;
+        document.getElementById('entry-activity').value = rec.name || '';
+        document.getElementById('entry-location').value = rec.where || '';
+        document.getElementById('entry-price').value = rec.price || '';
+        document.getElementById('entry-notes').value = '';
+        document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
+
+        const catSelect = document.getElementById('entry-category');
+        const mapped = categoryTitle ? WHENEVER_CATEGORY_MAP[categoryTitle] : '';
+        catSelect.value = mapped || '';
+
+        editingIndex = -1;
+        document.getElementById('add-btn').textContent = 'Add to Done List';
+        document.getElementById('cancel-btn').style.display = 'none';
+
+        const doneTabBtn = document.querySelector('.tab[onclick*="\'done\'"]');
+        showTab('done', doneTabBtn);
+        setTimeout(() => {
+            document.querySelector('.add-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById('entry-activity').focus();
+        }, 50);
+        showToast('Pre-filled \u2014 add rating & notes, then save.');
     }
 
     function renderProfile() {
