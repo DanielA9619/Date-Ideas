@@ -682,6 +682,74 @@
         .btn-danger { background: var(--red-bg); color: var(--red-text); }
         .btn-danger:hover { opacity: 0.8; }
 
+        .wishlist-box {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .wishlist-box h3 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .wishlist-input-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .wishlist-input-row input {
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--input-border);
+            background: var(--input-bg);
+            color: var(--text);
+            font-size: 0.85rem;
+            font-family: inherit;
+        }
+
+        .wishlist-input-row input:focus { outline: none; border-color: var(--text); }
+        .wishlist-input-row input::placeholder { color: var(--text-muted); }
+
+        .wishlist-items { margin-top: 10px; }
+
+        .wishlist-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .wishlist-item:last-child { border-bottom: none; }
+
+        .wishlist-item .text { flex: 1; }
+
+        .wishlist-item .remove {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .wishlist-item .remove:hover { color: var(--red-text); background: var(--red-bg); }
+
+        .wishlist-hint {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
         .connected-badge {
             display: inline-flex;
             align-items: center;
@@ -718,6 +786,15 @@
 
 <!-- RECOMMENDATIONS -->
 <div id="recs" class="panel active">
+    <div class="wishlist-box">
+        <h3>Want to Do</h3>
+        <div class="wishlist-input-row">
+            <input type="text" id="wishlist-input" placeholder="Saw something cool? Type it here..." onkeydown="if(event.key==='Enter')addWishlistItem()">
+            <button class="btn-small" onclick="addWishlistItem()">Add</button>
+        </div>
+        <div class="wishlist-items" id="wishlist-items"></div>
+        <div class="wishlist-hint" id="wishlist-hint" style="display:none;">The AI will look these up and add full details on the next refresh.</div>
+    </div>
     <div class="sub-tabs">
         <button class="sub-tab active" onclick="showSubTab('scheduled', this)">This Period</button>
         <button class="sub-tab" onclick="showSubTab('whenever', this)">Whenever</button>
@@ -1111,6 +1188,55 @@
             `).join('');
         } else {
             wheneverEl.innerHTML = '<div class="empty-state">No whenever ideas yet. Ask the AI to refresh recommendations!</div>';
+        }
+
+        renderWishlist();
+    }
+
+    // --- Wishlist ---
+    function renderWishlist() {
+        const items = (recsData && recsData.wishlist) || [];
+        const el = document.getElementById('wishlist-items');
+        const hint = document.getElementById('wishlist-hint');
+        if (!items.length) { el.innerHTML = ''; hint.style.display = 'none'; return; }
+        hint.style.display = 'block';
+        el.innerHTML = items.map((item, i) => `
+            <div class="wishlist-item">
+                <span class="text">${escHtml(item)}</span>
+                <button class="remove" onclick="removeWishlistItem(${i})" title="Remove">\u00D7</button>
+            </div>
+        `).join('');
+    }
+
+    async function addWishlistItem() {
+        const input = document.getElementById('wishlist-input');
+        const text = input.value.trim();
+        if (!text) return;
+        if (!recsData) return;
+        if (!recsData.wishlist) recsData.wishlist = [];
+        recsData.wishlist.push(text);
+        input.value = '';
+        renderWishlist();
+        if (getToken()) {
+            try {
+                const result = await ghPut('recommendations.json', JSON.stringify(recsData, null, 4) + '\n', recsSha, 'Add wishlist item');
+                recsSha = result.content.sha;
+                showToast('Added to wishlist!');
+            } catch (err) { showToast('Save failed: ' + err.message, true); }
+        } else {
+            showToast('Connect GitHub to save.', true);
+        }
+    }
+
+    async function removeWishlistItem(index) {
+        if (!recsData || !recsData.wishlist) return;
+        recsData.wishlist.splice(index, 1);
+        renderWishlist();
+        if (getToken()) {
+            try {
+                const result = await ghPut('recommendations.json', JSON.stringify(recsData, null, 4) + '\n', recsSha, 'Remove wishlist item');
+                recsSha = result.content.sha;
+            } catch (err) { showToast('Save failed: ' + err.message, true); }
         }
     }
 

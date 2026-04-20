@@ -83,9 +83,10 @@ Feedback values can be:
 When asked to refresh or update recommendations:
 
 1. **Read `done-dates.json`** to see all past dates, what they liked, and what they didn't
-2. **Read `recommendations.json`** — check `previousIds`, and read the `feedback` object
-3. **Note today's date** from the `currentDate` context. The 2-week window starts **today** (not a future date). Skip any days that have already passed. So if today is April 16, the window is April 16 – April 29 and no scheduled date should be before April 16.
-4. **Generate ideas** split into two groups:
+2. **Read `recommendations.json`** — check `previousIds`, `feedback`, and the `wishlist` array
+3. **Process the wishlist** — if there are items in the `wishlist` array, search for each one (it might be a venue name, event, activity, or something they saw on a billboard). Look up the real details (dates, prices, location, website) and include them as full recommendation entries in `scheduled` (if date-specific) or `whenever` (if anytime). After processing, **clear the `wishlist` array** (set to `[]`).
+4. **Note today's date** from the `currentDate` context. The 2-week window starts **today** (not a future date). Skip any days that have already passed. So if today is April 16, the window is April 16 – April 29 and no scheduled date should be before April 16.
+5. **Generate ideas** split into two groups:
    - **`scheduled`** — 4-7 date-specific ideas tied to particular days within the 2-week window starting today. Pick good days (Fridays, Saturdays, some weeknights). Consider events, weather, and day of week.
    - **`whenever`** — 5-8 anytime ideas grouped by category. These are ideas that work any day.
    - Both groups should:
@@ -97,10 +98,11 @@ When asked to refresh or update recommendations:
      - Include some variety from categories rated 3
      - Avoid anything similar to done dates rated 1-2
      - Never reuse any ID from `previousIds`
-5. **Replace `scheduled` and `whenever`** arrays in `recommendations.json` with new ideas
-6. **Clear the `feedback` object** (reset to `{}`) since it was for the old set
-7. **Add all new IDs** to the `previousIds` array (keep old ones too)
-8. **Update `dateRange`** (today → today + 13 days) and **`updated`** (today's date) fields
+6. **Replace `scheduled` and `whenever`** arrays in `recommendations.json` with new ideas
+7. **Clear the `feedback` object** (reset to `{}`) since it was for the old set
+8. **Clear the `wishlist` array** (reset to `[]`) since the items were processed
+9. **Add all new IDs** to the `previousIds` array (keep old ones too)
+10. **Update `dateRange`** (today → today + 13 days) and **`updated`** (today's date) fields
 
 ## recommendations.json Structure
 
@@ -109,6 +111,7 @@ When asked to refresh or update recommendations:
     "dateRange": "March 31 - April 13, 2026",
     "updated": "March 31, 2026",
     "feedback": {},
+    "wishlist": ["Phantom of the Opera", "that new ramen place in Lehi"],
     "previousIds": ["sunset-picnic", "stargazing-drive", "..."],
     "scheduled": [
         {
