@@ -84,10 +84,16 @@ When asked to refresh or update recommendations:
 
 1. **Read `done-dates.json`** to see all past dates, what they liked, and what they didn't
 2. **Read `recommendations.json`** — check `previousIds`, `feedback`, and the `wishlist` array
-3. **Process the wishlist** — if there are items in the `wishlist` array, search for each one (it might be a venue name, event, activity, or something they saw on a billboard). Look up the real details (dates, prices, location, website) and include them as full recommendation entries in `scheduled` (if date-specific) or `whenever` (if anytime). After processing, **clear the `wishlist` array** (set to `[]`).
+3. **Process the wishlist (IMPORTANT)** — if the `wishlist` array is non-empty, you **MUST** process every item:
+   - **Use web search** to look up each item. The user typed something they saw (a billboard, an ad, a friend's suggestion) — it could be a restaurant name, event, show, activity, or venue.
+   - **Find real details**: dates/showtimes, prices, address/location, website URL, whether reservations or tickets are needed.
+   - **Create a full recommendation entry** from each item with all the looked-up details filled in. Place it in `scheduled` (if it has specific dates/showtimes) or `whenever` (if it's anytime).
+   - **Set `"fromWishlist": true`** on each entry created from the wishlist so the site can badge it.
+   - If you genuinely cannot find info on an item, still create an entry with what you know and note it in `desc`.
+   - After processing all items, **clear the `wishlist` array** (set to `[]`).
 4. **Note today's date** from the `currentDate` context. The 2-week window starts **today** (not a future date). Skip any days that have already passed. So if today is April 16, the window is April 16 – April 29 and no scheduled date should be before April 16.
 5. **Generate ideas** split into two groups:
-   - **`scheduled`** — 4-7 date-specific ideas tied to particular days within the 2-week window starting today. Pick good days (Fridays, Saturdays, some weeknights). Consider events, weather, and day of week.
+   - **`scheduled`** — 4-7 date-specific ideas tied to particular days within the 2-week window starting today. Pick good days (Fridays, Saturdays, some weeknights). Consider events, weather, and day of week. **Fridays are date night** — always include at least 2 ideas for each Friday in the window, and put extra effort into finding standout Friday plans (special events, popular restaurants, shows, etc.).
    - **`whenever`** — 5-8 anytime ideas grouped by category. These are ideas that work any day.
    - Both groups should:
      - Heavily favor categories/styles with done-date ratings of 4-5
@@ -164,10 +170,11 @@ When asked to refresh or update recommendations:
 | `where` | General location | `Local park`, `Home` |
 | `reservation` | `"none"`, `"tickets"`, or `"required"` | |
 | `link` | URL to venue, event page, or tickets (optional) | `https://thanksgivingpoint.org/tulip-festival` |
+| `fromWishlist` | `true` if this came from the user's wishlist (optional) | `true` |
 
 ### Whenever date fields
 
-Same as scheduled, but `start` is optional (omit or use `"Flexible"`). Include `link` when there's a relevant website.
+Same as scheduled, but `start` is optional (omit or use `"Flexible"`). Include `link` when there's a relevant website. Include `fromWishlist: true` if the idea came from the wishlist.
 
 ### Whenever categories
 
