@@ -1,15 +1,8 @@
 {
     "dateRange": "April 21 - May 4, 2026",
     "updated": "April 21, 2026",
-    "feedback": {
-        "tulip-festival-ashton-gardens-lehi": "up",
-        "tree-room-sundance-dinner": {
-            "comment": "Dont recomend food without an accompaning event near or with it"
-        }
-    },
-    "wishlist": [
-        "japan festival"
-    ],
+    "feedback": {},
+    "wishlist": [],
     "previousIds": [
         "phantom-opera-eccles-apr22",
         "bells-canyon-waterfall-hike-may2",
@@ -86,9 +79,33 @@
         "repeal-jazz-bar-grand-opening",
         "natural-history-museum-slc",
         "utah-food-festival-slc",
-        "tree-room-sundance-dinner"
+        "tree-room-sundance-dinner",
+        "utah-utes-baseball-apr21",
+        "rsl-vs-inter-miami-messi-apr22",
+        "utah-mammoth-vgk-playoff-apr24",
+        "nihon-matsuri-japan-festival-apr25",
+        "utah-symphony-herrmann-apr29",
+        "axe-throwing-salt-lake",
+        "kayaking-sup-utah-lake",
+        "brewery-distillery-tasting-experience"
     ],
     "scheduled": [
+        {
+            "date": "2026-04-21",
+            "dates": [
+                {
+                    "id": "utah-utes-baseball-apr21",
+                    "name": "Utah Utes Baseball vs. Utah Valley Wolverines",
+                    "price": "$12 - $25",
+                    "desc": "Crisp spring evening of college baseball under the lights. Casual, fun atmosphere with great sightlines and good ballpark food. Perfect for a relaxed date with plenty of time to chat between innings.",
+                    "start": "6:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "America First Ballpark — 1300 S 1300 W, Salt Lake City, UT 84104",
+                    "reservation": "tickets recommended",
+                    "link": "https://www.utahutes.com/sports/baseball/"
+                }
+            ]
+        },
         {
             "date": "2026-04-22",
             "dates": [
@@ -103,6 +120,33 @@
                     "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
                     "reservation": "required",
                     "link": "https://saltlakecity.broadway.com/shows/the-phantom-of-the-opera/"
+                },
+                {
+                    "id": "rsl-vs-inter-miami-messi-apr22",
+                    "name": "Real Salt Lake vs. Inter Miami CF — Lionel Messi Match",
+                    "price": "$40 - $120",
+                    "desc": "Watch soccer superstar Lionel Messi take the pitch with Inter Miami in a high-energy MLS match. Dynamic play, incredible skill, and the electric atmosphere of a top-tier soccer match. A memorable night of world-class athletics.",
+                    "start": "7:30 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Rio Tinto Stadium — 2300 W South Temple, Salt Lake City, UT 84115",
+                    "reservation": "tickets recommended",
+                    "link": "https://www.rsl.com/schedule/"
+                }
+            ]
+        },
+        {
+            "date": "2026-04-24",
+            "dates": [
+                {
+                    "id": "utah-mammoth-vgk-playoff-apr24",
+                    "name": "Utah Mammoth vs. Vegas Golden Knights — Playoff Hockey",
+                    "price": "$35 - $80",
+                    "desc": "Intense ECHL playoff hockey action! You gave Utah Grizzlies 5 stars—this captures that same high-energy, thrilling sports atmosphere. Playoff games bring the noise, speed, and drama. Friday night date with maximum excitement and team energy.",
+                    "start": "7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 N Temple, Salt Lake City, UT 84101",
+                    "reservation": "tickets recommended",
+                    "link": "https://utahgrizzlies.com/"
                 }
             ]
         },
@@ -119,6 +163,18 @@
                     "where": "Utah State Fairpark — 155 N 1000 W, Salt Lake City, UT 84116",
                     "reservation": "none",
                     "link": "https://www.visitsaltlake.com/events/"
+                },
+                {
+                    "id": "nihon-matsuri-japan-festival-apr25",
+                    "name": "Nihon Matsuri — Japan Festival 2026",
+                    "price": "Free admission",
+                    "desc": "Celebrate authentic Japanese culture with 40+ vendors, authentic cuisine, crafts, and cultural items. Watch martial arts demonstrations, taiko drumming performances, anime cosplay, and traditional dances on the main stage. Experience a traditional tea ceremony and hands-on cultural activities. From your wishlist!",
+                    "start": "10:00 AM",
+                    "duration": "3 - 5 hrs (all-day festival)",
+                    "where": "100 South Japan Town Street (between 200 W & 300 W), Salt Lake City, UT 84101",
+                    "reservation": "none",
+                    "link": "https://www.nihonmatsuri.com/",
+                    "fromWishlist": true
                 }
             ]
         },
@@ -140,18 +196,18 @@
             ]
         },
         {
-            "date": "2026-04-28",
+            "date": "2026-04-29",
             "dates": [
                 {
-                    "id": "tree-room-sundance-dinner",
-                    "name": "Fine Dining at The Tree Room — Sundance Resort",
-                    "price": "$150 - $220 for two (entrees + wine)",
-                    "desc": "Forbes Four-Star, Michelin-rated fine dining with stunning mountain views. Seasonal menu featuring locally-sourced ingredients and creative presentations. Closed Sundays and Mondays. Reservations required well in advance. Dress code: smart casual.",
-                    "start": "6:30 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
-                    "reservation": "required",
-                    "link": "https://www.sundanceresort.com/dining/"
+                    "id": "utah-symphony-herrmann-apr29",
+                    "name": "Utah Symphony — The Film Music of Bernard Herrmann",
+                    "price": "$40 - $85",
+                    "desc": "Experience iconic film scores conducted live. Bernard Herrmann's masterworks from Hitchcock classics and other films create a dramatic, immersive evening. Performed in the beautiful Abravanel Hall. A cultured, romantic date for art lovers.",
+                    "start": "7:30 PM",
+                    "duration": "2 hrs (no intermission)",
+                    "where": "Abravanel Hall — 123 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "tickets recommended",
+                    "link": "https://www.symphonycafe.org/concerts/"
                 }
             ]
         },
@@ -247,6 +303,16 @@
                     "where": "Jordanelle State Park — Heber, UT (45 min from SLC)",
                     "reservation": "none",
                     "link": "https://stateparks.utah.gov/parks/jordanelle/"
+                },
+                {
+                    "id": "kayaking-sup-utah-lake",
+                    "name": "Kayaking or SUP at Utah Lake — Scenic Water Date",
+                    "price": "$40 - $80 (kayak/SUP rentals for two)",
+                    "desc": "Glide across pristine waters with stunning mountain views. You rated your lake date 5 stars—this captures that same magic. Rent kayaks, tandem kayaks, or try paddle boarding. Morning paddles are peaceful; sunset outings are romantic. Bring a picnic or watch the sunset together.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Utah Lake State Park or rental stations (Provo area, ~40 min south)",
+                    "reservation": "recommended for weekend rentals",
+                    "link": "https://stateparks.utah.gov/parks/utah-lake/"
                 }
             ]
         },
@@ -282,6 +348,16 @@
                     "where": "The Foundry Grill — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
                     "reservation": "recommended",
                     "link": "https://www.sundanceresort.com/dining/the-foundry-grill/"
+                },
+                {
+                    "id": "brewery-distillery-tasting-experience",
+                    "name": "Brewery or Craft Distillery Tasting Tour — Salt Lake City",
+                    "price": "$45 - $75 per person",
+                    "desc": "Tour a local craft brewery or distillery with guided tastings and stories about the craft. Beehive Distillery, Proper Brewing Company, and others offer excellent experiences. Many allow food trucks or pair with local snacks. Educational, delicious, and a fun way to explore Utah's craft beverage scene.",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Various locations throughout Salt Lake City (Beehive Distillery, breweries in the Sugarhouse area)",
+                    "reservation": "recommended for tours",
+                    "link": "https://www.visitsaltlake.com/"
                 }
             ]
         },
@@ -307,6 +383,16 @@
                     "where": "TopGolf — 484 N Entertainment Way, Vineyard, UT 84059",
                     "reservation": "none (recommended for evenings)",
                     "link": "https://topgolf.com/us/vineyard/"
+                },
+                {
+                    "id": "axe-throwing-salt-lake",
+                    "name": "Axe Throwing at Local Range — Novelty + Adrenaline",
+                    "price": "$30 - $50 per person",
+                    "desc": "Learn proper axe-throwing technique from professional instructors in a safe, fun environment. Friendly competition, lots of laughs, and a rush when you nail a throw. Great for couples seeking something playfully competitive and different.",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "Local axe-throwing ranges in Salt Lake City (multiple locations)",
+                    "reservation": "recommended for weekends",
+                    "link": "https://www.yelp.com/search?find=axe+throwing&loc=Salt+Lake+City,+UT"
                 }
             ]
         },
