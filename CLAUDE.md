@@ -126,6 +126,7 @@ When asked to refresh or update recommendations:
                 {
                     "id": "unique-kebab-case-id",
                     "name": "Date Name Here",
+                    "endDate": "2026-04-10",
                     "price": "$XX - $XX",
                     "desc": "One to two sentence description.",
                     "start": "7:00 PM",
@@ -171,6 +172,29 @@ When asked to refresh or update recommendations:
 | `reservation` | `"none"`, `"tickets"`, or `"required"` | |
 | `link` | URL to venue, event page, or tickets (optional) | `https://thanksgivingpoint.org/tulip-festival` |
 | `fromWishlist` | `true` if this came from the user's wishlist (optional) | `true` |
+| `endDate` | End date for multi-day events (YYYY-MM-DD, optional) | `2026-04-30` |
+
+### Multi-day events
+
+For events that span multiple dates (festivals, exhibition runs, multi-day shows), add an `endDate` field:
+
+```json
+{
+    "date": "2026-04-20",
+    "dates": [{
+        "id": "tulip-festival-april",
+        "name": "Tulip Festival at Ashton Gardens",
+        "endDate": "2026-04-30",
+        ...
+    }]
+}
+```
+
+- The item's parent `date` is the start; `endDate` is the last day (inclusive)
+- The site automatically shows the item on every day from `date` through `endDate` in the calendar
+- Place the item under its **first available date** in the JSON — the rendering handles expansion
+- Omit `endDate` for single-day events
+- Use for: festivals, exhibitions, shows with multiple performances, seasonal activities with known end dates
 
 ### Whenever date fields
 

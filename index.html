@@ -286,6 +286,106 @@
         .detail-link:hover { opacity: 0.8; }
         .detail-wishlist { background: var(--purple-bg); color: var(--purple-text); font-weight: 600; }
 
+        /* Calendar View */
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .cal-dow {
+            text-align: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 0 8px;
+        }
+
+        .cal-day {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.15s;
+            background: var(--surface);
+            border: 2px solid transparent;
+            position: relative;
+            min-height: 48px;
+        }
+
+        .cal-day:hover {
+            border-color: var(--border-hover);
+            background: var(--surface-hover);
+        }
+
+        .cal-day.empty {
+            background: transparent;
+            cursor: default;
+            border: none;
+        }
+        .cal-day.empty:hover { background: transparent; border-color: transparent; }
+
+        .cal-day.past { opacity: 0.4; }
+
+        .cal-day.today .cal-date {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .cal-day.selected {
+            border-color: var(--accent);
+            background: var(--surface);
+            box-shadow: 0 0 0 1px var(--accent);
+        }
+        .cal-day.selected.past { opacity: 0.7; }
+
+        .cal-date {
+            font-size: 0.9rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .cal-month-label {
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .cal-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            margin-top: 4px;
+        }
+
+        .cal-count {
+            font-size: 0.6rem;
+            color: var(--accent);
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        .calendar-no-events {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .cal-day { min-height: 40px; border-radius: 8px; }
+            .cal-date { font-size: 0.8rem; }
+            .cal-dot { width: 5px; height: 5px; margin-top: 3px; }
+        }
+
         .card-footer {
             display: flex;
             justify-content: flex-end;
@@ -914,6 +1014,8 @@
     let editingIndex = -1;
     let recsData = null;
     let recsSha = null;
+    let selectedCalendarDate = null;
+    let scheduledDateMap = null;
 
     // --- Theme ---
     function getPreferredTheme() {
@@ -1193,6 +1295,127 @@
         return `<span>${day}</span><span class="day-label">${rest}</span>`;
     }
 
+    // --- Calendar View ---
+    function parseDateRange(rangeStr) {
+        const parts = rangeStr.split(' - ');
+        const year = parts[1].match(/\d{4}/)[0];
+        const startStr = parts[0] + ', ' + year;
+        const endStr = parts[1];
+        const s = new Date(startStr);
+        const e = new Date(endStr);
+        const pad = n => String(n).padStart(2, '0');
+        return {
+            startDate: `${s.getFullYear()}-${pad(s.getMonth()+1)}-${pad(s.getDate())}`,
+            endDate: `${e.getFullYear()}-${pad(e.getMonth()+1)}-${pad(e.getDate())}`
+        };
+    }
+
+    function buildScheduledCalendar(data) {
+        const { startDate, endDate } = parseDateRange(data.dateRange);
+        const map = new Map();
+        let cursor = new Date(startDate + 'T00:00');
+        const end = new Date(endDate + 'T00:00');
+        while (cursor <= end) {
+            map.set(cursor.toISOString().slice(0, 10), []);
+            cursor.setDate(cursor.getDate() + 1);
+        }
+        for (const day of (data.scheduled || [])) {
+            for (const item of day.dates) {
+                const itemStart = day.date;
+                const itemEnd = item.endDate || day.date;
+                let d = new Date(itemStart + 'T00:00');
+                const dEnd = new Date(itemEnd + 'T00:00');
+                while (d <= dEnd) {
+                    const key = d.toISOString().slice(0, 10);
+                    if (map.has(key)) map.get(key).push(item);
+                    d.setDate(d.getDate() + 1);
+                }
+            }
+        }
+        return map;
+    }
+
+    function renderScheduledCalendar(data, saved, getVote) {
+        const scheduledEl = document.getElementById('scheduled');
+        scheduledDateMap = buildScheduledCalendar(data);
+        const { startDate, endDate } = parseDateRange(data.dateRange);
+        const start = new Date(startDate + 'T00:00');
+        const end = new Date(endDate + 'T00:00');
+        const today = new Date().toISOString().slice(0, 10);
+
+        const startDow = start.getDay();
+        const offset = startDow === 0 ? 6 : startDow - 1;
+        const dows = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+        let gridHTML = dows.map(d => `<div class="cal-dow">${d}</div>`).join('');
+
+        for (let i = 0; i < offset; i++) gridHTML += '<div class="cal-day empty"></div>';
+
+        let firstEventDate = null;
+        let cursor = new Date(start);
+        while (cursor <= end) {
+            const key = cursor.toISOString().slice(0, 10);
+            const events = scheduledDateMap.get(key) || [];
+            const hasEvents = events.length > 0;
+            const isPast = key < today;
+            const isToday = key === today;
+            const dayNum = cursor.getDate();
+            const showMonth = dayNum === 1 || cursor.getTime() === start.getTime();
+            const monthLabel = showMonth ? cursor.toLocaleDateString('en-US', { month: 'short' }) : '';
+
+            if (hasEvents && !firstEventDate) firstEventDate = key;
+
+            let cls = 'cal-day';
+            if (isPast) cls += ' past';
+            if (isToday) cls += ' today';
+            if (hasEvents) cls += ' has-events';
+
+            gridHTML += `<div class="${cls}" data-date="${key}" onclick="selectCalendarDate('${key}')">
+                ${monthLabel ? `<span class="cal-month-label">${monthLabel}</span>` : ''}
+                <span class="cal-date">${dayNum}</span>
+                ${hasEvents ? (events.length > 1 ? `<span class="cal-count">${events.length}</span>` : '<span class="cal-dot"></span>') : ''}
+            </div>`;
+            cursor.setDate(cursor.getDate() + 1);
+        }
+
+        const totalCells = offset + Math.round((end - start) / 86400000) + 1;
+        const remainder = totalCells % 7;
+        if (remainder > 0) {
+            for (let i = 0; i < 7 - remainder; i++) gridHTML += '<div class="cal-day empty"></div>';
+        }
+
+        scheduledEl.innerHTML = `
+            <div class="calendar-container">
+                <div class="calendar-grid">${gridHTML}</div>
+            </div>
+            <div id="calendar-events"></div>`;
+
+        const autoSelect = (scheduledDateMap.get(today) || []).length > 0 ? today : firstEventDate;
+        if (autoSelect) selectCalendarDate(autoSelect);
+        else document.getElementById('calendar-events').innerHTML = '<div class="calendar-no-events">No events in this period yet.</div>';
+    }
+
+    function selectCalendarDate(dateStr) {
+        selectedCalendarDate = dateStr;
+        document.querySelectorAll('.cal-day').forEach(el => {
+            el.classList.toggle('selected', el.dataset.date === dateStr);
+        });
+        const eventsEl = document.getElementById('calendar-events');
+        const events = (scheduledDateMap || new Map()).get(dateStr) || [];
+        const saved = JSON.parse(localStorage.getItem('dateRecs') || '{}');
+        const fb = (recsData && recsData.feedback) || {};
+        function getVote(id) { const v = fb[id]; return typeof v === 'string' ? v : (v && v.vote) || null; }
+
+        if (!events.length) {
+            eventsEl.innerHTML = '<div class="calendar-no-events">No dates planned for this day</div>';
+        } else {
+            eventsEl.innerHTML = `
+                <div class="category">
+                    <div class="day-header">${formatDay(dateStr)}</div>
+                    ${events.map(d => renderCard(d, saved, getVote)).join('')}
+                </div>`;
+        }
+    }
+
     function renderRecs(data) {
         recsData = data;
         document.getElementById('date-range').textContent = data.dateRange;
@@ -1201,17 +1424,11 @@
         const fb = data.feedback || {};
         function getVote(id) { const v = fb[id]; return typeof v === 'string' ? v : (v && v.vote) || null; }
 
-        // Scheduled (by date)
-        const scheduledEl = document.getElementById('scheduled');
+        // Scheduled (calendar view)
         if (data.scheduled && data.scheduled.length) {
-            scheduledEl.innerHTML = data.scheduled.map(day => `
-                <div class="category">
-                    <div class="day-header">${formatDay(day.date)}</div>
-                    ${day.dates.map(d => renderCard(d, saved, getVote)).join('')}
-                </div>
-            `).join('');
+            renderScheduledCalendar(data, saved, getVote);
         } else {
-            scheduledEl.innerHTML = '<div class="empty-state">No scheduled dates yet. Ask the AI to refresh recommendations!</div>';
+            document.getElementById('scheduled').innerHTML = '<div class="empty-state">No scheduled dates yet. Ask the AI to refresh recommendations!</div>';
         }
 
         // Whenever (by category)
