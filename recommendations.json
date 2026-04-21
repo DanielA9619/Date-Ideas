@@ -1,9 +1,11 @@
 {
-    "dateRange": "April 20 - May 3, 2026",
-    "updated": "April 20, 2026",
+    "dateRange": "April 21 - May 4, 2026",
+    "updated": "April 21, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
+        "phantom-opera-eccles-apr22",
+        "bells-canyon-waterfall-hike-may2",
         "tulip-festival-thanksgiving-point",
         "antelope-island-day-trip",
         "sound-bites-sunset-market",
@@ -76,22 +78,23 @@
         "spring-festival-utah-state-fairpark",
         "repeal-jazz-bar-grand-opening",
         "natural-history-museum-slc",
-        "utah-food-festival-slc"
+        "utah-food-festival-slc",
+        "tree-room-sundance-dinner"
     ],
     "scheduled": [
         {
-            "date": "2026-04-20",
+            "date": "2026-04-22",
             "dates": [
                 {
-                    "id": "art-exhibit-opening-slc-apr20",
-                    "name": "Art Exhibit Opening Reception — 'And the Journey Continues'",
-                    "price": "Free (donations welcome)",
-                    "desc": "Opening reception for paintings by Dr. Sam Forlenza runs through May 1. Spring art opening with refreshments and a chance to meet the artist. Intimate gallery setting downtown. Great way to start a date exploring local art.",
-                    "start": "5:00 PM - 7:00 PM",
-                    "duration": "1 - 2 hrs",
-                    "where": "Salt Lake City (exact gallery location TBD — check local art listings)",
-                    "reservation": "none",
-                    "link": "https://www.visitsaltlake.com/events/"
+                    "id": "phantom-opera-eccles-apr22",
+                    "name": "The Phantom of the Opera — New Cameron Mackintosh Production",
+                    "price": "$50 - $150 depending on seat selection",
+                    "desc": "Cameron Mackintosh presents a revitalized new production of Andrew Lloyd Webber's legendary musical. Features brilliant original design by Maria Björnson and celebrated direction of Harold Prince. One of theater's most beloved stories—a romantic and spectacular evening perfect for couples.",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs (including intermission)",
+                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://saltlakecity.broadway.com/shows/the-phantom-of-the-opera/"
                 }
             ]
         },
@@ -118,8 +121,8 @@
                     "id": "tulip-festival-ashton-gardens-lehi",
                     "name": "Thanksgiving Point Tulip Festival — Ashton Gardens (Weekend Outing)",
                     "price": "$16 - $20/person (check website for current rates)",
-                    "desc": "Peak tulip season! Over 1 million flowers across 50 acres including 400,000 tulips in 175+ varieties. Saturday features live music, local vendors, and food trucks. Perfect for photos, strolling, and enjoying spring blooms together. The festival has excellent walkability and stunning photo spots throughout.",
-                    "start": "10:00 AM",
+                    "desc": "Peak tulip season! Over 1 million flowers across 50 acres including 400,000 tulips in 175+ varieties. Saturday features live music, local vendors, and food trucks. Perfect for photos, strolling, and enjoying spring blooms together. The festival runs through May 16, so plenty of time to visit.",
+                    "start": "9:00 AM - 8:00 PM",
                     "duration": "2 - 4 hrs",
                     "where": "Thanksgiving Point — Ashton Gardens, 3900 N. Garden Drive, Lehi, UT 84048",
                     "reservation": "tickets recommended (buy online)",
@@ -147,15 +150,15 @@
             "date": "2026-05-01",
             "dates": [
                 {
-                    "id": "blippi-eccles-may1",
-                    "name": "Blippi: Be Like Blippi — Family Show at Eccles Theater",
-                    "price": "$25 - $55/person",
-                    "desc": "Interactive live performance by the beloved Blippi character with music, dance, and audience participation. Great fun if you enjoy high-energy entertainment. May 1 evening show. All ages welcome.",
-                    "start": "7:00 PM",
-                    "duration": "1.5 hrs",
-                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "tickets recommended",
-                    "link": "https://live-at-the-eccles.com/events"
+                    "id": "getout-games-escape-room-slc",
+                    "name": "Escape Room Challenge at Getout Games — Salt Lake City",
+                    "price": "$25 - $35/person",
+                    "desc": "Immersive 60-minute escape room experience in one of four themed rooms: Egyptian Tomb, Zombie on a Chain, The Heist, or Reactor Room. Solve puzzles and work together under pressure. You've given escape rooms an 'up' vote—great chemistry-building date activity.",
+                    "start": "Flexible (book your time slot in advance)",
+                    "duration": "1 - 1.5 hrs",
+                    "where": "Getout Games — 202 W 400 S, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://getoutgames.com/escape-room-salt-lake-city/"
                 }
             ]
         },
@@ -327,24 +330,24 @@
             "title": "Unique / Novelty",
             "dates": [
                 {
-                    "id": "getout-games-escape-room-slc",
-                    "name": "Escape Room at Getout Games — Salt Lake City",
-                    "price": "$25 - $35/person",
-                    "desc": "Four themed rooms downtown: Egyptian Tomb, Zombie on a Chain, The Heist, or Reactor Room. 60 minutes of puzzle-solving and teamwork under pressure. Book in advance; evening slots available daily. You gave this an 'up' vote — definitely try it. Great problem-solving chemistry builder.",
-                    "duration": "1 - 1.5 hrs",
-                    "where": "Getout Games — 202 W 400 S, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://getoutgames.com/escape-room-salt-lake-city/"
+                    "id": "museum-of-ancient-life-thanksgiving-point",
+                    "name": "Museum of Ancient Life at Thanksgiving Point — Dinosaurs & Fossils",
+                    "price": "$15 - $19/person",
+                    "desc": "World-class paleontology museum with over 60,000 bones and fossils. Explore interactive exhibits on prehistoric life, including the famous Allosaurus skeleton and Egyptian mummy. Perfect complement to visiting the Tulip Festival in Lehi. Educational and fun for couples interested in natural history.",
+                    "duration": "1.5 - 3 hrs",
+                    "where": "Thanksgiving Point — 3900 N. Garden Drive, Lehi, UT 84048 (same location as Tulip Festival)",
+                    "reservation": "none (tickets at door or online)",
+                    "link": "https://thanksgivingpoint.org/museum-of-ancient-life/"
                 },
                 {
-                    "id": "utah-food-festival-slc",
-                    "name": "Utah Food Festival — Culinary Artisan Workshops",
-                    "price": "$30 - $80 per workshop (May 16-17)",
-                    "desc": "Celebrates culinary creativity with artisan food workshops, tastings, and demonstrations. If you enjoy trying new cuisines and cooking techniques together, this is perfect. Multiple vendors and interactive food experiences.",
-                    "duration": "2 - 4 hrs",
-                    "where": "Salt Lake City (venue TBD — check event page for details)",
-                    "reservation": "recommended for workshops",
-                    "link": "https://www.visitsaltlake.com/events/"
+                    "id": "rock-climbing-the-front-slc",
+                    "name": "Rock Climbing at The Front Climbing Club — Salt Lake City",
+                    "price": "$20/person day pass (memberships available)",
+                    "desc": "State-of-the-art climbing gym with diverse terrain for all skill levels: bouldering, rope climbing, and walls. Zero climbing experience needed—staff provides guidance. Includes yoga and fitness classes. Great for couples seeking an active, challenging, and fun experience together.",
+                    "duration": "1.5 - 2.5 hrs",
+                    "where": "The Front Climbing Club — 1470 S 400 W, Salt Lake City, UT 84115",
+                    "reservation": "none (drop-in welcome, busy evenings recommended to book)",
+                    "link": "https://thefrontclimbingclub.com/slc/"
                 }
             ]
         }
