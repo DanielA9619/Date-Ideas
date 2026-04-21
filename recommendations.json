@@ -90,6 +90,7 @@
                 {
                     "id": "phantom-opera-eccles-apr22",
                     "name": "The Phantom of the Opera — New Cameron Mackintosh Production",
+                    "endDate": "2026-05-03",
                     "price": "$50 - $150 depending on seat selection",
                     "desc": "Cameron Mackintosh presents a revitalized new production of Andrew Lloyd Webber's legendary musical. Features brilliant original design by Maria Björnson and celebrated direction of Harold Prince. One of theater's most beloved stories—a romantic and spectacular evening perfect for couples.",
                     "start": "7:00 PM",
@@ -121,9 +122,10 @@
             "dates": [
                 {
                     "id": "tulip-festival-ashton-gardens-lehi",
-                    "name": "Thanksgiving Point Tulip Festival — Ashton Gardens (Weekend Outing)",
+                    "name": "Thanksgiving Point Tulip Festival — Ashton Gardens",
+                    "endDate": "2026-05-04",
                     "price": "$16 - $20/person (check website for current rates)",
-                    "desc": "Peak tulip season! Over 1 million flowers across 50 acres including 400,000 tulips in 175+ varieties. Saturday features live music, local vendors, and food trucks. Perfect for photos, strolling, and enjoying spring blooms together. The festival runs through May 16, so plenty of time to visit.",
+                    "desc": "Peak tulip season! Over 1 million flowers across 50 acres including 400,000 tulips in 175+ varieties. Live music, local vendors, and food trucks on weekends. Perfect for photos, strolling, and enjoying spring blooms together.",
                     "start": "9:00 AM - 8:00 PM",
                     "duration": "2 - 4 hrs",
                     "where": "Thanksgiving Point — Ashton Gardens, 3900 N. Garden Drive, Lehi, UT 84048",

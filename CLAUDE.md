@@ -94,6 +94,7 @@ When asked to refresh or update recommendations:
 4. **Note today's date** from the `currentDate` context. The 2-week window starts **today** (not a future date). Skip any days that have already passed. So if today is April 16, the window is April 16 – April 29 and no scheduled date should be before April 16.
 5. **Generate ideas** split into two groups:
    - **`scheduled`** — 4-7 date-specific ideas tied to particular days within the 2-week window starting today. Pick good days (Fridays, Saturdays, some weeknights). Consider events, weather, and day of week. **Fridays are date night** — always include at least 2 ideas for each Friday in the window, and put extra effort into finding standout Friday plans (special events, popular restaurants, shows, etc.).
+     - **IMPORTANT — use `endDate` for multi-day events.** If an event runs across multiple dates (festivals, shows with multiple performances, exhibitions), you MUST set `endDate` so the calendar shows it on every available day. For example, a tulip festival running Apr 20 – May 16 should have `"endDate": "2026-05-16"`. A show with performances Apr 22, 24, and 26 should span `"endDate": "2026-04-26"`. The goal: when the user clicks ANY day on the calendar, they see everything available that day.
    - **`whenever`** — 5-8 anytime ideas grouped by category. These are ideas that work any day.
    - Both groups should:
      - Heavily favor categories/styles with done-date ratings of 4-5
