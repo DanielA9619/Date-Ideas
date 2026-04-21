@@ -92,7 +92,8 @@ When asked to refresh or update recommendations:
    - If you genuinely cannot find info on an item, still create an entry with what you know and note it in `desc`.
    - After processing all items, **clear the `wishlist` array** (set to `[]`).
 4. **Note today's date** from the `currentDate` context. The 2-week window starts **today** (not a future date). Skip any days that have already passed. So if today is April 16, the window is April 16 – April 29 and no scheduled date should be before April 16.
-5. **Generate ideas** split into two groups:
+5. **Research real events (IMPORTANT)** — before generating ideas, **fetch `https://www.visitsaltlake.com/events/`** to find real events happening in the Salt Lake City area during the 2-week window. This is the primary source for scheduled ideas. Look for concerts, festivals, shows, markets, openings, sports games, and seasonal activities. Also search the web for other Utah/SLC events in the date range. **Scheduled ideas should be real events with real dates, not generic suggestions.**
+6. **Generate ideas** split into two groups:
    - **`scheduled`** — 4-7 date-specific ideas tied to particular days within the 2-week window starting today. Pick good days (Fridays, Saturdays, some weeknights). Consider events, weather, and day of week. **Fridays are date night** — always include at least 2 ideas for each Friday in the window, and put extra effort into finding standout Friday plans (special events, popular restaurants, shows, etc.).
      - **IMPORTANT — use `endDate` for multi-day events.** If an event runs across multiple dates (festivals, shows with multiple performances, exhibitions), you MUST set `endDate` so the calendar shows it on every available day. For example, a tulip festival running Apr 20 – May 16 should have `"endDate": "2026-05-16"`. A show with performances Apr 22, 24, and 26 should span `"endDate": "2026-04-26"`. The goal: when the user clicks ANY day on the calendar, they see everything available that day.
    - **`whenever`** — 5-8 anytime ideas grouped by category. These are ideas that work any day.
@@ -105,11 +106,11 @@ When asked to refresh or update recommendations:
      - Include some variety from categories rated 3
      - Avoid anything similar to done dates rated 1-2
      - Never reuse any ID from `previousIds`
-6. **Replace `scheduled` and `whenever`** arrays in `recommendations.json` with new ideas
-7. **Clear the `feedback` object** (reset to `{}`) since it was for the old set
-8. **Clear the `wishlist` array** (reset to `[]`) since the items were processed
-9. **Add all new IDs** to the `previousIds` array (keep old ones too)
-10. **Update `dateRange`** (today → today + 13 days) and **`updated`** (today's date) fields
+7. **Replace `scheduled` and `whenever`** arrays in `recommendations.json` with new ideas
+8. **Clear the `feedback` object** (reset to `{}`) since it was for the old set
+9. **Clear the `wishlist` array** (reset to `[]`) since the items were processed
+10. **Add all new IDs** to the `previousIds` array (keep old ones too)
+11. **Update `dateRange`** (today → today + 13 days) and **`updated`** (today's date) fields
 
 ## recommendations.json Structure
 
