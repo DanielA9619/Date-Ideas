@@ -1601,25 +1601,66 @@
         'Unique / Novelty': 'unique'
     };
 
-    function markAsDone(id) {
+    function removeRecById(id) {
+        if (!recsData) return false;
+        let removed = false;
+        for (let i = (recsData.scheduled || []).length - 1; i >= 0; i--) {
+            const day = recsData.scheduled[i];
+            const idx = day.dates.findIndex(d => d.id === id);
+            if (idx >= 0) {
+                day.dates.splice(idx, 1);
+                removed = true;
+                if (day.dates.length === 0) recsData.scheduled.splice(i, 1);
+            }
+        }
+        for (let i = (recsData.whenever || []).length - 1; i >= 0; i--) {
+            const cat = recsData.whenever[i];
+            const idx = cat.dates.findIndex(d => d.id === id);
+            if (idx >= 0) {
+                cat.dates.splice(idx, 1);
+                removed = true;
+                if (cat.dates.length === 0) recsData.whenever.splice(i, 1);
+            }
+        }
+        if (removed && recsData.feedback) delete recsData.feedback[id];
+        return removed;
+    }
+
+    async function markAsDone(id) {
         const { rec, date, categoryTitle } = findRecContext(id);
         if (!rec) { showToast('Recommendation not found.', true); return; }
 
+        const recName = rec.name || '';
+        const recWhere = rec.where || '';
+        const recPrice = rec.price || '';
+        const recDate = date;
+        const recCategoryTitle = categoryTitle;
+
         const today = new Date().toISOString().slice(0, 10);
-        document.getElementById('entry-date').value = date || today;
-        document.getElementById('entry-activity').value = rec.name || '';
-        document.getElementById('entry-location').value = rec.where || '';
-        document.getElementById('entry-price').value = rec.price || '';
+        document.getElementById('entry-date').value = recDate || today;
+        document.getElementById('entry-activity').value = recName;
+        document.getElementById('entry-location').value = recWhere;
+        document.getElementById('entry-price').value = recPrice;
         document.getElementById('entry-notes').value = '';
         document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
 
         const catSelect = document.getElementById('entry-category');
-        const mapped = categoryTitle ? WHENEVER_CATEGORY_MAP[categoryTitle] : '';
+        const mapped = recCategoryTitle ? WHENEVER_CATEGORY_MAP[recCategoryTitle] : '';
         catSelect.value = mapped || '';
 
         editingIndex = -1;
         document.getElementById('add-btn').textContent = 'Add to Done List';
         document.getElementById('cancel-btn').style.display = 'none';
+
+        if (removeRecById(id)) {
+            renderRecs(recsData);
+            if (getToken()) {
+                try {
+                    const result = await ghPut('recommendations.json', JSON.stringify(recsData, null, 4) + '\n', recsSha, 'Remove completed recommendation');
+                    recsSha = result.content.sha;
+                } catch (err) { showToast('Could not remove from recs: ' + err.message, true); }
+            }
+        }
 
         const doneTabBtn = document.querySelector('.tab[onclick*="\'done\'"]');
         showTab('done', doneTabBtn);
