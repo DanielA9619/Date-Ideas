@@ -1,5 +1,13 @@
 [
     {
+        "date": "2026-04-22",
+        "activity": "The Phantom of the Opera — New Cameron Mackintosh Production",
+        "rating": 5,
+        "category": "arts",
+        "location": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+        "price": "$250 per seat"
+    },
+    {
         "date": "2026-02-12",
         "activity": "jazz game",
         "rating": 4,
