@@ -8,7 +8,10 @@
             "comment": "too long of a hike"
         },
         "tulip-festival-ashton-gardens-lehi": "maybe",
-        "phantom-finale-dinner-may3": "down"
+        "phantom-finale-dinner-may3": {
+            "vote": "down",
+            "comment": "Already went"
+        }
     },
     "wishlist": [],
     "previousIds": [
