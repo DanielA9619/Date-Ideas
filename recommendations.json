@@ -12,7 +12,10 @@
             "vote": "down",
             "comment": "Already went"
         },
-        "emerald-pools-zion-waterfall": "down"
+        "emerald-pools-zion-waterfall": {
+            "vote": "down",
+            "comment": "too far from salt lake"
+        }
     },
     "wishlist": [],
     "previousIds": [
