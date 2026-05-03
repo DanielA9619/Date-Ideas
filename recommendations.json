@@ -26,7 +26,9 @@
         "hot-air-balloon-sunrise-flight": "down",
         "scenic-railroad-dinner-train": "maybe"
     },
-    "wishlist": [],
+    "wishlist": [
+        "circus"
+    ],
     "previousIds": [
         "phantom-opera-eccles-apr22",
         "bells-canyon-waterfall-hike-may2",
