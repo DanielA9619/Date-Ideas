@@ -380,6 +380,66 @@
             padding: 20px;
         }
 
+        .add-date-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 12px;
+        }
+
+        .btn-add-date {
+            background: var(--pill-bg);
+            color: var(--text);
+            border: 1px dashed var(--border-hover);
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .btn-add-date:hover {
+            background: var(--surface);
+            border-style: solid;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 200;
+            padding: 16px;
+        }
+
+        .modal {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            max-width: 520px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .modal-actions .btn { flex: 1; }
+
         @media (max-width: 480px) {
             .cal-day { min-height: 40px; border-radius: 8px; }
             .cal-date { font-size: 0.8rem; }
@@ -1001,6 +1061,39 @@
 <p class="updated" id="updated"></p>
 </div>
 
+<div class="modal-overlay" id="add-rec-modal" style="display:none;" onclick="if(event.target===this)closeAddRec()">
+    <div class="modal">
+        <h3>Add a Date</h3>
+        <div class="form-row">
+            <input type="date" id="new-rec-date">
+            <input type="text" id="new-rec-name" placeholder="Name (e.g. Sunset Picnic)">
+        </div>
+        <div class="form-row">
+            <input type="text" id="new-rec-where" placeholder="Where (optional)">
+            <input type="text" id="new-rec-price" placeholder="Price (optional, e.g. $25)">
+        </div>
+        <div class="form-row">
+            <input type="text" id="new-rec-start" placeholder="Start time (optional, e.g. 7:00 PM)">
+            <input type="text" id="new-rec-duration" placeholder="Duration (optional, e.g. 2 - 3 hrs)">
+        </div>
+        <div class="form-row">
+            <input type="text" id="new-rec-desc" placeholder="Description (optional)">
+        </div>
+        <div class="form-row">
+            <input type="url" id="new-rec-link" placeholder="Link (optional)">
+            <select id="new-rec-reservation">
+                <option value="none">No reservation needed</option>
+                <option value="tickets">Tickets may be needed</option>
+                <option value="required">Reservation required</option>
+            </select>
+        </div>
+        <div class="modal-actions">
+            <button class="btn btn-cancel" onclick="closeAddRec()">Cancel</button>
+            <button class="btn btn-add" onclick="saveAddRec()">Add Date</button>
+        </div>
+    </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
@@ -1326,15 +1419,15 @@
 
     // Calendar view spans further than the AI's generation window so the user
     // can browse and add dates beyond the 2-week range. Show through the end
-    // of next month, or the AI's range end (and any scheduled item beyond
-    // that), whichever is later.
+    // of the current month, or the AI's range end (and any scheduled item
+    // beyond that), whichever is later.
     function getCalendarRange(data) {
         const { startDate, endDate: rangeEnd } = parseDateRange(data.dateRange);
         const today = new Date();
         today.setHours(0, 0, 0, 0);
-        const endOfNextMonth = new Date(today.getFullYear(), today.getMonth() + 2, 0);
+        const endOfThisMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
         let finalEnd = new Date(rangeEnd + 'T00:00');
-        if (endOfNextMonth > finalEnd) finalEnd = endOfNextMonth;
+        if (endOfThisMonth > finalEnd) finalEnd = endOfThisMonth;
         for (const day of (data.scheduled || [])) {
             for (const item of day.dates) {
                 const itemEndStr = item.endDate || day.date;
@@ -1442,14 +1535,91 @@
         const fb = (recsData && recsData.feedback) || {};
         function getVote(id) { const v = fb[id]; return typeof v === 'string' ? v : (v && v.vote) || null; }
 
+        const addBtn = `<div class="add-date-row"><button class="btn-add-date" onclick="openAddRec('${dateStr}')">+ Add a date</button></div>`;
+
         if (!events.length) {
-            eventsEl.innerHTML = '<div class="calendar-no-events">No dates planned for this day</div>';
+            eventsEl.innerHTML = `<div class="calendar-no-events">No dates planned for this day</div>${addBtn}`;
         } else {
             eventsEl.innerHTML = `
                 <div class="category">
                     <div class="day-header">${formatDay(dateStr)}</div>
                     ${events.map(d => renderCard(d, saved, getVote)).join('')}
-                </div>`;
+                </div>${addBtn}`;
+        }
+    }
+
+    function openAddRec(dateStr) {
+        document.getElementById('new-rec-date').value = dateStr || '';
+        document.getElementById('new-rec-name').value = '';
+        document.getElementById('new-rec-where').value = '';
+        document.getElementById('new-rec-price').value = '';
+        document.getElementById('new-rec-start').value = '';
+        document.getElementById('new-rec-duration').value = '';
+        document.getElementById('new-rec-desc').value = '';
+        document.getElementById('new-rec-link').value = '';
+        document.getElementById('new-rec-reservation').value = 'none';
+        document.getElementById('add-rec-modal').style.display = 'flex';
+        setTimeout(() => document.getElementById('new-rec-name').focus(), 50);
+    }
+
+    function closeAddRec() {
+        document.getElementById('add-rec-modal').style.display = 'none';
+    }
+
+    function makeRecId(name) {
+        let base = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        if (!base) base = 'date';
+        let id = base;
+        let n = 1;
+        while (findRecById(id)) {
+            n++;
+            id = `${base}-${n}`;
+        }
+        return id;
+    }
+
+    async function saveAddRec() {
+        if (!recsData) { showToast('Recommendations not loaded yet.', true); return; }
+        const date = document.getElementById('new-rec-date').value;
+        const name = document.getElementById('new-rec-name').value.trim();
+        if (!date) { showToast('Pick a date.', true); return; }
+        if (!name) { showToast('Give it a name.', true); return; }
+
+        const rec = {
+            id: makeRecId(name),
+            name,
+            price: document.getElementById('new-rec-price').value.trim(),
+            desc: document.getElementById('new-rec-desc').value.trim(),
+            duration: document.getElementById('new-rec-duration').value.trim(),
+            where: document.getElementById('new-rec-where').value.trim(),
+            reservation: document.getElementById('new-rec-reservation').value || 'none'
+        };
+        const start = document.getElementById('new-rec-start').value.trim();
+        const link = document.getElementById('new-rec-link').value.trim();
+        if (start) rec.start = start;
+        if (link) rec.link = link;
+
+        if (!recsData.scheduled) recsData.scheduled = [];
+        let dayGroup = recsData.scheduled.find(g => g.date === date);
+        if (!dayGroup) {
+            dayGroup = { date, dates: [] };
+            recsData.scheduled.push(dayGroup);
+            recsData.scheduled.sort((a, b) => a.date.localeCompare(b.date));
+        }
+        dayGroup.dates.push(rec);
+
+        closeAddRec();
+        renderRecs(recsData);
+        selectCalendarDate(date);
+
+        if (getToken()) {
+            try {
+                const result = await ghPut('recommendations.json', JSON.stringify(recsData, null, 4) + '\n', recsSha, 'Add custom date');
+                recsSha = result.content.sha;
+                showToast('Date added!');
+            } catch (err) { showToast('Save failed: ' + err.message, true); }
+        } else {
+            showToast('Connect GitHub to save permanently.', true);
         }
     }
 
