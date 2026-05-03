@@ -1324,8 +1324,31 @@
         };
     }
 
+    // Calendar view spans further than the AI's generation window so the user
+    // can browse and add dates beyond the 2-week range. Show through the end
+    // of next month, or the AI's range end (and any scheduled item beyond
+    // that), whichever is later.
+    function getCalendarRange(data) {
+        const { startDate, endDate: rangeEnd } = parseDateRange(data.dateRange);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const endOfNextMonth = new Date(today.getFullYear(), today.getMonth() + 2, 0);
+        let finalEnd = new Date(rangeEnd + 'T00:00');
+        if (endOfNextMonth > finalEnd) finalEnd = endOfNextMonth;
+        for (const day of (data.scheduled || [])) {
+            for (const item of day.dates) {
+                const itemEndStr = item.endDate || day.date;
+                const itemEnd = new Date(itemEndStr + 'T00:00');
+                if (itemEnd > finalEnd) finalEnd = itemEnd;
+            }
+        }
+        const pad = n => String(n).padStart(2, '0');
+        const endDate = `${finalEnd.getFullYear()}-${pad(finalEnd.getMonth()+1)}-${pad(finalEnd.getDate())}`;
+        return { startDate, endDate };
+    }
+
     function buildScheduledCalendar(data) {
-        const { startDate, endDate } = parseDateRange(data.dateRange);
+        const { startDate, endDate } = getCalendarRange(data);
         const map = new Map();
         let cursor = new Date(startDate + 'T00:00');
         const end = new Date(endDate + 'T00:00');
@@ -1352,7 +1375,7 @@
     function renderScheduledCalendar(data, saved, getVote) {
         const scheduledEl = document.getElementById('scheduled');
         scheduledDateMap = buildScheduledCalendar(data);
-        const { startDate, endDate } = parseDateRange(data.dateRange);
+        const { startDate, endDate } = getCalendarRange(data);
         const start = new Date(startDate + 'T00:00');
         const end = new Date(endDate + 'T00:00');
         const today = new Date().toISOString().slice(0, 10);
@@ -1601,25 +1624,66 @@
         'Unique / Novelty': 'unique'
     };
 
-    function markAsDone(id) {
+    function removeRecById(id) {
+        if (!recsData) return false;
+        let removed = false;
+        for (let i = (recsData.scheduled || []).length - 1; i >= 0; i--) {
+            const day = recsData.scheduled[i];
+            const idx = day.dates.findIndex(d => d.id === id);
+            if (idx >= 0) {
+                day.dates.splice(idx, 1);
+                removed = true;
+                if (day.dates.length === 0) recsData.scheduled.splice(i, 1);
+            }
+        }
+        for (let i = (recsData.whenever || []).length - 1; i >= 0; i--) {
+            const cat = recsData.whenever[i];
+            const idx = cat.dates.findIndex(d => d.id === id);
+            if (idx >= 0) {
+                cat.dates.splice(idx, 1);
+                removed = true;
+                if (cat.dates.length === 0) recsData.whenever.splice(i, 1);
+            }
+        }
+        if (removed && recsData.feedback) delete recsData.feedback[id];
+        return removed;
+    }
+
+    async function markAsDone(id) {
         const { rec, date, categoryTitle } = findRecContext(id);
         if (!rec) { showToast('Recommendation not found.', true); return; }
 
+        const recName = rec.name || '';
+        const recWhere = rec.where || '';
+        const recPrice = rec.price || '';
+        const recDate = date;
+        const recCategoryTitle = categoryTitle;
+
         const today = new Date().toISOString().slice(0, 10);
-        document.getElementById('entry-date').value = date || today;
-        document.getElementById('entry-activity').value = rec.name || '';
-        document.getElementById('entry-location').value = rec.where || '';
-        document.getElementById('entry-price').value = rec.price || '';
+        document.getElementById('entry-date').value = recDate || today;
+        document.getElementById('entry-activity').value = recName;
+        document.getElementById('entry-location').value = recWhere;
+        document.getElementById('entry-price').value = recPrice;
         document.getElementById('entry-notes').value = '';
         document.querySelectorAll('input[name="rating"]').forEach(r => r.checked = false);
 
         const catSelect = document.getElementById('entry-category');
-        const mapped = categoryTitle ? WHENEVER_CATEGORY_MAP[categoryTitle] : '';
+        const mapped = recCategoryTitle ? WHENEVER_CATEGORY_MAP[recCategoryTitle] : '';
         catSelect.value = mapped || '';
 
         editingIndex = -1;
         document.getElementById('add-btn').textContent = 'Add to Done List';
         document.getElementById('cancel-btn').style.display = 'none';
+
+        if (removeRecById(id)) {
+            renderRecs(recsData);
+            if (getToken()) {
+                try {
+                    const result = await ghPut('recommendations.json', JSON.stringify(recsData, null, 4) + '\n', recsSha, 'Remove completed recommendation');
+                    recsSha = result.content.sha;
+                } catch (err) { showToast('Could not remove from recs: ' + err.message, true); }
+            }
+        }
 
         const doneTabBtn = document.querySelector('.tab[onclick*="\'done\'"]');
         showTab('done', doneTabBtn);
