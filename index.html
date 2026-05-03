@@ -1324,8 +1324,31 @@
         };
     }
 
+    // Calendar view spans further than the AI's generation window so the user
+    // can browse and add dates beyond the 2-week range. Show through the end
+    // of next month, or the AI's range end (and any scheduled item beyond
+    // that), whichever is later.
+    function getCalendarRange(data) {
+        const { startDate, endDate: rangeEnd } = parseDateRange(data.dateRange);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const endOfNextMonth = new Date(today.getFullYear(), today.getMonth() + 2, 0);
+        let finalEnd = new Date(rangeEnd + 'T00:00');
+        if (endOfNextMonth > finalEnd) finalEnd = endOfNextMonth;
+        for (const day of (data.scheduled || [])) {
+            for (const item of day.dates) {
+                const itemEndStr = item.endDate || day.date;
+                const itemEnd = new Date(itemEndStr + 'T00:00');
+                if (itemEnd > finalEnd) finalEnd = itemEnd;
+            }
+        }
+        const pad = n => String(n).padStart(2, '0');
+        const endDate = `${finalEnd.getFullYear()}-${pad(finalEnd.getMonth()+1)}-${pad(finalEnd.getDate())}`;
+        return { startDate, endDate };
+    }
+
     function buildScheduledCalendar(data) {
-        const { startDate, endDate } = parseDateRange(data.dateRange);
+        const { startDate, endDate } = getCalendarRange(data);
         const map = new Map();
         let cursor = new Date(startDate + 'T00:00');
         const end = new Date(endDate + 'T00:00');
@@ -1352,7 +1375,7 @@
     function renderScheduledCalendar(data, saved, getVote) {
         const scheduledEl = document.getElementById('scheduled');
         scheduledDateMap = buildScheduledCalendar(data);
-        const { startDate, endDate } = parseDateRange(data.dateRange);
+        const { startDate, endDate } = getCalendarRange(data);
         const start = new Date(startDate + 'T00:00');
         const end = new Date(endDate + 'T00:00');
         const today = new Date().toISOString().slice(0, 10);
