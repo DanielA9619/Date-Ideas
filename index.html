@@ -1260,15 +1260,36 @@
         localStorage.setItem('dateRecs', JSON.stringify(checked));
     }
 
+    const RESERVATION_LABELS = {
+        none: '<div class="detail detail-free">No reservation needed</div>',
+        tickets: '<div class="detail detail-ticket">Tickets may be needed</div>',
+        required: '<div class="detail detail-ticket">Reservation required</div>'
+    };
+
     function reservationTag(type) {
-        if (type === 'tickets') return '<div class="detail detail-ticket">Tickets may be needed</div>';
-        if (type === 'required') return '<div class="detail detail-ticket">Reservation required</div>';
-        return '<div class="detail detail-free">No reservation needed</div>';
+        const key = typeof type === 'string' ? type.trim().toLowerCase() : '';
+        if (RESERVATION_LABELS[key]) return RESERVATION_LABELS[key];
+        if (key.includes('ticket')) return RESERVATION_LABELS.tickets;
+        if (key.includes('reserv') || key.includes('required')) return RESERVATION_LABELS.required;
+        return RESERVATION_LABELS.none;
     }
 
     function escHtml(str) {
-        if (!str) return '';
-        return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        if (str === null || str === undefined) return '';
+        return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    }
+
+    function safeHref(url) {
+        if (!url || typeof url !== 'string') return '';
+        const trimmed = url.trim();
+        if (!/^https?:\/\//i.test(trimmed)) return '';
+        return escHtml(trimmed);
+    }
+
+    // Strip anything that could break out of an inline JS string literal.
+    // IDs are kebab-case in normal data; this hardens against malformed input.
+    function safeJsId(id) {
+        return String(id == null ? '' : id).replace(/[^a-zA-Z0-9_-]/g, '');
     }
 
     function getComment(id) {
@@ -1278,8 +1299,12 @@
 
     function toggleCommentRow(id) {
         const row = document.getElementById('comment-row-' + id);
+        if (!row) return;
         row.classList.toggle('open');
-        if (row.classList.contains('open')) document.getElementById('comment-input-' + id).focus();
+        if (row.classList.contains('open')) {
+            const input = document.getElementById('comment-input-' + id);
+            if (input) input.focus();
+        }
     }
 
     async function saveComment(id) {
@@ -1362,35 +1387,38 @@
     }
 
     function renderCard(d, saved, getVote) {
+        const idAttr = escHtml(d.id);
+        const idJs = safeJsId(d.id);
+        const safeLink = safeHref(d.link);
         return `
-            <div class="date-card${saved[d.id] ? ' done' : ''}" data-id="${d.id}">
+            <div class="date-card${saved[d.id] ? ' done' : ''}" data-id="${idAttr}">
                 <div class="card-header">
                     <input type="checkbox" onchange="toggleRec(this)"${saved[d.id] ? ' checked' : ''}>
-                    <div class="name">${d.name}</div>
-                    <div class="price">${d.price}</div>
+                    <div class="name">${escHtml(d.name)}</div>
+                    <div class="price">${escHtml(d.price)}</div>
                 </div>
-                <div class="desc">${d.desc}</div>
+                <div class="desc">${escHtml(d.desc)}</div>
                 <div class="details">
-                    ${d.when ? `<div class="detail"><span class="label">When</span> ${d.when}</div>` : ''}
-                    ${d.start ? `<div class="detail"><span class="label">Start</span> ${d.start}</div>` : ''}
-                    <div class="detail"><span class="label">Duration</span> ${d.duration}</div>
-                    <div class="detail"><span class="label">Where</span> ${d.where}</div>
+                    ${d.when ? `<div class="detail"><span class="label">When</span> ${escHtml(d.when)}</div>` : ''}
+                    ${d.start ? `<div class="detail"><span class="label">Start</span> ${escHtml(d.start)}</div>` : ''}
+                    <div class="detail"><span class="label">Duration</span> ${escHtml(d.duration)}</div>
+                    <div class="detail"><span class="label">Where</span> ${escHtml(d.where)}</div>
                     ${reservationTag(d.reservation)}
-                    ${d.link ? `<a class="detail detail-link" href="${d.link}" target="_blank" rel="noopener">More info \u2197</a>` : ''}
+                    ${safeLink ? `<a class="detail detail-link" href="${safeLink}" target="_blank" rel="noopener noreferrer">More info \u2197</a>` : ''}
                     ${d.fromWishlist ? '<div class="detail detail-wishlist">\u2728 From your list</div>' : ''}
                 </div>
                 <div class="card-footer">
                     <div class="feedback-btns">
-                        <button class="fb-btn up${getVote(d.id) === 'up' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'up')" title="Interested">\uD83D\uDC4D</button>
-                        <button class="fb-btn maybe${getVote(d.id) === 'maybe' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'maybe')" title="Maybe">\uD83E\uDD14</button>
-                        <button class="fb-btn down${getVote(d.id) === 'down' ? ' active' : ''}" onclick="toggleFeedback('${d.id}', 'down')" title="Not for us">\uD83D\uDC4E</button>
-                        <button class="fb-comment-btn${getComment(d.id) ? ' has-comment' : ''}" onclick="toggleCommentRow('${d.id}')" title="Add a comment">${getComment(d.id) ? '\uD83D\uDCAC comment' : '\uD83D\uDCAC'}</button>
-                        <button class="did-it-btn" onclick="markAsDone('${d.id}')" title="Add to Done List">Did It \u2713</button>
+                        <button class="fb-btn up${getVote(d.id) === 'up' ? ' active' : ''}" onclick="toggleFeedback('${idJs}', 'up')" title="Interested">\uD83D\uDC4D</button>
+                        <button class="fb-btn maybe${getVote(d.id) === 'maybe' ? ' active' : ''}" onclick="toggleFeedback('${idJs}', 'maybe')" title="Maybe">\uD83E\uDD14</button>
+                        <button class="fb-btn down${getVote(d.id) === 'down' ? ' active' : ''}" onclick="toggleFeedback('${idJs}', 'down')" title="Not for us">\uD83D\uDC4E</button>
+                        <button class="fb-comment-btn${getComment(d.id) ? ' has-comment' : ''}" onclick="toggleCommentRow('${idJs}')" title="Add a comment">${getComment(d.id) ? '\uD83D\uDCAC comment' : '\uD83D\uDCAC'}</button>
+                        <button class="did-it-btn" onclick="markAsDone('${idJs}')" title="Add to Done List">Did It \u2713</button>
                     </div>
                 </div>
-                <div class="fb-comment-row" id="comment-row-${d.id}">
-                    <input type="text" id="comment-input-${d.id}" placeholder="Why do you like or dislike this idea?" value="${escHtml(getComment(d.id))}" onkeydown="if(event.key==='Enter')saveComment('${d.id}')">
-                    <button class="fb-comment-save" onclick="saveComment('${d.id}')">Save</button>
+                <div class="fb-comment-row" id="comment-row-${idAttr}">
+                    <input type="text" id="comment-input-${idAttr}" placeholder="Why do you like or dislike this idea?" value="${escHtml(getComment(d.id))}" onkeydown="if(event.key==='Enter')saveComment('${idJs}')">
+                    <button class="fb-comment-save" onclick="saveComment('${idJs}')">Save</button>
                 </div>
             </div>`;
     }
@@ -1429,23 +1457,35 @@
         return { startDate, endDate };
     }
 
+    // Format a Date as YYYY-MM-DD using local components (avoids the UTC
+    // off-by-one bug that toISOString().slice(0,10) causes east of UTC).
+    function localDateKey(d) {
+        const pad = n => String(n).padStart(2, '0');
+        return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+    }
+
+    function todayKey() { return localDateKey(new Date()); }
+
     function buildScheduledCalendar(data) {
         const { startDate, endDate } = getCalendarRange(data);
         const map = new Map();
         let cursor = new Date(startDate + 'T00:00');
         const end = new Date(endDate + 'T00:00');
         while (cursor <= end) {
-            map.set(cursor.toISOString().slice(0, 10), []);
+            map.set(localDateKey(cursor), []);
             cursor.setDate(cursor.getDate() + 1);
         }
-        for (const day of (data.scheduled || [])) {
+        for (const day of (Array.isArray(data.scheduled) ? data.scheduled : [])) {
+            if (!day || !Array.isArray(day.dates) || !day.date) continue;
             for (const item of day.dates) {
+                if (!item) continue;
                 const itemStart = day.date;
                 const itemEnd = item.endDate || day.date;
                 let d = new Date(itemStart + 'T00:00');
                 const dEnd = new Date(itemEnd + 'T00:00');
+                if (isNaN(d) || isNaN(dEnd)) continue;
                 while (d <= dEnd) {
-                    const key = d.toISOString().slice(0, 10);
+                    const key = localDateKey(d);
                     if (map.has(key)) map.get(key).push(item);
                     d.setDate(d.getDate() + 1);
                 }
@@ -1460,7 +1500,7 @@
         const { startDate, endDate } = getCalendarRange(data);
         const start = new Date(startDate + 'T00:00');
         const end = new Date(endDate + 'T00:00');
-        const today = new Date().toISOString().slice(0, 10);
+        const today = todayKey();
 
         const startDow = start.getDay();
         const offset = startDow === 0 ? 6 : startDow - 1;
@@ -1472,7 +1512,7 @@
         let firstEventDate = null;
         let cursor = new Date(start);
         while (cursor <= end) {
-            const key = cursor.toISOString().slice(0, 10);
+            const key = localDateKey(cursor);
             const events = scheduledDateMap.get(key) || [];
             const hasEvents = events.length > 0;
             const isPast = key < today;
@@ -1588,8 +1628,11 @@
         if (start) rec.start = start;
         if (link) rec.link = link;
 
-        if (!recsData.scheduled) recsData.scheduled = [];
-        let dayGroup = recsData.scheduled.find(g => g.date === date);
+        const snapshot = JSON.parse(JSON.stringify(recsData));
+        const snapshotSha = recsSha;
+
+        if (!Array.isArray(recsData.scheduled)) recsData.scheduled = [];
+        let dayGroup = recsData.scheduled.find(g => g && g.date === date);
         if (!dayGroup) {
             dayGroup = { date, dates: [] };
             recsData.scheduled.push(dayGroup);
@@ -1606,7 +1649,12 @@
                 const result = await ghPut('recommendations.json', JSON.stringify(recsData, null, 4) + '\n', recsSha, 'Add custom date');
                 recsSha = result.content.sha;
                 showToast('Date added!');
-            } catch (err) { showToast('Save failed: ' + err.message, true); }
+            } catch (err) {
+                recsData = snapshot;
+                recsSha = snapshotSha;
+                renderRecs(recsData);
+                showToast('Save failed: ' + err.message, true);
+            }
         } else {
             showToast('Connect GitHub to save permanently.', true);
         }
@@ -1621,7 +1669,7 @@
         function getVote(id) { const v = fb[id]; return typeof v === 'string' ? v : (v && v.vote) || null; }
 
         // Scheduled (calendar view)
-        if (data.scheduled && data.scheduled.length) {
+        if (Array.isArray(data.scheduled) && data.scheduled.length) {
             renderScheduledCalendar(data, saved, getVote);
         } else {
             document.getElementById('scheduled').innerHTML = '<div class="empty-state">No scheduled dates yet. Ask the AI to refresh recommendations!</div>';
@@ -1629,13 +1677,15 @@
 
         // Whenever (by category)
         const wheneverEl = document.getElementById('whenever');
-        if (data.whenever && data.whenever.length) {
-            wheneverEl.innerHTML = data.whenever.map(cat => `
+        if (Array.isArray(data.whenever) && data.whenever.length) {
+            wheneverEl.innerHTML = data.whenever.map(cat => {
+                if (!cat || !Array.isArray(cat.dates)) return '';
+                return `
                 <div class="category">
-                    <div class="category-title">${cat.title}</div>
+                    <div class="category-title">${escHtml(cat.title)}</div>
                     ${cat.dates.map(d => renderCard(d, saved, getVote)).join('')}
-                </div>
-            `).join('');
+                </div>`;
+            }).join('');
         } else {
             wheneverEl.innerHTML = '<div class="empty-state">No whenever ideas yet. Ask the AI to refresh recommendations!</div>';
         }
@@ -1645,18 +1695,20 @@
 
     // --- Wishlist ---
     function renderWishlist() {
-        const items = (recsData && recsData.wishlist) || [];
+        const items = Array.isArray(recsData && recsData.wishlist) ? recsData.wishlist : [];
         const el = document.getElementById('wishlist-items');
         const hint = document.getElementById('wishlist-hint');
         const processedEl = document.getElementById('wishlist-processed');
 
         const wishlistRecs = [];
         if (recsData) {
-            for (const day of (recsData.scheduled || [])) {
-                for (const d of day.dates) if (d.fromWishlist) wishlistRecs.push(d.name);
+            for (const day of (Array.isArray(recsData.scheduled) ? recsData.scheduled : [])) {
+                if (!day || !Array.isArray(day.dates)) continue;
+                for (const d of day.dates) if (d && d.fromWishlist) wishlistRecs.push(d.name);
             }
-            for (const cat of (recsData.whenever || [])) {
-                for (const d of cat.dates) if (d.fromWishlist) wishlistRecs.push(d.name);
+            for (const cat of (Array.isArray(recsData.whenever) ? recsData.whenever : [])) {
+                if (!cat || !Array.isArray(cat.dates)) continue;
+                for (const d of cat.dates) if (d && d.fromWishlist) wishlistRecs.push(d.name);
             }
         }
 
@@ -1723,25 +1775,32 @@
         empty.style.display = 'none';
         stats.style.display = 'grid';
 
-        list.innerHTML = allEntries.map((e, i) => `
+        list.innerHTML = allEntries.map((e, i) => {
+            let dateLabel = '';
+            if (e.date) {
+                const parsed = new Date(e.date + 'T00:00');
+                if (!isNaN(parsed)) dateLabel = parsed.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            }
+            const rating = Number.isInteger(e.rating) && e.rating >= 1 && e.rating <= 5 ? e.rating : null;
+            return `
             <li class="done-entry">
                 <div class="left">
-                    <div class="activity">${e.activity}</div>
+                    <div class="activity">${escHtml(e.activity)}</div>
                     <div class="meta">
-                        ${e.date ? `<span>${new Date(e.date + 'T00:00').toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</span>` : ''}
-                        ${e.rating ? starsHtml(e.rating) : ''}
-                        ${e.category ? `<span class="tag tag-cat">${e.category}</span>` : ''}
-                        ${e.location ? `<span>${e.location}</span>` : ''}
-                        ${e.price ? `<span>${e.price}</span>` : ''}
-                        ${e.notes ? `<span>${e.notes}</span>` : ''}
+                        ${dateLabel ? `<span>${escHtml(dateLabel)}</span>` : ''}
+                        ${rating ? starsHtml(rating) : ''}
+                        ${e.category ? `<span class="tag tag-cat">${escHtml(e.category)}</span>` : ''}
+                        ${e.location ? `<span>${escHtml(e.location)}</span>` : ''}
+                        ${e.price ? `<span>${escHtml(e.price)}</span>` : ''}
+                        ${e.notes ? `<span>${escHtml(e.notes)}</span>` : ''}
                     </div>
                 </div>
                 <div class="entry-actions">
                     <button class="entry-btn" onclick="editEntry(${i})" title="Edit">\u270E</button>
                     <button class="entry-btn delete" onclick="deleteEntry(${i})" title="Delete">\u00D7</button>
                 </div>
-            </li>
-        `).join('');
+            </li>`;
+        }).join('');
 
         const rated = allEntries.filter(e => e.rating);
         document.getElementById('stat-total').textContent = allEntries.length;
@@ -1752,22 +1811,26 @@
     // --- Profile ---
     function findRecById(id) {
         if (!recsData) return null;
-        for (const day of (recsData.scheduled || [])) {
-            for (const d of day.dates) if (d.id === id) return d;
+        for (const day of (Array.isArray(recsData.scheduled) ? recsData.scheduled : [])) {
+            if (!day || !Array.isArray(day.dates)) continue;
+            for (const d of day.dates) if (d && d.id === id) return d;
         }
-        for (const cat of (recsData.whenever || [])) {
-            for (const d of cat.dates) if (d.id === id) return d;
+        for (const cat of (Array.isArray(recsData.whenever) ? recsData.whenever : [])) {
+            if (!cat || !Array.isArray(cat.dates)) continue;
+            for (const d of cat.dates) if (d && d.id === id) return d;
         }
         return null;
     }
 
     function findRecContext(id) {
         if (!recsData) return { rec: null };
-        for (const day of (recsData.scheduled || [])) {
-            for (const d of day.dates) if (d.id === id) return { rec: d, date: day.date };
+        for (const day of (Array.isArray(recsData.scheduled) ? recsData.scheduled : [])) {
+            if (!day || !Array.isArray(day.dates)) continue;
+            for (const d of day.dates) if (d && d.id === id) return { rec: d, date: day.date };
         }
-        for (const cat of (recsData.whenever || [])) {
-            for (const d of cat.dates) if (d.id === id) return { rec: d, categoryTitle: cat.title };
+        for (const cat of (Array.isArray(recsData.whenever) ? recsData.whenever : [])) {
+            if (!cat || !Array.isArray(cat.dates)) continue;
+            for (const d of cat.dates) if (d && d.id === id) return { rec: d, categoryTitle: cat.title };
         }
         return { rec: null };
     }
@@ -1786,22 +1849,26 @@
     function removeRecById(id) {
         if (!recsData) return false;
         let removed = false;
-        for (let i = (recsData.scheduled || []).length - 1; i >= 0; i--) {
-            const day = recsData.scheduled[i];
-            const idx = day.dates.findIndex(d => d.id === id);
+        const scheduled = Array.isArray(recsData.scheduled) ? recsData.scheduled : [];
+        for (let i = scheduled.length - 1; i >= 0; i--) {
+            const day = scheduled[i];
+            if (!day || !Array.isArray(day.dates)) continue;
+            const idx = day.dates.findIndex(d => d && d.id === id);
             if (idx >= 0) {
                 day.dates.splice(idx, 1);
                 removed = true;
-                if (day.dates.length === 0) recsData.scheduled.splice(i, 1);
+                if (day.dates.length === 0) scheduled.splice(i, 1);
             }
         }
-        for (let i = (recsData.whenever || []).length - 1; i >= 0; i--) {
-            const cat = recsData.whenever[i];
-            const idx = cat.dates.findIndex(d => d.id === id);
+        const whenever = Array.isArray(recsData.whenever) ? recsData.whenever : [];
+        for (let i = whenever.length - 1; i >= 0; i--) {
+            const cat = whenever[i];
+            if (!cat || !Array.isArray(cat.dates)) continue;
+            const idx = cat.dates.findIndex(d => d && d.id === id);
             if (idx >= 0) {
                 cat.dates.splice(idx, 1);
                 removed = true;
-                if (cat.dates.length === 0) recsData.whenever.splice(i, 1);
+                if (cat.dates.length === 0) whenever.splice(i, 1);
             }
         }
         if (removed && recsData.feedback) delete recsData.feedback[id];
@@ -1818,7 +1885,7 @@
         const recDate = date;
         const recCategoryTitle = categoryTitle;
 
-        const today = new Date().toISOString().slice(0, 10);
+        const today = todayKey();
         document.getElementById('entry-date').value = recDate || today;
         document.getElementById('entry-activity').value = recName;
         document.getElementById('entry-location').value = recWhere;
@@ -1834,13 +1901,20 @@
         document.getElementById('add-btn').textContent = 'Add to Done List';
         document.getElementById('cancel-btn').style.display = 'none';
 
+        const snapshot = JSON.parse(JSON.stringify(recsData));
+        const snapshotSha = recsSha;
         if (removeRecById(id)) {
             renderRecs(recsData);
             if (getToken()) {
                 try {
                     const result = await ghPut('recommendations.json', JSON.stringify(recsData, null, 4) + '\n', recsSha, 'Remove completed recommendation');
                     recsSha = result.content.sha;
-                } catch (err) { showToast('Could not remove from recs: ' + err.message, true); }
+                } catch (err) {
+                    recsData = snapshot;
+                    recsSha = snapshotSha;
+                    renderRecs(recsData);
+                    showToast('Could not remove from recs: ' + err.message, true);
+                }
             }
         }
 
@@ -1893,7 +1967,7 @@
             if (!items.length) return '<div class="profile-empty">None yet</div>';
             return '<ul class="profile-list">' + items.map(i => `
                 <li>
-                    <div class="name">${i.name}</div>
+                    <div class="name">${escHtml(i.name)}</div>
                     ${i.comment ? `<div class="comment">"${escHtml(i.comment)}"</div>` : ''}
                 </li>
             `).join('') + '</ul>';
@@ -1901,12 +1975,14 @@
 
         function ratingList(items) {
             if (!items.length) return '<div class="profile-empty">None yet</div>';
-            return '<ul class="profile-list">' + items.map(e => `
+            return '<ul class="profile-list">' + items.map(e => {
+                const r = Number.isInteger(e.rating) && e.rating >= 1 && e.rating <= 5 ? e.rating : 0;
+                return `
                 <li>
-                    <div class="name">${e.activity} ${starsHtml(e.rating)}</div>
+                    <div class="name">${escHtml(e.activity)} ${r ? starsHtml(r) : ''}</div>
                     ${e.notes ? `<div class="comment">"${escHtml(e.notes)}"</div>` : ''}
-                </li>
-            `).join('') + '</ul>';
+                </li>`;
+            }).join('') + '</ul>';
         }
 
         el.innerHTML = `
@@ -1921,8 +1997,8 @@
                 <h3>Categories (best to worst)</h3>
                 ${catList.length ? catList.map(c => `
                     <div class="profile-row">
-                        <span class="label">${c.cat} (${c.count})</span>
-                        <span class="value">${c.avg !== '-' ? c.avg + ' \u2605' : '\u2014'}</span>
+                        <span class="label">${escHtml(c.cat)} (${c.count})</span>
+                        <span class="value">${c.avg !== '-' ? escHtml(c.avg) + ' \u2605' : '\u2014'}</span>
                     </div>
                 `).join('') : '<div class="profile-empty">No categories yet</div>'}
             </div>
@@ -1981,23 +2057,30 @@
         if (!entry) return;
         const btn = document.getElementById('add-btn');
         const isEdit = editingIndex >= 0;
+        const editIdx = editingIndex;
+        const previous = isEdit ? allEntries[editIdx] : null;
 
         if (getToken()) {
             btn.disabled = true;
             btn.textContent = 'Saving...';
             try {
-                if (isEdit) allEntries[editingIndex] = entry; else allEntries.unshift(entry);
+                if (isEdit) allEntries[editIdx] = entry; else allEntries.unshift(entry);
                 const result = await ghPut(FILE_PATH, JSON.stringify(allEntries, null, 4) + '\n', fileSha, isEdit ? 'Update done date' : 'Add done date');
                 fileSha = result.content.sha;
                 renderDone();
                 resetForm();
                 showToast(isEdit ? 'Date updated!' : 'Saved!');
             } catch (err) {
-                if (!isEdit) allEntries.shift();
+                if (isEdit) {
+                    if (editIdx >= 0 && editIdx < allEntries.length) allEntries[editIdx] = previous;
+                } else {
+                    allEntries.shift();
+                }
+                renderDone();
                 showToast('Save failed: ' + err.message, true);
             } finally { btn.disabled = false; btn.textContent = 'Add to Done List'; }
         } else {
-            if (isEdit) allEntries[editingIndex] = entry; else allEntries.unshift(entry);
+            if (isEdit) allEntries[editIdx] = entry; else allEntries.unshift(entry);
             renderDone(); resetForm();
             showToast('Connect GitHub to save permanently.', true);
         }
@@ -2020,17 +2103,24 @@
     }
 
     async function deleteEntry(index) {
+        if (!allEntries[index]) return;
         if (!confirm('Delete "' + allEntries[index].activity + '"?')) return;
-        allEntries.splice(index, 1);
+        const removed = allEntries.splice(index, 1)[0];
+        if (editingIndex === index) resetForm();
+        renderDone();
         if (getToken()) {
             try {
                 const result = await ghPut(FILE_PATH, JSON.stringify(allEntries, null, 4) + '\n', fileSha, 'Delete done date');
                 fileSha = result.content.sha;
                 showToast('Deleted!');
-            } catch (err) { showToast('Delete failed: ' + err.message, true); }
+            } catch (err) {
+                allEntries.splice(index, 0, removed);
+                renderDone();
+                showToast('Delete failed: ' + err.message, true);
+            }
+        } else {
+            showToast('Connect GitHub to save permanently.', true);
         }
-        if (editingIndex === index) resetForm();
-        renderDone();
     }
 
     function cancelEdit() { resetForm(); }
