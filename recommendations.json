@@ -1,6 +1,6 @@
 {
-    "dateRange": "May 17 - May 30, 2026",
-    "updated": "May 17, 2026",
+    "dateRange": "May 24 - June 6, 2026",
+    "updated": "May 24, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
@@ -154,7 +154,16 @@
         "riverdance-eccles-may22",
         "billy-joel-sting-may22",
         "mirror-lake-scenic-adventure-may29",
-        "totally-rad-vintage-fest-may31"
+        "totally-rad-vintage-fest-may31",
+        "ringo-starr-all-starr-band-june1",
+        "trey-anastasio-red-butte-garden-june2",
+        "grande-staircase-escalante-scenic-drive-june4",
+        "goblin-valley-state-park-hoodoos-june4",
+        "provo-rock-canyon-waterfall-hike-june5",
+        "utah-lake-paddleboarding-june5",
+        "brit-floyd-pink-floyd-tribute-june6",
+        "downtown-farmers-market-pioneer-park-june6",
+        "park-city-mountain-summer-opening-june6"
     ],
     "scheduled": [
         {
@@ -290,6 +299,130 @@
                     "where": "Mountain America Exposition Center — 9575 State St, Sandy, UT 84070",
                     "reservation": "none (pay at door)",
                     "link": "https://totallyradvf.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-06-01",
+            "dates": [
+                {
+                    "id": "ringo-starr-all-starr-band-june1",
+                    "name": "Ringo Starr & His All-Starr Band — Rock Legend Concert",
+                    "price": "$69 - $200+",
+                    "desc": "The legendary Beatles drummer performs with his All-Starr Band featuring world-class musicians. A night of iconic hits, storytelling, and pure rock & roll energy. Exceptional musicianship and nostalgia for classic rock lovers. Similar high-caliber artistry to Phantom of the Opera.",
+                    "start": "8:00 PM (doors 6:30 PM)",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.live-at-the-eccles.com"
+                }
+            ]
+        },
+        {
+            "date": "2026-06-02",
+            "dates": [
+                {
+                    "id": "trey-anastasio-red-butte-garden-june2",
+                    "name": "Trey Anastasio Acoustic Evening — Red Butte Garden Amphitheatre",
+                    "price": "$50 - $110/ticket",
+                    "desc": "Intimate acoustic performance by Trey Anastasio (Phish) in the beautiful Red Butte Garden setting. World-class musicianship in a stunning natural amphitheater surrounded by spring blooms. Perfect combination of live music excellence and scenic beauty.",
+                    "start": "7:00 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "required",
+                    "link": "https://redbuttegarden.org/concerts/"
+                }
+            ]
+        },
+        {
+            "date": "2026-06-04",
+            "dates": [
+                {
+                    "id": "grande-staircase-escalante-scenic-drive-june4",
+                    "name": "Grand Staircase-Escalante Scenic Loop — Southwest Adventure",
+                    "price": "Free (scenic drive + park entry)",
+                    "desc": "Epic scenic drive through Utah's most stunning red rock landscapes. Stop at iconic viewpoints, explore the Grand Staircase-Escalante National Monument. Multi-colored rock formations, slot canyons, and wilderness vistas. Similar to your love of exploration and natural beauty.",
+                    "start": "Flexible (8:00 AM recommended)",
+                    "duration": "5 - 8 hrs (full day adventure)",
+                    "where": "Grand Staircase-Escalante National Monument — UT-12, Escalante, UT (2.5 hrs south)",
+                    "reservation": "none",
+                    "link": "https://www.visitutah.com/places-to-go/parks-outdoors/grand-staircase-escalante-national-monument"
+                },
+                {
+                    "id": "goblin-valley-state-park-hoodoos-june4",
+                    "name": "Goblin Valley State Park — Alien Landscape & Hoodoos",
+                    "price": "$15/vehicle entry",
+                    "desc": "Otherworldly landscape filled with thousands of colorful hoodoo rock formations. Stunning sunset views, hiking trails, and unique geology. Perfect for exploration and photography. Utah's most distinctive and least-crowded scenic park.",
+                    "start": "Flexible (afternoon/sunset recommended)",
+                    "duration": "3 - 5 hrs",
+                    "where": "Goblin Valley State Park — Goblin Valley Rd, Green River, UT (2 hrs southeast)",
+                    "reservation": "none",
+                    "link": "https://stateparks.utah.gov/parks/goblin-valley/"
+                }
+            ]
+        },
+        {
+            "date": "2026-06-05",
+            "dates": [
+                {
+                    "id": "provo-rock-canyon-waterfall-hike-june5",
+                    "name": "Provo Rock Canyon Waterfall — Scenic Waterfall Hike",
+                    "price": "Free (parking nearby)",
+                    "desc": "Beautiful waterfall hike through Provo Canyon. Easy to moderate trail with a rewarding waterfall at the end. June weather is perfect for this hike. Emerald pools and cascading water surrounded by canyon walls.",
+                    "start": "Flexible (morning recommended)",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "Provo Rock Canyon — Provo, UT (45 min south of SLC)",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/provo-rock-canyon-falls"
+                },
+                {
+                    "id": "utah-lake-paddleboarding-june5",
+                    "name": "Utah Lake Water Sports — Kayaking & Stand-Up Paddleboarding",
+                    "price": "$50 - $100 (equipment rental for two)",
+                    "desc": "Pristine warm alpine water perfect for paddleboarding and kayaking in June. Crystal-clear views, calm mornings, peaceful paddling. Access to several launch areas around the lake. Your favorite type of water adventure.",
+                    "start": "Flexible (8:00 AM - 10:00 AM best for calm water)",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Utah Lake State Park — Provo area, UT (30 min from SLC)",
+                    "reservation": "recommended for equipment rentals",
+                    "link": "https://stateparks.utah.gov/parks/utah-lake/"
+                }
+            ]
+        },
+        {
+            "date": "2026-06-06",
+            "dates": [
+                {
+                    "id": "brit-floyd-pink-floyd-tribute-june6",
+                    "name": "Brit Floyd — World's #1 Pink Floyd Tribute",
+                    "price": "$65 - $120/ticket",
+                    "desc": "The world's leading Pink Floyd tribute band recreates the legendary sound and spectacle of Pink Floyd. 'The Moon, The Wall and Beyond' tour celebrates iconic albums with stunning production and musicianship. For rock lovers who appreciate artistry and musical excellence.",
+                    "start": "7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Maverik Center — 301 S Temple, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.maverik.com/events"
+                },
+                {
+                    "id": "downtown-farmers-market-pioneer-park-june6",
+                    "name": "Downtown Farmers Market — Local Produce & Artisans",
+                    "price": "Free admission (pay for purchases)",
+                    "desc": "Browse fresh local produce, artisan foods, crafts, and live music. Free, casual weekend activity with great energy and local community vibe. Perfect for a relaxed Saturday morning exploring local vendors.",
+                    "start": "9:00 AM - 12:30 PM",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "Pioneer Park — Salt Lake City, UT",
+                    "reservation": "none",
+                    "link": "https://www.visitsaltlake.com/events/"
+                },
+                {
+                    "id": "park-city-mountain-summer-opening-june6",
+                    "name": "Park City Mountain Resort — Summer Activities Grand Opening",
+                    "price": "$22 - $45 per activity",
+                    "desc": "Utah's longest mountain coaster, Alpine slide, scenic chairlift rides, and 150+ miles of hiking and biking trails open for summer. Breathtaking mountain vistas, thrilling activities, and outdoor exploration. Perfect start to summer adventure season.",
+                    "start": "Flexible (9:00 AM - 5:00 PM)",
+                    "duration": "3 - 5 hrs",
+                    "where": "Park City Mountain Resort — Park City, UT (30 min from SLC)",
+                    "reservation": "recommended for peak times",
+                    "link": "https://www.parkcitymountain.com/explore/experience-parkcity-summer.aspx"
                 }
             ]
         }
