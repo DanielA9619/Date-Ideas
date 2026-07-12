@@ -1,6 +1,6 @@
 {
-    "dateRange": "July 5 - July 18, 2026",
-    "updated": "July 5, 2026",
+    "dateRange": "July 12 - July 25, 2026",
+    "updated": "July 12, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
@@ -163,11 +163,19 @@
         "lukas-nelson-sandy-amphitheater-july8",
         "draper-days-rodeo-parade-july10",
         "old-crow-medicine-show-twilight-july13",
+        "gin-blossoms-blues-traveler-red-butte-july14",
         "rainbow-kitten-surprise-july15",
-        "freddie-gibbs-twilight-july17",
-        "hilary-duff-lucky-me-tour-july17",
         "salt-lake-bees-vs-reno-july17",
         "deer-valley-beethoven-symphony-9-july17",
+        "salt-lake-bees-vs-reno-july18",
+        "food-truck-warz-thanksgiving-point-july18",
+        "marcus-king-band-red-butte-july19",
+        "maren-morris-red-butte-july20",
+        "joji-solaris-maverik-center-july21",
+        "utah-symphony-mozart-deer-valley-july22",
+        "string-cheese-incident-red-butte-july22",
+        "stravinsky-firebird-deer-valley-july25",
+        "totally-tubular-festival-red-butte-july26",
         "july-alpine-lake-kayaking-adventure",
         "park-city-400-mile-trail-network-biking",
         "sundance-alpine-hiking-waterfall",
@@ -195,109 +203,6 @@
     ],
     "scheduled": [
         {
-            "date": "2026-07-05",
-            "dates": [
-                {
-                    "id": "salt-lake-bees-vs-aviators-july5",
-                    "name": "Salt Lake Bees vs Las Vegas Aviators — Minor League Baseball",
-                    "price": "$10 - $30",
-                    "desc": "Enjoy a fun summer evening of Triple-A baseball! The Bees kick off their July homestand against the Aviators. Great for sports lovers—casual, fun atmosphere with family-friendly activities, hot dogs, and plenty of energy.",
-                    "start": "6:05 PM",
-                    "duration": "3 hrs",
-                    "where": "The Ballpark at America First Square — Salt Lake City, UT 84101",
-                    "reservation": "none",
-                    "link": "https://www.milb.com/salt-lake/schedule"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-06",
-            "dates": [
-                {
-                    "id": "utah-jazz-summer-league-game1-july6",
-                    "name": "Utah Jazz vs Memphis Grizzlies — Summer League Basketball",
-                    "price": "$15 - $35",
-                    "desc": "Watch the Utah Jazz take on the Memphis Grizzlies in the Salt Lake City Summer League! See exciting young talent, including Jazz rookies. Great energy, competitive play, and perfect for basketball fans. Summer league games are fast-paced and fun.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 hrs",
-                    "where": "Jon M. Huntsman Center (UofU) — 451 S 1400 E, Salt Lake City, UT 84112",
-                    "reservation": "recommended",
-                    "link": "https://www.nba.com/jazz/news/2026-salt-lake-city-summer-league-preview"
-                },
-                {
-                    "id": "downtown-blooms-chalk-july6",
-                    "name": "Downtown Blooms — Wildflower Chalk Art & Main Street Festival",
-                    "price": "Free",
-                    "desc": "Celebrate Utah's wildflower season with vibrant sidewalk chalk murals and colorful window art throughout downtown Main Street. Stroll together, enjoy the colorful displays, and grab coffee or lunch at nearby restaurants. Perfect afternoon date.",
-                    "start": "All day (10:00 AM - 6:00 PM peak)",
-                    "duration": "1 - 2 hrs",
-                    "where": "Downtown Salt Lake City, Main Street — Salt Lake City, UT 84101",
-                    "reservation": "none",
-                    "link": "https://www.visitsaltlake.com/events/"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-07",
-            "dates": [
-                {
-                    "id": "hells-kitchen-musical-july7",
-                    "name": "Hell's Kitchen — A New Alicia Keys Musical",
-                    "endDate": "2026-07-12",
-                    "price": "$43 - $150+",
-                    "desc": "Electrifying new musical featuring 16-time Grammy winner Alicia Keys' music and greatest hits. Directed by Tony Award winner Michael Greif with stunning choreography. Powerful storytelling, incredible vocals, and world-class production. Similar energy to Phantom—you'll be mesmerized.",
-                    "start": "Evening performances (6:00 PM - 8:00 PM typically)",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://saltlakecountyarts.org/events/hells-kitchen/"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-08",
-            "dates": [
-                {
-                    "id": "wynton-marsalis-red-butte-july8",
-                    "name": "Wynton Marsalis Septet — Red Butte Garden Outdoor Concert",
-                    "price": "$77 - $82",
-                    "desc": "Experience world-class jazz! Wynton Marsalis, a Jazz legend and Pulitzer Prize winner, performs his septet in the stunning natural amphitheater at Red Butte Garden. Beautiful mountain views, evening outdoor concert atmosphere—perfect romantic date with exceptional live music.",
-                    "start": "7:30 PM (gates 6:30 PM)",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended (arrive 30-60 min early for parking)",
-                    "link": "https://redbuttegarden.org/concerts/"
-                },
-                {
-                    "id": "lukas-nelson-sandy-amphitheater-july8",
-                    "name": "Lukas Nelson & Promise of the Real — Sandy Amphitheater Concert",
-                    "price": "$45 - $85",
-                    "desc": "Country-rock excellence from Lukas Nelson (Willie Nelson's son). Energetic live show with great songs and incredible musicianship. Perfect for laid-back summer concert vibe with beautiful evening weather.",
-                    "start": "8:00 PM",
-                    "duration": "2.5 hrs",
-                    "where": "Sandy Amphitheater — 1000 E Prospector Ave, Sandy, UT 84070",
-                    "reservation": "recommended",
-                    "link": "https://www.ticketmaster.com/sandy-amphitheater-tickets-sandy/venue/246847"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-10",
-            "dates": [
-                {
-                    "id": "draper-days-rodeo-parade-july10",
-                    "name": "Draper Days — Rodeo, Parade & Community Festival",
-                    "price": "$5 - $20 (most events free; rodeo/shows vary)",
-                    "desc": "Full day of summer fun! PRCA rodeo, live parade, 5K run/walk, sports tournaments, carnival rides, local vendors, live music, and fireworks. Small-town celebration with big energy. Great for experiencing local Utah culture and having outdoor fun together.",
-                    "start": "All day (typically 9:00 AM - 10:00 PM)",
-                    "duration": "4 - 8 hrs",
-                    "where": "Draper Park — 1250 E Pioneer Rd, Draper, UT 84020",
-                    "reservation": "none (some events have entry fees)",
-                    "link": "https://www.lehi-ut.gov/recreation/events-celebrations/"
-                }
-            ]
-        },
-        {
             "date": "2026-07-13",
             "dates": [
                 {
@@ -310,6 +215,22 @@
                     "where": "Gallivan Center — 239 S Main St, Salt Lake City, UT 84101",
                     "reservation": "none (first-come seating)",
                     "link": "https://saltlakearts.org/programs/twilight-concert-series"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-14",
+            "dates": [
+                {
+                    "id": "gin-blossoms-blues-traveler-red-butte-july14",
+                    "name": "Gin Blossoms & Blues Traveler — Red Butte Garden Concert",
+                    "price": "$75 - $85",
+                    "desc": "Two iconic bands of the '90s! Gin Blossoms bring 'Hey Jealousy' energy with fun, melodic rock. Blues Traveler delivers harmonica-driven jam excellence. Great night of nostalgia and high-energy music in the beautiful Red Butte Garden amphitheater.",
+                    "start": "7:00 PM (gates 6:00 PM)",
+                    "duration": "3 hrs",
+                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/concerts/"
                 }
             ]
         },
@@ -333,43 +254,16 @@
             "date": "2026-07-17",
             "dates": [
                 {
-                    "id": "freddie-gibbs-twilight-july17",
-                    "name": "Freddie Gibbs — Twilight Concert Series",
-                    "price": "$40 - $75",
-                    "desc": "Hip-hop excellence from Grammy-winning artist Freddie Gibbs. High-energy performance with incredible beats and lyrical flow. Perfect for music lovers who appreciate artistry and passion in live performances.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 hrs",
-                    "where": "Gallivan Center — 239 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "none (first-come seating)",
-                    "link": "https://saltlakearts.org/programs/twilight-concert-series"
-                },
-                {
-                    "id": "hilary-duff-lucky-me-tour-july17",
-                    "name": "Hilary Duff — 'The Lucky Me Tour'",
-                    "price": "$37 - $75+",
-                    "desc": "Pop icon Hilary Duff performing greatest hits and new songs! High-energy pop show with special guests La Roux and Jade LeMac. Perfect summer concert for feel-good music, dancing, and fun energy. Great for couples who love pop and nostalgia.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Utah First Credit Union Amphitheatre — 5901 S Pioneer Rd, West Valley City, UT 84118",
-                    "reservation": "required",
-                    "link": "https://www.livenation.com/event/G5vzZ_7KQtbEJ/hilary-duff-the-lucky-me-tour"
-                },
-                {
                     "id": "salt-lake-bees-vs-reno-july17",
                     "name": "Salt Lake Bees vs Reno Aces — Baseball Homestand",
                     "price": "$10 - $30",
-                    "desc": "Summer baseball returns! The Bees start a nine-game homestand with three games against the Reno Aces. Perfect for a relaxed, fun evening with snacks, activities, and competitive sports.",
+                    "desc": "Summer baseball! The Bees begin a homestand with games against the Reno Aces. Perfect for a relaxed, fun evening with snacks, activities, and competitive sports. Your kind of casual date night.",
                     "start": "6:35 PM",
                     "duration": "3 hrs",
                     "where": "The Ballpark at America First Square — Salt Lake City, UT 84101",
                     "reservation": "none",
                     "link": "https://www.milb.com/salt-lake/schedule"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-17",
-            "dates": [
+                },
                 {
                     "id": "deer-valley-beethoven-symphony-9-july17",
                     "name": "Deer Valley Music Festival — Beethoven's Symphony No. 9",
@@ -381,6 +275,135 @@
                     "where": "Snow Park Outdoor Amphitheater — Park City, UT (30 min from SLC)",
                     "reservation": "required",
                     "link": "https://deervalleymusicfestival.org/schedule/"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-18",
+            "dates": [
+                {
+                    "id": "salt-lake-bees-vs-reno-july18",
+                    "name": "Salt Lake Bees vs Reno Aces — Afternoon Baseball Game",
+                    "price": "$10 - $30",
+                    "desc": "Saturday matinee baseball! Enjoy afternoon sports, sunshine, and summertime fun. Casual atmosphere with food, drinks, and entertainment. Perfect for an easygoing date.",
+                    "start": "6:35 PM",
+                    "duration": "3 hrs",
+                    "where": "The Ballpark at America First Square — Salt Lake City, UT 84101",
+                    "reservation": "none",
+                    "link": "https://www.milb.com/salt-lake/schedule"
+                },
+                {
+                    "id": "food-truck-warz-thanksgiving-point-july18",
+                    "name": "Food Truck Warz — Thanksgiving Point Festival",
+                    "price": "$5 - $20 (per food truck item)",
+                    "desc": "Epic battle between food trucks! Multiple gourmet food trucks compete for bragging rights. Sample diverse cuisines, enjoy outdoor festival vibes, and support local culinary talent. Fun, casual, and delicious.",
+                    "start": "10:00 AM - 4:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Electric Park at Thanksgiving Point — 2650 N Ashton Blvd, Lehi, UT 84043",
+                    "reservation": "none",
+                    "link": "https://thanksgivingpoint.org/events/"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-19",
+            "dates": [
+                {
+                    "id": "marcus-king-band-red-butte-july19",
+                    "name": "Marcus King — Red Butte Garden Concert",
+                    "price": "$75 - $85",
+                    "desc": "Southern rock/soul legend Marcus King brings high-energy, passionate performances with incredible guitar work. Known for powerful vocals and authentic musicianship. Beautiful Red Butte Garden setting makes this a perfect summer evening.",
+                    "start": "7:00 PM (gates 6:00 PM)",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/concerts/"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-20",
+            "dates": [
+                {
+                    "id": "maren-morris-red-butte-july20",
+                    "name": "Maren Morris — Red Butte Garden Concert",
+                    "price": "$75 - $85",
+                    "desc": "Country/pop superstar Maren Morris delivering a captivating performance of hits and new music. Known for powerful vocals, infectious energy, and connection with audiences. Perfect romantic summer evening in the gorgeous garden setting.",
+                    "start": "7:00 PM (gates 6:00 PM)",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/concerts/"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-21",
+            "dates": [
+                {
+                    "id": "joji-solaris-maverik-center-july21",
+                    "name": "JOJI: 'Solaris' Tour — Maverik Center",
+                    "price": "$65 - $120",
+                    "desc": "Electronic/R&B innovator JOJI bringing atmospheric, soulful performances. Known for creating immersive concert experiences with stunning visuals. Perfect for couples who love contemporary music and artistic performances.",
+                    "start": "6:30 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Maverik Center — 301 S Temple, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.ticketmaster.com/maverik-center-tickets-salt-lake-city/venue/246754"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-22",
+            "dates": [
+                {
+                    "id": "utah-symphony-mozart-deer-valley-july22",
+                    "name": "Deer Valley Music Festival — Mozart & Violin Concerto",
+                    "price": "$89 - $135+",
+                    "desc": "Utah Symphony presents Mozart's 'Jupiter' Symphony and Violin Concerto No. 2 performed by acclaimed soloist. Elegant classical music in a breathtaking outdoor mountain amphitheater. Pure romance and world-class artistry.",
+                    "start": "7:30 PM",
+                    "duration": "2.5 hrs",
+                    "where": "Snow Park Outdoor Amphitheater — Park City, UT (30 min from SLC)",
+                    "reservation": "required",
+                    "link": "https://deervalleymusicfestival.org/schedule/"
+                },
+                {
+                    "id": "string-cheese-incident-red-butte-july22",
+                    "name": "The String Cheese Incident — Red Butte Garden Concert",
+                    "price": "$75 - $85",
+                    "desc": "Jam band masters The String Cheese Incident deliver energetic, improvisational performances. Known for long sets, musical exploration, and dancing audiences. Perfect for a fun, high-energy musical evening.",
+                    "start": "7:00 PM (gates 6:00 PM)",
+                    "duration": "3 - 3.5 hrs",
+                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/concerts/"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-25",
+            "dates": [
+                {
+                    "id": "stravinsky-firebird-deer-valley-july25",
+                    "name": "Deer Valley Music Festival — Stravinsky's Firebird Suite",
+                    "price": "$89 - $135+",
+                    "desc": "Utah Symphony performs Stravinsky's bold, colorful 'Firebird Suite' and other masterpieces. Conductor Markus Poschner leads this spectacular performance combining Russian-inspired music with stunning mountain views. Magical summer evening.",
+                    "start": "7:30 PM",
+                    "duration": "2.5 hrs",
+                    "where": "Snow Park Outdoor Amphitheater — Park City, UT (30 min from SLC)",
+                    "reservation": "required",
+                    "link": "https://deervalleymusicfestival.org/schedule/"
+                },
+                {
+                    "id": "totally-tubular-festival-red-butte-july26",
+                    "name": "Totally Tubular Festival — Red Butte Garden (80s & 90s Nostalgia)",
+                    "price": "$60 - $75",
+                    "desc": "Epic '80s and '90s festival featuring Thomas Dolby, A Flock of Seagulls, The Motels, and more! Pure nostalgia with energetic performances from iconic bands. Dance under the stars to the soundtrack of your youth. Fun, campy, and absolutely entertaining.",
+                    "start": "6:00 PM (gates 5:00 PM)",
+                    "duration": "4 - 5 hrs",
+                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/concerts/"
                 }
             ]
         }
@@ -623,7 +646,7 @@
                     "id": "free-outdoor-concert-twilight-series",
                     "name": "Twilight Concert Series — Free Outdoor Summer Music",
                     "price": "Free (bring picnic)",
-                    "desc": "Free outdoor concerts with nationally recognized and local artists throughout July. Bring a blanket, picnic, and enjoy live music under the stars. Perfect summer evening—romantic and budget-friendly.",
+                    "desc": "Free outdoor concerts with nationally recognized and local artists throughout July and beyond. Bring a blanket, picnic, and enjoy live music under the stars. Perfect summer evening—romantic and budget-friendly.",
                     "duration": "2 - 3 hrs",
                     "where": "Gallivan Center — 239 S Main St, Salt Lake City, UT 84101",
                     "reservation": "none (first-come seating)",
