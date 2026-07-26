@@ -1,6 +1,6 @@
 {
-    "dateRange": "July 5 - July 18, 2026",
-    "updated": "July 5, 2026",
+    "dateRange": "July 26 - August 8, 2026",
+    "updated": "July 26, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
@@ -191,193 +191,143 @@
         "imaginaria-ashton-gardens-lehi",
         "free-outdoor-concert-twilight-series",
         "comedy-night-wiseguys-slc",
-        "park-city-silly-sunday-market"
+        "park-city-silly-sunday-market",
+        "alabama-shakes-red-butte-july29",
+        "lyle-lovett-deer-valley-july31",
+        "chris-botti-deer-valley-aug1",
+        "minecraft-movie-thanksgiving-point-aug1",
+        "muna-twilight-concert-aug4",
+        "chicago-musical-deer-valley-aug7",
+        "idina-menzel-deer-valley-aug8",
+        "august-alpine-lake-kayaking-rockport",
+        "park-city-mountain-biking-trail-adventure",
+        "stewart-falls-sundance-waterfall-hike",
+        "antelope-island-scenic-loop-wildlife",
+        "snowbird-hidden-peak-tram-ride",
+        "handle-park-city-chef-menu-dining",
+        "log-haven-millcreek-canyon-fine-dining",
+        "tree-room-sundance-mountain-dinner",
+        "sundance-horseback-dinner-adventure",
+        "great-salt-lake-fringe-theater-exploration",
+        "eccles-theater-broadway-shows",
+        "deer-valley-music-festival-orchestra",
+        "natural-history-museum-utah",
+        "red-butte-garden-botanical-concerts",
+        "salt-lake-arts-district-gallery-walk",
+        "kimball-arts-festival-park-city",
+        "horseback-riding-sundance-trails",
+        "topgolf-vineyard-competition",
+        "escape-room-puzzle-challenge",
+        "indoor-rock-climbing-gym",
+        "summer-outdoor-tennis-pickleball",
+        "imaginaria-interactive-festival-ashton",
+        "twilight-concert-series-free-music",
+        "wiseguys-comedy-night-slc",
+        "park-silly-sunday-market-park-city",
+        "hot-air-balloon-sunrise-adventure"
     ],
     "scheduled": [
         {
-            "date": "2026-07-05",
+            "date": "2026-07-29",
             "dates": [
                 {
-                    "id": "salt-lake-bees-vs-aviators-july5",
-                    "name": "Salt Lake Bees vs Las Vegas Aviators — Minor League Baseball",
-                    "price": "$10 - $30",
-                    "desc": "Enjoy a fun summer evening of Triple-A baseball! The Bees kick off their July homestand against the Aviators. Great for sports lovers—casual, fun atmosphere with family-friendly activities, hot dogs, and plenty of energy.",
-                    "start": "6:05 PM",
-                    "duration": "3 hrs",
-                    "where": "The Ballpark at America First Square — Salt Lake City, UT 84101",
-                    "reservation": "none",
-                    "link": "https://www.milb.com/salt-lake/schedule"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-06",
-            "dates": [
-                {
-                    "id": "utah-jazz-summer-league-game1-july6",
-                    "name": "Utah Jazz vs Memphis Grizzlies — Summer League Basketball",
-                    "price": "$15 - $35",
-                    "desc": "Watch the Utah Jazz take on the Memphis Grizzlies in the Salt Lake City Summer League! See exciting young talent, including Jazz rookies. Great energy, competitive play, and perfect for basketball fans. Summer league games are fast-paced and fun.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 hrs",
-                    "where": "Jon M. Huntsman Center (UofU) — 451 S 1400 E, Salt Lake City, UT 84112",
-                    "reservation": "recommended",
-                    "link": "https://www.nba.com/jazz/news/2026-salt-lake-city-summer-league-preview"
-                },
-                {
-                    "id": "downtown-blooms-chalk-july6",
-                    "name": "Downtown Blooms — Wildflower Chalk Art & Main Street Festival",
-                    "price": "Free",
-                    "desc": "Celebrate Utah's wildflower season with vibrant sidewalk chalk murals and colorful window art throughout downtown Main Street. Stroll together, enjoy the colorful displays, and grab coffee or lunch at nearby restaurants. Perfect afternoon date.",
-                    "start": "All day (10:00 AM - 6:00 PM peak)",
-                    "duration": "1 - 2 hrs",
-                    "where": "Downtown Salt Lake City, Main Street — Salt Lake City, UT 84101",
-                    "reservation": "none",
-                    "link": "https://www.visitsaltlake.com/events/"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-07",
-            "dates": [
-                {
-                    "id": "hells-kitchen-musical-july7",
-                    "name": "Hell's Kitchen — A New Alicia Keys Musical",
-                    "endDate": "2026-07-12",
-                    "price": "$43 - $150+",
-                    "desc": "Electrifying new musical featuring 16-time Grammy winner Alicia Keys' music and greatest hits. Directed by Tony Award winner Michael Greif with stunning choreography. Powerful storytelling, incredible vocals, and world-class production. Similar energy to Phantom—you'll be mesmerized.",
-                    "start": "Evening performances (6:00 PM - 8:00 PM typically)",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://saltlakecountyarts.org/events/hells-kitchen/"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-08",
-            "dates": [
-                {
-                    "id": "wynton-marsalis-red-butte-july8",
-                    "name": "Wynton Marsalis Septet — Red Butte Garden Outdoor Concert",
+                    "id": "alabama-shakes-red-butte-july29",
+                    "name": "Alabama Shakes with Billy Allen & The Pollies — Red Butte Garden",
                     "price": "$77 - $82",
-                    "desc": "Experience world-class jazz! Wynton Marsalis, a Jazz legend and Pulitzer Prize winner, performs his septet in the stunning natural amphitheater at Red Butte Garden. Beautiful mountain views, evening outdoor concert atmosphere—perfect romantic date with exceptional live music.",
+                    "desc": "Indie rock excellence! Alabama Shakes deliver powerful, soulful performances with incredible vocals and tight musicianship. Perfect summer outdoor concert in the stunning Red Butte Garden natural amphitheater with beautiful mountain sunset views.",
                     "start": "7:30 PM (gates 6:30 PM)",
                     "duration": "2 - 2.5 hrs",
                     "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
                     "reservation": "recommended (arrive 30-60 min early for parking)",
                     "link": "https://redbuttegarden.org/concerts/"
-                },
-                {
-                    "id": "lukas-nelson-sandy-amphitheater-july8",
-                    "name": "Lukas Nelson & Promise of the Real — Sandy Amphitheater Concert",
-                    "price": "$45 - $85",
-                    "desc": "Country-rock excellence from Lukas Nelson (Willie Nelson's son). Energetic live show with great songs and incredible musicianship. Perfect for laid-back summer concert vibe with beautiful evening weather.",
-                    "start": "8:00 PM",
-                    "duration": "2.5 hrs",
-                    "where": "Sandy Amphitheater — 1000 E Prospector Ave, Sandy, UT 84070",
-                    "reservation": "recommended",
-                    "link": "https://www.ticketmaster.com/sandy-amphitheater-tickets-sandy/venue/246847"
                 }
             ]
         },
         {
-            "date": "2026-07-10",
+            "date": "2026-07-31",
             "dates": [
                 {
-                    "id": "draper-days-rodeo-parade-july10",
-                    "name": "Draper Days — Rodeo, Parade & Community Festival",
-                    "price": "$5 - $20 (most events free; rodeo/shows vary)",
-                    "desc": "Full day of summer fun! PRCA rodeo, live parade, 5K run/walk, sports tournaments, carnival rides, local vendors, live music, and fireworks. Small-town celebration with big energy. Great for experiencing local Utah culture and having outdoor fun together.",
-                    "start": "All day (typically 9:00 AM - 10:00 PM)",
-                    "duration": "4 - 8 hrs",
-                    "where": "Draper Park — 1250 E Pioneer Rd, Draper, UT 84020",
-                    "reservation": "none (some events have entry fees)",
-                    "link": "https://www.lehi-ut.gov/recreation/events-celebrations/"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-13",
-            "dates": [
-                {
-                    "id": "old-crow-medicine-show-twilight-july13",
-                    "name": "Old Crow Medicine Show — Twilight Concert Series",
-                    "price": "$35 - $65",
-                    "desc": "Grammy-winning Americana and folk-rock legends! High-energy, joyful live show perfect for summer outdoor concerts. Known for incredible fiddle work and feel-good music. Bring a blanket, relax, enjoy great musicians under the stars.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 hrs",
-                    "where": "Gallivan Center — 239 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "none (first-come seating)",
-                    "link": "https://saltlakearts.org/programs/twilight-concert-series"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-15",
-            "dates": [
-                {
-                    "id": "rainbow-kitten-surprise-july15",
-                    "name": "Rainbow Kitten Surprise — 'Bones' Tour",
-                    "price": "$103 - $150+",
-                    "desc": "Eclectic indie-rock band with energetic, soulful live performances. Experimental, artistic sound with passionate fans. Great for couples who appreciate unique, creative music. Summer outdoor amphitheater setting is perfect.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Sandy Amphitheater — 1000 E Prospector Ave, Sandy, UT 84070",
-                    "reservation": "required (purchase in advance)",
-                    "link": "https://www.ticketmaster.com/rainbow-kitten-surprise-tickets/artist/2254393"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-17",
-            "dates": [
-                {
-                    "id": "freddie-gibbs-twilight-july17",
-                    "name": "Freddie Gibbs — Twilight Concert Series",
-                    "price": "$40 - $75",
-                    "desc": "Hip-hop excellence from Grammy-winning artist Freddie Gibbs. High-energy performance with incredible beats and lyrical flow. Perfect for music lovers who appreciate artistry and passion in live performances.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 hrs",
-                    "where": "Gallivan Center — 239 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "none (first-come seating)",
-                    "link": "https://saltlakearts.org/programs/twilight-concert-series"
-                },
-                {
-                    "id": "hilary-duff-lucky-me-tour-july17",
-                    "name": "Hilary Duff — 'The Lucky Me Tour'",
-                    "price": "$37 - $75+",
-                    "desc": "Pop icon Hilary Duff performing greatest hits and new songs! High-energy pop show with special guests La Roux and Jade LeMac. Perfect summer concert for feel-good music, dancing, and fun energy. Great for couples who love pop and nostalgia.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Utah First Credit Union Amphitheatre — 5901 S Pioneer Rd, West Valley City, UT 84118",
-                    "reservation": "required",
-                    "link": "https://www.livenation.com/event/G5vzZ_7KQtbEJ/hilary-duff-the-lucky-me-tour"
-                },
-                {
-                    "id": "salt-lake-bees-vs-reno-july17",
-                    "name": "Salt Lake Bees vs Reno Aces — Baseball Homestand",
-                    "price": "$10 - $30",
-                    "desc": "Summer baseball returns! The Bees start a nine-game homestand with three games against the Reno Aces. Perfect for a relaxed, fun evening with snacks, activities, and competitive sports.",
-                    "start": "6:35 PM",
-                    "duration": "3 hrs",
-                    "where": "The Ballpark at America First Square — Salt Lake City, UT 84101",
-                    "reservation": "none",
-                    "link": "https://www.milb.com/salt-lake/schedule"
-                }
-            ]
-        },
-        {
-            "date": "2026-07-17",
-            "dates": [
-                {
-                    "id": "deer-valley-beethoven-symphony-9-july17",
-                    "name": "Deer Valley Music Festival — Beethoven's Symphony No. 9",
-                    "endDate": "2026-07-18",
+                    "id": "lyle-lovett-deer-valley-july31",
+                    "name": "Lyle Lovett — Deer Valley Music Festival",
                     "price": "$89 - $135+",
-                    "desc": "World-class performance of one of music's greatest masterpieces! Utah Symphony with conductor Markus Poschner, full chorus, and vocal soloists perform Beethoven's iconic Symphony No. 9 with the 'Ode to Joy.' Breathtaking mountain setting, stunning performance.",
+                    "desc": "Legendary singer-songwriter Lyle Lovett brings his distinctive country-rock artistry to the scenic Deer Valley outdoor amphitheater. Known for witty lyrics, masterful musicianship, and engaging live performances. Perfect romantic evening in the mountains.",
                     "start": "7:30 PM",
-                    "duration": "2.5 hrs",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Snow Park Outdoor Amphitheater — Park City, UT (30 min from SLC)",
+                    "reservation": "required",
+                    "link": "https://deervalleymusicfestival.org/schedule/"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-01",
+            "dates": [
+                {
+                    "id": "chris-botti-deer-valley-aug1",
+                    "name": "Chris Botti — GRAMMY-Winning Trumpeter with Utah Symphony",
+                    "price": "$89 - $135+",
+                    "desc": "Smooth jazz and classical excellence! Grammy Award-winning trumpeter Chris Botti blends jazz, pop, and classical with expressive playing. He's performed with Sting, Barbra Streisand, and Tony Bennett. Romantic mountain setting, world-class musicianship.",
+                    "start": "7:30 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Snow Park Outdoor Amphitheater — Park City, UT (30 min from SLC)",
+                    "reservation": "required",
+                    "link": "https://deervalleymusicfestival.org/schedule/"
+                },
+                {
+                    "id": "minecraft-movie-thanksgiving-point-aug1",
+                    "name": "Outdoor Movie Night — 'Minecraft Movie' at Ashton Gardens",
+                    "price": "$7.50 (adult), $5 (child)",
+                    "desc": "Bring a blanket and enjoy a movie under the stars in stunning Ashton Gardens! 40-foot outdoor screen, concession stand with popcorn and snacks, beautiful garden setting with mountain views. Perfect for a fun, casual summer date.",
+                    "start": "9:00 PM (gates open 8:00 PM)",
+                    "duration": "2 hrs",
+                    "where": "Ashton Gardens at Thanksgiving Point — Lehi, UT (25 min south)",
+                    "reservation": "none",
+                    "link": "https://thanksgivingpoint.org/special-events/"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-04",
+            "dates": [
+                {
+                    "id": "muna-twilight-concert-aug4",
+                    "name": "MUNA — Twilight Concert Series",
+                    "price": "$20 - $40 (typical Twilight pricing)",
+                    "desc": "Indie pop trio MUNA brings energetic, feel-good music perfect for summer outdoor concerts. Fun, lively, and engaging performance. Free outdoor concert atmosphere—bring a blanket, relax, and enjoy great music.",
+                    "start": "5:00 PM doors / 6:00 PM show",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Gallivan Center or Civic Center — Salt Lake City, UT",
+                    "reservation": "none (arrive early for good seating)",
+                    "link": "https://saltlakearts.org/programs/twilight-concert-series"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-07",
+            "dates": [
+                {
+                    "id": "chicago-musical-deer-valley-aug7",
+                    "name": "The Musical 'Chicago' — Utah Symphony with Broadway Vocalists",
+                    "price": "$89 - $135+",
+                    "desc": "Classic Broadway musical performed by Utah Symphony with professional Broadway vocalists! Razzle-dazzle jazz, iconic songs, energetic choreography. Outdoor mountain amphitheater setting adds special magic. You loved Phantom—Chicago is equally stunning.",
+                    "start": "7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Snow Park Outdoor Amphitheater — Park City, UT (30 min from SLC)",
+                    "reservation": "required",
+                    "link": "https://deervalleymusicfestival.org/schedule/"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-08",
+            "dates": [
+                {
+                    "id": "idina-menzel-deer-valley-aug8",
+                    "name": "Idina Menzel — 'Let It Go' and Broadway Hits with Utah Symphony",
+                    "price": "$89 - $135+",
+                    "desc": "Tony Award-winning vocalist Idina Menzel performs Broadway's greatest hits with the Utah Symphony! Known for powerful vocals and iconic Disney/Broadway roles. Incredible mountain sunset backdrop, world-class performance, unforgettable evening.",
+                    "start": "7:30 PM",
+                    "duration": "2 - 2.5 hrs",
                     "where": "Snow Park Outdoor Amphitheater — Park City, UT (30 min from SLC)",
                     "reservation": "required",
                     "link": "https://deervalleymusicfestival.org/schedule/"
@@ -390,50 +340,50 @@
             "title": "Adventures & Outdoors",
             "dates": [
                 {
-                    "id": "july-alpine-lake-kayaking-adventure",
+                    "id": "august-alpine-lake-kayaking-rockport",
                     "name": "Rockport or Strawberry Reservoir — Summer Alpine Lake Adventure",
                     "price": "$6 - $12 (day-use pass) + $50 - $100 (kayak/paddle board rentals)",
-                    "desc": "July is perfect for alpine lake dates! Crystal-clear waters, warm summer days, and mountain views. Choose between Rockport Reservoir (1 hr north) or Strawberry Reservoir for kayaking, paddleboarding, fishing, or shoreline picnicking. Your favorite type of exploration date.",
+                    "desc": "August is perfect for alpine lake dates! Crystal-clear waters, warm sunny days, and mountain views. Choose between Rockport Reservoir (1 hr north) or Strawberry Reservoir for kayaking, paddleboarding, fishing, or shoreline picnicking. Your favorite type of exploration date.",
                     "duration": "3 - 5 hrs",
                     "where": "Rockport State Park (Coalville, UT) or Strawberry Reservoir (Wasatch National Forest, UT)",
                     "reservation": "recommended for kayak/SUP rentals",
                     "link": "https://stateparks.utah.gov/parks/rockport/"
                 },
                 {
-                    "id": "park-city-400-mile-trail-network-biking",
-                    "name": "Park City Trail Network — Mountain Biking or Hiking Adventure",
+                    "id": "park-city-mountain-biking-trail-adventure",
+                    "name": "Park City Mountain Biking or Hiking — 400+ Mile Trail Network",
                     "price": "$30 - $80 (bike rentals optional)",
-                    "desc": "Park City has 400+ miles of scenic mountain trails! Perfect July weather for exploring. Choose easy to challenging hikes or bike rides with stunning views of wildflowers and mountain scenery. Various difficulty levels for all abilities.",
+                    "desc": "Park City has 400+ miles of scenic mountain trails! Perfect August weather for exploring. Choose easy to challenging hikes or bike rides with wildflower meadows and stunning mountain scenery. Various difficulty levels for all abilities.",
                     "duration": "2 - 4 hrs",
                     "where": "Park City Mountain Resort & Trail Network — Park City, UT (30 min from SLC)",
                     "reservation": "recommended for bike rentals",
                     "link": "https://www.visitparkcity.com/blog/stories/post/the-top-6-day-hikes-in-park-city/"
                 },
                 {
-                    "id": "sundance-alpine-hiking-waterfall",
+                    "id": "stewart-falls-sundance-waterfall-hike",
                     "name": "Stewart Falls Trail — Sundance Mountain Waterfall Hike",
                     "price": "$15 - $25 (parking/resort access)",
-                    "desc": "Moderate 3.5-mile mountain hike through shaded aspen forest to a stunning two-tiered waterfall. Beautiful July weather, cool mountain air, and picturesque alpine setting. Perfect romantic hiking date.",
+                    "desc": "Moderate 3.5-mile hike through shaded aspen forest to a stunning two-tiered waterfall. Cool mountain air, picturesque alpine setting, and refreshing water. Perfect romantic hiking date.",
                     "duration": "2 - 3 hrs",
                     "where": "Sundance Resort — 8841 Alpine Loop Rd, Sundance, UT 84604 (45 min south)",
                     "reservation": "none",
                     "link": "https://www.sundanceresort.com/activities/summer-activities/"
                 },
                 {
-                    "id": "antelope-island-summer-sunset-drive",
-                    "name": "Antelope Island State Park — Wildlife & Sunset Scenic Loop",
+                    "id": "antelope-island-scenic-loop-wildlife",
+                    "name": "Antelope Island State Park — Scenic Loop & Wildlife Viewing",
                     "price": "$15/vehicle entry fee",
-                    "desc": "Drive or hike the 7-mile scenic loop spotting native bison herds, pronghorn, and bighorn sheep. July offers clear skies for stunning Great Salt Lake sunset views. Peaceful, scenic, and perfect for your love of exploration dates.",
+                    "desc": "Drive or hike the 7-mile scenic loop spotting bison herds, pronghorn, and bighorn sheep. Perfect for wildlife photography and exploration. Clear August skies offer stunning Great Salt Lake sunset views.",
                     "duration": "2 - 3 hrs",
                     "where": "Antelope Island State Park — 4528 W 1700 S, Syracuse, UT 84075 (45 min north)",
                     "reservation": "none",
                     "link": "https://stateparks.utah.gov/parks/antelope-island/"
                 },
                 {
-                    "id": "snowbird-scenic-tram-mountain-views",
-                    "name": "Snowbird Alpine Tram — Mountain Peak Scenic Ride",
+                    "id": "snowbird-hidden-peak-tram-ride",
+                    "name": "Snowbird Alpine Tram — Hidden Peak Mountain Adventure",
                     "price": "$22 - $35 (tram)",
-                    "desc": "Ride the 2,000-foot aerial tram to Hidden Peak (11,000 ft) for breathtaking 360° views of the Wasatch Mountains. Great July weather, cool alpine air, and stunning vistas. Option to dine at the summit restaurant.",
+                    "desc": "Ride the 2,000-foot aerial tram to Hidden Peak (11,000 ft) for breathtaking 360° views of the Wasatch Mountains. Cool alpine air, stunning vistas, and optional summit restaurant dining.",
                     "duration": "2 - 3 hrs",
                     "where": "Snowbird Resort — Little Cottonwood Canyon, UT (45 min east)",
                     "reservation": "recommended for dining",
@@ -445,54 +395,54 @@
             "title": "Food & Dining",
             "dates": [
                 {
-                    "id": "handle-park-city-summer-dining",
+                    "id": "handle-park-city-chef-menu-dining",
                     "name": "Dinner at Handle — Park City Seasonal Chef's Menu",
                     "price": "$100 - $160 for two",
-                    "desc": "Intimate, chef-driven restaurant featuring Dave Jones' celebrated seasonal small plates. Fresh fish, heritage meats, creative vegetables. Excellent wine list. Perfect romantic atmosphere with outdoor patio option for summer dining.",
+                    "desc": "Intimate, chef-driven restaurant featuring Dave Jones' celebrated seasonal small plates. Fresh fish, heritage meats, creative vegetables. Excellent wine list and romantic outdoor patio option.",
                     "duration": "2 - 2.5 hrs",
                     "where": "Handle — 412 Main St, Park City, UT 84060 (30 min from SLC)",
                     "reservation": "required",
                     "link": "https://handleparkcity.com/"
                 },
                 {
-                    "id": "log-haven-summer-mountain-dining",
+                    "id": "log-haven-millcreek-canyon-fine-dining",
                     "name": "Dinner at Log Haven — Millcreek Canyon Fine Dining",
                     "price": "$120 - $180 for two",
-                    "desc": "Scenic mountain setting four miles up Millcreek Canyon with refreshing alpine air. Chef Dave Jones' sophisticated seasonal menu, beautiful mountain views, excellent service. Perfect summer escape.",
+                    "desc": "Scenic mountain setting four miles up Millcreek Canyon. Chef Dave Jones' sophisticated seasonal menu, beautiful views, and excellent service. Perfect romantic summer escape.",
                     "duration": "2.5 - 3.5 hrs",
                     "where": "Log Haven — 6451 Mill Canyon Rd, Salt Lake City, UT 84121 (15 min south)",
                     "reservation": "required",
                     "link": "https://www.log-haven.com/"
                 },
                 {
-                    "id": "tree-room-sundance-july-dining",
+                    "id": "tree-room-sundance-mountain-dinner",
                     "name": "Dinner at The Tree Room — Sundance Mountain Fine Dining",
                     "price": "$100 - $180 for two",
-                    "desc": "Tucked into the mountains at Sundance with cool alpine breezes. Seasonal American cuisine, mountain views, rustic elegance, exceptional service. Romantic summer escape from the heat.",
+                    "desc": "Tucked into the mountains at Sundance with cool alpine breezes. Seasonal American cuisine, mountain views, rustic elegance, exceptional service.",
                     "duration": "2.5 - 3 hrs",
                     "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
                     "reservation": "required",
                     "link": "https://www.sundanceresort.com/dining/"
                 },
                 {
-                    "id": "sundance-chuck-wagon-dinner-horseback",
-                    "name": "Chuck Wagon Dinner — Sundance Horseback & Cowboy Meal",
+                    "id": "sundance-horseback-dinner-adventure",
+                    "name": "Horseback Ride & Cowboy Dinner — Sundance Alpine Experience",
                     "price": "$80 - $120 per person",
-                    "desc": "Unique combination! Scenic horseback ride through alpine meadows, then authentic cowboy dinner at Elk Meadows. Casual fun, great views, and delicious food. Perfect for active outdoor couples.",
+                    "desc": "Scenic horseback ride through alpine meadows followed by authentic cowboy dinner at Elk Meadows. Combine outdoor adventure with hearty food. Perfect for active, outdoorsy couples.",
                     "duration": "3 - 4 hrs",
                     "where": "Sundance Resort — 8841 Alpine Loop Rd, Sundance, UT 84604",
                     "reservation": "required",
                     "link": "https://www.sundanceresort.com/activities/horseback-riding/"
                 },
                 {
-                    "id": "thanksgiving-point-outdoor-movie-dinner",
-                    "name": "Outdoor Movie Night — Ashton Gardens Thanksgiving Point",
-                    "price": "$15 - $30 (general admission + dinner options available)",
-                    "desc": "Bring a blanket, grab popcorn and dinner, and enjoy a family-friendly movie under the stars at beautiful Ashton Gardens. Summer evening atmosphere, scenic garden backdrop. Fun and romantic outdoor experience.",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Ashton Gardens at Thanksgiving Point — Lehi, UT (25 min south)",
-                    "reservation": "none",
-                    "link": "https://thanksgivingpoint.org/special-events/"
+                    "id": "great-salt-lake-fringe-theater-exploration",
+                    "name": "Great Salt Lake Fringe Festival — Experimental Theater & Arts",
+                    "price": "$15/show (or packages available)",
+                    "desc": "20+ original, uncensored shows featuring theatre, dance, music, magic, and storytelling. Two-weekend festival (July 23-Aug 2) with diverse performances. Perfect for exploring creative, independent theater.",
+                    "duration": "1.5 - 2.5 hrs per show",
+                    "where": "Multiple venues: Trolley Square (Alliance Theater), The Gateway, Lightree Studios — Salt Lake City",
+                    "reservation": "recommended",
+                    "link": "https://www.gslfringe.org/"
                 }
             ]
         },
@@ -500,54 +450,64 @@
             "title": "Arts & Culture",
             "dates": [
                 {
-                    "id": "broadway-musicals-eccles-theater-july",
+                    "id": "eccles-theater-broadway-shows",
                     "name": "Broadway Theater Productions — Eccles Theater",
                     "price": "$50 - $150/ticket",
-                    "desc": "World-class theatrical performances! You loved Phantom of the Opera (5 stars)—check Eccles schedule for similarly stunning musicals and shows. Hell's Kitchen is performing early July, and other Broadway tours happen throughout the summer.",
+                    "desc": "World-class theatrical performances! You loved Phantom of the Opera (5 stars)—Eccles Theater hosts stunning musicals and shows year-round. Powerful storytelling, incredible vocals, world-class production.",
                     "duration": "2.5 - 3.5 hrs",
                     "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
                     "reservation": "required",
                     "link": "https://www.live-at-the-eccles.com"
                 },
                 {
-                    "id": "deer-valley-music-festival-concerts",
-                    "name": "Deer Valley Music Festival — Utah Symphony Classical Concerts",
+                    "id": "deer-valley-music-festival-orchestra",
+                    "name": "Deer Valley Music Festival — Utah Symphony Concerts",
                     "price": "$89 - $150+/ticket",
-                    "desc": "World-class orchestra performances in stunning outdoor mountain amphitheater! July features Beethoven, Mozart, Stravinsky, and renowned soloists. Romantic, breathtaking mountain setting. Bring a blanket and enjoy sophistication with nature.",
+                    "desc": "World-class orchestra performances in stunning outdoor mountain amphitheater. July-August features classical masterpieces, Broadway selections, and guest artists. Romantic, breathtaking setting.",
                     "duration": "2.5 - 3 hrs",
                     "where": "Snow Park Outdoor Amphitheater — Park City, UT (30 min from SLC)",
                     "reservation": "required",
                     "link": "https://deervalleymusicfestival.org/schedule/"
                 },
                 {
-                    "id": "natural-history-museum-utah-fossils",
-                    "name": "Natural History Museum of Utah — Paleontology & Discovery",
+                    "id": "natural-history-museum-utah",
+                    "name": "Natural History Museum of Utah — World-Class Paleontology",
                     "price": "$24.95/adult",
-                    "desc": "World-class museum with 60,000+ fossils, interactive exhibits, stunning valley views. Educational, fascinating, perfect for exploration and learning together. Cool indoor escape from summer heat.",
+                    "desc": "60,000+ fossils, interactive exhibits, stunning valley views. Educational, fascinating, perfect for exploration and learning together. Cool indoor escape from summer heat.",
                     "duration": "2 - 4 hrs",
                     "where": "Natural History Museum of Utah — 301 S 1300 E, Salt Lake City, UT 84112",
                     "reservation": "none",
                     "link": "https://nhmu.utah.edu/"
                 },
                 {
-                    "id": "red-butte-garden-summer-concerts",
-                    "name": "Red Butte Garden — Botanical Gardens & Outdoor Concerts",
-                    "price": "$15 - $20 (garden entry) or $77 - $150 (concert)",
-                    "desc": "Utah's premier botanical garden with summer concerts under the stars. Beautiful garden pathways, peaceful atmosphere, world-class outdoor concert venue. Perfect romantic summer evening.",
+                    "id": "red-butte-garden-botanical-concerts",
+                    "name": "Red Butte Garden — Botanical Beauty & Concert Venue",
+                    "price": "$15 - $20 (garden) or $77 - $150 (concert)",
+                    "desc": "Utah's premier botanical garden with summer concerts under the stars. Beautiful pathways, peaceful atmosphere, world-class musicians. Perfect romantic evening.",
                     "duration": "2 - 3 hrs",
                     "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
                     "reservation": "recommended for concerts",
                     "link": "https://redbuttegarden.org/"
                 },
                 {
-                    "id": "downtown-arts-district-gallery-walk",
-                    "name": "Salt Lake Arts District Gallery Walk — Downtown Art Exploration",
+                    "id": "salt-lake-arts-district-gallery-walk",
+                    "name": "Salt Lake Arts District — Gallery Walk & Art Exploration",
                     "price": "Free",
-                    "desc": "Explore vibrant downtown arts district with local artists, contemporary installations, and rotating exhibits. Grab coffee at nearby cafes, discuss art together, discover new creative work. Perfect for culture-loving couples.",
+                    "desc": "Explore downtown arts district with local artists, contemporary installations, and rotating exhibits. Grab coffee nearby, discuss art, discover creative work. Perfect for culture-loving couples.",
                     "duration": "2 - 3 hrs",
                     "where": "Salt Lake City Arts District & Gallery Row — Downtown SLC",
                     "reservation": "none",
                     "link": "https://www.visitsaltlake.com/things-to-do/arts-culture/"
+                },
+                {
+                    "id": "kimball-arts-festival-park-city",
+                    "name": "Kimball Arts Festival — Park City (Aug 7-9)",
+                    "price": "Free admission (some events paid)",
+                    "desc": "Utah's longest-running visual arts festival! 150+ jury-selected artists, live music, food vendors, art-making activities. 30,000+ attendees over weekend. Lively downtown Park City atmosphere.",
+                    "duration": "2 - 4 hrs",
+                    "where": "Park City Main Street — Park City, UT (30 min from SLC)",
+                    "reservation": "none",
+                    "link": "https://kimballartsfestival.org/"
                 }
             ]
         },
@@ -555,50 +515,50 @@
             "title": "Active & Sporty",
             "dates": [
                 {
-                    "id": "july-horseback-riding-sundance",
+                    "id": "horseback-riding-sundance-trails",
                     "name": "Horseback Riding at Sundance — Alpine Mountain Trail Rides",
                     "price": "$80 - $150/person",
-                    "desc": "Guided horseback rides through stunning Sundance mountain trails with wildflower meadows and alpine overlooks. July weather is perfect—cool mountain air, beautiful scenery. Beginner-friendly with experienced guides.",
+                    "desc": "Guided rides through stunning mountain trails with wildflower meadows and alpine overlooks. Beginner-friendly with experienced guides. Cool mountain air and beautiful scenery.",
                     "duration": "2 - 3 hrs",
                     "where": "Sundance Resort — 8841 Alpine Loop Rd, Sundance, UT 84604 (45 min south)",
                     "reservation": "required",
                     "link": "https://www.sundanceresort.com/activities/horseback-riding/"
                 },
                 {
-                    "id": "topgolf-vineyard-summer-competition",
+                    "id": "topgolf-vineyard-competition",
                     "name": "TopGolf Vineyard — Gamified Golf & Friendly Competition",
                     "price": "$45 - $75 (bay rental per hour + food)",
-                    "desc": "Private bay with automatic scoring, full bar, great food. Zero golf skill required—just fun, friendly competition, laughter, and summer evening vibes. Relaxed, upbeat date night energy.",
+                    "desc": "Private bay with automatic scoring, full bar, great food. Zero golf skill required—just fun, friendly competition, and good vibes. Relaxed, upbeat date night.",
                     "duration": "2.5 - 3 hrs",
                     "where": "TopGolf — 484 N Entertainment Way, Vineyard, UT 84087",
                     "reservation": "recommended for evenings",
                     "link": "https://topgolf.com/us/vineyard/"
                 },
                 {
-                    "id": "escape-room-puzzle-challenge-slc",
-                    "name": "Escape Room Challenge — Puzzle & Teamwork Experience",
+                    "id": "escape-room-puzzle-challenge",
+                    "name": "Escape Room Challenge — Puzzle & Teamwork",
                     "price": "$25 - $35/person",
-                    "desc": "60-minute immersive puzzle experience with themed rooms. Solve puzzles together, race the clock, enjoy teamwork and challenge. Great for competitive couples—you'll love the problem-solving fun.",
+                    "desc": "60-minute immersive puzzle experience with themed rooms. Solve clues together, race the clock, enjoy teamwork and challenge. Great for competitive couples.",
                     "duration": "1 - 1.5 hrs",
                     "where": "Getout Games — 202 W 400 S, Salt Lake City, UT 84101",
                     "reservation": "required",
                     "link": "https://getoutgames.com/"
                 },
                 {
-                    "id": "summer-rock-climbing-gym",
-                    "name": "Indoor Rock Climbing — Beginner-Friendly Gym",
+                    "id": "indoor-rock-climbing-gym",
+                    "name": "Indoor Rock Climbing — Beginner-Friendly Adventure",
                     "price": "$15 - $20 (day pass) + $3 - $5 shoe rental",
-                    "desc": "Indoor climbing gym with varied difficulty levels perfect for all abilities. Great for teamwork, mutual encouragement, and friendly competition. Cool indoor escape from summer heat.",
+                    "desc": "Indoor climbing gym with varied difficulty levels. Great for teamwork, mutual encouragement, and friendly competition. Cool escape from summer heat.",
                     "duration": "1.5 - 2.5 hrs",
                     "where": "Local climbing gyms throughout Salt Lake City (multiple locations)",
                     "reservation": "none",
                     "link": "https://www.visitsaltlake.com/things-to-do/sports-recreation/"
                 },
                 {
-                    "id": "summer-tennis-or-pickleball-date",
+                    "id": "summer-outdoor-tennis-pickleball",
                     "name": "Summer Outdoor Sports — Tennis or Pickleball",
                     "price": "$10 - $30 (court rental)",
-                    "desc": "Perfect July weather for outdoor tennis or pickleball! Fun, competitive, low-pressure activity. Great exercise and plenty of laughs. Multiple courts available around the valley.",
+                    "desc": "Perfect August weather for outdoor tennis or pickleball! Fun, competitive, low-pressure activity. Great exercise, plenty of laughs, and friendly rivalry.",
                     "duration": "1.5 - 2 hrs",
                     "where": "Various parks throughout Salt Lake City, Park City, and Lehi",
                     "reservation": "recommended for public courts",
@@ -610,52 +570,52 @@
             "title": "Unique & Novelty",
             "dates": [
                 {
-                    "id": "imaginaria-ashton-gardens-lehi",
+                    "id": "imaginaria-interactive-festival-ashton",
                     "name": "Imaginaria Festival — Ashton Gardens Interactive Experience",
                     "price": "$25 - $40",
-                    "desc": "Immersive festival transforming 50-acre Ashton Gardens into extraordinary play zones and themed experiences. Fun, interactive, unique. Perfect for couples who enjoy creative, unconventional dates.",
+                    "desc": "Immersive festival transforming 50-acre Ashton Gardens into play zones and themed experiences. Fun, interactive, creative. Perfect for couples who enjoy unconventional, unique dates.",
                     "duration": "3 - 4 hrs",
                     "where": "Ashton Gardens at Thanksgiving Point — Lehi, UT (25 min south)",
                     "reservation": "recommended",
                     "link": "https://thanksgivingpoint.org/imaginaria/"
                 },
                 {
-                    "id": "free-outdoor-concert-twilight-series",
+                    "id": "twilight-concert-series-free-music",
                     "name": "Twilight Concert Series — Free Outdoor Summer Music",
                     "price": "Free (bring picnic)",
-                    "desc": "Free outdoor concerts with nationally recognized and local artists throughout July. Bring a blanket, picnic, and enjoy live music under the stars. Perfect summer evening—romantic and budget-friendly.",
+                    "desc": "Free outdoor concerts with nationally recognized artists. Bring a blanket, picnic, enjoy live music under the stars. Perfect romantic, budget-friendly summer evening.",
                     "duration": "2 - 3 hrs",
-                    "where": "Gallivan Center — 239 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "none (first-come seating)",
+                    "where": "Gallivan Center or Civic Center — Salt Lake City, UT",
+                    "reservation": "none (arrive early for good seating)",
                     "link": "https://saltlakearts.org/programs/twilight-concert-series"
                 },
                 {
-                    "id": "comedy-night-wiseguys-slc",
+                    "id": "wiseguys-comedy-night-slc",
                     "name": "Live Comedy Night — Stand-Up Comedy Club",
                     "price": "$25 - $60/person + 2-drink minimum",
-                    "desc": "Live stand-up comedy at local venues. Great laughs, casual fun atmosphere, perfect evening of entertainment. Low-pressure fun and connection—you'll laugh together.",
+                    "desc": "Live stand-up comedy with great laughs and casual fun atmosphere. Perfect evening of entertainment and connection—you'll laugh together.",
                     "duration": "1.5 - 2 hrs",
                     "where": "The Wiseguys Comedy Club — 250 S West Temple, Salt Lake City, UT 84101",
                     "reservation": "recommended",
                     "link": "https://www.wiseguyscomedy.com/"
                 },
                 {
-                    "id": "park-city-silly-sunday-market",
+                    "id": "park-silly-sunday-market-park-city",
                     "name": "Park Silly Sunday Market — Outdoor Craft & Music Festival",
                     "price": "Free admission",
-                    "desc": "Monthly outdoor market in Park City with local artists, crafts, food vendors, and live music. Fun, quirky, artistic vibe. Perfect for supporting local creators and enjoying summer Sunday atmosphere.",
+                    "desc": "Monthly outdoor market with local artists, crafts, food vendors, and live music. Fun, quirky artistic vibe. Support local creators and enjoy Sunday atmosphere.",
                     "duration": "2 - 3 hrs",
                     "where": "Park City Main Street — Park City, UT (30 min from SLC)",
                     "reservation": "none",
                     "link": "https://www.visitparkcity.com/blog/stories/post/things-to-do-in-park-city-in-july/"
                 },
                 {
-                    "id": "hot-air-balloon-sunrise-flight",
-                    "name": "Hot Air Balloon Sunrise Flight — Aerial Mountain Adventure",
+                    "id": "hot-air-balloon-sunrise-adventure",
+                    "name": "Hot Air Balloon Sunrise Flight — Aerial Adventure",
                     "price": "$200 - $300/person",
-                    "desc": "Magical sunrise hot air balloon flight over Utah landscapes and mountains. Floating peacefully with panoramic views, then champagne breakfast at landing. Romantic, unforgettable bucket-list experience.",
+                    "desc": "Magical sunrise flight over Utah landscapes. Peaceful floating with panoramic views, then champagne breakfast. Romantic, unforgettable bucket-list experience.",
                     "duration": "3 - 4 hrs",
-                    "where": "Various launch sites near Salt Lake City (arrange through tour operators)",
+                    "where": "Various launch sites near Salt Lake City (arrange through operators)",
                     "reservation": "required",
                     "link": "https://www.visitutah.com/things-to-do/tours-adventures/"
                 }
