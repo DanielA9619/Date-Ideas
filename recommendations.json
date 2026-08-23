@@ -1,9 +1,27 @@
 {
-    "dateRange": "August 16 - August 29, 2026",
-    "updated": "August 16, 2026",
+    "dateRange": "August 23 - September 6, 2026",
+    "updated": "August 23, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
+        "ray-lamontagne-red-butte-aug23",
+        "utah-lake-sunset-kayak-aug23",
+        "antelope-island-sunday-drive-aug24",
+        "log-haven-sunday-dinner-aug24",
+        "tree-room-sundance-dinner-aug25",
+        "horseback-riding-sundance-evening-aug25",
+        "handle-park-city-friday-dinner-aug29",
+        "live-music-downtown-aug29",
+        "sunflower-festival-cornbellys-sep4",
+        "stewart-falls-sunset-hike-sep4",
+        "utah-lake-paddleboard-sep5",
+        "courchevel-french-sep5",
+        "bonnie-raitt-red-butte-sep9",
+        "cecret-lake-hike-sep9",
+        "utah-state-fair-sep10",
+        "topgolf-vineyard-sep10",
+        "harry-potter-cursed-child-sep19",
+        "lake-blanche-hike-sep19",
         "oar-fitz-tantrums-red-butte-aug16",
         "shakey-graves-red-butte-aug19",
         "gipsy-kings-red-butte-aug20",
@@ -270,98 +288,53 @@
     ],
     "scheduled": [
         {
-            "date": "2026-08-16",
+            "date": "2026-08-23",
             "dates": [
                 {
-                    "id": "oar-fitz-tantrums-red-butte-aug16",
-                    "name": "O.A.R. with Fitz & The Tantrums — Red Butte Garden",
-                    "price": "$55 - $110",
-                    "desc": "Double headline of indie/alternative rock! O.A.R. brings energetic performances with hits like 'Crazy,' and Fitz & The Tantrums delivers infectious pop-rock energy. Beautiful garden venue, perfect summer evening with fantastic live music.",
-                    "start": "7:00 PM (gates 5:30 PM)",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/concerts/"
-                }
-            ]
-        },
-        {
-            "date": "2026-08-17",
-            "dates": [
-                {
-                    "id": "men-at-work-red-butte-aug17",
-                    "name": "Men at Work + Toad the Wet Sprocket — Red Butte Garden",
-                    "price": "$67 - $135",
-                    "desc": "80s classics from Men at Work ('Down Under') plus Toad the Wet Sprocket! Double headliner with nostalgic hits and great vibes. Beautiful garden venue, summer evening magic. Perfect for couples who love 80s music and outdoor concerts.",
-                    "start": "7:00 PM (gates 5:30 PM)",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/concerts/"
-                }
-            ]
-        },
-        {
-            "date": "2026-08-19",
-            "dates": [
-                {
-                    "id": "shakey-graves-red-butte-aug19",
-                    "name": "Shakey Graves — Red Butte Garden Concert",
-                    "price": "$45 - $95",
-                    "desc": "Virtuoso singer-songwriter Shakey Graves delivers acoustic brilliance and soulful folk-rock energy. Intimate and powerful performance in the beautiful garden setting. Perfect for couples who appreciate authentic, emotionally resonant live music.",
-                    "start": "7:30 PM (gates 6:00 PM)",
+                    "id": "ray-lamontagne-red-butte-aug23",
+                    "name": "Ray LaMontagne — Red Butte Garden Concert",
+                    "price": "$73 - $78",
+                    "desc": "Iconic singer-songwriter Ray LaMontagne brings his 'Trouble 20th Anniversary Tour' to Red Butte Garden with The Weather Station. Soul-stirring performance under the stars—romantic and emotionally resonant. Sold out show.",
+                    "start": "7:00 PM (gates 6:00 PM)",
                     "duration": "2 - 2.5 hrs",
                     "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
+                    "reservation": "sold out",
                     "link": "https://redbuttegarden.org/concerts/"
-                }
-            ]
-        },
-        {
-            "date": "2026-08-20",
-            "dates": [
+                },
                 {
-                    "id": "gipsy-kings-red-butte-aug20",
-                    "name": "Gipsy Kings featuring Nicolas Reyes — Red Butte Garden",
-                    "price": "$40 - $95",
-                    "desc": "Legendary flamenco-fusion band Gipsy Kings brings world-famous hits like 'Bamboléo' and 'Volâre' to the Red Butte stage. Incredible rhythms, passionate guitar work, and infectious energy. Perfect for couples seeking vibrant, uplifting live music.",
-                    "start": "7:30 PM (gates 6:00 PM)",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "id": "utah-lake-sunset-kayak-aug23",
+                    "name": "Utah Lake Summer Evening Paddle",
+                    "price": "$20 - $30 (rental per hour)",
+                    "desc": "Perfect August evening for a peaceful kayak or paddleboard adventure! Warm water, gentle breeze, stunning sunset views over Wasatch Mountains. Rent from Lindon Marina and explore at your own pace.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Lindon Marina — Lindon, UT (25 min north of SLC)",
                     "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/concerts/"
+                    "link": "https://www.lindonmarina.com/"
                 }
             ]
         },
         {
-            "date": "2026-08-21",
+            "date": "2026-08-24",
             "dates": [
                 {
-                    "id": "outdoor-movie-ashton-gardens-aug21",
-                    "name": "Outdoor Movie Night — Ashton Gardens Thanksgiving Point",
-                    "price": "$15 - $30 (general admission + food available)",
-                    "desc": "Bring a blanket and enjoy a movie under the stars at beautiful Ashton Gardens! Scenic 50-acre garden setting, perfect summer evening atmosphere, family-friendly fun. Grab popcorn or picnic dinner before the show. Romantic and magical outdoor experience.",
-                    "start": "8:00 PM (blankets welcome from 7:00 PM)",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Ashton Gardens at Thanksgiving Point — 3600 N Thanksgiving Way, Lehi, UT 84062",
-                    "reservation": "none",
-                    "link": "https://thanksgivingpoint.org/special-events/"
-                }
-            ]
-        },
-        {
-            "date": "2026-08-22",
-            "dates": [
+                    "id": "antelope-island-sunday-drive-aug24",
+                    "name": "Antelope Island State Park — Wildlife & Sunset",
+                    "price": "$15/vehicle entry",
+                    "desc": "Scenic 7-mile island loop with native bison herds, wildlife spotting, and stunning Great Salt Lake sunset views. Perfect for peaceful exploration and nature appreciation. Like your loved Rockport Lake date.",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Antelope Island State Park — 4528 W 1700 S, Syracuse, UT 84075 (45 min north)",
+                    "reservation": "none (gates 6 AM - 10 PM)",
+                    "link": "https://stateparks.utah.gov/parks/antelope/"
+                },
                 {
-                    "id": "ian-munsick-deer-valley-aug22",
-                    "name": "Ian Munsick — Deer Valley Music Festival, Park City",
-                    "price": "$62 - $95",
-                    "desc": "Rising country music star Ian Munsick brings western authenticity and storytelling to Deer Valley! Albums release show with his signature sound blending traditional country with modern flair. Stunning mountain amphitheater, perfect for live country music lovers.",
-                    "start": "6:00 PM (gates 5:30 PM)",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Snow Park Outdoor Amphitheater at Deer Valley Resort — Park City, UT 84060",
-                    "reservation": "recommended",
-                    "link": "https://deervalleymusicfestival.org/schedule/"
+                    "id": "log-haven-sunday-dinner-aug24",
+                    "name": "Log Haven — Millcreek Canyon Fine Dining",
+                    "price": "$120 - $180 for two",
+                    "desc": "Scenic mountain dining four miles up Millcreek Canyon with cool alpine air. Sophisticated seasonal menu, beautiful mountain views, exceptional service.",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Log Haven — 6451 Mill Canyon Rd, Salt Lake City, UT 84121",
+                    "reservation": "required",
+                    "link": "https://www.log-haven.com/"
                 }
             ]
         },
@@ -369,31 +342,176 @@
             "date": "2026-08-25",
             "dates": [
                 {
-                    "id": "water-for-elephants-eccles-aug25",
-                    "name": "Water for Elephants — The Musical at Eccles Theater",
-                    "price": "$41 - $150",
-                    "desc": "Tony-nominated musical extravaganza bringing Sara Gruen's beloved novel to life! Experience a 1930s traveling circus with dazzling performances, forbidden romance, and breathtaking choreography. You loved Phantom of the Opera—this theatrical production delivers equal magic and emotion.",
-                    "start": "7:00 PM (check schedule for Tue/Wed/Thu/Fri times)",
+                    "id": "tree-room-sundance-dinner-aug25",
+                    "name": "The Tree Room at Sundance — Alpine Cuisine",
+                    "price": "$100 - $180 for two",
+                    "desc": "Nestled in mountains with cool alpine breezes. Seasonal American cuisine, stunning views, rustic elegance, exceptional service.",
                     "duration": "2.5 - 3 hrs",
-                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
                     "reservation": "required",
-                    "link": "https://saltlakecity.broadway.com/"
+                    "link": "https://www.sundanceresort.com/dining/"
+                },
+                {
+                    "id": "horseback-riding-sundance-evening-aug25",
+                    "name": "Horseback Riding at Sundance — Alpine Trails",
+                    "price": "$85 - $120 per person",
+                    "desc": "Scenic horseback rides through Sundance trails with beautiful mountain views and cool alpine air. Perfect for couples seeking active outdoor adventure.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Sundance Resort — 8841 Alpine Loop Rd, Sundance, UT 84604",
+                    "reservation": "required",
+                    "link": "https://www.sundanceresort.com/activities/"
                 }
             ]
         },
         {
-            "date": "2026-08-27",
+            "date": "2026-08-29",
             "dates": [
                 {
-                    "id": "pink-martini-red-butte-aug27",
-                    "name": "Pink Martini featuring China Forbes — Red Butte Garden",
-                    "price": "$40 - $95",
-                    "desc": "Sophisticated jazz/world music band Pink Martini with vocalist China Forbes delivers elegant, romantic performances. Beautiful instrumental arrangements, charming vocals, perfect summer evening under the stars. Great for couples seeking refined musical experiences.",
-                    "start": "7:30 PM (gates 6:00 PM)",
+                    "id": "handle-park-city-friday-dinner-aug29",
+                    "name": "Handle Restaurant — Park City (Friday Date Night)",
+                    "price": "$100 - $160 for two",
+                    "desc": "Chef-driven restaurant with celebrated seasonal small plates and excellent wine. Perfect Friday night with sophisticated atmosphere.",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Handle — 412 Main St, Park City, UT 84060",
+                    "reservation": "required",
+                    "link": "https://handleparkcity.com/"
+                },
+                {
+                    "id": "live-music-downtown-aug29",
+                    "name": "Live Music Evening — Downtown SLC",
+                    "price": "Free - $20",
+                    "desc": "Friday evening live music throughout downtown Salt Lake City. Various artists, perfect casual date night with great vibes.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Various venues — Downtown Salt Lake City",
+                    "reservation": "none",
+                    "link": "https://www.visitsaltlake.com/things-to-do/arts-culture/"
+                }
+            ]
+        },
+        {
+            "date": "2026-09-04",
+            "dates": [
+                {
+                    "id": "sunflower-festival-cornbellys-sep4",
+                    "name": "Sunflower Festival at Cornbelly's (Opening Day)",
+                    "price": "$15 - $25 admission",
+                    "desc": "5th Annual Sunflower Festival opens! 15+ acres of 10 different sunflower varieties with over a million flowers blooming. Perfect photo opportunities and magical moments.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Cornbelly's — 3003 N Thanksgiving Way, Lehi, UT 84062",
+                    "reservation": "recommended",
+                    "link": "https://cornbellys.com/"
+                },
+                {
+                    "id": "stewart-falls-sunset-hike-sep4",
+                    "name": "Stewart Falls Hike — Spectacular Waterfall",
+                    "price": "Free",
+                    "desc": "Beautiful 200-foot cascading waterfall. Perfect September weather with fewer crowds. Great exercise and romantic waterfall backdrop.",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Stewart Falls Trailhead — Provo Canyon, UT (1 hr south)",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/stewart-falls-trail"
+                }
+            ]
+        },
+        {
+            "date": "2026-09-05",
+            "dates": [
+                {
+                    "id": "utah-lake-paddleboard-sep5",
+                    "name": "Utah Lake Paddleboarding Adventure",
+                    "price": "$20 - $35 (rental per hour)",
+                    "desc": "Perfect September weather for water adventures! Stand-up paddleboarding on peaceful Utah Lake with scenic Wasatch views.",
+                    "duration": "2 - 4 hrs",
+                    "where": "Utah Lake State Park — 4400 W Center St, Provo, UT",
+                    "reservation": "recommended",
+                    "link": "https://www.lindonmarina.com/"
+                },
+                {
+                    "id": "courchevel-french-sep5",
+                    "name": "Courchevel — Park City French Bistro",
+                    "price": "$80 - $140 for two",
+                    "desc": "Charming French bistro with classic dishes and excellent wine. European charm meets Park City sophistication.",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Courchevel — Park City Main Street, Park City, UT",
+                    "reservation": "required",
+                    "link": "https://www.courchevepark.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-09-09",
+            "dates": [
+                {
+                    "id": "bonnie-raitt-red-butte-sep9",
+                    "name": "Bonnie Raitt with Jon Cleary — Red Butte Garden",
+                    "price": "$88 - $93",
+                    "desc": "Blues legend Bonnie Raitt brings iconic blues, rock, and Americana to Red Butte Garden! Intimate, powerful performance in beautiful garden setting.",
+                    "start": "7:30 PM (gates 6:30 PM)",
                     "duration": "2 - 2.5 hrs",
                     "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
                     "reservation": "recommended",
                     "link": "https://redbuttegarden.org/concerts/"
+                },
+                {
+                    "id": "cecret-lake-hike-sep9",
+                    "name": "Cecret Lake Hike — Alpine Lake & Views",
+                    "price": "Free",
+                    "desc": "Pristine alpine lake with stunning Wasatch peak views and September wildflowers. Beautiful mountain scenery and cool alpine air.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Cecret Lake Trailhead — Little Cottonwood Canyon, UT",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/cecret-lake"
+                }
+            ]
+        },
+        {
+            "date": "2026-09-10",
+            "dates": [
+                {
+                    "id": "utah-state-fair-sep10",
+                    "name": "Utah State Fair 2026 — Opening Week",
+                    "price": "$10 - $15 gate admission",
+                    "desc": "Annual Utah State Fair with carnival rides, live entertainment, exhibits, and incredible fair food. Classic fun and people-watching.",
+                    "duration": "3 - 5 hrs",
+                    "where": "Utah State Fairpark — Salt Lake City, UT",
+                    "reservation": "none",
+                    "link": "https://www.utahstatefair.com/"
+                },
+                {
+                    "id": "topgolf-vineyard-sep10",
+                    "name": "TopGolf Vineyard — Gamified Golf & Fun",
+                    "price": "$45 - $75 (bay per hour) + food",
+                    "desc": "No-golf-skills-needed game! Private bay, full bar, great food. Friendly competition and relaxed vibes.",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "TopGolf — 484 N Entertainment Way, Vineyard, UT 84087",
+                    "reservation": "recommended",
+                    "link": "https://topgolf.com/us/vineyard/"
+                }
+            ]
+        },
+        {
+            "date": "2026-09-19",
+            "dates": [
+                {
+                    "id": "harry-potter-cursed-child-sep19",
+                    "name": "Harry Potter and The Cursed Child — Tony Award Winner",
+                    "price": "$111 - $187+",
+                    "desc": "You loved Phantom! This Tony Award-winning production brings the 'eighth story' to life with innovative stagecraft and incredible performances.",
+                    "start": "7:30 PM (doors 6:45 PM)",
+                    "duration": "2 hrs 50 mins + intermission",
+                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.harrypottersaltlakecity.com/"
+                },
+                {
+                    "id": "lake-blanche-hike-sep19",
+                    "name": "Lake Blanche Hike — Alpine Challenge",
+                    "price": "Free",
+                    "desc": "Challenging alpine hike with stunning lake views and mountain scenery. Perfect for couples seeking active adventure.",
+                    "duration": "3 - 4 hrs",
+                    "where": "Lake Blanche Trailhead — Big Cottonwood Canyon, UT",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/lake-blanche"
                 }
             ]
         }
