@@ -1,6 +1,6 @@
 {
-    "dateRange": "September 20 - October 3, 2026",
-    "updated": "September 20, 2026",
+    "dateRange": "September 27 - October 10, 2026",
+    "updated": "September 27, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
@@ -76,151 +76,116 @@
         "grappa-park-city-italian",
         "tupelo-park-city-farm-to-table",
         "handle-park-city-american-sep26",
-        "jazz-preseason-game-oct-delta-center"
+        "jazz-preseason-game-oct-delta-center",
+        "ghostbusters-concert-sep27",
+        "park-silly-sunday-market-sep27",
+        "chance-rapper-concert-sep29",
+        "harry-potter-cursed-child-sep29",
+        "park-city-wine-festival-thursday-oct1",
+        "park-city-wine-fest-grand-tasting-oct2",
+        "fall-festival-saratoga-oct2",
+        "wine-fest-grand-tasting-saturday-oct3",
+        "electric-park-thanksgiving-point-oct3",
+        "cornbellys-frightbellys-oct-ongoing",
+        "jazz-preseason-denver-oct6",
+        "cecret-lake-fall-hike-oct9",
+        "stewarts-falls-hike-friday-oct9",
+        "kansas-utes-football-oct10",
+        "indigenous-art-market-oct10-12",
+        "lower-bells-canyon-hike-oct",
+        "aspen-grove-trail-little-cottonwood",
+        "guardsmans-pass-scenic-loop-drive-oct",
+        "snowbird-tram-alpine-views-oct",
+        "red-pine-lake-hike-october",
+        "log-haven-millcreek-dining",
+        "tree-room-sundance-dinner",
+        "350-main-park-city-dining",
+        "grappa-italian-park-city",
+        "the-roof-slc-rooftop",
+        "eccles-theater-broadway-shows",
+        "natural-history-museum-utah",
+        "red-butte-garden-events",
+        "slc-arts-district-gallery-walk",
+        "thanksgiving-point-discovery-centers",
+        "utah-jazz-season-games",
+        "utah-hockey-club-games",
+        "topgolf-vineyard-entertainment",
+        "rock-climbing-gym-date",
+        "pickleball-outdoor-fall-fun",
+        "cornbelly-frightbelly-Halloween",
+        "wiseguys-comedy-laughs",
+        "hot-air-balloon-sunrise",
+        "imaginaria-immersive-art",
+        "scarecrow-festival-thanksgiving-point"
     ],
     "scheduled": [
-        {
-            "date": "2026-09-17",
-            "dates": [
-                {
-                    "id": "last-wild-buffalo-red-butte-sep17",
-                    "name": "The Last Wild Buffalo — Red Butte Garden Concert",
-                    "price": "$50 - $55",
-                    "desc": "Live music at Red Butte Garden with scenic garden backdrop. Beautiful Wednesday evening concert experience under the stars.",
-                    "start": "7:30 PM (gates 6:30 PM)",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/concerts/"
-                }
-            ]
-        },
-        {
-            "date": "2026-09-20",
-            "dates": [
-                {
-                    "id": "red-butte-garden-concert-sep20",
-                    "name": "Red Butte Garden Evening Concert — Saturday Night Music",
-                    "price": "$50 - $75",
-                    "desc": "Evening concert at Red Butte Garden during peak fall season. Beautiful Saturday night under the stars with excellent acoustics and garden ambiance. Perfect for music lovers.",
-                    "start": "7:00 PM (gates 6:00 PM)",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/concerts/"
-                },
-                {
-                    "id": "festa-italiana-sep20",
-                    "name": "Festa Italiana — Italian Heritage Festival (SATURDAY CONTINUATION)",
-                    "price": "Free admission (food/shopping extra)",
-                    "desc": "Continuation of Salt Lake's beloved Italian heritage festival with authentic food, live Italian music, dancing, art, crafts, and celebrations of Italian culture. Perfect weekend date for food and cultural exploration.",
-                    "start": "10:00 AM",
-                    "duration": "3 - 5 hrs",
-                    "where": "Pioneer Park & Downtown Salt Lake City, UT 84101",
-                    "reservation": "none",
-                    "link": "https://www.visitsaltlake.com/events/"
-                }
-            ]
-        },
-        {
-            "date": "2026-09-21",
-            "dates": [
-                {
-                    "id": "city-creek-canyon-fall-foliage-hike",
-                    "name": "City Creek Canyon Fall Foliage Hike — Urban Nature Escape",
-                    "price": "Free",
-                    "desc": "6.5-mile out-and-back trail immersed in dense red, yellow, and orange fall foliage. Stunning September canyon colors with cool mountain air. Perfect for your love of exploration—like the Rockport Reservoir date you adored!",
-                    "start": "9:00 AM",
-                    "duration": "2.5 - 3.5 hrs",
-                    "where": "City Creek Canyon Trailhead — Salt Lake City, UT 84103",
-                    "reservation": "none",
-                    "link": "https://www.alltrails.com/trail/us/utah/city-creek-canyon"
-                }
-            ]
-        },
-        {
-            "date": "2026-09-22",
-            "dates": [
-                {
-                    "id": "revivalists-red-butte-sep22",
-                    "name": "The Revivalists — Red Butte Garden Live Concert",
-                    "price": "$60 - $75",
-                    "desc": "High-energy rock and funk from The Revivalists at beautiful Red Butte Garden! Uplifting live music performance with great crowd energy. Perfect feel-good concert date under the stars.",
-                    "start": "7:00 PM (gates 6:00 PM)",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/concerts/"
-                }
-            ]
-        },
-        {
-            "date": "2026-09-26",
-            "dates": [
-                {
-                    "id": "harry-potter-cursed-child-sep24",
-                    "name": "Harry Potter and The Cursed Child — Broadway Magic (FRIDAY NIGHT)",
-                    "price": "$75 - $150/ticket",
-                    "desc": "You LOVED Phantom of the Opera (5 stars)! Harry Potter and The Cursed Child is a world-class theatrical experience with magical storytelling, stunning stagecraft, and theatrical brilliance. Perfect for theater lovers—September 26 performance. Celebrate Friday night at the theater!",
-                    "start": "7:00 PM",
-                    "duration": "3.5 - 4 hrs (with intermission)",
-                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://www.live-at-the-eccles.com"
-                },
-                {
-                    "id": "handle-park-city-american-sep26",
-                    "name": "Handle — Park City Small Plates & Wine (FRIDAY DINNER)",
-                    "price": "$100 - $160 for two",
-                    "desc": "Friday night celebration at this chef-driven Park City gem with excellent seasonal small plates and sophisticated wine list. Creative American cuisine in upscale-yet-relaxed atmosphere. Perfect post-theater dinner or standalone date.",
-                    "start": "7:00 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Handle — 412 Main St, Park City, UT 84060",
-                    "reservation": "required",
-                    "link": "https://handleparkcity.com/"
-                }
-            ]
-        },
         {
             "date": "2026-09-27",
             "dates": [
                 {
-                    "id": "fanx-salt-lake-sep24-26",
-                    "name": "FanX Salt Lake Comic & Pop Culture Convention (WEEKEND EVENT)",
-                    "price": "$15 - $30 (day pass), weekend passes available",
-                    "desc": "Multi-genre pop culture expo with celebrity guests, autographs, photo ops, gaming, cosplay contests, film festival, KidCon, and special events. Fun, energetic Saturday at Salt Palace Convention Center. Perfect for pop culture enthusiasts!",
-                    "start": "10:00 AM",
-                    "duration": "4 - 6 hrs",
-                    "where": "Salt Palace Convention Center — 100 S Temple, Salt Lake City, UT 84101",
+                    "id": "ghostbusters-concert-sep27",
+                    "name": "Ghostbusters in Concert — Film with Live Orchestra (SUNDAY NIGHT)",
+                    "price": "$40 - $65/ticket",
+                    "desc": "Classic 1984 film on HD cinema screen fully synced with live orchestra performing Academy Award-winning composer Elmer Bernstein's score. Unique experience perfect for movie lovers—nostalgic, musical, magical night at the theater!",
+                    "start": "6:30 PM (doors 5:00 PM)",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
                     "reservation": "recommended",
-                    "link": "https://fanxsaltlake.com/"
+                    "link": "https://www.live-at-the-eccles.com/events/ghostbusters-in-concert"
                 },
                 {
-                    "id": "park-city-fall-hike-escape",
-                    "name": "Park City Aspen Hike — Early October Fall Colors",
-                    "price": "Free",
-                    "desc": "Hiking on Park City trails to catch early fall colors and cool mountain air. Beautiful Sunday afternoon exploring aspen corridors and scenic vistas. Peaceful outdoor adventure perfect for nature lovers.",
-                    "start": "10:00 AM",
-                    "duration": "2 - 3 hrs",
-                    "where": "Park City Trail System — Park City, UT 84060",
+                    "id": "park-silly-sunday-market-sep27",
+                    "name": "Park Silly Sunday Market — Local Artisans & Good Vibes",
+                    "price": "Free to browse (shopping/food extra)",
+                    "desc": "Community market on Historic Main Street with local artisans, crafts, food vendors, and live music. Casual Sunday stroll through Park City's vibrant scene. Great for exploring local talent and enjoying fall weather.",
+                    "start": "10:00 AM - 4:00 PM",
+                    "duration": "1.5 - 3 hrs",
+                    "where": "Historic Main Street — Park City, UT 84060",
                     "reservation": "none",
-                    "link": "https://www.visitparkcity.com/things-to-do/outdoor-activities/hiking"
+                    "link": "https://www.visitparkcity.com/events/"
                 }
             ]
         },
         {
-            "date": "2026-09-28",
+            "date": "2026-09-29",
             "dates": [
                 {
-                    "id": "big-cottonwood-canyon-scenic-drive",
-                    "name": "Big Cottonwood Canyon Scenic Fall Drive — Stunning Foliage Tour",
-                    "price": "Free (gas)",
-                    "desc": "15-mile scenic corridor with accessible fall colors, passing Silver Lake, Solitude, and Brighton before reaching Guardsmans Pass at 9,700 feet. Continue to Park City for breathtaking views. Perfect couples' escape to witness peak fall beauty.",
-                    "start": "9:00 AM",
-                    "duration": "2.5 - 4 hrs (including stops)",
-                    "where": "Big Cottonwood Canyon — Salt Lake City/Park City, UT",
-                    "reservation": "none",
-                    "link": "https://www.visitutah.com/"
+                    "id": "chance-rapper-concert-sep29",
+                    "name": "Chance The Rapper — Live Concert (TUESDAY NIGHT)",
+                    "price": "$50 - $100/ticket",
+                    "desc": "Grammy Award-winning artist in intimate concert setting. Smooth hip-hop beats, great energy, fun crowd. Perfect for music lovers seeking a Tuesday night out with an energetic vibe.",
+                    "start": "8:00 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "The Union — Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.theunionslc.com/"
+                },
+                {
+                    "id": "harry-potter-cursed-child-sep29",
+                    "name": "Harry Potter and The Cursed Child — Broadway Magic (OPEN NOW THROUGH OCT 11)",
+                    "price": "$75 - $150/ticket",
+                    "desc": "You LOVED Phantom of the Opera (5 stars)! Harry Potter and The Cursed Child is a record-breaking theatrical masterpiece with magical storytelling, stunning stagecraft, and spellbinding performances. Perfect for theater lovers. Multiple showtimes available!",
+                    "start": "7:00 PM (varies by day)",
+                    "duration": "3.5 - 4 hrs (with intermission)",
+                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.live-at-the-eccles.com"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-01",
+            "dates": [
+                {
+                    "id": "park-city-wine-festival-thursday-oct1",
+                    "name": "Park City Wine Festival — Opening Night Wine Dinners (THURSDAY)",
+                    "price": "$100 - $200+ per person (varies by dinner)",
+                    "desc": "Kick off the 7th Annual Park City Wine Festival with opening night wine dinners at premier Park City restaurants. Paired wine experiences with gourmet cuisine. Perfect for sophisticated couples seeking culinary excellence.",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Various Park City restaurants (Riverhorse On Main, Le Depot Brasserie, Butcher's Chop House & Bar, LOMA)",
+                    "reservation": "required",
+                    "link": "https://parkcitywinefest.com/"
                 }
             ]
         },
@@ -228,26 +193,26 @@
             "date": "2026-10-02",
             "dates": [
                 {
-                    "id": "jazz-preseason-game-oct-delta-center",
-                    "name": "Utah Jazz Preseason Game — NBA Basketball (FRIDAY NIGHT)",
-                    "price": "$25 - $75/ticket",
-                    "desc": "You LOVED the Jazz game (4 stars)! NBA basketball action as the Utah Jazz begin their preseason. Exciting fast-paced play, great crowd energy at Delta Center. Friday night sports celebration! Game on October 6 also available.",
-                    "start": "7:00 PM - 7:30 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "id": "park-city-wine-fest-grand-tasting-oct2",
+                    "name": "Park City Wine Festival — Grand Tasting (FRIDAY AFTERNOON)",
+                    "price": "$100 - $125/ticket",
+                    "desc": "Largest wine tasting of the festival! Sample 250+ wines from West Coast to France with expert sommelier guidance. 80+ wineries represented. Perfect Friday date with wine education, tastings, and new favorites to discover.",
+                    "start": "12:00 PM (various sessions)",
+                    "duration": "3 - 4 hrs",
+                    "where": "Canyons Village Plaza — Park City, UT 84060",
                     "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
+                    "link": "https://parkcitywinefest.com/"
                 },
                 {
-                    "id": "350-main-park-city-dinner",
-                    "name": "350 Main — Park City New American Brasserie (FRIDAY DINNER)",
-                    "price": "$100 - $160 for two",
-                    "desc": "Refined blend of globally influenced cuisine in exquisite New American Brasserie with wonderful bar and signature cocktails. Friday night celebration at Park City's premier dining destination. Elegant atmosphere, exceptional service.",
-                    "start": "7:30 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "350 Main — 350 Main St, Park City, UT 84060",
-                    "reservation": "required",
-                    "link": "https://350main.com/"
+                    "id": "fall-festival-saratoga-oct2",
+                    "name": "Fall Festival — Saratoga Springs Community Celebration (FRIDAY)",
+                    "price": "Free",
+                    "desc": "Community fall festival with family-friendly activities, food vendors, live music, and autumn celebrations. Casual Friday afternoon exploring local community. Great alternative for a more relaxed vibe.",
+                    "start": "4:00 PM - 8:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Shay Park — Saratoga Springs, UT (near Lehi, 20 min)",
+                    "reservation": "none",
+                    "link": "https://www.visitsaltlake.com/events/"
                 }
             ]
         },
@@ -255,26 +220,107 @@
             "date": "2026-10-03",
             "dates": [
                 {
-                    "id": "desolation-lake-aspen-view-hike",
-                    "name": "Desolation Lake — Blue Waters & Glimmering Aspens (SATURDAY ADVENTURE)",
-                    "price": "Free",
-                    "desc": "Stunning hike to pristine alpine lake framed by brilliant fall aspens. Blue-green waters, mountain panoramas, and September/October peak colors. Epic landscape date perfect for your love of exploration and natural beauty.",
-                    "start": "8:00 AM",
-                    "duration": "4 - 5 hrs",
-                    "where": "Desolation Lake Trailhead — Big Cottonwood Canyon, Salt Lake City, UT",
-                    "reservation": "none",
-                    "link": "https://www.alltrails.com/trail/us/utah/desolation-lake"
+                    "id": "wine-fest-grand-tasting-saturday-oct3",
+                    "name": "Park City Wine Festival — Grand Tasting Saturday (SATURDAY AFTERNOON)",
+                    "price": "$100 - $125/ticket",
+                    "desc": "Final day of Grand Tasting at Park City Wine Festival! Sample 250+ wines, discover new favorites, enjoy expert sommelier guidance. Peak Saturday experience with beautiful October weather and wine culture.",
+                    "start": "12:00 PM (various sessions)",
+                    "duration": "3 - 4 hrs",
+                    "where": "Canyons Village Plaza — Park City, UT 84060",
+                    "reservation": "recommended",
+                    "link": "https://parkcitywinefest.com/"
                 },
                 {
-                    "id": "frightbellys-cornbellys-sept-oct",
-                    "name": "Frightbelly's & Cornbelly's — Corn Maze & Haunted Adventure (SEPT 25 - OCT 30)",
-                    "price": "$15 - $25 (general admission), $18 - $28 (haunted trail)",
-                    "desc": "Thanksgiving Point's seasonal attraction with 10-acre non-haunted corn maze, hayrides, campfires, and haunted 30-minute Frightbelly's trail with 23 terrifying scenes. Fun, interactive, perfect couple's spooky date. Open through October.",
-                    "start": "Varies by day (typically 5 PM - 10 PM)",
+                    "id": "electric-park-thanksgiving-point-oct3",
+                    "name": "Electric Park — Thanksgiving Point Free Evening Fun (SATURDAY NIGHT)",
+                    "price": "Free admission, $10 - $20 for activities/parking",
+                    "desc": "Free Halloween festivities at Thanksgiving Point with free trick-or-treating, free live music, free balloon magic shows, and seasonal activities. Festive, fun, low-pressure Saturday evening with great entertainment.",
+                    "start": "5:00 PM - 9:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
+                    "reservation": "none",
+                    "link": "https://thanksgivingpoint.org/"
+                },
+                {
+                    "id": "cornbellys-frightbellys-oct-ongoing",
+                    "name": "Cornbelly's & Frightbelly's — Corn Maze & Haunted Trail (OCT 3-31)",
+                    "price": "$15 - $25 (corn maze), $18 - $28 (haunted trail)",
+                    "desc": "Thanksgiving Point's seasonal Halloween attraction with 10-acre corn maze, hayrides, campfires, and Frightbelly's 30-minute haunted trail with 23 scenes. Fun couples' date with spooky thrills and cozy autumn vibes.",
+                    "start": "5:00 PM - 10:00 PM (hours vary)",
                     "duration": "2 - 3 hrs",
                     "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
                     "reservation": "recommended",
                     "link": "https://thanksgivingpoint.org/cornbellys/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-06",
+            "dates": [
+                {
+                    "id": "jazz-preseason-denver-oct6",
+                    "name": "Utah Jazz vs Denver Nuggets — Preseason Basketball (TUESDAY NIGHT)",
+                    "price": "$25 - $75/ticket",
+                    "desc": "You LOVED the Jazz game (4 stars)! Preseason action at Delta Center with fast-paced NBA basketball. Great crowd energy, exciting plays, perfect date night for sports fans. Tuesday evening out!",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-09",
+            "dates": [
+                {
+                    "id": "cecret-lake-fall-hike-oct9",
+                    "name": "Cecret Lake — Alpine Aspen Fall Hike (FRIDAY)",
+                    "price": "Free",
+                    "desc": "Stunning 1.8-mile hike to pristine mountain lake surrounded by vibrant golden and red aspens at peak colors. Moderate difficulty, accessible, and absolutely gorgeous. Perfect for your love of exploration—like Rockport Reservoir!",
+                    "start": "9:00 AM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Cecret Lake Trailhead — Alta, UT (40 min from SLC)",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/cecret-lake"
+                },
+                {
+                    "id": "stewarts-falls-hike-friday-oct9",
+                    "name": "Stewart Falls — Waterfall Hike with Fall Colors (FRIDAY OPTION)",
+                    "price": "Free",
+                    "desc": "Beautiful 3.8-mile moderate waterfall hike from Sundance with stunning fall foliage. Alpine stream, towering pines, and golden aspens. Perfect Friday adventure near Sundance Resort. You love outdoor exploration!",
+                    "start": "9:00 AM",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Stewart Falls Trailhead — Sundance, UT (45 min from SLC)",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/stewart-falls"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-10",
+            "dates": [
+                {
+                    "id": "kansas-utes-football-oct10",
+                    "name": "Kansas Jayhawks vs Utah Utes — College Football (SATURDAY)",
+                    "price": "$30 - $80/ticket",
+                    "desc": "Exciting college football game at Rice–Eccles Stadium! You loved sports (Jazz 4 stars, Hockey 5 stars). Great Saturday crowd energy, spirited atmosphere, and Utes fans. Classic college game experience!",
+                    "start": "1:00 PM or 4:00 PM (times TBD)",
+                    "duration": "3 - 3.5 hrs",
+                    "where": "Rice–Eccles Stadium — Salt Lake City, UT 84112",
+                    "reservation": "recommended",
+                    "link": "https://www.mgo.com/teams/utah-utes/"
+                },
+                {
+                    "id": "indigenous-art-market-oct10-12",
+                    "name": "Indigenous Art Market — Native American Artists Showcase (OCT 10-12)",
+                    "price": "$10 - $15 (museum entry) or Free with admission",
+                    "desc": "Natural History Museum hosts showcase of top Native American artists and craftspeople. Three-day event featuring authentic art, jewelry, textiles, and cultural stories. Educational, beautiful, and supports indigenous communities. Perfect cultural date.",
+                    "start": "10:00 AM - 5:00 PM",
+                    "duration": "2 - 4 hrs",
+                    "where": "Natural History Museum of Utah — 301 S 1300 E, Salt Lake City, UT 84112",
+                    "reservation": "none",
+                    "link": "https://nhmu.utah.edu/events"
                 }
             ]
         }
@@ -284,54 +330,54 @@
             "title": "Adventures & Outdoors",
             "dates": [
                 {
-                    "id": "red-pine-lake-hike-fall-colors",
-                    "name": "Red Pine Lake Hike — Little Cottonwood Canyon Alpine Colors",
+                    "id": "lower-bells-canyon-hike-oct",
+                    "name": "Lower Bells Canyon Reservoir — Golden Aspen Hike",
                     "price": "Free",
-                    "desc": "7.7-mile roundtrip through groves of aspens and pines with vibrant fall colors. Stunning mountain scenery and peaceful alpine exploration. Like your loved Rockport Reservoir date—peaceful exploration with beautiful views.",
-                    "duration": "3 - 4 hrs",
-                    "where": "Red Pine Lake Trailhead — Little Cottonwood Canyon, Salt Lake City, UT",
+                    "desc": "Moderate 4.6-mile roundtrip through golden aspens and fiery maple groves leading to scenic alpine reservoir. Stunning fall colors, mountain views, and peaceful exploration perfect for your love of outdoor adventure.",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Lower Bells Canyon Trailhead — Salt Lake City, UT",
                     "reservation": "none",
-                    "link": "https://www.alltrails.com/trail/us/utah/red-pine-lake"
+                    "link": "https://www.alltrails.com/trail/us/utah/lower-bells-canyon-reservoir"
                 },
                 {
-                    "id": "guardsmans-pass-scenic-loop-drive",
+                    "id": "aspen-grove-trail-little-cottonwood",
+                    "name": "Aspen Grove Trail — Premium Fall Color Hike",
+                    "price": "Free",
+                    "desc": "3-mile moderate hike through one of the best aspen corridors in the Wasatch. Vibrant fall colors, beautiful forest, perfect for exploration lovers. Similar to your loved Rockport Reservoir experience!",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Aspen Grove Trailhead — Little Cottonwood Canyon, Salt Lake City, UT",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/aspen-grove"
+                },
+                {
+                    "id": "guardsmans-pass-scenic-loop-drive-oct",
                     "name": "Guardsmans Pass Scenic Loop — 24-Mile Mountain Drive",
                     "price": "Free (gas)",
-                    "desc": "Stunning 24.2-mile road connecting Big Cottonwood Canyon to Park City near Deer Valley. Epic views of Big Cottonwood Canyon, Heber Valley, and Park City. Perfect scenic couples' drive through peak fall colors.",
+                    "desc": "Epic 24-mile scenic route connecting Big Cottonwood Canyon to Park City with breathtaking views of the Wasatch, Heber Valley, and fall aspens. Perfect couples' drive for peak autumn colors.",
                     "duration": "2.5 - 3.5 hrs",
-                    "where": "Guardsmans Pass Road — Big Cottonwood Canyon to Park City, UT",
+                    "where": "Guardsmans Pass Road — Big Cottonwood/Park City, UT",
                     "reservation": "none",
                     "link": "https://www.visitutah.com/"
                 },
                 {
-                    "id": "snowbird-tram-alpine-peak-views",
-                    "name": "Snowbird Aerial Tram — Hidden Peak 11,000 ft Summit",
+                    "id": "snowbird-tram-alpine-views-oct",
+                    "name": "Snowbird Aerial Tram — Hidden Peak 11,000 ft Views",
                     "price": "$22 - $35 (tram), $50+ (with dining)",
-                    "desc": "Scenic aerial tram to Hidden Peak for 360° Wasatch Mountains views. Cool alpine air, breathtaking scenery, fall colors visible from above. Perfect for exploration lovers.",
+                    "desc": "Scenic aerial tram to stunning alpine summit with 360° Wasatch Mountain panoramas. Cool fall air, breathtaking views of surrounding peaks and valleys. Perfect for exploration lovers seeking elevation!",
                     "duration": "2 - 3 hrs",
                     "where": "Snowbird Resort — 11000 E Little Cottonwood Canyon Rd, Salt Lake City, UT 84092",
                     "reservation": "recommended for dining",
                     "link": "https://www.snowbird.com/summer/"
                 },
                 {
-                    "id": "utah-lake-paddleboarding-october",
-                    "name": "Utah Lake Stand-Up Paddleboarding — Late Fall Adventure",
-                    "price": "$20 - $35 (rental per hour)",
-                    "desc": "Peaceful SUP on Utah Lake with perfect fall weather and scenic Wasatch views. Calm water, fewer crowds, beautiful light for exploration. Similar to loved Rockport Reservoir experience.",
-                    "duration": "2 - 4 hrs",
-                    "where": "Lindon Marina — Lindon, UT (25 min north) or Utah Lake State Park",
-                    "reservation": "recommended",
-                    "link": "https://www.lindonmarina.com/"
-                },
-                {
-                    "id": "elbow-fork-millcreek-canyon-hike",
-                    "name": "Elbow Fork Trail — Millcreek Canyon Fall Colors",
+                    "id": "red-pine-lake-hike-october",
+                    "name": "Red Pine Lake — Little Cottonwood Alpine Lake Hike",
                     "price": "Free",
-                    "desc": "Popular Millcreek Canyon trail with abundant fall foliage, creek crossings, and beautiful aspen groves. Accessible moderate hike with stunning seasonal colors.",
-                    "duration": "2.5 - 3.5 hrs",
-                    "where": "Elbow Fork Trailhead — Millcreek Canyon, Salt Lake City, UT",
+                    "desc": "Beautiful 7.7-mile roundtrip through aspen and pine groves with vibrant fall colors. Alpine lake framed by golden aspens, mountain scenery, and peaceful exploration. Perfect for outdoor-loving couples.",
+                    "duration": "3 - 4 hrs",
+                    "where": "Red Pine Lake Trailhead — Little Cottonwood Canyon, Salt Lake City, UT",
                     "reservation": "none",
-                    "link": "https://www.alltrails.com/trail/us/utah/elbow-fork"
+                    "link": "https://www.alltrails.com/trail/us/utah/red-pine-lake"
                 }
             ]
         },
@@ -339,54 +385,54 @@
             "title": "Food & Dining",
             "dates": [
                 {
-                    "id": "log-haven-mountain-dining-october",
-                    "name": "Log Haven — Millcreek Canyon Fine Dining",
+                    "id": "log-haven-millcreek-dining",
+                    "name": "Log Haven — Millcreek Canyon Fine Dining Experience",
                     "price": "$120 - $180 for two",
-                    "desc": "Mountain fine dining four miles up Millcreek Canyon with cool alpine air and crisp fall breezes. Sophisticated seasonal menu, beautiful views, exceptional service.",
+                    "desc": "Sophisticated mountain fine dining 4 miles up scenic Millcreek Canyon. Seasonal menu, cool alpine air, exceptional service, and beautiful ambiance. Perfect romantic dinner in nature.",
                     "duration": "2.5 - 3.5 hrs",
                     "where": "Log Haven — 6451 Mill Canyon Rd, Salt Lake City, UT 84121",
                     "reservation": "required",
                     "link": "https://www.log-haven.com/"
                 },
                 {
-                    "id": "grappa-park-city-italian",
+                    "id": "tree-room-sundance-dinner",
+                    "name": "The Tree Room at Sundance — Alpine Fine Dining",
+                    "price": "$100 - $180 for two",
+                    "desc": "Elevated American cuisine with stunning mountain views and cool alpine breezes. Seasonal ingredients, exceptional service, romantic forest setting. Perfect mountain escape dinner.",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
+                    "reservation": "required",
+                    "link": "https://www.sundanceresort.com/dining/"
+                },
+                {
+                    "id": "350-main-park-city-dining",
+                    "name": "350 Main — Park City New American Brasserie",
+                    "price": "$100 - $160 for two",
+                    "desc": "Refined globally-influenced New American cuisine in elegant Park City setting. Signature cocktails, impressive wine list, sophisticated yet relaxed atmosphere. Premier dining destination.",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "350 Main — 350 Main St, Park City, UT 84060",
+                    "reservation": "required",
+                    "link": "https://350main.com/"
+                },
+                {
+                    "id": "grappa-italian-park-city",
                     "name": "Grappa — Park City Italian Fine Dining",
                     "price": "$90 - $150 for two",
-                    "desc": "Charming Italian restaurant on Main Street with excellent pasta, wine selection, and romantic ambiance. Perfect Park City fine dining experience with European charm.",
+                    "desc": "Charming Italian restaurant with excellent handmade pasta, curated wine selection, and romantic Main Street ambiance. European charm with Utah hospitality.",
                     "duration": "2 - 2.5 hrs",
                     "where": "Grappa — Historic Main Street, Park City, UT 84060",
                     "reservation": "required",
                     "link": "https://www.grappapark.com/"
                 },
                 {
-                    "id": "tupelo-park-city-farm-to-table",
-                    "name": "Tupelo — Park City Farm-to-Table Dining",
-                    "price": "$100 - $160 for two",
-                    "desc": "Immaculate menu of globally inspired food, all artisanally sourced with farm-to-table approach to elevated dining. Executive chef and owner Matt Harris creates exceptional culinary experiences.",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Tupelo — Historic Main Street, Park City, UT 84060",
-                    "reservation": "required",
-                    "link": "https://www.tupelopark.com/"
-                },
-                {
-                    "id": "the-roof-slc-rooftop-fine-dining",
-                    "name": "The Roof — Downtown SLC Rooftop Fine Dining",
+                    "id": "the-roof-slc-rooftop",
+                    "name": "The Roof — Downtown SLC Rooftop Dining",
                     "price": "$80 - $140 for two",
-                    "desc": "Rooftop dining with Temple Square views and gourmet cuisine. Modern atmosphere with stunning city vistas. Perfect elevated dinner date.",
+                    "desc": "Elevated gourmet cuisine with stunning Temple Square views from rooftop. Modern atmosphere, creative dishes, perfect city vistas for a special evening.",
                     "duration": "2 - 2.5 hrs",
-                    "where": "The Roof — Downtown Salt Lake City",
+                    "where": "The Roof — Downtown Salt Lake City, UT 84101",
                     "reservation": "required",
                     "link": "https://www.visitsaltlake.com/restaurants/"
-                },
-                {
-                    "id": "tree-room-sundance-alpine-dining",
-                    "name": "The Tree Room at Sundance — Alpine Fine Dining",
-                    "price": "$100 - $180 for two",
-                    "desc": "Mountain fine dining with cool alpine breezes. Seasonal American cuisine, stunning views, exceptional service. Perfect romantic mountain escape.",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
-                    "reservation": "required",
-                    "link": "https://www.sundanceresort.com/dining/"
                 }
             ]
         },
@@ -394,54 +440,54 @@
             "title": "Arts & Culture",
             "dates": [
                 {
-                    "id": "eccles-theater-broadway-2026",
-                    "name": "Eccles Theater — Broadway & Live Theater Shows",
+                    "id": "eccles-theater-broadway-shows",
+                    "name": "Eccles Theater — World-Class Broadway & Theater",
                     "price": "$75 - $150+/ticket",
-                    "desc": "You LOVED Phantom of the Opera (5 stars)! The Eccles brings world-class theatrical productions including Harry Potter and The Cursed Child. Stunning performances, magical experiences. Check current season for upcoming shows.",
-                    "duration": "2.5 - 3.5 hrs",
+                    "desc": "You LOVED Phantom of the Opera (5 stars)! The Eccles hosts world-class theatrical productions including Harry Potter and Broadway shows. Magical storytelling, stunning stagecraft, unforgettable performances.",
+                    "duration": "2.5 - 4 hrs",
                     "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
                     "reservation": "required",
                     "link": "https://www.live-at-the-eccles.com"
                 },
                 {
-                    "id": "red-butte-garden-concert-fall-2026",
-                    "name": "Red Butte Garden Concert Series — Live Music Under Stars",
-                    "price": "$50 - $95/ticket",
-                    "desc": "Outdoor concert series with diverse artists throughout fall. Romantic evening under the stars in beautiful garden setting. Perfect for music lovers.",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/concerts/"
-                },
-                {
-                    "id": "natural-history-museum-utah-fall",
+                    "id": "natural-history-museum-utah",
                     "name": "Natural History Museum of Utah — Fossils & Exhibits",
                     "price": "$24.95/adult",
-                    "desc": "World-class museum with 60,000+ fossils and interactive exhibits. Educational exploration, stunning valley views. Cool, engaging indoor activity perfect for curious couples.",
+                    "desc": "World-class museum with 60,000+ fossils, dinosaur exhibits, and interactive displays. Beautiful valley views, educational exploration, engaging for curious couples.",
                     "duration": "2 - 4 hrs",
                     "where": "Natural History Museum of Utah — 301 S 1300 E, Salt Lake City, UT 84112",
                     "reservation": "none",
                     "link": "https://nhmu.utah.edu/"
                 },
                 {
-                    "id": "slc-arts-district-gallery-walk-fall",
-                    "name": "Salt Lake City Arts District — Gallery Walk & Local Art",
+                    "id": "red-butte-garden-events",
+                    "name": "Red Butte Garden — Concerts & Events Series",
+                    "price": "$50 - $95/ticket",
+                    "desc": "Beautiful outdoor concert series under the stars in scenic garden setting. Diverse artists, romantic atmosphere, perfect for music lovers. Fall foliage backdrop adds magic.",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Red Butte Garden Amphitheatre — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/concerts/"
+                },
+                {
+                    "id": "slc-arts-district-gallery-walk",
+                    "name": "Salt Lake City Arts District — Gallery Walk & Exploration",
                     "price": "Free",
-                    "desc": "Vibrant downtown arts district with galleries, local artists, contemporary installations. Explore, discuss art, discover local talent. Grab coffee or dinner, perfect cultural date.",
+                    "desc": "Vibrant downtown arts district with galleries, local artists, contemporary installations, and cultural venues. Perfect for exploring local talent, grabbing coffee, and cultural connection.",
                     "duration": "2 - 3 hrs",
-                    "where": "Salt Lake City Arts District — Downtown SLC (Gallery Row)",
+                    "where": "Salt Lake City Arts District — Downtown SLC",
                     "reservation": "none",
                     "link": "https://www.visitsaltlake.com/things-to-do/arts-culture/"
                 },
                 {
-                    "id": "scarecrow-festival-thanksgiving-point-oct",
-                    "name": "Scarecrow Festival at Thanksgiving Point — Fall Celebration (OCT 12-17)",
-                    "price": "$12 - $20",
-                    "desc": "50 acres of Ashton Gardens transformed into colorful autumn celebration with imaginative scarecrows, carved pumpkins, seasonal displays, and family fun. Peak fall colors with creative artistry.",
-                    "duration": "2 - 3 hrs",
-                    "where": "Ashton Gardens at Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
-                    "reservation": "recommended",
-                    "link": "https://thanksgivingpoint.org/scarecrow-festival/"
+                    "id": "thanksgiving-point-discovery-centers",
+                    "name": "Thanksgiving Point Discovery Centers — Educational Fun",
+                    "price": "$18 - $25/person",
+                    "desc": "Interactive learning centers covering aquarium, museums, and educational exhibits. Fun exploration for curious minds. Beautiful campus grounds with fall colors and outdoor spaces.",
+                    "duration": "2 - 4 hrs",
+                    "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
+                    "reservation": "none",
+                    "link": "https://thanksgivingpoint.org/"
                 }
             ]
         },
@@ -449,52 +495,52 @@
             "title": "Active & Sporty",
             "dates": [
                 {
-                    "id": "utah-jazz-nba-basketball",
-                    "name": "Utah Jazz NBA Games — Live Basketball",
+                    "id": "utah-jazz-season-games",
+                    "name": "Utah Jazz — NBA Basketball Games",
                     "price": "$25 - $75/ticket",
-                    "desc": "You loved a Jazz game (4 stars)! NBA basketball with Utah's pro team. Exciting fast-paced action, great crowd energy. Perfect sports-filled date night. Preseason starts early October!",
+                    "desc": "You loved a Jazz game (4 stars)! Fast-paced NBA basketball with great crowd energy and exciting action. Perfect date night for sports fans. Regular season starts mid-October!",
                     "duration": "2.5 - 3 hrs",
                     "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
                     "reservation": "recommended",
                     "link": "https://www.utahjazz.com/schedule"
                 },
                 {
-                    "id": "utah-hockey-club-live-games",
+                    "id": "utah-hockey-club-games",
                     "name": "Utah Hockey Club — Live Hockey Action",
                     "price": "$30 - $75/ticket",
-                    "desc": "You LOVED the Grizzlies hockey game (5 stars)! Fast-paced, exciting live hockey with great atmosphere. Perfect energetic date night with passionate fans.",
+                    "desc": "You LOVED the Grizzlies hockey (5 stars)! Fast-paced, thrilling hockey with passionate fans. Great atmosphere, exciting plays, energetic date night experience.",
                     "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — Salt Lake City area",
+                    "where": "Delta Center — Salt Lake City, UT 84101",
                     "reservation": "recommended",
                     "link": "https://www.utahhockeyclub.com/"
                 },
                 {
-                    "id": "topgolf-vineyard-games-fall",
-                    "name": "TopGolf Vineyard — No-Golf-Skills Gaming",
-                    "price": "$45 - $75 (bay per hour) + food",
-                    "desc": "No-golf-skills-needed gaming! Private bay with automatic scoring, full bar, great food. Friendly competition, laughs, relaxed vibes. Perfect casual date with entertainment.",
+                    "id": "topgolf-vineyard-entertainment",
+                    "name": "TopGolf Vineyard — Golf Gaming & Entertainment",
+                    "price": "$45 - $75/hour + food",
+                    "desc": "No golf skills needed! Private bay with automatic scoring, full bar, great food, and friendly competition. Perfect casual date with laughs and entertainment.",
                     "duration": "2.5 - 3 hrs",
                     "where": "TopGolf — 484 N Entertainment Way, Vineyard, UT 84087",
                     "reservation": "recommended",
                     "link": "https://topgolf.com/us/vineyard/"
                 },
                 {
-                    "id": "rock-climbing-gym-challenge-fall",
-                    "name": "Indoor Rock Climbing — Beginner-Friendly Challenge",
+                    "id": "rock-climbing-gym-date",
+                    "name": "Indoor Rock Climbing — Couples' Challenge Date",
                     "price": "$15 - $20 (day pass) + $3 shoe rental",
-                    "desc": "Varied difficulty levels for all abilities. Great teamwork, mutual encouragement, friendly competition. Fun activity with lots of laughs and physical challenge together.",
+                    "desc": "Varied climbing difficulty for all levels. Great teamwork, mutual encouragement, friendly competition, and lots of laughs. Fun physical challenge together!",
                     "duration": "1.5 - 2.5 hrs",
-                    "where": "The Front or climbing gyms — Salt Lake City area",
+                    "where": "The Front Climbing Gym — Salt Lake City, UT",
                     "reservation": "none",
                     "link": "https://www.thefrontclimbinggym.com/"
                 },
                 {
-                    "id": "pickleball-park-city-outdoor-courts",
-                    "name": "Pickleball at Park City Courts — Outdoor Fall Fun",
+                    "id": "pickleball-outdoor-fall-fun",
+                    "name": "Pickleball at Park City — Outdoor Fall Competition",
                     "price": "$10 - $25 (court rental)",
-                    "desc": "Perfect fall weather for outdoor pickleball! Fun, competitive, low-pressure activity. Great exercise, lots of laughs, friendly competition. Active couples' date.",
+                    "desc": "Perfect fall weather for outdoor pickleball! Fun competition, great exercise, friendly atmosphere, and lots of laughs. Active couples' date with beautiful mountain backdrop.",
                     "duration": "1.5 - 2 hrs",
-                    "where": "Park City Recreation Center — Park City, UT",
+                    "where": "Park City Recreation Center — Park City, UT 84060",
                     "reservation": "recommended",
                     "link": "https://www.visitparkcity.com/"
                 }
@@ -504,54 +550,54 @@
             "title": "Unique & Novelty",
             "dates": [
                 {
-                    "id": "fanx-pop-culture-convention",
-                    "name": "FanX Salt Lake Comic & Pop Culture Convention",
-                    "price": "$15 - $30 (day pass)",
-                    "desc": "Multi-genre pop culture expo with celebrity guests, autographs, photo ops, gaming, cosplay contests, film festival, and special events. Fun, energetic experience for pop culture enthusiasts!",
-                    "duration": "4 - 6 hrs",
-                    "where": "Salt Palace Convention Center — 100 S Temple, Salt Lake City, UT 84101",
+                    "id": "cornbelly-frightbelly-Halloween",
+                    "name": "Cornbelly's & Frightbelly's — Corn Maze & Haunted Trail",
+                    "price": "$15 - $25 (maze), $18 - $28 (haunted trail)",
+                    "desc": "Thanksgiving Point's 10-acre corn maze with hayrides, campfires, and Frightbelly's 30-minute haunted trail with 23 creative scenes. Fun couples' date combining spooky thrills with autumn tradition.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
                     "reservation": "recommended",
-                    "link": "https://fanxsaltlake.com/"
+                    "link": "https://thanksgivingpoint.org/cornbellys/"
                 },
                 {
-                    "id": "wiseguys-comedy-club-laughs",
+                    "id": "wiseguys-comedy-laughs",
                     "name": "Wiseguys Comedy Club — Live Stand-Up Comedy",
                     "price": "$25 - $60/person + 2-drink minimum",
-                    "desc": "Live stand-up comedy with great laughs and casual fun atmosphere. Perfect low-pressure evening of entertainment and connection.",
+                    "desc": "Great live stand-up comedy with casual fun atmosphere. Perfect low-pressure evening of entertainment, connection, and lots of laughs together.",
                     "duration": "1.5 - 2 hrs",
                     "where": "Wiseguys Comedy Club — 250 S West Temple, Salt Lake City, UT 84101",
                     "reservation": "recommended",
                     "link": "https://www.wiseguyscomedy.com/"
                 },
                 {
-                    "id": "spooktober-thanksgiving-point",
-                    "name": "Spooktober at Thanksgiving Point — Pumpkin & Halloween Fun",
-                    "price": "$12 - $20",
-                    "desc": "October's month of Halloween fun with pumpkin-filled adventures, festive STEM programs, scavenger hunts, and spooky surprises across Discovery Centers. Fun, interactive, perfect couple's date.",
-                    "duration": "2 - 3 hrs",
-                    "where": "Thanksgiving Point Discovery Centers — 3003 Thanksgiving Way, Lehi, UT 84062",
-                    "reservation": "recommended",
-                    "link": "https://thanksgivingpoint.org/"
-                },
-                {
-                    "id": "hot-air-balloon-sunrise-flight-fall",
-                    "name": "Hot Air Balloon Sunrise Flight — Aerial Romance",
+                    "id": "hot-air-balloon-sunrise",
+                    "name": "Hot Air Balloon Sunrise Flight — Romantic Aerial Adventure",
                     "price": "$200 - $300/person",
-                    "desc": "Magical sunrise hot air balloon flight over Utah mountains in fall. Float peacefully with panoramic views, then champagne breakfast. Romantic, unforgettable bucket-list experience.",
+                    "desc": "Magical sunrise balloon flight over Utah mountains with panoramic views, peaceful floating experience, and champagne breakfast. Romantic, unforgettable bucket-list date!",
                     "duration": "3 - 4 hrs",
                     "where": "Various launch sites — Salt Lake City area",
                     "reservation": "required",
                     "link": "https://www.visitutah.com/things-to-do/tours-adventures/"
                 },
                 {
-                    "id": "imaginaria-immersive-art-festival-fall",
-                    "name": "Imaginaria Festival — Immersive Interactive Art",
+                    "id": "imaginaria-immersive-art",
+                    "name": "Imaginaria Festival — Immersive Interactive Art Installation",
                     "price": "$25 - $40",
-                    "desc": "Immersive festival with 50-acre Ashton Gardens transformed into art installations, play zones, and themed experiences. Creative, unique, interactive fun for adventurous couples.",
+                    "desc": "50-acre Ashton Gardens transformed into creative art installations, play zones, and themed experiences. Unique, interactive, perfect for adventurous artistic couples.",
                     "duration": "3 - 4 hrs",
                     "where": "Ashton Gardens at Thanksgiving Point — Lehi, UT 84062",
                     "reservation": "recommended",
                     "link": "https://thanksgivingpoint.org/imaginaria/"
+                },
+                {
+                    "id": "scarecrow-festival-thanksgiving-point",
+                    "name": "Scarecrow Festival at Thanksgiving Point — Fall Celebration",
+                    "price": "$12 - $20",
+                    "desc": "50 acres of Ashton Gardens with imaginative scarecrows, carved pumpkins, seasonal displays, and family fun. Peak fall colors, creative artistry, beautiful outdoor experience.",
+                    "duration": "2 - 3 hrs",
+                    "where": "Ashton Gardens at Thanksgiving Point — Lehi, UT 84062",
+                    "reservation": "recommended",
+                    "link": "https://thanksgivingpoint.org/scarecrow-festival/"
                 }
             ]
         }
