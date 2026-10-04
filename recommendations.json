@@ -1,6 +1,6 @@
 {
-    "dateRange": "September 27 - October 10, 2026",
-    "updated": "September 27, 2026",
+    "dateRange": "October 4 - October 18, 2026",
+    "updated": "October 4, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
@@ -116,7 +116,19 @@
         "wiseguys-comedy-laughs",
         "hot-air-balloon-sunrise",
         "imaginaria-immersive-art",
-        "scarecrow-festival-thanksgiving-point"
+        "scarecrow-festival-thanksgiving-point",
+        "zorro-opera-oct12",
+        "jazz-spurs-preseason-oct12",
+        "zorro-opera-oct14",
+        "bootanical-red-butte-oct15",
+        "sundance-halloween-lift-oct15",
+        "zorro-opera-oct16",
+        "blueys-big-play-oct16",
+        "world-climbing-series-oct16",
+        "blueys-big-play-sat-oct17",
+        "scarecrow-festival-sat-oct17",
+        "zorro-opera-oct18",
+        "blueys-big-play-sun-oct18"
     ],
     "scheduled": [
         {
@@ -321,6 +333,169 @@
                     "where": "Natural History Museum of Utah — 301 S 1300 E, Salt Lake City, UT 84112",
                     "reservation": "none",
                     "link": "https://nhmu.utah.edu/events"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-12",
+            "dates": [
+                {
+                    "id": "zorro-opera-oct12",
+                    "name": "Héctor Armienta's Zorro — Utah Opera (MONDAY NIGHT)",
+                    "price": "$45 - $275/ticket",
+                    "desc": "Dashing action, romance, and brilliant orchestration! Utah Opera's spectacular production brings the legendary masked hero to life. Stunning staging, incredible singers, and pure theatrical magic. Perfect for theater lovers like you!",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs (with intermission)",
+                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 S, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://utahopera.org/zorro"
+                },
+                {
+                    "id": "jazz-spurs-preseason-oct12",
+                    "name": "Utah Jazz vs San Antonio Spurs — Preseason Basketball (MONDAY NIGHT ALT)",
+                    "price": "$25 - $65/ticket",
+                    "desc": "You LOVED the Jazz game (4 stars)! Preseason action at Delta Center with exciting NBA basketball. Perfect alternative if you want fast-paced sports energy instead of opera.",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-14",
+            "dates": [
+                {
+                    "id": "zorro-opera-oct14",
+                    "name": "Héctor Armienta's Zorro — Utah Opera (WEDNESDAY EVENING)",
+                    "price": "$45 - $275/ticket",
+                    "desc": "Mid-week opera magic! Beautiful orchestration, exceptional singers, and the timeless legend of Zorro. Wednesday evening cultural escape perfect for theater-loving couples.",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 S, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://utahopera.org/zorro"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-15",
+            "dates": [
+                {
+                    "id": "bootanical-red-butte-oct15",
+                    "name": "BOOtanical Garden After Dark — Red Butte Garden (THURSDAY NIGHT)",
+                    "price": "$15 - $20 (weeknight ticket)",
+                    "desc": "Halloween magic in the gardens! Experience Red Butte Garden transformed with spooky decorations, twinkling lights, and seasonal ambiance. Perfect autumn evening date with beautiful fall colors and festive vibes.",
+                    "start": "6:00 PM - 8:00 PM (timed entry)",
+                    "duration": "1.5 - 2.5 hrs",
+                    "where": "Red Butte Garden & Arboretum — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/events/garden-after-dark/"
+                },
+                {
+                    "id": "sundance-halloween-lift-oct15",
+                    "name": "Sundance Halloween Lift Rides — Mountain Adventure (THURSDAY)",
+                    "price": "$20 - $35 (lift ticket) + dining",
+                    "desc": "Scenic chairlift rides through autumn foliage with Halloween-themed ambiance. Beautiful evening exploring Sundance mountain with crisp fall air and seasonal decorations. Great alternative to garden experience.",
+                    "start": "10:00 AM - 4:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Sundance Resort — 8841 Alpine Loop Rd, Sundance, UT 84604",
+                    "reservation": "none",
+                    "link": "https://www.sundanceresort.com/activities/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-16",
+            "dates": [
+                {
+                    "id": "zorro-opera-oct16",
+                    "name": "Héctor Armienta's Zorro — Utah Opera (FRIDAY NIGHT)",
+                    "price": "$60 - $275/ticket",
+                    "desc": "FRIDAY NIGHT OPERA! Thrilling romance, elaborate staging, and world-class singers. Dashing swordplay and passionate storytelling. Premium date night for theater lovers. Peak Friday experience!",
+                    "start": "7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 S, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://utahopera.org/zorro"
+                },
+                {
+                    "id": "blueys-big-play-oct16",
+                    "name": "Bluey's Big Play — Family Theater Magic (FRIDAY OPTIONS)",
+                    "price": "$67 - $89/ticket",
+                    "desc": "Emmy-winning show brought to life with brilliantly crafted puppets! Fun, engaging storytelling perfect for couples who love theatrical experiences. Multiple showtimes available Friday.",
+                    "start": "6:00 PM, 11:00 AM Saturday options",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "George S. and Dolores Dore Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.live-at-the-eccles.com"
+                },
+                {
+                    "id": "world-climbing-series-oct16",
+                    "name": "World Climbing Series Boulder Competition — USA vs World (FRIDAY START)",
+                    "price": "$40 - $65/ticket (use code VISITSL15 for 15% off)",
+                    "desc": "Watch elite international climbers compete on massive walls at Smith's Ballpark. Thrilling competition, amazing athleticism, unique spectator experience. Perfect for sports-loving couples seeking something different!",
+                    "start": "10:00 AM (various sessions)",
+                    "duration": "3 - 4 hrs per session",
+                    "where": "Smith's Ballpark — 1614 S 700 W, Salt Lake City, UT 84115",
+                    "reservation": "recommended",
+                    "link": "https://www.eventbrite.com/e/world-climbing-series-salt-lake-city-2026-tickets",
+                    "endDate": "2026-10-18"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-17",
+            "dates": [
+                {
+                    "id": "blueys-big-play-sat-oct17",
+                    "name": "Bluey's Big Play — Puppet Theater Performances (SATURDAY MULTIPLE TIMES)",
+                    "price": "$68 - $70/ticket",
+                    "desc": "Saturday family theater magic! Multiple showtimes (11 AM, 2 PM, 5 PM) let you choose your preferred time. Brilliantly crafted puppets, engaging storytelling, and fun for everyone.",
+                    "start": "11:00 AM, 2:00 PM, 5:00 PM",
+                    "duration": "1.5 - 2 hrs each",
+                    "where": "George S. and Dolores Dore Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.live-at-the-eccles.com"
+                },
+                {
+                    "id": "scarecrow-festival-sat-oct17",
+                    "name": "Scarecrow Festival at Thanksgiving Point (SATURDAY ADVENTURE)",
+                    "price": "$12 - $20 admission",
+                    "desc": "Peak fall colors! Explore 50 acres of Ashton Gardens transformed with imaginative scarecrows, carved pumpkins, and seasonal displays. Beautiful outdoor autumn experience like your love of nature! Food vendors and local artisans.",
+                    "start": "9:00 AM - 8:00 PM",
+                    "duration": "2 - 4 hrs",
+                    "where": "Ashton Gardens at Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
+                    "reservation": "recommended",
+                    "link": "https://thanksgivingpoint.org/scarecrow-festival/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-18",
+            "dates": [
+                {
+                    "id": "zorro-opera-oct18",
+                    "name": "Héctor Armienta's Zorro — Utah Opera (SUNDAY MATINEE)",
+                    "price": "$45 - $275/ticket",
+                    "desc": "Sunday afternoon opera! Beautiful matinee performance with legendary swordplay, romance, and spectacular staging. Perfect for a relaxed Sunday cultural experience.",
+                    "start": "2:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 S, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://utahopera.org/zorro"
+                },
+                {
+                    "id": "blueys-big-play-sun-oct18",
+                    "name": "Bluey's Big Play — Sunday Matinee Performance (SUNDAY ALT)",
+                    "price": "$67/ticket",
+                    "desc": "Sunday family theater fun! Perfect afternoon entertainment with puppet magic and engaging storytelling. Great alternative to opera if you want lighter theatrical experience.",
+                    "start": "1:00 PM",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "George S. and Dolores Dore Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.live-at-the-eccles.com"
                 }
             ]
         }
