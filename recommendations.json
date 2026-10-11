@@ -1,6 +1,6 @@
 {
-    "dateRange": "October 4 - October 18, 2026",
-    "updated": "October 4, 2026",
+    "dateRange": "October 25 - November 7, 2026",
+    "updated": "October 11, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
@@ -128,137 +128,187 @@
         "blueys-big-play-sat-oct17",
         "scarecrow-festival-sat-oct17",
         "zorro-opera-oct18",
-        "blueys-big-play-sun-oct18"
+        "blueys-big-play-sun-oct18",
+        "jazz-lakers-friday-oct25",
+        "log-haven-fine-dining-oct25",
+        "jazz-grizzlies-saturday-oct26",
+        "350-main-park-city-saturday",
+        "utah-hockey-mammoth-oct27",
+        "leonid-friends-eccles-oct28",
+        "jazz-spurs-oct28",
+        "smashing-pumpkins-delta-oct29",
+        "red-butte-bootanical-oct30",
+        "log-haven-dinner-oct30",
+        "cornbellys-frightbellys-halloween",
+        "cornbelly-maze-halloween",
+        "don-omar-concert-nov1",
+        "grappa-park-city-nov1",
+        "mon-laferte-eccles-nov3",
+        "outlander-orchestra-nov5",
+        "l7-concert-nov7",
+        "the-roof-slc-nov7"
     ],
     "scheduled": [
         {
-            "date": "2026-09-27",
+            "date": "2026-10-25",
             "dates": [
                 {
-                    "id": "ghostbusters-concert-sep27",
-                    "name": "Ghostbusters in Concert — Film with Live Orchestra (SUNDAY NIGHT)",
-                    "price": "$40 - $65/ticket",
-                    "desc": "Classic 1984 film on HD cinema screen fully synced with live orchestra performing Academy Award-winning composer Elmer Bernstein's score. Unique experience perfect for movie lovers—nostalgic, musical, magical night at the theater!",
-                    "start": "6:30 PM (doors 5:00 PM)",
+                    "id": "jazz-lakers-friday-oct25",
+                    "name": "Utah Jazz vs Los Angeles Lakers — Friday Night Basketball (SEASON OPENER WEEKEND)",
+                    "price": "$35 - $85/ticket",
+                    "desc": "You LOVED the Jazz game (4 stars)! Kick off the weekend with fast-paced NBA basketball. Lakers matchup brings exciting energy, great crowd, perfect Friday night date. Regular season begins!",
+                    "start": "7:00 PM",
                     "duration": "2.5 - 3 hrs",
-                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
                     "reservation": "recommended",
-                    "link": "https://www.live-at-the-eccles.com/events/ghostbusters-in-concert"
+                    "link": "https://www.utahjazz.com/schedule"
                 },
                 {
-                    "id": "park-silly-sunday-market-sep27",
-                    "name": "Park Silly Sunday Market — Local Artisans & Good Vibes",
-                    "price": "Free to browse (shopping/food extra)",
-                    "desc": "Community market on Historic Main Street with local artisans, crafts, food vendors, and live music. Casual Sunday stroll through Park City's vibrant scene. Great for exploring local talent and enjoying fall weather.",
-                    "start": "10:00 AM - 4:00 PM",
-                    "duration": "1.5 - 3 hrs",
-                    "where": "Historic Main Street — Park City, UT 84060",
-                    "reservation": "none",
-                    "link": "https://www.visitparkcity.com/events/"
+                    "id": "log-haven-fine-dining-oct25",
+                    "name": "Log Haven — Mountain Fine Dining Experience (FRIDAY ALTERNATIVE)",
+                    "price": "$120 - $180 for two",
+                    "desc": "Sophisticated alpine fine dining 4 miles up scenic Millcreek Canyon. Exceptional seasonal menu, cool mountain air, romantic ambiance. Perfect upscale Friday dinner escape with nature as backdrop.",
+                    "start": "6:00 PM or 8:00 PM",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Log Haven — 6451 Mill Canyon Rd, Salt Lake City, UT 84121",
+                    "reservation": "required",
+                    "link": "https://www.log-haven.com/"
                 }
             ]
         },
         {
-            "date": "2026-09-29",
+            "date": "2026-10-26",
             "dates": [
                 {
-                    "id": "chance-rapper-concert-sep29",
-                    "name": "Chance The Rapper — Live Concert (TUESDAY NIGHT)",
-                    "price": "$50 - $100/ticket",
-                    "desc": "Grammy Award-winning artist in intimate concert setting. Smooth hip-hop beats, great energy, fun crowd. Perfect for music lovers seeking a Tuesday night out with an energetic vibe.",
+                    "id": "jazz-grizzlies-saturday-oct26",
+                    "name": "Utah Jazz vs Memphis Grizzlies — Saturday Afternoon Basketball",
+                    "price": "$30 - $75/ticket",
+                    "desc": "Back-to-back basketball! You loved the Jazz game (4 stars). Saturday afternoon matchup with Grizzlies brings high-energy play and great crowd atmosphere. Perfect for sports couples!",
+                    "start": "1:00 PM or 3:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                },
+                {
+                    "id": "350-main-park-city-saturday",
+                    "name": "350 Main — Park City New American Brasserie (SATURDAY OPTION)",
+                    "price": "$100 - $160 for two",
+                    "desc": "Refined globally-influenced New American cuisine in elegant Park City setting. Signature cocktails, impressive wine selection, sophisticated yet relaxed Saturday dinner atmosphere.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "350 Main — 350 Main St, Park City, UT 84060",
+                    "reservation": "required",
+                    "link": "https://350main.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-27",
+            "dates": [
+                {
+                    "id": "utah-hockey-mammoth-oct27",
+                    "name": "Utah Mammoth Hockey Club vs Minnesota Wild — SUNDAY NIGHT HOCKEY (YOU LOVED THIS!)",
+                    "price": "$40 - $80/ticket",
+                    "desc": "You LOVED the Grizzlies hockey (5 stars)! Fast-paced, thrilling hockey action with passionate fans. New NHL team in Utah — historic moment! Energetic atmosphere, incredible plays, unforgettable date experience.",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahhockeyclub.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-28",
+            "dates": [
+                {
+                    "id": "leonid-friends-eccles-oct28",
+                    "name": "Leonid & Friends — Tribute to Chicago in Concert (MONDAY NIGHT AT ECCLES)",
+                    "price": "$45 - $75/ticket",
+                    "desc": "Brilliant live tribute to the legendary band Chicago! All the hits with authentic orchestration and horn section. Perfect evening of great music for couples who love live concerts and classic rock energy.",
+                    "start": "7:00 PM (doors 6:00 PM)",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.saltlakecountyarts.org/events/"
+                },
+                {
+                    "id": "jazz-spurs-oct28",
+                    "name": "Utah Jazz vs San Antonio Spurs — Monday Night Basketball (ALTERNATIVE)",
+                    "price": "$30 - $70/ticket",
+                    "desc": "You loved the Jazz game (4 stars)! Monday night basketball with competitive matchup. Great energy, exciting plays, perfect alternative if you want sports over live music.",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-29",
+            "dates": [
+                {
+                    "id": "smashing-pumpkins-delta-oct29",
+                    "name": "The Smashing Pumpkins — Rock Concert SPECTACULAR (TUESDAY NIGHT - MAJOR EVENT)",
+                    "price": "$65 - $120/ticket",
+                    "desc": "MAJOR CONCERT EVENT! Iconic rock band performing their greatest hits live. Incredible light show, passionate crowd, unforgettable energy. Perfect for music lovers and couples seeking an electric night out!",
                     "start": "8:00 PM",
                     "duration": "2 - 2.5 hrs",
-                    "where": "The Union — Salt Lake City, UT 84101",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
                     "reservation": "recommended",
-                    "link": "https://www.theunionslc.com/"
+                    "link": "https://www.thedeltacenter.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-30",
+            "dates": [
+                {
+                    "id": "red-butte-bootanical-oct30",
+                    "name": "BOOtanical Garden After Dark — Red Butte Garden FINAL NIGHT (WEDNESDAY)",
+                    "price": "$18 - $22 (weeknight ticket)",
+                    "desc": "LAST NIGHT of Halloween magic! Experience Red Butte Garden transformed with spooky decorations, glowing lights, and seasonal ambiance. Beautiful evening with fall colors, festive vibes, and intimate atmosphere.",
+                    "start": "6:00 PM - 8:00 PM (timed entry)",
+                    "duration": "1.5 - 2.5 hrs",
+                    "where": "Red Butte Garden & Arboretum — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/events/garden-after-dark/"
                 },
                 {
-                    "id": "harry-potter-cursed-child-sep29",
-                    "name": "Harry Potter and The Cursed Child — Broadway Magic (OPEN NOW THROUGH OCT 11)",
-                    "price": "$75 - $150/ticket",
-                    "desc": "You LOVED Phantom of the Opera (5 stars)! Harry Potter and The Cursed Child is a record-breaking theatrical masterpiece with magical storytelling, stunning stagecraft, and spellbinding performances. Perfect for theater lovers. Multiple showtimes available!",
-                    "start": "7:00 PM (varies by day)",
-                    "duration": "3.5 - 4 hrs (with intermission)",
-                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "id": "log-haven-dinner-oct30",
+                    "name": "The Tree Room at Sundance — Alpine Fine Dining (WEDNESDAY OPTION)",
+                    "price": "$100 - $180 for two",
+                    "desc": "Elevated American cuisine with stunning mountain views. Seasonal ingredients, exceptional service, romantic forest setting near picturesque Sundance Resort.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
                     "reservation": "required",
-                    "link": "https://www.live-at-the-eccles.com"
+                    "link": "https://www.sundanceresort.com/dining/"
                 }
             ]
         },
         {
-            "date": "2026-10-01",
+            "date": "2026-10-31",
             "dates": [
                 {
-                    "id": "park-city-wine-festival-thursday-oct1",
-                    "name": "Park City Wine Festival — Opening Night Wine Dinners (THURSDAY)",
-                    "price": "$100 - $200+ per person (varies by dinner)",
-                    "desc": "Kick off the 7th Annual Park City Wine Festival with opening night wine dinners at premier Park City restaurants. Paired wine experiences with gourmet cuisine. Perfect for sophisticated couples seeking culinary excellence.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3.5 hrs",
-                    "where": "Various Park City restaurants (Riverhorse On Main, Le Depot Brasserie, Butcher's Chop House & Bar, LOMA)",
-                    "reservation": "required",
-                    "link": "https://parkcitywinefest.com/"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-02",
-            "dates": [
-                {
-                    "id": "park-city-wine-fest-grand-tasting-oct2",
-                    "name": "Park City Wine Festival — Grand Tasting (FRIDAY AFTERNOON)",
-                    "price": "$100 - $125/ticket",
-                    "desc": "Largest wine tasting of the festival! Sample 250+ wines from West Coast to France with expert sommelier guidance. 80+ wineries represented. Perfect Friday date with wine education, tastings, and new favorites to discover.",
-                    "start": "12:00 PM (various sessions)",
-                    "duration": "3 - 4 hrs",
-                    "where": "Canyons Village Plaza — Park City, UT 84060",
-                    "reservation": "recommended",
-                    "link": "https://parkcitywinefest.com/"
-                },
-                {
-                    "id": "fall-festival-saratoga-oct2",
-                    "name": "Fall Festival — Saratoga Springs Community Celebration (FRIDAY)",
-                    "price": "Free",
-                    "desc": "Community fall festival with family-friendly activities, food vendors, live music, and autumn celebrations. Casual Friday afternoon exploring local community. Great alternative for a more relaxed vibe.",
-                    "start": "4:00 PM - 8:00 PM",
-                    "duration": "2 - 3 hrs",
-                    "where": "Shay Park — Saratoga Springs, UT (near Lehi, 20 min)",
-                    "reservation": "none",
-                    "link": "https://www.visitsaltlake.com/events/"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-03",
-            "dates": [
-                {
-                    "id": "wine-fest-grand-tasting-saturday-oct3",
-                    "name": "Park City Wine Festival — Grand Tasting Saturday (SATURDAY AFTERNOON)",
-                    "price": "$100 - $125/ticket",
-                    "desc": "Final day of Grand Tasting at Park City Wine Festival! Sample 250+ wines, discover new favorites, enjoy expert sommelier guidance. Peak Saturday experience with beautiful October weather and wine culture.",
-                    "start": "12:00 PM (various sessions)",
-                    "duration": "3 - 4 hrs",
-                    "where": "Canyons Village Plaza — Park City, UT 84060",
-                    "reservation": "recommended",
-                    "link": "https://parkcitywinefest.com/"
-                },
-                {
-                    "id": "electric-park-thanksgiving-point-oct3",
-                    "name": "Electric Park — Thanksgiving Point Free Evening Fun (SATURDAY NIGHT)",
-                    "price": "Free admission, $10 - $20 for activities/parking",
-                    "desc": "Free Halloween festivities at Thanksgiving Point with free trick-or-treating, free live music, free balloon magic shows, and seasonal activities. Festive, fun, low-pressure Saturday evening with great entertainment.",
-                    "start": "5:00 PM - 9:00 PM",
-                    "duration": "2 - 3 hrs",
+                    "id": "cornbellys-frightbellys-halloween",
+                    "name": "Frightbelly's Haunted Trail — Halloween Night at Thanksgiving Point (HALLOWEEN!)",
+                    "price": "$20 - $30/ticket",
+                    "desc": "HALLOWEEN ADVENTURE! Thanksgiving Point's Frightbelly's 30-minute haunted trail with 23 creative scenes, perfect Halloween date. Spooky thrills, creative scares, seasonal fun, festive atmosphere.",
+                    "start": "5:00 PM - 10:00 PM",
+                    "duration": "2 - 2.5 hrs",
                     "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
-                    "reservation": "none",
-                    "link": "https://thanksgivingpoint.org/"
+                    "reservation": "recommended",
+                    "link": "https://thanksgivingpoint.org/cornbellys/"
                 },
                 {
-                    "id": "cornbellys-frightbellys-oct-ongoing",
-                    "name": "Cornbelly's & Frightbelly's — Corn Maze & Haunted Trail (OCT 3-31)",
-                    "price": "$15 - $25 (corn maze), $18 - $28 (haunted trail)",
-                    "desc": "Thanksgiving Point's seasonal Halloween attraction with 10-acre corn maze, hayrides, campfires, and Frightbelly's 30-minute haunted trail with 23 scenes. Fun couples' date with spooky thrills and cozy autumn vibes.",
-                    "start": "5:00 PM - 10:00 PM (hours vary)",
+                    "id": "cornbelly-maze-halloween",
+                    "name": "Cornbelly's Corn Maze — 10-Acre Maze & Hayrides (HALLOWEEN OPTION)",
+                    "price": "$18 - $25/ticket",
+                    "desc": "Fun alternative or addition to haunted trail! 10-acre corn maze, hayrides, campfires, and autumn activities. Perfect couples' date combining exploration and seasonal fun.",
+                    "start": "5:00 PM - 10:00 PM",
                     "duration": "2 - 3 hrs",
                     "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
                     "reservation": "recommended",
@@ -267,235 +317,88 @@
             ]
         },
         {
-            "date": "2026-10-06",
+            "date": "2026-11-01",
             "dates": [
                 {
-                    "id": "jazz-preseason-denver-oct6",
-                    "name": "Utah Jazz vs Denver Nuggets — Preseason Basketball (TUESDAY NIGHT)",
-                    "price": "$25 - $75/ticket",
-                    "desc": "You LOVED the Jazz game (4 stars)! Preseason action at Delta Center with fast-paced NBA basketball. Great crowd energy, exciting plays, perfect date night for sports fans. Tuesday evening out!",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-09",
-            "dates": [
-                {
-                    "id": "cecret-lake-fall-hike-oct9",
-                    "name": "Cecret Lake — Alpine Aspen Fall Hike (FRIDAY)",
-                    "price": "Free",
-                    "desc": "Stunning 1.8-mile hike to pristine mountain lake surrounded by vibrant golden and red aspens at peak colors. Moderate difficulty, accessible, and absolutely gorgeous. Perfect for your love of exploration—like Rockport Reservoir!",
-                    "start": "9:00 AM",
+                    "id": "don-omar-concert-nov1",
+                    "name": "Don Omar — Live Concert (FRIDAY NIGHT - REGGAETON PARTY)",
+                    "price": "$55 - $95/ticket",
+                    "desc": "High-energy reggaeton concert with Latin music, dancing, and infectious rhythms. Great crowd energy, fun atmosphere, perfect Friday night for couples who love music and dancing!",
+                    "start": "8:00 PM",
                     "duration": "2 - 2.5 hrs",
-                    "where": "Cecret Lake Trailhead — Alta, UT (40 min from SLC)",
-                    "reservation": "none",
-                    "link": "https://www.alltrails.com/trail/us/utah/cecret-lake"
-                },
-                {
-                    "id": "stewarts-falls-hike-friday-oct9",
-                    "name": "Stewart Falls — Waterfall Hike with Fall Colors (FRIDAY OPTION)",
-                    "price": "Free",
-                    "desc": "Beautiful 3.8-mile moderate waterfall hike from Sundance with stunning fall foliage. Alpine stream, towering pines, and golden aspens. Perfect Friday adventure near Sundance Resort. You love outdoor exploration!",
-                    "start": "9:00 AM",
-                    "duration": "2.5 - 3.5 hrs",
-                    "where": "Stewart Falls Trailhead — Sundance, UT (45 min from SLC)",
-                    "reservation": "none",
-                    "link": "https://www.alltrails.com/trail/us/utah/stewart-falls"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-10",
-            "dates": [
-                {
-                    "id": "kansas-utes-football-oct10",
-                    "name": "Kansas Jayhawks vs Utah Utes — College Football (SATURDAY)",
-                    "price": "$30 - $80/ticket",
-                    "desc": "Exciting college football game at Rice–Eccles Stadium! You loved sports (Jazz 4 stars, Hockey 5 stars). Great Saturday crowd energy, spirited atmosphere, and Utes fans. Classic college game experience!",
-                    "start": "1:00 PM or 4:00 PM (times TBD)",
-                    "duration": "3 - 3.5 hrs",
-                    "where": "Rice–Eccles Stadium — Salt Lake City, UT 84112",
-                    "reservation": "recommended",
-                    "link": "https://www.mgo.com/teams/utah-utes/"
-                },
-                {
-                    "id": "indigenous-art-market-oct10-12",
-                    "name": "Indigenous Art Market — Native American Artists Showcase (OCT 10-12)",
-                    "price": "$10 - $15 (museum entry) or Free with admission",
-                    "desc": "Natural History Museum hosts showcase of top Native American artists and craftspeople. Three-day event featuring authentic art, jewelry, textiles, and cultural stories. Educational, beautiful, and supports indigenous communities. Perfect cultural date.",
-                    "start": "10:00 AM - 5:00 PM",
-                    "duration": "2 - 4 hrs",
-                    "where": "Natural History Museum of Utah — 301 S 1300 E, Salt Lake City, UT 84112",
-                    "reservation": "none",
-                    "link": "https://nhmu.utah.edu/events"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-12",
-            "dates": [
-                {
-                    "id": "zorro-opera-oct12",
-                    "name": "Héctor Armienta's Zorro — Utah Opera (MONDAY NIGHT)",
-                    "price": "$45 - $275/ticket",
-                    "desc": "Dashing action, romance, and brilliant orchestration! Utah Opera's spectacular production brings the legendary masked hero to life. Stunning staging, incredible singers, and pure theatrical magic. Perfect for theater lovers like you!",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs (with intermission)",
-                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 S, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://utahopera.org/zorro"
-                },
-                {
-                    "id": "jazz-spurs-preseason-oct12",
-                    "name": "Utah Jazz vs San Antonio Spurs — Preseason Basketball (MONDAY NIGHT ALT)",
-                    "price": "$25 - $65/ticket",
-                    "desc": "You LOVED the Jazz game (4 stars)! Preseason action at Delta Center with exciting NBA basketball. Perfect alternative if you want fast-paced sports energy instead of opera.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs",
                     "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
                     "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-14",
-            "dates": [
-                {
-                    "id": "zorro-opera-oct14",
-                    "name": "Héctor Armienta's Zorro — Utah Opera (WEDNESDAY EVENING)",
-                    "price": "$45 - $275/ticket",
-                    "desc": "Mid-week opera magic! Beautiful orchestration, exceptional singers, and the timeless legend of Zorro. Wednesday evening cultural escape perfect for theater-loving couples.",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 S, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://utahopera.org/zorro"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-15",
-            "dates": [
-                {
-                    "id": "bootanical-red-butte-oct15",
-                    "name": "BOOtanical Garden After Dark — Red Butte Garden (THURSDAY NIGHT)",
-                    "price": "$15 - $20 (weeknight ticket)",
-                    "desc": "Halloween magic in the gardens! Experience Red Butte Garden transformed with spooky decorations, twinkling lights, and seasonal ambiance. Perfect autumn evening date with beautiful fall colors and festive vibes.",
-                    "start": "6:00 PM - 8:00 PM (timed entry)",
-                    "duration": "1.5 - 2.5 hrs",
-                    "where": "Red Butte Garden & Arboretum — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/events/garden-after-dark/"
+                    "link": "https://www.thedeltacenter.com/"
                 },
                 {
-                    "id": "sundance-halloween-lift-oct15",
-                    "name": "Sundance Halloween Lift Rides — Mountain Adventure (THURSDAY)",
-                    "price": "$20 - $35 (lift ticket) + dining",
-                    "desc": "Scenic chairlift rides through autumn foliage with Halloween-themed ambiance. Beautiful evening exploring Sundance mountain with crisp fall air and seasonal decorations. Great alternative to garden experience.",
-                    "start": "10:00 AM - 4:00 PM",
-                    "duration": "2 - 3 hrs",
-                    "where": "Sundance Resort — 8841 Alpine Loop Rd, Sundance, UT 84604",
-                    "reservation": "none",
-                    "link": "https://www.sundanceresort.com/activities/"
+                    "id": "grappa-park-city-nov1",
+                    "name": "Grappa — Park City Italian Fine Dining (FRIDAY OPTION)",
+                    "price": "$90 - $150 for two",
+                    "desc": "Charming Italian restaurant with excellent handmade pasta, curated wine selection, and romantic Main Street ambiance. European charm with Utah hospitality for a refined Friday dinner.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Grappa — Historic Main Street, Park City, UT 84060",
+                    "reservation": "required",
+                    "link": "https://www.grappapark.com/"
                 }
             ]
         },
         {
-            "date": "2026-10-16",
+            "date": "2026-11-03",
             "dates": [
                 {
-                    "id": "zorro-opera-oct16",
-                    "name": "Héctor Armienta's Zorro — Utah Opera (FRIDAY NIGHT)",
-                    "price": "$60 - $275/ticket",
-                    "desc": "FRIDAY NIGHT OPERA! Thrilling romance, elaborate staging, and world-class singers. Dashing swordplay and passionate storytelling. Premium date night for theater lovers. Peak Friday experience!",
+                    "id": "mon-laferte-eccles-nov3",
+                    "name": "Mon Laferte — Femme Fatale Tour at Eccles Theater (TUESDAY NIGHT)",
+                    "price": "$50 - $85/ticket",
+                    "desc": "Dynamic Latin American music artist delivering passionate performances! High energy, beautiful vocals, and engaging stage presence. Perfect for music lovers seeking an exciting cultural concert experience.",
+                    "start": "8:00 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.saltlakecountyarts.org/events/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-05",
+            "dates": [
+                {
+                    "id": "outlander-orchestra-nov5",
+                    "name": "Outlander in Concert — Live Orchestra Performing Bear McCreary's Score (THURSDAY - MUST SEE!)",
+                    "price": "$50 - $85/ticket",
+                    "desc": "YOU LOVED PHANTOM OF THE OPERA (5 STARS)! Outlander in Concert features LIVE ORCHESTRA performing the Emmy Award-winning composer's epic score WHILE the show plays on screen. Orchestral magnificence, emotional storytelling, pure theatrical magic!",
                     "start": "7:30 PM",
                     "duration": "2.5 - 3 hrs",
-                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 S, Salt Lake City, UT 84101",
+                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
                     "reservation": "required",
-                    "link": "https://utahopera.org/zorro"
-                },
-                {
-                    "id": "blueys-big-play-oct16",
-                    "name": "Bluey's Big Play — Family Theater Magic (FRIDAY OPTIONS)",
-                    "price": "$67 - $89/ticket",
-                    "desc": "Emmy-winning show brought to life with brilliantly crafted puppets! Fun, engaging storytelling perfect for couples who love theatrical experiences. Multiple showtimes available Friday.",
-                    "start": "6:00 PM, 11:00 AM Saturday options",
-                    "duration": "1.5 - 2 hrs",
-                    "where": "George S. and Dolores Dore Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://www.live-at-the-eccles.com"
-                },
-                {
-                    "id": "world-climbing-series-oct16",
-                    "name": "World Climbing Series Boulder Competition — USA vs World (FRIDAY START)",
-                    "price": "$40 - $65/ticket (use code VISITSL15 for 15% off)",
-                    "desc": "Watch elite international climbers compete on massive walls at Smith's Ballpark. Thrilling competition, amazing athleticism, unique spectator experience. Perfect for sports-loving couples seeking something different!",
-                    "start": "10:00 AM (various sessions)",
-                    "duration": "3 - 4 hrs per session",
-                    "where": "Smith's Ballpark — 1614 S 700 W, Salt Lake City, UT 84115",
-                    "reservation": "recommended",
-                    "link": "https://www.eventbrite.com/e/world-climbing-series-salt-lake-city-2026-tickets",
-                    "endDate": "2026-10-18"
+                    "link": "https://www.saltlakecountyarts.org/events/"
                 }
             ]
         },
         {
-            "date": "2026-10-17",
+            "date": "2026-11-07",
             "dates": [
                 {
-                    "id": "blueys-big-play-sat-oct17",
-                    "name": "Bluey's Big Play — Puppet Theater Performances (SATURDAY MULTIPLE TIMES)",
-                    "price": "$68 - $70/ticket",
-                    "desc": "Saturday family theater magic! Multiple showtimes (11 AM, 2 PM, 5 PM) let you choose your preferred time. Brilliantly crafted puppets, engaging storytelling, and fun for everyone.",
-                    "start": "11:00 AM, 2:00 PM, 5:00 PM",
-                    "duration": "1.5 - 2 hrs each",
-                    "where": "George S. and Dolores Dore Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://www.live-at-the-eccles.com"
+                    "id": "l7-concert-nov7",
+                    "name": "L7 — Legendary Rock Band Live (SATURDAY - FINAL WEEKEND)",
+                    "price": "$40 - $65/ticket",
+                    "desc": "Classic 90s rock band L7 delivers authentic rock energy! Great crowd, iconic hits, perfect for couples who love live rock music. Energetic, fun Saturday night to close out the date window.",
+                    "start": "8:00 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "The Urban Lounge — Salt Lake City, UT",
+                    "reservation": "recommended",
+                    "link": "https://www.theurbanloungeslc.com/"
                 },
                 {
-                    "id": "scarecrow-festival-sat-oct17",
-                    "name": "Scarecrow Festival at Thanksgiving Point (SATURDAY ADVENTURE)",
-                    "price": "$12 - $20 admission",
-                    "desc": "Peak fall colors! Explore 50 acres of Ashton Gardens transformed with imaginative scarecrows, carved pumpkins, and seasonal displays. Beautiful outdoor autumn experience like your love of nature! Food vendors and local artisans.",
-                    "start": "9:00 AM - 8:00 PM",
-                    "duration": "2 - 4 hrs",
-                    "where": "Ashton Gardens at Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
-                    "reservation": "recommended",
-                    "link": "https://thanksgivingpoint.org/scarecrow-festival/"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-18",
-            "dates": [
-                {
-                    "id": "zorro-opera-oct18",
-                    "name": "Héctor Armienta's Zorro — Utah Opera (SUNDAY MATINEE)",
-                    "price": "$45 - $275/ticket",
-                    "desc": "Sunday afternoon opera! Beautiful matinee performance with legendary swordplay, romance, and spectacular staging. Perfect for a relaxed Sunday cultural experience.",
-                    "start": "2:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 S, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://utahopera.org/zorro"
-                },
-                {
-                    "id": "blueys-big-play-sun-oct18",
-                    "name": "Bluey's Big Play — Sunday Matinee Performance (SUNDAY ALT)",
-                    "price": "$67/ticket",
-                    "desc": "Sunday family theater fun! Perfect afternoon entertainment with puppet magic and engaging storytelling. Great alternative to opera if you want lighter theatrical experience.",
-                    "start": "1:00 PM",
-                    "duration": "1.5 - 2 hrs",
-                    "where": "George S. and Dolores Dore Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "id": "the-roof-slc-nov7",
+                    "name": "The Roof — Downtown SLC Rooftop Dining (SATURDAY OPTION)",
+                    "price": "$80 - $140 for two",
+                    "desc": "Elevated gourmet cuisine with stunning Temple Square views from rooftop. Modern atmosphere, creative dishes, perfect city vistas for a special Saturday evening.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "The Roof — Downtown Salt Lake City, UT 84101",
                     "reservation": "required",
-                    "link": "https://www.live-at-the-eccles.com"
+                    "link": "https://www.visitsaltlake.com/restaurants/"
                 }
             ]
         }
