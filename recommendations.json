@@ -1,9 +1,19 @@
 {
-    "dateRange": "October 25 - November 7, 2026",
-    "updated": "October 11, 2026",
+    "dateRange": "October 18 - October 31, 2026",
+    "updated": "October 18, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
+        "bootanical-red-butte-oct18",
+        "fine-dining-friday-oct18",
+        "mammoth-penguins-oct19",
+        "sundance-halloween-lift-oct20",
+        "phoebe-bridgers-vivint-oct21",
+        "jazz-pelicans-oct23",
+        "utah-symphony-tchaikovsky-oct23",
+        "umoca-doomsday-disco-oct23",
+        "mammoth-lightning-oct24",
+        "dia-de-los-muertos-thanksgiving-point-oct24",
         "styx-chicago-rock-concert-aug30",
         "gallivan-jazz-free-concert-aug30",
         "labor-day-weekend-sundance-bbq-aug31",
@@ -149,6 +159,195 @@
         "the-roof-slc-nov7"
     ],
     "scheduled": [
+        {
+            "date": "2026-10-18",
+            "dates": [
+                {
+                    "id": "bootanical-red-butte-oct18",
+                    "name": "BOOtanical Garden After Dark — Red Butte Garden (FRIDAY EVENING)",
+                    "price": "$18 - $22 (evening ticket)",
+                    "desc": "Experience Red Butte Garden transformed with glowing autumn displays, illuminated pathways, and Halloween atmosphere. Beautiful fall foliage meets festive nighttime magic. Similar to exploring spaces you love!",
+                    "start": "6:00 PM - 9:00 PM (timed entry)",
+                    "duration": "1.5 - 2.5 hrs",
+                    "where": "Red Butte Garden & Arboretum — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://redbuttegarden.org/events/garden-after-dark/"
+                },
+                {
+                    "id": "fine-dining-friday-oct18",
+                    "name": "Log Haven or The Tree Room — Fine Dining Escape (FRIDAY OPTION)",
+                    "price": "$100 - $180 for two",
+                    "desc": "Sophisticated mountain dining with alpine ambiance. Choose Log Haven in scenic Millcreek Canyon or The Tree Room at Sundance Resort. Both offer exceptional seasonal cuisine and romantic escapes.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Log Haven — 6451 Mill Canyon Rd, Salt Lake City, UT 84121 OR The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
+                    "reservation": "required",
+                    "link": "https://www.log-haven.com/ OR https://www.sundanceresort.com/dining/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-19",
+            "dates": [
+                {
+                    "id": "mammoth-penguins-oct19",
+                    "name": "Utah Mammoth vs Pittsburgh Penguins — SUNDAY NIGHT HOCKEY (YOU LOVE THIS!)",
+                    "price": "$40 - $85/ticket",
+                    "desc": "You LOVED hockey (5 stars)! Utah's NHL team delivers thrilling fast-paced action with passionate crowds. Historic NHL season in Utah! Exciting plays, energetic atmosphere, unforgettable date night.",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahhockeyclub.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-20",
+            "dates": [
+                {
+                    "id": "sundance-halloween-lift-oct20",
+                    "name": "Sundance Halloween Lift Rides — Mountain Alpine Adventure (MONDAY)",
+                    "price": "$22 - $35 (tram ticket) + dining",
+                    "desc": "Scenic aerial tram to Hidden Peak with 11,000 ft alpine views. Cool fall air, stunning Wasatch panoramas, perfect mountain escape. Great for outdoor lovers seeking elevation and fresh air.",
+                    "start": "9:00 AM - 4:00 PM (seasonal)",
+                    "duration": "2 - 3 hrs",
+                    "where": "Sundance Resort — 8841 Alpine Loop Rd, Provo Canyon, UT 84604",
+                    "reservation": "none",
+                    "link": "https://www.sundanceresort.com/"
+                },
+                {
+                    "id": "lower-bells-canyon-hike-oct20",
+                    "name": "Lower Bells Canyon Reservoir — Golden Aspen Hike (MONDAY OPTION)",
+                    "price": "Free",
+                    "desc": "Moderate 4.6-mile roundtrip through vibrant golden aspens and fiery maples leading to scenic alpine reservoir. Stunning fall colors, mountain views, peaceful exploration. Perfect for your love of outdoor adventure!",
+                    "start": "9:00 AM or afternoon",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Lower Bells Canyon Trailhead — Salt Lake City, UT",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/lower-bells-canyon-reservoir"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-21",
+            "dates": [
+                {
+                    "id": "phoebe-bridgers-vivint-oct21",
+                    "name": "Phoebe Bridgers — Live Concert (TUESDAY NIGHT MUSIC)",
+                    "price": "$55 - $95/ticket",
+                    "desc": "Ethereal indie rock artist with emotionally powerful live performances. Beautiful vocals, intimate stage presence, perfect for music lovers seeking an engaging evening of live music.",
+                    "start": "7:30 PM or 8:00 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Vivint Smart Home Arena — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.vivintarena.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-22",
+            "dates": [
+                {
+                    "id": "red-pine-lake-hike-oct22",
+                    "name": "Red Pine Lake — Little Cottonwood Alpine Lake Hike (WEDNESDAY)",
+                    "price": "Free",
+                    "desc": "Beautiful 7.7-mile roundtrip through aspen and pine groves with vibrant fall colors at peak. Alpine lake framed by golden aspens, stunning mountain scenery, and peaceful exploration.",
+                    "start": "8:00 AM - 10:00 AM",
+                    "duration": "3 - 4 hrs",
+                    "where": "Red Pine Lake Trailhead — Little Cottonwood Canyon, Salt Lake City, UT",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/red-pine-lake"
+                },
+                {
+                    "id": "aspen-grove-trail-oct22",
+                    "name": "Aspen Grove Trail — Premium Fall Color Hike (WEDNESDAY OPTION)",
+                    "price": "Free",
+                    "desc": "3-mile moderate hike through one of the best aspen corridors in the Wasatch with vibrant fall colors. Beautiful forest exploration, perfect for outdoor-loving couples. Similar to your loved Rockport Reservoir!",
+                    "start": "9:00 AM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Aspen Grove Trailhead — Little Cottonwood Canyon, Salt Lake City, UT",
+                    "reservation": "none",
+                    "link": "https://www.alltrails.com/trail/us/utah/aspen-grove"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-23",
+            "dates": [
+                {
+                    "id": "jazz-pelicans-oct23",
+                    "name": "Utah Jazz vs New Orleans Pelicans — THURSDAY NIGHT BASKETBALL (SEASON HOME OPENER!)",
+                    "price": "$35 - $85/ticket",
+                    "desc": "You LOVED the Jazz game (4 stars)! Utah's season home opener brings exciting NBA basketball, great crowd energy, and perfect date night for sports fans. Fast-paced action, thrilling plays!",
+                    "start": "7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                },
+                {
+                    "id": "utah-symphony-tchaikovsky-oct23",
+                    "name": "Utah Symphony — Tchaikovsky Symphony No. 5 (THURSDAY OPTION)",
+                    "price": "$45 - $85/ticket",
+                    "desc": "Live orchestral performance of Tchaikovsky's dramatic fifth symphony with soaring melodies and passionate crescendos. Perfect for classical music lovers seeking refined evening entertainment.",
+                    "start": "7:30 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Maurice Abravanel Hall — 123 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahsymphony.org/"
+                },
+                {
+                    "id": "umoca-doomsday-disco-oct23",
+                    "name": "UMOCA Doomsday Disco Halloween Bash — Art & Music (THURSDAY EVENING)",
+                    "price": "$15 - $25",
+                    "desc": "Utah Museum of Contemporary Art's Halloween bash with music, art-making, open studios, and creative costumes. Fun, artistic atmosphere with dancing and interactive installations.",
+                    "start": "6:00 PM - 10:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Utah Museum of Contemporary Art — 20 S West Temple, Salt Lake City, UT 84101",
+                    "reservation": "none",
+                    "link": "https://umoca.org/"
+                }
+            ]
+        },
+        {
+            "date": "2026-10-24",
+            "dates": [
+                {
+                    "id": "mammoth-lightning-oct24",
+                    "name": "Utah Mammoth vs Tampa Bay Lightning — FRIDAY NIGHT HOCKEY (DATE NIGHT!)",
+                    "price": "$40 - $85/ticket",
+                    "desc": "You LOVED hockey (5 stars)! Friday night matchup with Lightning brings high-octane NHL action, fantastic crowd energy, and perfect date night atmosphere. Thrilling plays, passionate fans!",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahhockeyclub.com/"
+                },
+                {
+                    "id": "dia-de-los-muertos-thanksgiving-point-oct24",
+                    "name": "Día de los Muertos — Thanksgiving Point Festival (FRIDAY DAYTIME)",
+                    "price": "$12 - $20 (admission + activities)",
+                    "desc": "Colorful celebration of Mexican culture and tradition at Thanksgiving Point. Live music, food vendors, artistic displays, and festive community gathering. Beautiful and culturally enriching experience.",
+                    "start": "10:00 AM - 8:00 PM",
+                    "duration": "2 - 4 hrs",
+                    "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
+                    "reservation": "none",
+                    "link": "https://thanksgivingpoint.org/"
+                },
+                {
+                    "id": "350-main-park-city-oct24",
+                    "name": "350 Main — Park City New American Brasserie (FRIDAY DINNER)",
+                    "price": "$100 - $160 for two",
+                    "desc": "Refined globally-influenced New American cuisine in elegant Park City setting. Signature cocktails, impressive wine list, sophisticated yet relaxed Friday evening atmosphere. Premier dining destination.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "350 Main — 350 Main St, Park City, UT 84060",
+                    "reservation": "required",
+                    "link": "https://350main.com/"
+                }
+            ]
+        },
         {
             "date": "2026-10-25",
             "dates": [
