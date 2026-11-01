@@ -1,9 +1,27 @@
 {
-    "dateRange": "October 25 - November 7, 2026",
-    "updated": "October 25, 2026",
+    "dateRange": "November 1 - November 14, 2026",
+    "updated": "November 1, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
+        "don-omar-reggaeton-nov1",
+        "handle-slc-dinner-nov1",
+        "everclear-rock-concert-nov3",
+        "teddy-swims-concert-nov3",
+        "sutton-foster-eccles-nov4",
+        "frencks-holladay-dinner-nov4",
+        "outlander-orchestra-nov5",
+        "valters-osteria-nov5",
+        "utah-utes-byu-football-nov7",
+        "red-butte-orchid-show-nov7-8",
+        "jazz-heat-tuesday-nov10",
+        "log-haven-fine-dining-nov10",
+        "jim-brickman-holiday-nov11",
+        "tree-room-sundance-nov11",
+        "mammoth-blues-hockey-nov12",
+        "luminaria-thanksgiving-point-nov12",
+        "mammoth-sharks-hockey-nov14",
+        "350-main-park-city-nov14",
         "bootanical-red-butte-oct18",
         "fine-dining-friday-oct18",
         "mammoth-penguins-oct19",
@@ -168,202 +186,24 @@
     ],
     "scheduled": [
         {
-            "date": "2026-10-25",
-            "dates": [
-                {
-                    "id": "jazz-lakers-friday-oct25",
-                    "name": "Utah Jazz vs Los Angeles Lakers — Friday Afternoon Basketball",
-                    "price": "$35 - $85/ticket",
-                    "desc": "You LOVED the Jazz game (4 stars)! Catch the Lakers matchup with exciting fast-paced NBA action. Perfect afternoon date with passionate crowd energy and thrilling plays throughout the game!",
-                    "start": "3:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
-                },
-                {
-                    "id": "log-haven-fine-dining-oct25",
-                    "name": "Log Haven — Mountain Fine Dining Experience (FRIDAY ALTERNATIVE)",
-                    "price": "$120 - $180 for two",
-                    "desc": "Sophisticated alpine fine dining 4 miles up scenic Millcreek Canyon. Exceptional seasonal menu, cool mountain air, romantic ambiance. Perfect upscale Friday dinner escape with nature as backdrop.",
-                    "start": "6:00 PM or 8:00 PM",
-                    "duration": "2.5 - 3.5 hrs",
-                    "where": "Log Haven — 6451 Mill Canyon Rd, Salt Lake City, UT 84121",
-                    "reservation": "required",
-                    "link": "https://www.log-haven.com/"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-26",
-            "dates": [
-                {
-                    "id": "jazz-grizzlies-saturday-oct26",
-                    "name": "Utah Jazz vs Memphis Grizzlies — Saturday Afternoon Basketball",
-                    "price": "$30 - $75/ticket",
-                    "desc": "Back-to-back basketball! You loved the Jazz game (4 stars). Saturday afternoon matchup with Grizzlies brings high-energy play and great crowd atmosphere. Perfect for sports couples!",
-                    "start": "1:00 PM or 3:30 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
-                },
-                {
-                    "id": "350-main-park-city-saturday",
-                    "name": "350 Main — Park City New American Brasserie (SATURDAY OPTION)",
-                    "price": "$100 - $160 for two",
-                    "desc": "Refined globally-influenced New American cuisine in elegant Park City setting. Signature cocktails, impressive wine selection, sophisticated yet relaxed Saturday dinner atmosphere.",
-                    "start": "6:00 PM or 7:30 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "350 Main — 350 Main St, Park City, UT 84060",
-                    "reservation": "required",
-                    "link": "https://350main.com/"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-27",
-            "dates": [
-                {
-                    "id": "utah-hockey-mammoth-oct27",
-                    "name": "Utah Mammoth Hockey Club vs St. Louis Blues — TUESDAY NIGHT HOCKEY (YOU LOVED THIS!)",
-                    "price": "$40 - $80/ticket",
-                    "desc": "You LOVED hockey (5 stars)! Fast-paced, thrilling NHL action with passionate fans. Mammoth vs. Blues brings electric atmosphere, incredible plays, and unforgettable excitement. Perfect date night!",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.utahhockeyclub.com/"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-28",
-            "dates": [
-                {
-                    "id": "jazz-spurs-oct28",
-                    "name": "Utah Jazz vs San Antonio Spurs — Wednesday Night Basketball",
-                    "price": "$30 - $70/ticket",
-                    "desc": "You loved the Jazz game (4 stars)! Wednesday night NBA basketball brings competitive matchups and exciting fast-paced action. Great crowd energy and perfect date night for sports fans!",
-                    "start": "7:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
-                },
-                {
-                    "id": "leonid-friends-eccles-oct28",
-                    "name": "Leonid & Friends — Tribute to Chicago in Concert (WEDNESDAY AT ECCLES)",
-                    "price": "$45 - $75/ticket",
-                    "desc": "Brilliant live tribute to the legendary band Chicago! Authentic orchestration, horn section, all the classics. Perfect evening of great music with impressive staging and nostalgic energy.",
-                    "start": "7:00 PM (doors 6:00 PM)",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.saltlakecountyarts.org/events/"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-29",
-            "dates": [
-                {
-                    "id": "smashing-pumpkins-delta-oct29",
-                    "name": "The Smashing Pumpkins — Rock Concert SPECTACULAR (THURSDAY NIGHT)",
-                    "price": "$65 - $120/ticket",
-                    "desc": "MAJOR CONCERT EVENT! Iconic rock band performing their greatest hits live. Incredible light show, passionate crowd, electric energy. Perfect for couples seeking an unforgettable night of classic rock!",
-                    "start": "8:00 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.thedeltacenter.com/"
-                },
-                {
-                    "id": "jazz-trail-blazers-oct31",
-                    "name": "Utah Jazz vs Portland Trail Blazers — Saturday Afternoon (ALTERNATIVE)",
-                    "price": "$30 - $75/ticket",
-                    "desc": "You loved the Jazz game (4 stars)! Saturday afternoon basketball brings exciting NBA action and great crowd energy. Perfect date option if you prefer sports to concerts!",
-                    "start": "1:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-30",
-            "dates": [
-                {
-                    "id": "red-butte-bootanical-oct30",
-                    "name": "BOOtanical Garden After Dark — Red Butte Garden FINAL NIGHT (WEDNESDAY)",
-                    "price": "$18 - $22 (weeknight ticket)",
-                    "desc": "LAST NIGHT of Halloween magic! Experience Red Butte Garden transformed with spooky decorations, glowing lights, and seasonal ambiance. Beautiful evening with fall colors, festive vibes, and intimate atmosphere.",
-                    "start": "6:00 PM - 8:00 PM (timed entry)",
-                    "duration": "1.5 - 2.5 hrs",
-                    "where": "Red Butte Garden & Arboretum — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "recommended",
-                    "link": "https://redbuttegarden.org/events/garden-after-dark/"
-                },
-                {
-                    "id": "log-haven-dinner-oct30",
-                    "name": "The Tree Room at Sundance — Alpine Fine Dining (WEDNESDAY OPTION)",
-                    "price": "$100 - $180 for two",
-                    "desc": "Elevated American cuisine with stunning mountain views. Seasonal ingredients, exceptional service, romantic forest setting near picturesque Sundance Resort.",
-                    "start": "6:00 PM or 7:30 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
-                    "reservation": "required",
-                    "link": "https://www.sundanceresort.com/dining/"
-                }
-            ]
-        },
-        {
-            "date": "2026-10-31",
-            "dates": [
-                {
-                    "id": "cornbellys-frightbellys-halloween",
-                    "name": "Frightbelly's Haunted Trail — Halloween Night at Thanksgiving Point (HALLOWEEN!)",
-                    "price": "$20 - $30/ticket",
-                    "desc": "HALLOWEEN ADVENTURE! Thanksgiving Point's Frightbelly's 30-minute haunted trail with 23 creative scenes, perfect Halloween date. Spooky thrills, creative scares, seasonal fun, festive atmosphere.",
-                    "start": "5:00 PM - 10:00 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
-                    "reservation": "recommended",
-                    "link": "https://thanksgivingpoint.org/cornbellys/"
-                },
-                {
-                    "id": "cornbelly-maze-halloween",
-                    "name": "Cornbelly's Corn Maze — 10-Acre Maze & Hayrides (HALLOWEEN OPTION)",
-                    "price": "$18 - $25/ticket",
-                    "desc": "Fun alternative or addition to haunted trail! 10-acre corn maze, hayrides, campfires, and autumn activities. Perfect couples' date combining exploration and seasonal fun.",
-                    "start": "5:00 PM - 10:00 PM",
-                    "duration": "2 - 3 hrs",
-                    "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
-                    "reservation": "recommended",
-                    "link": "https://thanksgivingpoint.org/cornbellys/"
-                }
-            ]
-        },
-        {
             "date": "2026-11-01",
             "dates": [
                 {
-                    "id": "don-omar-concert-nov1",
-                    "name": "Don Omar — Live Concert (SUNDAY NIGHT - REGGAETON PARTY)",
+                    "id": "don-omar-reggaeton-nov1",
+                    "name": "Don Omar — Live Reggaeton Concert (SUNDAY NIGHT PARTY)",
                     "price": "$55 - $95/ticket",
-                    "desc": "High-energy reggaeton concert with infectious Latin rhythms, passionate vocals, and dynamic staging. Perfect for couples who love live music and dancing! Great crowd energy and fun atmosphere.",
+                    "desc": "High-energy reggaeton superstar with infectious Latin rhythms, dynamic stage presence, and passionate vocals. Perfect for couples who love live music and dancing energy!",
                     "start": "8:00 PM",
                     "duration": "2 - 2.5 hrs",
                     "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
                     "reservation": "recommended",
-                    "link": "https://www.thedeltacenter.com/"
+                    "link": "https://www.utahjazz.com/schedule"
                 },
                 {
-                    "id": "hsler-slc-dining-nov1",
-                    "name": "Handle Salt Lake — Upscale American Dinner (SUNDAY OPTION)",
+                    "id": "handle-slc-dinner-nov1",
+                    "name": "Handle Salt Lake — Upscale American Dinner (SUNDAY ALTERNATIVE)",
                     "price": "$80 - $140 for two",
-                    "desc": "Lively upscale American restaurant featuring local Utah ingredients and seasonal cuisine. Sister restaurant to the acclaimed Park City location with sophisticated yet welcoming atmosphere.",
+                    "desc": "Lively upscale American restaurant featuring local Utah ingredients and seasonal cuisine. Sophisticated yet welcoming atmosphere — perfect dinner before or after a concert!",
                     "start": "6:00 PM or 7:30 PM",
                     "duration": "2 - 2.5 hrs",
                     "where": "Handle Salt Lake — 418 East 200 South, Salt Lake City, UT 84111",
@@ -376,21 +216,21 @@
             "date": "2026-11-03",
             "dates": [
                 {
-                    "id": "mon-laferte-eccles-nov3",
-                    "name": "Mon Laferte — Live Concert at Eccles Theater (TUESDAY NIGHT)",
-                    "price": "$50 - $85/ticket",
-                    "desc": "Dynamic Latin American music artist with powerful emotional performances and beautiful vocals. High-energy stage presence, engaging connection with audience. Perfect for music lovers seeking cultural concert experience!",
-                    "start": "8:00 PM",
+                    "id": "everclear-rock-concert-nov3",
+                    "name": "Everclear — 90s Rock Band Live (TUESDAY NIGHT NOSTALGIA)",
+                    "price": "$35 - $50/ticket",
+                    "desc": "Classic 90s rock band bringing iconic hits and high-energy performances. Great crowd atmosphere, nostalgic setlist, perfect for couples who love alternative rock!",
+                    "start": "7:30 PM",
                     "duration": "2 - 2.5 hrs",
-                    "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "where": "The Complex — Salt Lake City, UT 84101",
                     "reservation": "recommended",
-                    "link": "https://www.saltlakecountyarts.org/events/"
+                    "link": "https://www.thecomplexslc.com/"
                 },
                 {
-                    "id": "teddy-swims-delta-nov3",
-                    "name": "Teddy Swims — Live Concert at Delta Center (TUESDAY OPTION)",
+                    "id": "teddy-swims-concert-nov3",
+                    "name": "Teddy Swims — Soulful Pop-Soul Concert (TUESDAY OPTION)",
                     "price": "$45 - $80/ticket",
-                    "desc": "Rising singer-songwriter with soulful vocals and emotional connection to audience. Contemporary pop-soul performances with heartfelt storytelling. Great alternative for music lovers!",
+                    "desc": "Rising singer-songwriter with powerful, emotional vocals and heartfelt performances. Contemporary pop-soul with genuine connection to audience. Beautiful musicianship!",
                     "start": "8:00 PM",
                     "duration": "2 - 2.5 hrs",
                     "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
@@ -400,13 +240,40 @@
             ]
         },
         {
+            "date": "2026-11-04",
+            "dates": [
+                {
+                    "id": "sutton-foster-eccles-nov4",
+                    "name": "Sutton Foster — Broadway Performer at Eccles Theater (WEDNESDAY)",
+                    "price": "$45 - $75/ticket",
+                    "desc": "Talented Broadway star bringing theatrical excellence and captivating performances. Perfect for theater lovers! Similar magic to Phantom — expect stunning vocals and stagecraft.",
+                    "start": "7:30 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.live-at-the-eccles.com/"
+                },
+                {
+                    "id": "frencks-holladay-dinner-nov4",
+                    "name": "Franck's — Intimate Fine Dining in Historic Home (WEDNESDAY OPTION)",
+                    "price": "$75 - $130 for two",
+                    "desc": "Creative contemporary cuisine in charming renovated home setting. Warm hospitality, elegant yet cozy atmosphere — perfect romantic alternative evening.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Franck's — Holladay, UT 84117",
+                    "reservation": "required",
+                    "link": "https://www.francksslc.com/"
+                }
+            ]
+        },
+        {
             "date": "2026-11-05",
             "dates": [
                 {
                     "id": "outlander-orchestra-nov5",
-                    "name": "Outlander in Concert — LIVE ORCHESTRA & FILM EXPERIENCE (THURSDAY - MUST SEE!)",
+                    "name": "Outlander in Concert — LIVE ORCHESTRA & FILM (THURSDAY - MUST SEE!)",
                     "price": "$50 - $85/ticket",
-                    "desc": "YOU LOVED PHANTOM OF THE OPERA (5 STARS)! Outlander in Concert is PURE THEATRICAL MAGIC — a live orchestra performs Emmy Award-winning composer Bear McCreary's epic score WHILE the show plays on screen. Emotional storytelling, orchestral magnificence, unforgettable experience!",
+                    "desc": "YOU LOVED PHANTOM OF THE OPERA (5 STARS)! Live orchestra performs Emmy Award-winning composer Bear McCreary's epic score WHILE the Outlander show plays on screen. Pure theatrical magic — emotional storytelling, orchestral magnificence!",
                     "start": "7:30 PM",
                     "duration": "2.5 - 3 hrs",
                     "where": "Delta Hall at Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
@@ -417,7 +284,7 @@
                     "id": "valters-osteria-nov5",
                     "name": "Valter's Osteria — Elegant Italian Fine Dining (THURSDAY OPTION)",
                     "price": "$90 - $150 for two",
-                    "desc": "Warm and sophisticated Italian dining with Tuscan-inspired cuisine. Elegant ambiance, impeccable service, excellent wine selection. Perfect romantic alternative to a concert evening.",
+                    "desc": "Warm and sophisticated Italian dining with Tuscan-inspired cuisine. Elegant ambiance, impeccable service, excellent wine selection — perfect romantic evening.",
                     "start": "6:00 PM or 7:30 PM",
                     "duration": "2.5 - 3 hrs",
                     "where": "Valter's Osteria — 173 W. Broadway, Salt Lake City, UT 84101",
@@ -430,26 +297,136 @@
             "date": "2026-11-07",
             "dates": [
                 {
-                    "id": "l7-concert-nov7",
-                    "name": "L7 — Legendary 90s Rock Band Live (SATURDAY NIGHT - FINAL WEEKEND)",
-                    "price": "$40 - $65/ticket",
-                    "desc": "Classic 90s rock band L7 brings authentic rock energy and iconic hits! High-energy crowd, thrilling performances, perfect Saturday night for couples who love live rock music and fantastic atmosphere.",
-                    "start": "8:00 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "The Urban Lounge — Salt Lake City, UT 84101",
+                    "id": "utah-utes-byu-football-nov7",
+                    "name": "Utah Utes vs BYU — RIVALRY FOOTBALL GAME (SATURDAY)",
+                    "price": "$35 - $85/ticket",
+                    "desc": "THE rivalry game! Epic annual matchup between Utes and Cougars with passionate fans, intense competition, and electric stadium atmosphere. College football at its best!",
+                    "start": "Time TBD (typically afternoon or evening)",
+                    "duration": "3 - 3.5 hrs",
+                    "where": "Rice-Eccles Stadium — 50 S. Campus Drive, Salt Lake City, UT 84112",
                     "reservation": "recommended",
-                    "link": "https://www.theurbanloungeslc.com/"
+                    "link": "https://www.utahutes.com/schedule"
                 },
                 {
-                    "id": "monte-chef-martin-nov7",
-                    "name": "Monte by Chef Martin Babio — Gourmet Tasting Menu (SATURDAY OPTION)",
-                    "price": "$95 - $160 per person",
-                    "desc": "Sophisticated tasting menu restaurant featuring seasonal Utah ingredients prepared with artistic precision. Located in the historic Beehive Distillery. Elegant experience perfect for special occasions.",
-                    "start": "5:30 PM or 7:30 PM",
-                    "duration": "3 - 4 hrs",
-                    "where": "Monte by Chef Martin Babio — South Salt Lake, UT 84107",
+                    "id": "red-butte-orchid-show-nov7-8",
+                    "name": "Fall Orchid Show at Red Butte Garden (SATURDAY-SUNDAY)",
+                    "price": "Garden admission (call for details)",
+                    "desc": "Stunning seasonal orchid exhibit with rare and beautiful varieties from around the world. Perfect for exploration lovers! Combine with garden walk, scenic overlooks, and fall mountain views.",
+                    "start": "10:00 AM - 5:00 PM (check hours)",
+                    "duration": "2 - 3 hrs",
+                    "where": "Red Butte Garden & Arboretum — 300 Wakara Way, Salt Lake City, UT 84108",
+                    "reservation": "none",
+                    "endDate": "2026-11-08",
+                    "link": "https://redbuttegarden.org/events/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-10",
+            "dates": [
+                {
+                    "id": "jazz-heat-tuesday-nov10",
+                    "name": "Utah Jazz vs Miami Heat — TUESDAY NIGHT BASKETBALL (YOU LOVED THIS!)",
+                    "price": "$35 - $85/ticket",
+                    "desc": "You LOVED the Jazz game (4 stars)! Fast-paced NBA basketball with exciting matchups and passionate crowd energy. Perfect date night for sports fans!",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                },
+                {
+                    "id": "log-haven-fine-dining-nov10",
+                    "name": "Log Haven — Mountain Fine Dining (TUESDAY ALTERNATIVE)",
+                    "price": "$120 - $180 for two",
+                    "desc": "Sophisticated alpine fine dining 4 miles up scenic Millcreek Canyon. Exceptional seasonal menu, cool mountain air, romantic ambiance. Perfect upscale Tuesday escape!",
+                    "start": "6:00 PM or 8:00 PM",
+                    "duration": "2.5 - 3.5 hrs",
+                    "where": "Log Haven — 6451 Mill Canyon Rd, Salt Lake City, UT 84121",
                     "reservation": "required",
-                    "link": "https://www.monteslc.com/"
+                    "link": "https://www.log-haven.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-11",
+            "dates": [
+                {
+                    "id": "jim-brickman-holiday-nov11",
+                    "name": "Jim Brickman — Holiday Piano Concert (WEDNESDAY SPECIAL)",
+                    "price": "$35 - $65/ticket",
+                    "desc": "Beautiful holiday piano performances by master pianist Jim Brickman. Elegant, emotional, perfect for couples seeking intimate classical music experience before the holidays begin!",
+                    "start": "7:00 PM (time TBD)",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Jeanne Wagner Theatre at Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.arttix.org/"
+                },
+                {
+                    "id": "tree-room-sundance-nov11",
+                    "name": "The Tree Room at Sundance — Alpine Fine Dining (WEDNESDAY OPTION)",
+                    "price": "$100 - $180 for two",
+                    "desc": "Elevated American cuisine with stunning mountain views. Seasonal ingredients, exceptional service, romantic forest setting. Perfect mountain escape dinner.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
+                    "reservation": "required",
+                    "link": "https://www.sundanceresort.com/dining/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-12",
+            "dates": [
+                {
+                    "id": "mammoth-blues-hockey-nov12",
+                    "name": "Utah Mammoth vs St. Louis Blues — THURSDAY NIGHT HOCKEY (YOU LOVED THIS!)",
+                    "price": "$40 - $80/ticket",
+                    "desc": "You LOVED hockey (5 stars)! Fast-paced, thrilling NHL action with passionate fans. Mammoth brings electric atmosphere, incredible plays, and unforgettable excitement. Perfect date night!",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahhockeyclub.com/"
+                },
+                {
+                    "id": "luminaria-thanksgiving-point-nov12",
+                    "name": "Luminaria Festival — Thanksgiving Point Light Display (OPENS THURSDAY)",
+                    "price": "$25 - $40 (estimated)",
+                    "desc": "Stunning seasonal light display transforms Thanksgiving Point into magical illuminated wonderland. 50 acres of interactive light installations perfect for couples seeking festive November fun!",
+                    "start": "6:00 PM - 10:00 PM (check hours)",
+                    "duration": "2 - 3 hrs",
+                    "where": "Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
+                    "reservation": "recommended",
+                    "endDate": "2027-01-09",
+                    "link": "https://thanksgivingpoint.org/luminaria/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-14",
+            "dates": [
+                {
+                    "id": "mammoth-sharks-hockey-nov14",
+                    "name": "Utah Mammoth vs San Jose Sharks — SATURDAY NIGHT HOCKEY (FINAL GAME!)",
+                    "price": "$40 - $80/ticket",
+                    "desc": "You LOVED hockey (5 stars)! Last hockey game of the weekend — fast-paced, thrilling action with passionate fans. Perfect Saturday date night for sports couples!",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahhockeyclub.com/"
+                },
+                {
+                    "id": "350-main-park-city-nov14",
+                    "name": "350 Main — Park City New American Brasserie (SATURDAY OPTION)",
+                    "price": "$100 - $160 for two",
+                    "desc": "Refined globally-influenced New American cuisine in elegant Park City setting. Signature cocktails, impressive wine selection, sophisticated yet relaxed Saturday dinner atmosphere.",
+                    "start": "6:00 PM or 7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "350 Main — 350 Main St, Park City, UT 84060",
+                    "reservation": "required",
+                    "link": "https://350main.com/"
                 }
             ]
         }
