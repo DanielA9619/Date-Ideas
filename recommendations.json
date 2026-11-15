@@ -1,9 +1,28 @@
 {
-    "dateRange": "November 22 - December 6, 2026",
-    "updated": "November 8, 2026",
+    "dateRange": "November 15 - November 29, 2026",
+    "updated": "November 15, 2026",
     "feedback": {},
     "wishlist": [],
     "previousIds": [
+        "jazz-spurs-nov15-saturday",
+        "farmers-market-slc-nov15",
+        "mammoth-hockey-nov16",
+        "postmodern-jukebox-nov19",
+        "jazz-suns-nov20-thursday",
+        "alta-opening-nov20",
+        "todd-rundgren-nov21-friday",
+        "dinner-before-show-nov21",
+        "jazz-mavericks-nov22",
+        "luminaria-thanksgiving-point-nov22",
+        "natural-history-museum-nov24",
+        "gentri-christmas-nov27",
+        "gentri-christmas-nov28-friday",
+        "zoolights-nov29",
+        "park-city-hiking-fall",
+        "snowbird-tram-november",
+        "guardsmans-pass-drive-november",
+        "stewart-falls-park-city-hike",
+        "thanksgiving-dinner-together",
         "tso-30th-anniversary-matinee",
         "tso-30th-anniversary-evening",
         "jazz-nuggets-nov27-thanksgiving",
@@ -225,29 +244,158 @@
     ],
     "scheduled": [
         {
+            "date": "2026-11-15",
+            "dates": [
+                {
+                    "id": "jazz-spurs-nov15-saturday",
+                    "name": "Utah Jazz vs San Antonio Spurs — SATURDAY AFTERNOON BASKETBALL",
+                    "price": "$35 - $85/ticket",
+                    "desc": "You LOVED Jazz games (4 stars)! Start the weekend right with fast-paced NBA action, exciting plays, and great crowd energy at Delta Center. Perfect Saturday couples' date!",
+                    "start": "3:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                },
+                {
+                    "id": "farmers-market-slc-nov15",
+                    "name": "Salt Lake City Downtown Winter Farmers Market — Fresh Local Finds",
+                    "price": "Free entry + purchases",
+                    "desc": "Browse local produce, artisan crafts, and seasonal items. Perfect for gathering fresh ingredients for a home cooking date, or just enjoying the community vibe. Cozy Saturday morning couple activity!",
+                    "start": "10:00 AM - 2:00 PM",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "The Gateway (indoor market) — 50 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "none",
+                    "link": "https://gastronomicslc.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-16",
+            "dates": [
+                {
+                    "id": "mammoth-hockey-nov16",
+                    "name": "Utah Mammoth vs Vancouver Canucks — NHL HOCKEY (You LOVE Hockey!)",
+                    "price": "$30 - $75/ticket",
+                    "desc": "You LOVED Utah Grizzlies Hockey (5 stars)! The new Utah Mammoth delivers fast-paced NHL action, thrilling plays, and electric crowd energy. Perfect Sunday evening sports date with intense athletic excitement!",
+                    "start": "7:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahhockeyclub.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-19",
+            "dates": [
+                {
+                    "id": "postmodern-jukebox-nov19",
+                    "name": "Scott Bradlee's Postmodern Jukebox — Vintage Pop Concert Experience",
+                    "price": "$52 - $85/ticket",
+                    "desc": "You LOVED Phantom of the Opera (5 stars)! This theatrical ensemble performs vintage-style covers of modern pop songs with stunning vocal harmonies, creative arrangements, and theatrical staging. Unique musical concert experience!",
+                    "start": "8:00 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Eccles Theater — 131 S Main St, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.arttix.org/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-20",
+            "dates": [
+                {
+                    "id": "jazz-suns-nov20-thursday",
+                    "name": "Utah Jazz vs Phoenix Suns — THURSDAY NIGHT BASKETBALL",
+                    "price": "$35 - $85/ticket",
+                    "desc": "You LOVED Jazz games (4 stars)! Thursday night court action with exciting plays, great matchups, and thrilling NBA basketball. Perfect midweek date night energy!",
+                    "start": "7:30 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                },
+                {
+                    "id": "alta-opening-nov20",
+                    "name": "Alta Ski Resort — Season Opening (Weather Permitting, Nov 20)",
+                    "price": "$135 - $159/day lift ticket or $25 - $50 rental",
+                    "desc": "Classic Utah ski terrain in scenic Little Cottonwood Canyon. If snow conditions permit, enjoy powder runs, scenic alpine views, and exciting winter sport together. Check conditions before heading up!",
+                    "start": "9:00 AM - 4:00 PM (typical hours)",
+                    "duration": "4 - 6 hrs",
+                    "where": "Alta Ski Resort — Route 210, Salt Lake City, UT 84092",
+                    "reservation": "recommended for lessons",
+                    "link": "https://www.alta.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-21",
+            "dates": [
+                {
+                    "id": "todd-rundgren-nov21-friday",
+                    "name": "Todd Rundgren: Damned If I Do Tour — FRIDAY NIGHT LIVE MUSIC (DATE NIGHT!)",
+                    "price": "$65 - $120/ticket",
+                    "desc": "Legendary rock artist Todd Rundgren performs his classic catalog with theatrical staging and brilliant musicianship. Unique Friday evening for music and art lovers!",
+                    "start": "7:30 PM",
+                    "duration": "2 - 2.5 hrs",
+                    "where": "Capitol Theatre — 50 W 200 South, Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.arttix.org/"
+                },
+                {
+                    "id": "dinner-before-show-nov21",
+                    "name": "Fine Dinner Before Todd Rundgren — Upscale Dining (FRIDAY DINNER)",
+                    "price": "$90 - $150 for two",
+                    "desc": "Book a reservation at a top-rated SLC restaurant before the show. Suggested: Valter's Osteria (Italian), Current Fish & Oyster (seafood), or Aker (Japanese). Perfect Friday night couples' experience!",
+                    "start": "5:30 PM - 6:30 PM",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "Various — Downtown Salt Lake City",
+                    "reservation": "required",
+                    "link": "https://www.opentable.com/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-22",
+            "dates": [
+                {
+                    "id": "jazz-mavericks-nov22",
+                    "name": "Utah Jazz vs Dallas Mavericks — SATURDAY AFTERNOON BASKETBALL",
+                    "price": "$35 - $85/ticket",
+                    "desc": "You LOVED Jazz games (4 stars)! Another Saturday court matchup with fast-paced action, exciting plays, and electric crowd. Great weekend date at Delta Center!",
+                    "start": "5:00 PM",
+                    "duration": "2.5 - 3 hrs",
+                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
+                    "reservation": "recommended",
+                    "link": "https://www.utahjazz.com/schedule"
+                },
+                {
+                    "id": "luminaria-thanksgiving-point-nov22",
+                    "name": "Luminaria at Thanksgiving Point — 10+ Million Holiday Lights",
+                    "price": "$25 - $40",
+                    "desc": "You LOVED exploration at Rockport Reservoir (5 stars)! Stunning light display transforms 50 acres of Ashton Gardens into an enchanted wonderland. Walk through interactive light installations, festive atmosphere, perfect for holiday romance and exploration!",
+                    "start": "6:00 PM - 10:00 PM",
+                    "duration": "2 - 3 hrs",
+                    "where": "Ashton Gardens at Thanksgiving Point — 3003 Thanksgiving Way, Lehi, UT 84062",
+                    "reservation": "recommended",
+                    "link": "https://thanksgivingpoint.org/luminaria/"
+                }
+            ]
+        },
+        {
             "date": "2026-11-24",
             "dates": [
                 {
-                    "id": "tso-30th-anniversary-matinee",
-                    "name": "Trans-Siberian Orchestra: The Ghosts of Christmas Eve (MATINEE)",
-                    "price": "$72 - $97/ticket",
-                    "desc": "30th Anniversary Holiday Spectacular! Epic theatrical production with live orchestra, pyrotechnics, and stunning visual effects. Perfect holiday spectacle experience — similar magic to theatrical concerts!",
-                    "start": "3:00 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://www.deltacenter.com/"
-                },
-                {
-                    "id": "tso-30th-anniversary-evening",
-                    "name": "Trans-Siberian Orchestra: The Ghosts of Christmas Eve (EVENING)",
-                    "price": "$72 - $97/ticket",
-                    "desc": "30th Anniversary Holiday Spectacular! Epic theatrical production with live orchestra, pyrotechnics, and stunning visual effects. Perfect holiday spectacle experience — similar magic to theatrical concerts!",
-                    "start": "7:30 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://www.deltacenter.com/"
+                    "id": "natural-history-museum-nov24",
+                    "name": "Natural History Museum of Utah — Dinosaurs & Fossils Exploration",
+                    "price": "$23 - $25/person",
+                    "desc": "You LOVED exploration at Rockport Reservoir (5 stars)! World-class museum with 60,000+ fossils and dinosaur exhibits. Educational, engaging, and perfect for curious couples seeking discovery!",
+                    "start": "10:00 AM - 5:00 PM",
+                    "duration": "2 - 4 hrs",
+                    "where": "Natural History Museum of Utah — 301 S 1300 E, Salt Lake City, UT 84112",
+                    "reservation": "recommended",
+                    "link": "https://nhmu.utah.edu/"
                 }
             ]
         },
@@ -255,27 +403,42 @@
             "date": "2026-11-27",
             "dates": [
                 {
-                    "id": "jazz-nuggets-nov27-thanksgiving",
-                    "name": "Utah Jazz vs Denver Nuggets — Thanksgiving Night Basketball",
-                    "price": "$35 - $85/ticket",
-                    "desc": "You LOVED Jazz games (4 stars)! Fast-paced NBA action the day after Thanksgiving. Great crowd energy, exciting matchups. Perfect way to spend Thanksgiving evening together!",
-                    "start": "7:30 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
+                    "id": "gentri-christmas-nov27",
+                    "name": "GENTRI Christmas — Holiday Vocal Ensemble Concert",
+                    "price": "$30 - $60/ticket",
+                    "desc": "You LOVED Phantom of the Opera (5 stars)! GENTRI performs stunning holiday arrangements with beautiful vocal harmonies, theatrical staging, and festive spirit. Perfect Thanksgiving-weekend theatrical experience!",
+                    "start": "7:00 PM",
+                    "duration": "2 hrs",
+                    "where": "Delta Hall (Eccles Complex) — Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.saltlakecountyarts.org/"
+                }
+            ]
+        },
+        {
+            "date": "2026-11-28",
+            "dates": [
+                {
+                    "id": "gentri-christmas-nov28-friday",
+                    "name": "GENTRI Christmas — Holiday Concert (FRIDAY NIGHT DATE!)",
+                    "price": "$30 - $60/ticket",
+                    "desc": "You LOVED Phantom of the Opera (5 stars)! Friday evening of beautiful vocal harmonies, theatrical staging, and festive holiday spirit. Perfect end-of-week theatrical couples' date!",
+                    "start": "7:00 PM",
+                    "duration": "2 hrs",
+                    "where": "Delta Hall (Eccles Complex) — Salt Lake City, UT 84101",
+                    "reservation": "required",
+                    "link": "https://www.saltlakecountyarts.org/"
                 },
                 {
-                    "id": "christkindlmarkt-thanksgiving-week",
-                    "name": "Christkindlmarkt SLC — German-Style Christmas Market (OPENS TODAY)",
-                    "price": "Free admission (food/crafts for purchase)",
-                    "desc": "Authentic Bavarian-style holiday market with festive vendors, holiday food, crafts, and seasonal decorations. Walk through twinkling lights with mulled wine and roasted chestnuts. True European holiday charm!",
-                    "start": "11:00 AM - 8:00 PM daily",
-                    "duration": "2 - 3 hrs",
-                    "where": "This Is The Place Heritage Park — Salt Lake City, UT",
+                    "id": "farmers-market-nov29",
+                    "name": "Salt Lake City Downtown Winter Farmers Market (SATURDAY MORNING)",
+                    "price": "Free entry + purchases",
+                    "desc": "Browse local produce, artisan crafts, and seasonal winter items. Cozy community atmosphere perfect for gathering ingredients for a home cooking date or enjoying fresh local finds together!",
+                    "start": "10:00 AM - 2:00 PM",
+                    "duration": "1.5 - 2 hrs",
+                    "where": "The Gateway (indoor market) — 50 S Main St, Salt Lake City, UT 84101",
                     "reservation": "none",
-                    "endDate": "2026-12-05",
-                    "link": "https://www.thisistheplace.org/"
+                    "link": "https://gastronomicslc.com/"
                 }
             ]
         },
@@ -283,136 +446,15 @@
             "date": "2026-11-29",
             "dates": [
                 {
-                    "id": "jazz-suns-nov29-friday",
-                    "name": "Utah Jazz vs Phoenix Suns — FRIDAY NIGHT BASKETBALL (DATE NIGHT!)",
-                    "price": "$35 - $85/ticket",
-                    "desc": "You LOVED Jazz games (4 stars)! Friday night at Delta Center — perfect date night with fast-paced action, exciting plays, and electric crowd energy. Ideal Friday couples' experience!",
-                    "start": "3:00 PM or 7:00 PM (check schedule)",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "Delta Center — 301 W South Temple, Salt Lake City, UT 84101",
-                    "reservation": "recommended",
-                    "link": "https://www.utahjazz.com/schedule"
-                },
-                {
-                    "id": "festival-trees-market-combo-nov29",
-                    "name": "Festival of Trees + Christkindlmarkt — Holiday Shopping & Market Day (FRIDAY OPTION)",
-                    "price": "$10 - $20 (estimated for Festival) + market food",
-                    "desc": "Spend Friday afternoon exploring two festive holiday markets! Festival of Trees features beautifully decorated Christmas trees and holiday shopping at Mountain America Expo Center. Then browse the German-style Christkindlmarkt for evening fun, local crafts, and seasonal treats.",
-                    "start": "1:00 PM - 8:00 PM",
-                    "duration": "4 - 5 hrs (flexible, can split between both)",
-                    "where": "Mountain America Expo Center (Sandy) + This Is The Place Heritage Park (SLC)",
-                    "reservation": "none",
-                    "link": "https://www.visitutah.com/"
-                }
-            ]
-        },
-        {
-            "date": "2026-12-02",
-            "dates": [
-                {
-                    "id": "en-pointe-nutcracker-dec1-2",
-                    "name": "En Pointe Ballet: 'The Nutcracker' — Classic Holiday Ballet",
-                    "price": "$25 - $45/ticket (estimated)",
-                    "desc": "You LOVED Phantom of the Opera (5 stars)! The timeless Nutcracker ballet brings theatrical magic, beautiful choreography, and enchanting music. Classic holiday performance with stunning stagecraft and talented dancers.",
-                    "start": "6:00 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Grand Theatre at SLCC (Salt Lake Community College) — Salt Lake City, UT",
-                    "reservation": "required",
-                    "link": "https://www.arttix.org/"
-                },
-                {
-                    "id": "festival-trees-expo-dec2",
-                    "name": "Festival of Trees at Mountain America Expo Center (OPENS WEDNESDAY)",
-                    "price": "$10 - $15/person",
-                    "desc": "Stunning display of beautifully decorated Christmas trees, wreaths, and holiday décor. Benefit for Primary Children's Hospital. Perfect afternoon for holiday inspiration, shopping, and festive exploration.",
-                    "start": "10:00 AM - 6:00 PM (varies daily)",
-                    "duration": "2 - 3 hrs",
-                    "where": "Mountain America Expo Center — Sandy, UT 84070",
-                    "reservation": "none",
-                    "endDate": "2026-12-05",
-                    "link": "https://www.visitutah.com/"
-                }
-            ]
-        },
-        {
-            "date": "2026-12-04",
-            "dates": [
-                {
-                    "id": "ballet-west-nutcracker-dec4",
-                    "name": "Ballet West: 'The Nutcracker' — Professional Production (THURSDAY)",
-                    "price": "$40 - $75/ticket (estimated)",
-                    "desc": "You LOVED Phantom of the Opera (5 stars)! Professional Ballet West presents the iconic Nutcracker with stunning choreography, beautiful sets, and magical storytelling. Unforgettable theatrical experience!",
-                    "start": "7:00 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 South, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://www.arttix.org/"
-                },
-                {
-                    "id": "tree-room-dinner-dec4",
-                    "name": "The Tree Room at Sundance — Alpine Fine Dining (THURSDAY DINNER)",
-                    "price": "$100 - $180 for two",
-                    "desc": "Elevated American cuisine with stunning mountain views. Exceptional seasonal menu, romantic forest setting, cool alpine breezes. Perfect elegant dinner paired with ballet evening!",
-                    "start": "6:00 PM",
-                    "duration": "2.5 - 3 hrs",
-                    "where": "The Tree Room — Sundance Resort, 8841 Alpine Loop Rd, Sundance, UT 84604",
-                    "reservation": "required",
-                    "link": "https://www.sundanceresort.com/dining/"
-                }
-            ]
-        },
-        {
-            "date": "2026-12-05",
-            "dates": [
-                {
-                    "id": "ballet-west-nutcracker-dec5-friday",
-                    "name": "Ballet West: 'The Nutcracker' — Professional Production (FRIDAY NIGHT DATE!)",
-                    "price": "$40 - $75/ticket (estimated)",
-                    "desc": "You LOVED Phantom of the Opera (5 stars)! Professional Ballet West's iconic Nutcracker on Friday night — perfect date with stunning choreography, beautiful sets, and magical storytelling. Unforgettable!",
-                    "start": "7:00 PM",
-                    "duration": "2 - 2.5 hrs",
-                    "where": "Janet Quinney Lawson Capitol Theatre — 50 W 200 South, Salt Lake City, UT 84101",
-                    "reservation": "required",
-                    "link": "https://www.arttix.org/"
-                },
-                {
-                    "id": "log-haven-dinner-dec5",
-                    "name": "Log Haven — Mountain Fine Dining (FRIDAY DINNER OPTION)",
-                    "price": "$120 - $180 for two",
-                    "desc": "Sophisticated alpine fine dining 4 miles up scenic Millcreek Canyon. Exceptional seasonal menu, cool mountain air, romantic ambiance. Perfect Friday night escape paired with ballet!",
-                    "start": "6:00 PM",
-                    "duration": "2.5 - 3.5 hrs",
-                    "where": "Log Haven — 6451 Mill Canyon Rd, Salt Lake City, UT 84121",
-                    "reservation": "required",
-                    "link": "https://www.log-haven.com/"
-                }
-            ]
-        },
-        {
-            "date": "2026-12-06",
-            "dates": [
-                {
-                    "id": "red-butte-holiday-open-house-dec6",
-                    "name": "Red Butte Garden: Holiday Open House & Art Fair (SATURDAY)",
-                    "price": "Free garden admission + $$ for art/gifts",
-                    "desc": "You LOVED exploration at Rockport Reservoir (5 stars)! Beautiful gardens and scenic overlooks feature 18 local artists selling holiday art and crafts. Free admission, stunning December mountain views, and creative shopping. Perfect outdoor couple activity!",
-                    "start": "10:00 AM - 5:00 PM (estimated)",
-                    "duration": "2 - 3 hrs",
-                    "where": "Red Butte Garden & Arboretum — 300 Wakara Way, Salt Lake City, UT 84108",
-                    "reservation": "none",
-                    "link": "https://www.redbuttegarden.org/"
-                },
-                {
-                    "id": "temple-square-lights-luminaria-dec6",
-                    "name": "Temple Square Christmas Lights + Luminaria at Thanksgiving Point (SATURDAY EVENING)",
-                    "price": "$0 (Temple Square) + $25-40 (Luminaria)",
-                    "desc": "Double holiday magic! Walk Temple Square's stunning free light display (over 500,000 lights), then drive to Thanksgiving Point's Luminaria with 8 million lights transforming the gardens into an enchanted wonderland. Perfect festive Saturday evening!",
+                    "id": "zoolights-nov29",
+                    "name": "ZooLights at Hogle Zoo — Holiday Light Display",
+                    "price": "$25 - $35",
+                    "desc": "You LOVED exploration at Rockport Reservoir (5 stars)! Holiday light displays throughout zoo grounds create a magical festive atmosphere. Walk through illuminated paths with winter scenery and holiday magic!",
                     "start": "5:00 PM - 10:00 PM",
-                    "duration": "3 - 4 hrs (flexible)",
-                    "where": "Temple Square (SLC) + Ashton Gardens at Thanksgiving Point (Lehi, UT 84062)",
-                    "reservation": "none for Temple Square; recommended for Luminaria",
-                    "endDate": "2026-12-06",
-                    "link": "https://thanksgivingpoint.org/luminaria/"
+                    "duration": "2 - 3 hrs",
+                    "where": "Hogle Zoo — 2600 E Sunnyside Ave, Salt Lake City, UT 84108",
+                    "reservation": "recommended",
+                    "link": "https://www.hoglezoo.org/"
                 }
             ]
         }
@@ -422,54 +464,44 @@
             "title": "Adventures & Outdoors",
             "dates": [
                 {
-                    "id": "snowbird-tram-winter-scenic",
-                    "name": "Snowbird Aerial Tram — Hidden Peak 11,000 ft Winter Views",
+                    "id": "park-city-hiking-fall",
+                    "name": "Park City Mountain Trails — Scenic Hiking (50+ miles available)",
+                    "price": "Free",
+                    "desc": "You LOVED exploration at Rockport Reservoir (5 stars)! Round Valley and Summit Park offer stunning fall/early winter hiking with beautiful canyon views, varied difficulty levels, and peaceful mountain scenery. Perfect for adventurous couples!",
+                    "duration": "2 - 4 hrs",
+                    "where": "Round Valley & Summit Park — Park City, UT",
+                    "reservation": "none",
+                    "link": "https://www.visitparkcity.com/"
+                },
+                {
+                    "id": "snowbird-tram-november",
+                    "name": "Snowbird Aerial Tram — Hidden Peak 11,000 ft Alpine Views (Opens Nov 27)",
                     "price": "$22 - $35 (tram), $50+ (with dining)",
-                    "desc": "Scenic aerial tram to stunning alpine summit with 360° Wasatch panoramas and winter snow. Crisp mountain air, breathtaking snow-covered peaks, stunning Utah views. Perfect for your love of outdoor exploration!",
+                    "desc": "Scenic aerial tram to stunning alpine summit with 360° Wasatch panoramas. Crisp mountain air, breathtaking views, and peaceful exploration. Perfect for outdoor lovers — opens late November!",
                     "duration": "2 - 3 hrs",
                     "where": "Snowbird Resort — 11000 E Little Cottonwood Canyon Rd, Salt Lake City, UT 84092",
                     "reservation": "recommended for dining",
-                    "link": "https://www.snowbird.com/winter/"
+                    "link": "https://www.snowbird.com/"
                 },
                 {
-                    "id": "park-city-skiing-opening-dec",
-                    "name": "Park City Mountain — Skiing & Winter Sports (OPENS NOV 20)",
-                    "price": "$120 - $179/day lift tickets (or $30 - $60 rental)",
-                    "desc": "Park City Mountain opens November 20! Perfect couples' skiing or snowboarding adventure. Beautiful runs, scenic views, apres-ski options. Whether expert or beginner, fantastic winter date adventure!",
-                    "duration": "4 - 6 hrs",
-                    "where": "Park City Mountain — 1345 Lowell Ave, Park City, UT 84060",
-                    "reservation": "recommended for lessons",
-                    "link": "https://www.parkcitymountain.com/"
-                },
-                {
-                    "id": "guardsmans-pass-winter-drive",
-                    "name": "Guardsmans Pass Scenic Loop — Winter Mountain Drive",
+                    "id": "guardsmans-pass-drive-november",
+                    "name": "Guardsmans Pass Scenic Loop — Alpine Mountain Drive",
                     "price": "Free (gas)",
-                    "desc": "Epic 24-mile scenic route connecting Big Cottonwood Canyon to Park City. Winter snow creates stunning Wasatch panoramas with powder-covered peaks. Perfect couples' scenic drive for peaceful exploration!",
+                    "desc": "Epic 24-mile scenic route connecting Big Cottonwood Canyon to Park City. Stunning fall foliage transitioning to early winter snow. Perfect couples' scenic drive for peaceful exploration and photography!",
                     "duration": "2.5 - 3.5 hrs",
                     "where": "Guardsmans Pass Road — Big Cottonwood/Park City, UT",
                     "reservation": "none",
                     "link": "https://www.visitutah.com/"
                 },
                 {
-                    "id": "lower-bells-canyon-winter-hike",
-                    "name": "Lower Bells Canyon Reservoir — Winter Hiking Adventure",
+                    "id": "stewart-falls-park-city-hike",
+                    "name": "Stewart Falls at Sundance — Scenic Waterfall Hike",
                     "price": "Free",
-                    "desc": "Moderate 4.6-mile roundtrip to scenic alpine reservoir. Winter scenery with snow-covered slopes, crisp mountain air, and peaceful exploration. Similar to your loved Rockport Reservoir (5 stars)!",
+                    "desc": "Beautiful 3.5-mile roundtrip hike to cascading waterfall in scenic canyon. Picturesque fall scenery, crisp mountain air, and peaceful exploration. Similar to your loved Rockport Reservoir (5 stars)!",
                     "duration": "2.5 - 3.5 hrs",
-                    "where": "Lower Bells Canyon Trailhead — Salt Lake City, UT",
+                    "where": "Stewart Falls Trailhead — Sundance Resort, UT",
                     "reservation": "none",
-                    "link": "https://www.alltrails.com/trail/us/utah/lower-bells-canyon-reservoir"
-                },
-                {
-                    "id": "brighton-resort-winter-scenic",
-                    "name": "Brighton Resort — Easy Winter Scenic Chairlift & Hiking",
-                    "price": "$25 - $40 (scenic lift), Free if skiing",
-                    "desc": "Scenic chairlift to alpine views or easy winter hiking trails. Beautiful snow-covered scenery, cool mountain air, and peaceful exploration. Perfect for couples seeking winter mountain adventure without heavy skiing commitment!",
-                    "duration": "2 - 3 hrs",
-                    "where": "Brighton Resort — Big Cottonwood Canyon, UT 84092",
-                    "reservation": "none",
-                    "link": "https://www.brightonresort.com/"
+                    "link": "https://www.alltrails.com/trail/us/utah/stewart-falls"
                 }
             ]
         },
@@ -757,6 +789,16 @@
                     "link": "https://www.allrecipes.com/"
                 },
                 {
+                    "id": "thanksgiving-dinner-together",
+                    "name": "Cook Thanksgiving Dinner Together — Special Holiday Date",
+                    "price": "$40 - $70 (ingredients)",
+                    "desc": "Prepare Thanksgiving feast together at home. Classic turkey, sides, desserts — teamwork, creativity, wine, and delicious results. Intimate, meaningful, and full of quality time together!",
+                    "duration": "3 - 5 hrs",
+                    "where": "Home",
+                    "reservation": "none",
+                    "link": "https://www.allrecipes.com/gallery/thanksgiving-dinner-recipes/"
+                },
+                {
                     "id": "spa-date-home-wellness",
                     "name": "At-Home Spa Date — Couples' Wellness & Relaxation",
                     "price": "$30 - $60 (spa supplies)",
@@ -765,16 +807,6 @@
                     "where": "Home",
                     "reservation": "none",
                     "link": "https://www.wellness.com/"
-                },
-                {
-                    "id": "board-games-puzzles-night",
-                    "name": "Game & Puzzle Night at Home — Fun Indoor Date",
-                    "price": "Free (if you have games) or $20 - $50 (new games)",
-                    "desc": "Play board games, card games, or work on a puzzle together. Competitive fun, lots of laughs, quality time together. Perfect cozy evening for connection!",
-                    "duration": "2 - 4 hrs",
-                    "where": "Home",
-                    "reservation": "none",
-                    "link": "https://www.boardgamegeek.com/"
                 }
             ]
         }
